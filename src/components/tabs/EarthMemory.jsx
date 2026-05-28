@@ -1,182 +1,134 @@
 import { motion } from 'framer-motion'
 
+function Chapter({ event, index }) {
+  const isEven = index % 2 === 1
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-30px' }}
+      transition={{ duration: 0.6, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {index > 0 && (
+        <div style={{ height: 1, background: 'rgba(201,168,76,0.15)', margin: '0 0 2.5rem' }} />
+      )}
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isEven ? '1fr 160px' : '160px 1fr',
+        gap: '2.5rem',
+        alignItems: 'start',
+        marginBottom: '2.5rem',
+      }}>
+        {/* Big year — LEFT for odd events */}
+        {!isEven && (
+          <div style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: 'clamp(3rem, 7vw, 5.5rem)',
+            fontWeight: 300,
+            color: 'rgba(201,168,76,0.2)',
+            lineHeight: 1,
+            textAlign: 'right',
+            userSelect: 'none',
+            paddingTop: '0.1rem',
+          }}>
+            {event.year}
+          </div>
+        )}
+
+        {/* Content */}
+        <div>
+          <span style={{
+            display: 'inline-block',
+            fontFamily: 'Inter, sans-serif', fontSize: '0.57rem',
+            letterSpacing: '0.22em', textTransform: 'uppercase',
+            color: '#c9a84c', marginBottom: '0.6rem',
+          }}>
+            {event.year}
+          </span>
+
+          <h3 style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)',
+            fontWeight: 300, color: '#111a10',
+            lineHeight: 1.15, marginBottom: '0.6rem',
+          }}>
+            {event.title}
+          </h3>
+
+          <p style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: '1.02rem', fontWeight: 300,
+            color: 'rgba(17,26,16,0.6)', lineHeight: 1.8,
+          }}>
+            {event.description}
+          </p>
+        </div>
+
+        {/* Big year — RIGHT for even events */}
+        {isEven && (
+          <div style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: 'clamp(3rem, 7vw, 5.5rem)',
+            fontWeight: 300,
+            color: 'rgba(201,168,76,0.2)',
+            lineHeight: 1,
+            textAlign: 'left',
+            userSelect: 'none',
+            paddingTop: '0.1rem',
+          }}>
+            {event.year}
+          </div>
+        )}
+      </div>
+    </motion.div>
+  )
+}
+
 export default function EarthMemory({ property }) {
   const { timeline, name } = property
 
   return (
-    <div className="max-w-3xl mx-auto">
-      {/* Header */}
-      <div className="text-center" style={{ marginBottom: '4rem' }}>
-        <p
-          style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '0.62rem',
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: '#c9a84c',
-            marginBottom: '1rem',
-          }}
-        >
-          Memoria de la Tierra
-        </p>
-        <h2
-          style={{
-            fontFamily: '"Cormorant Garamond", serif',
-            fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-            fontWeight: 300,
-            color: '#111a10',
-            lineHeight: 1.1,
-          }}
-        >
-          Historia Viva de {name}
-        </h2>
-      </div>
+    <div>
+      <p style={{
+        fontFamily: 'Inter, sans-serif', fontSize: '0.6rem',
+        letterSpacing: '0.28em', textTransform: 'uppercase',
+        color: '#c9a84c', marginBottom: '0.9rem',
+      }}>
+        Memoria de la Tierra
+      </p>
 
-      {/* Map placeholder */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.97 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+      <motion.h2
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="rounded-2xl flex items-center justify-center"
         style={{
-          height: 300,
-          background: 'rgba(17,26,16,0.03)',
-          border: '1px solid rgba(201,168,76,0.15)',
-          position: 'relative',
-          overflow: 'hidden',
-          marginBottom: '5rem',
+          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+          fontWeight: 400, lineHeight: 1.05, margin: '0 0 3rem',
         }}
       >
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: `${(i + 1) * 12}%`,
-              height: `${(i + 1) * 12}%`,
-              border: '1px solid rgba(201,168,76,0.12)',
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%,-50%)',
-            }}
-          />
+        <span style={{ color: '#c9a84c' }}>Historia</span>
+        <span style={{ color: '#111a10' }}> Viva de {name}</span>
+      </motion.h2>
+
+      <div>
+        {timeline.map((event, i) => (
+          <Chapter key={i} event={event} index={i} />
         ))}
-        <div className="relative z-10 text-center">
-          <div style={{ fontSize: '2.2rem', marginBottom: 12 }}>🗺️</div>
-          <p
-            style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1.15rem',
-              fontStyle: 'italic',
-              color: 'rgba(17,26,16,0.3)',
-              marginBottom: 6,
-            }}
-          >
-            Mapa Topográfico 3D
-          </p>
-          <p
-            style={{
-              fontFamily: 'Inter, sans-serif',
-              fontSize: '0.62rem',
-              color: 'rgba(17,26,16,0.18)',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Integra tu visor de mapas aquí
-          </p>
-        </div>
-      </motion.div>
-
-      {/* Timeline */}
-      <div className="relative">
-        <div
-          className="absolute left-6 top-0 bottom-0 w-px"
-          style={{ background: 'linear-gradient(to bottom, rgba(201,168,76,0.4), rgba(201,168,76,0.04))' }}
-        />
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-          {timeline.map((event, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              style={{ position: 'relative', paddingLeft: '4.5rem' }}
-            >
-              {/* Dot */}
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 + 0.2 }}
-                style={{
-                  position: 'absolute',
-                  left: 24,
-                  top: 6,
-                  width: 16,
-                  height: 16,
-                  borderRadius: '50%',
-                  transform: 'translateX(-50%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: i === timeline.length - 1 ? '#c9a84c' : '#ffffff',
-                  border: `2px solid ${i === timeline.length - 1 ? '#c9a84c' : 'rgba(201,168,76,0.4)'}`,
-                  boxShadow: i === timeline.length - 1
-                    ? '0 0 12px rgba(201,168,76,0.4)'
-                    : '0 0 0 3px rgba(17,26,16,0.05)',
-                }}
-              >
-                {i === timeline.length - 1 && (
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#ffffff' }} />
-                )}
-              </motion.div>
-
-              <span
-                style={{
-                  display: 'inline-block',
-                  marginBottom: '0.5rem',
-                  fontFamily: 'Inter, sans-serif',
-                  fontSize: '0.62rem',
-                  letterSpacing: '0.2em',
-                  textTransform: 'uppercase',
-                  color: '#c9a84c',
-                }}
-              >
-                {event.year}
-              </span>
-
-              <h3
-                style={{
-                  fontFamily: '"Cormorant Garamond", serif',
-                  fontSize: '1.4rem',
-                  fontWeight: 400,
-                  color: '#111a10',
-                  lineHeight: 1.2,
-                  marginBottom: '0.7rem',
-                }}
-              >
-                {event.title}
-              </h3>
-
-              <p
-                style={{
-                  fontFamily: '"Cormorant Garamond", serif',
-                  fontSize: '1.05rem',
-                  fontWeight: 300,
-                  color: 'rgba(17,26,16,0.55)',
-                  lineHeight: 1.8,
-                }}
-              >
-                {event.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
+
+      <div style={{ height: 1, background: 'rgba(201,168,76,0.15)', marginTop: '0.5rem', marginBottom: '2rem' }} />
+      <p style={{
+        fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+        fontSize: '0.95rem', color: 'rgba(17,26,16,0.28)',
+        lineHeight: 1.75, textAlign: 'center',
+        maxWidth: 480, margin: '0 auto',
+      }}>
+        Cada año es una capa de memoria. Cada capa sostiene el valor del presente.
+      </p>
     </div>
   )
 }

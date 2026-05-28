@@ -10,9 +10,10 @@ export const TABS = [
   { id: 'pulse',       label: 'Pulso Comunidad',     short: 'Comunidad' },
   { id: 'index',       label: 'Índice Virtuoso',     short: 'Índice' },
   { id: 'legacy',      label: 'Legado',              short: 'Legado' },
+  { id: 'gallery',     label: 'Galería',             short: 'Galería' },
 ]
 
-export default function TabNav({ activeTab, onTabChange }) {
+export default function TabNav({ activeTab, onTabChange, navRef }) {
   const scrollRef = useRef(null)
   const activeRef = useRef(null)
 
@@ -24,12 +25,13 @@ export default function TabNav({ activeTab, onTabChange }) {
 
   return (
     <div
+      ref={navRef}
       className="sticky top-0 z-50"
       style={{
-        background: 'rgba(255,255,255,0.97)',
+        background: 'rgba(5,13,5,0.97)',
         backdropFilter: 'blur(20px)',
-        borderBottom: '1px solid rgba(17,26,16,0.09)',
-        borderTop: '1px solid rgba(17,26,16,0.05)',
+        borderBottom: '1px solid rgba(201,168,76,0.12)',
+        borderTop: 'none',
       }}
     >
       <div
@@ -59,7 +61,7 @@ export default function TabNav({ activeTab, onTabChange }) {
                   fontSize: '0.68rem',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
-                  color: isActive ? '#111a10' : 'rgba(17,26,16,0.38)',
+                  color: isActive ? '#f5f0e8' : 'rgba(245,240,232,0.35)',
                   fontWeight: isActive ? 500 : 400,
                   background: 'none',
                   border: 'none',
@@ -67,13 +69,10 @@ export default function TabNav({ activeTab, onTabChange }) {
                   cursor: 'pointer',
                   transition: 'color 0.2s ease',
                 }}
-                onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(17,26,16,0.7)' }}
-                onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(17,26,16,0.38)' }}
+                onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(245,240,232,0.75)' }}
+                onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(245,240,232,0.35)' }}
               >
-                {/* Mobile: short label */}
-                <span className="inline md:hidden">{tab.short}</span>
-                {/* Desktop: full label */}
-                <span className="hidden md:inline">{tab.label}</span>
+                <span style={{ display: 'inline' }}>{tab.short}</span>
 
                 {isActive && (
                   <motion.div
@@ -91,11 +90,10 @@ export default function TabNav({ activeTab, onTabChange }) {
                 )}
               </button>
 
-              {/* Dot separator between tabs */}
               {index < TABS.length - 1 && (
                 <span
                   style={{
-                    color: 'rgba(17,26,16,0.15)',
+                    color: 'rgba(245,240,232,0.12)',
                     fontSize: '0.45rem',
                     flexShrink: 0,
                     userSelect: 'none',

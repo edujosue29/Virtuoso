@@ -315,6 +315,19 @@ export const PROPERTIES = [
     ],
     videoSrc: '/videos/carpintera.mp4',
 
+    // ── Imágenes por sección (banners editoriales) ─────────────────────────
+    sectionImages: {
+      technical:  '/images/carpintera/IMG_3024.jpg',
+      flora:      '/images/nature/zdenek-machacek-HKUXTajl8Is-unsplash.jpg',
+      memory:     '/images/nature/a-chosen-soul-SxQ9fZq3uQ0-unsplash.jpg',
+      prosperity: '/images/carpintera/IMG_3028.jpg',
+      ancestral:  '/images/nature/casey-horner-4rDCa5hBlCs-unsplash.jpg',
+      pulse:      '/images/carpintera/IMG_3036.jpg',
+      index:      '/images/nature/ales-krivec-h7bNiN2AzNM-unsplash.jpg',
+      legacy:     '/images/carpintera/IMG_3043.jpg',
+      gallery:    '/images/carpintera/foto-2.jpg',
+    },
+
     // ── Ubicación ──────────────────────────────────────────────────────────
     coordinates: {
       lat: 9.8972,
@@ -445,13 +458,13 @@ export const PROPERTIES = [
     // ── Prosperidad ────────────────────────────────────────────────────────
     prosperity: {
       description:
-        'Ubicación estratégica a 22 km de San José y 12 km de Cartago, en zona protegida no urbanizable. Alta plusvalía sostenida, ahorro operativo total (agua y energía propias), exenciones fiscales bajo Ley Forestal 7575 y elegibilidad para PSA de FONAFIFO. El perfil ideal para retiro ejecutivo de alto valor, ecoturismo de lujo o sede institucional con vocación ambiental.',
+        'La Carpintera es un ecosistema de bosque nuboso en proceso activo de restauración — transformado de ganadería erosiva a santuario vivo en menos de una década. Su adquisición implica asumir la custodia de un corredor biológico irreemplazable a las puertas de la Gran Área Metropolitana. No es una inversión. Es un compromiso con la tierra.',
       indicators: [
-        { label: 'Plusvalía en Zona Protegida',         value: 95 },
-        { label: 'Ahorro Operativo (agua + energía)',   value: 92 },
-        { label: 'Conectividad con GAM',                value: 94 },
-        { label: 'Potencial Ecoturístico',              value: 85 },
-        { label: 'Impacto Comunitario',                 value: 80 },
+        { value: '21.9',   unit: 'ha',            label: 'Bosque protegido',   note: 'Zona Protectora SINAC/MINAE — uso estrictamente regulado por el PGM' },
+        { value: '250+',   unit: 'especies',       label: 'Aves registradas',   note: 'Lista eBird L854298 · presencia confirmada de Quetzal y Puma' },
+        { value: '2',      unit: 'nacientes',      label: 'Agua propia',        note: 'Permisos MINAE activos · agua de montaña sin tratamiento químico' },
+        { value: '~10',    unit: 'años',           label: 'Restauración',       note: 'Ganadería detenida desde 2015 — bosque en recuperación activa' },
+        { value: '0',      unit: 'proyectos',      label: 'Sin urbanizar',      note: 'Zona no urbanizable de forma permanente · ZPCC protege el corredor' },
       ],
       issues: [
         {

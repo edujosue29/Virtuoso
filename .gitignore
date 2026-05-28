@@ -12,8 +12,25 @@ multimedia/
 *.xlsx
 *.xls
 
-# Unused stock nature images (only referenced ones are tracked)
+# Stock nature images — exclude all except specifically referenced ones
 public/images/nature/
+!public/images/nature/dario-bronnimann-fWBZ9r4vO9M-unsplash.jpg
+!public/images/nature/dario-bronnimann-osI_sT8d-Ig-unsplash.jpg
+!public/images/nature/clement-m-igX2deuD9lc-unsplash.jpg
+!public/images/nature/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg
+!public/images/nature/marc-serota-6z3B_REO-xM-unsplash.jpg
+!public/images/nature/marc-serota-8SlGLcMDJ78-unsplash.jpg
+!public/images/nature/marc-serota-iRWEzx3xkTI-unsplash.jpg
+!public/images/nature/giulia-squillace-OiKL-Ye00Q4-unsplash.jpg
+!public/images/nature/giulia-squillace-ZsZaQdGVD0Q-unsplash.jpg
+!public/images/nature/giulia-squillace-_b-blgbLJhw-unsplash.jpg
+!public/images/nature/goutham-krishna-h5wvMCdOV3w-unsplash.jpg
+!public/images/nature/max-saeling-ef0sXQtnCYU-unsplash.jpg
+!public/images/nature/abhi-verma-2KieNaLrmDw-unsplash.jpg
+!public/images/nature/abhi-verma-DSaL_3YwLu8-unsplash.jpg
+!public/images/nature/zdenek-machacek-jNZV4o7zay4-unsplash.jpg
+!public/images/nature/zdenek-machacek-iEy05HTiamo-unsplash.jpg
+!public/images/nature/zdenek-machacek-VPcKMnBJanI-unsplash.jpg
 
 # macOS
 .DS_Store
@@ -35,3 +52,4 @@ public/images/nature/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vercel
