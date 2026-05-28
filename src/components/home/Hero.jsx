@@ -34,7 +34,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(180deg, rgba(49,87,44,0.55) 0%, rgba(49,87,44,0.1) 35%, rgba(49,87,44,0.15) 65%, rgba(49,87,44,0.75) 100%)',
+            'linear-gradient(180deg, rgba(23,60,28,0.55) 0%, rgba(23,60,28,0.1) 35%, rgba(23,60,28,0.15) 65%, rgba(23,60,28,0.75) 100%)',
         }}
       />
       {/* Subtle green radial center glow */}

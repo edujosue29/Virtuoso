@@ -8,11 +8,11 @@ export default function CustodyLegacy({ property, dark }) {
   const pullQuote = dotIdx > -1 ? legacy.message.slice(0, dotIdx + 1) : legacy.message
   const bodyText = dotIdx > -1 ? legacy.message.slice(dotIdx + 1).trim() : ''
 
-  const textMain    = dark ? '#f5f0e8'                 : '#31572C'
-  const quoteColor  = dark ? 'rgba(245,240,232,0.8)'   : 'rgba(49,87,44,0.75)'
-  const bodyColor   = dark ? 'rgba(245,240,232,0.72)'  : '#31572C'
-  const attrColor   = dark ? 'rgba(245,240,232,0.35)'  : 'rgba(49,87,44,0.35)'
-  const ctaColor    = dark ? 'rgba(245,240,232,0.45)'  : 'rgba(49,87,44,0.38)'
+  const textMain    = dark ? '#f5f0e8'                 : '#173C1C'
+  const quoteColor  = dark ? 'rgba(245,240,232,0.8)'   : 'rgba(23,60,28,0.75)'
+  const bodyColor   = dark ? 'rgba(245,240,232,0.72)'  : '#173C1C'
+  const attrColor   = dark ? 'rgba(245,240,232,0.35)'  : 'rgba(23,60,28,0.35)'
+  const ctaColor    = dark ? 'rgba(245,240,232,0.45)'  : 'rgba(23,60,28,0.38)'
   const colRule     = dark ? 'rgba(201,168,76,0.15)'   : 'rgba(201,168,76,0.12)'
 
   // Split legacy title: first word gold, rest adapts

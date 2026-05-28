@@ -76,7 +76,7 @@ export default function VideoHero({ property }) {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(49,87,44,0.2) 0%, rgba(49,87,44,0) 30%, rgba(49,87,44,0.75) 75%, rgba(49,87,44,0.92) 100%)',
+          background: 'linear-gradient(to bottom, rgba(23,60,28,0.2) 0%, rgba(23,60,28,0) 30%, rgba(23,60,28,0.75) 75%, rgba(23,60,28,0.92) 100%)',
           pointerEvents: 'none',
         }}
       />
@@ -228,7 +228,7 @@ export default function VideoHero({ property }) {
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   color: 'rgba(245,240,232,0.75)',
-                  background: 'rgba(49,87,44,0.45)',
+                  background: 'rgba(23,60,28,0.45)',
                   border: '1px solid rgba(245,240,232,0.14)',
                   backdropFilter: 'blur(6px)',
                 }}
@@ -257,7 +257,7 @@ export default function VideoHero({ property }) {
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 color: '#c9a84c',
-                background: 'rgba(49,87,44,0.55)',
+                background: 'rgba(23,60,28,0.55)',
                 border: '1px solid rgba(201,168,76,0.22)',
                 backdropFilter: 'blur(6px)',
               }}

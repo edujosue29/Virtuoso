@@ -7,9 +7,9 @@ function FlipCard({ item, index, dark }) {
   const [flipped, setFlipped] = useState(false)
 
   const frontBg     = dark ? 'rgba(255,255,255,0.05)' : '#ffffff'
-  const frontBorder = dark ? 'rgba(201,168,76,0.15)'  : 'rgba(49,87,44,0.1)'
-  const frontText   = dark ? 'rgba(245,240,232,0.78)' : '#31572C'
-  const hintColor   = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(49,87,44,0.22)'
+  const frontBorder = dark ? 'rgba(201,168,76,0.15)'  : 'rgba(23,60,28,0.1)'
+  const frontText   = dark ? 'rgba(245,240,232,0.78)' : '#173C1C'
+  const hintColor   = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(23,60,28,0.22)'
 
   return (
     <motion.div
@@ -72,7 +72,7 @@ function FlipCard({ item, index, dark }) {
           backfaceVisibility: 'hidden',
           transform: 'rotateY(180deg)',
           padding: '1.75rem',
-          background: '#31572C',
+          background: '#173C1C',
           border: '1px solid rgba(201,168,76,0.18)',
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
         }}>
@@ -109,15 +109,15 @@ export default function LocalProsperity({ property, dark }) {
   const { prosperity, sectionImages } = property
   const img = sectionImages?.prosperity || CONSERVATION_IMAGE
 
-  const textMain    = dark ? '#f5f0e8'                : '#31572C'
+  const textMain    = dark ? '#f5f0e8'                : '#173C1C'
   const statCardBg  = dark ? 'rgba(255,255,255,0.04)' : '#ffffff'
-  const statVal     = dark ? '#f5f0e8'                : '#31572C'
-  const statNote    = dark ? 'rgba(245,240,232,0.38)' : 'rgba(49,87,44,0.36)'
-  const statUnit    = dark ? 'rgba(245,240,232,0.35)' : 'rgba(49,87,44,0.32)'
+  const statVal     = dark ? '#f5f0e8'                : '#173C1C'
+  const statNote    = dark ? 'rgba(245,240,232,0.38)' : 'rgba(23,60,28,0.36)'
+  const statUnit    = dark ? 'rgba(245,240,232,0.35)' : 'rgba(23,60,28,0.32)'
   const flipFrontBg = dark ? 'rgba(255,255,255,0.05)' : '#ffffff'
-  const flipFrontBorder = dark ? 'rgba(201,168,76,0.15)' : 'rgba(49,87,44,0.1)'
-  const flipFrontText   = dark ? 'rgba(245,240,232,0.78)' : '#31572C'
-  const flipHint        = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(49,87,44,0.22)'
+  const flipFrontBorder = dark ? 'rgba(201,168,76,0.15)' : 'rgba(23,60,28,0.1)'
+  const flipFrontText   = dark ? 'rgba(245,240,232,0.78)' : '#173C1C'
+  const flipHint        = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(23,60,28,0.22)'
   const gridBg          = dark ? 'rgba(201,168,76,0.08)'  : 'rgba(201,168,76,0.1)'
   const gridBorder      = dark ? 'rgba(201,168,76,0.08)'  : 'rgba(201,168,76,0.1)'
 
@@ -177,7 +177,7 @@ export default function LocalProsperity({ property, dark }) {
           {/* Subtle dark overlay */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(135deg, rgba(49,87,44,0.4) 0%, rgba(49,87,44,0.1) 100%)',
+            background: 'linear-gradient(135deg, rgba(23,60,28,0.4) 0%, rgba(23,60,28,0.1) 100%)',
           }} />
           {/* Caption bottom */}
           <div style={{
@@ -195,7 +195,7 @@ export default function LocalProsperity({ property, dark }) {
 
         {/* Right — description + context */}
         <div style={{
-          background: '#31572C',
+          background: '#173C1C',
           padding: '3rem 2.5rem',
           display: 'flex', flexDirection: 'column', justifyContent: 'center',
           gap: '1.5rem',

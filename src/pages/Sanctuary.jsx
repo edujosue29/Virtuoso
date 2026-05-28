@@ -27,8 +27,8 @@ const TAB_COMPONENTS = {
 
 const CONTENT_TABS = TABS.filter((t) => t.id !== 'gallery')
 
-// Alternating dark / light sections — dark = #31572C (deep forest), light = #ffffff
-const SECTION_BG   = ['#ffffff', '#31572C', '#ffffff', '#31572C', '#ffffff', '#31572C', '#ffffff', '#31572C']
+// Alternating dark / light sections — dark = #173C1C (deep forest), light = #ffffff
+const SECTION_BG   = ['#ffffff', '#173C1C', '#ffffff', '#173C1C', '#ffffff', '#173C1C', '#ffffff', '#173C1C']
 const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true    ]
 
 // ── Sanctuary page ────────────────────────────────────────────────────────────
@@ -132,7 +132,7 @@ export default function Sanctuary() {
                     const parts = property.name.split(' ')
                     return <>
                       <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-                      {parts.length > 1 && <span style={{ color: '#31572C' }}> {parts.slice(1).join(' ')}</span>}
+                      {parts.length > 1 && <span style={{ color: '#173C1C' }}> {parts.slice(1).join(' ')}</span>}
                     </>
                   })()}
                 </h3>
@@ -153,7 +153,7 @@ export default function Sanctuary() {
 
       {/* Footer */}
       <div style={{
-        background: '#31572C', padding: '4rem 0', textAlign: 'center',
+        background: '#173C1C', padding: '4rem 0', textAlign: 'center',
       }}>
         <div style={{ marginBottom: '1.25rem' }}>
           <img

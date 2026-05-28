@@ -49,7 +49,7 @@ export default function ImageGallery({ images, title }) {
             {/* Hover overlay */}
             <div
               className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{ background: 'rgba(49,87,44,0.35)' }}
+              style={{ background: 'rgba(23,60,28,0.35)' }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round"/>
@@ -59,7 +59,7 @@ export default function ImageGallery({ images, title }) {
             {i === 8 && images.length > 9 && (
               <div
                 className="absolute inset-0 flex flex-col items-center justify-center"
-                style={{ background: 'rgba(49,87,44,0.72)' }}
+                style={{ background: 'rgba(23,60,28,0.72)' }}
               >
                 <span
                   style={{
@@ -96,7 +96,7 @@ export default function ImageGallery({ images, title }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-50 flex items-center justify-center"
-            style={{ background: 'rgba(49,87,44,0.95)', backdropFilter: 'blur(12px)' }}
+            style={{ background: 'rgba(23,60,28,0.95)', backdropFilter: 'blur(12px)' }}
             onClick={close}
           >
             {/* Image */}

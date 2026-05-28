@@ -36,12 +36,12 @@ function Tab({ label, isActive, onClick }) {
         fontSize: '0.65rem',
         letterSpacing: '0.22em',
         textTransform: 'uppercase',
-        color: isActive ? '#31572C' : 'rgba(49,87,44,0.35)',
+        color: isActive ? '#173C1C' : 'rgba(23,60,28,0.35)',
         fontWeight: isActive ? 500 : 400,
         transition: 'color 0.2s ease',
       }}
-      onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(49,87,44,0.65)' }}
-      onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(49,87,44,0.35)' }}
+      onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(23,60,28,0.65)' }}
+      onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(23,60,28,0.35)' }}
     >
       {label}
       {isActive && (

@@ -30,14 +30,14 @@ export default function FloraFauna({ property, dark }) {
   const col = STATUS_COLOR[featured.type] ?? STATUS_COLOR.fauna
 
   // Dark/light adaptive tokens
-  const textMain   = dark ? '#f5f0e8'                 : '#31572C'
-  const textMuted  = dark ? 'rgba(245,240,232,0.65)'  : 'rgba(49,87,44,0.72)'
-  const pillText   = dark ? 'rgba(245,240,232,0.45)'  : 'rgba(49,87,44,0.45)'
-  const pillBorder = dark ? 'rgba(245,240,232,0.14)'  : 'rgba(49,87,44,0.14)'
+  const textMain   = dark ? '#f5f0e8'                 : '#173C1C'
+  const textMuted  = dark ? 'rgba(245,240,232,0.65)'  : 'rgba(23,60,28,0.72)'
+  const pillText   = dark ? 'rgba(245,240,232,0.45)'  : 'rgba(23,60,28,0.45)'
+  const pillBorder = dark ? 'rgba(245,240,232,0.14)'  : 'rgba(23,60,28,0.14)'
   const panelBg    = dark ? 'rgba(255,255,255,0.04)'  : '#ffffff'
   const metaBg     = dark ? 'rgba(201,168,76,0.07)'   : 'rgba(201,168,76,0.04)'
-  const metaVal    = dark ? 'rgba(245,240,232,0.8)'   : '#31572C'
-  const countColor = dark ? 'rgba(245,240,232,0.25)'  : 'rgba(49,87,44,0.25)'
+  const metaVal    = dark ? 'rgba(245,240,232,0.8)'   : '#173C1C'
+  const countColor = dark ? 'rgba(245,240,232,0.25)'  : 'rgba(23,60,28,0.25)'
 
   return (
     <div>
@@ -73,7 +73,7 @@ export default function FloraFauna({ property, dark }) {
                 fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
                 letterSpacing: '0.18em', textTransform: 'uppercase',
                 padding: '0.45rem 1.1rem', borderRadius: 999, cursor: 'pointer',
-                color: filter === f.id ? '#31572C' : pillText,
+                color: filter === f.id ? '#173C1C' : pillText,
                 background: filter === f.id ? 'linear-gradient(135deg,#c9a84c,#e8c96e)' : 'transparent',
                 border: `1px solid ${filter === f.id ? 'transparent' : pillBorder}`,
                 transition: 'all 0.2s ease',
@@ -116,7 +116,7 @@ export default function FloraFauna({ property, dark }) {
           {/* Gradient overlay */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to top, rgba(49,87,44,0.88) 0%, rgba(49,87,44,0.1) 55%)',
+            background: 'linear-gradient(to top, rgba(23,60,28,0.88) 0%, rgba(23,60,28,0.1) 55%)',
           }} />
 
           {/* Name + scientific overlaid bottom-left */}
@@ -251,7 +251,7 @@ export default function FloraFauna({ property, dark }) {
               {!isActive && (
                 <div style={{
                   position: 'absolute', inset: 0,
-                  background: 'rgba(49,87,44,0.18)',
+                  background: 'rgba(23,60,28,0.18)',
                 }} />
               )}
             </button>
