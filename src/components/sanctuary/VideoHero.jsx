@@ -1,7 +1,20 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
+function deriveTechStats(property) {
+  const t = property.technical || {}
+  const area      = t.area?.split('(')[0]?.split(',')[0]?.trim() ?? ''
+  const elevation = t.elevation?.split('·')[0]?.replace(/^Finca \d+:\s*/i, '').trim() ?? ''
+  const z = (t.zoning || '').toLowerCase()
+  const zoning = z.includes('sinac') || z.includes('zpcc') ? 'SINAC · ZPCC'
+    : z.includes('unesco') ? 'UNESCO · Patrimonio'
+    : z.includes('ramsar') ? 'Ramsar'
+    : t.zoning?.split('—')[0]?.trim() ?? ''
+  return [area, elevation, zoning].filter(Boolean)
+}
+
 export default function VideoHero({ property }) {
+  const techStats = deriveTechStats(property)
   const videoRef = useRef(null)
   const [muted, setMuted] = useState(true)
 
@@ -190,11 +203,41 @@ export default function VideoHero({ property }) {
             color: 'rgba(245,240,232,0.52)',
             lineHeight: 1.5,
             maxWidth: 520,
-            marginBottom: '0.9rem',
+            marginBottom: '0.75rem',
           }}
         >
           {property.tagline}
         </motion.p>
+
+        {/* Area · Elevation · Zoning */}
+        {techStats.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.48 }}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.75rem' }}
+          >
+            {techStats.map((stat) => (
+              <span
+                key={stat}
+                style={{
+                  padding: '0.22rem 0.75rem',
+                  borderRadius: 999,
+                  fontFamily: '"DM Sans", Inter, sans-serif',
+                  fontSize: '0.6rem',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(245,240,232,0.75)',
+                  background: 'rgba(5,13,5,0.45)',
+                  border: '1px solid rgba(245,240,232,0.14)',
+                  backdropFilter: 'blur(6px)',
+                }}
+              >
+                {stat}
+              </span>
+            ))}
+          </motion.div>
+        )}
 
         {/* Energy tags */}
         <motion.div

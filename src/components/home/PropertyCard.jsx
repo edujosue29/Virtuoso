@@ -105,25 +105,6 @@ export default function PropertyCard({ property, index }) {
             {property.tagline}
           </p>
 
-          {/* Stats row */}
-          <div style={{
-            display: 'flex', flexWrap: 'wrap', gap: '0.5rem',
-            marginBottom: '1.75rem',
-          }}>
-            {[area, elevation].filter(Boolean).map((val, i) => (
-              <span key={i} style={{
-                padding: '0.3rem 0.85rem',
-                background: 'rgba(17,26,16,0.04)',
-                border: '1px solid rgba(17,26,16,0.08)',
-                borderRadius: 999,
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '0.88rem', color: '#111a10',
-              }}>
-                {val}
-              </span>
-            ))}
-          </div>
-
           {/* Description */}
           <p style={{
             fontFamily: '"DM Sans", Inter, sans-serif',
