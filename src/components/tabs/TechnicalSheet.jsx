@@ -177,20 +177,6 @@ export default function TechnicalSheet({ property }) {
         </motion.button>
       </div>
 
-      {/* ── Hero stat cards — 3 across ────────────────────────────────────── */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1px',
-        background: 'rgba(201,168,76,0.1)',
-        border: '1px solid rgba(201,168,76,0.1)',
-        marginBottom: '4rem',
-      }}>
-        {heroStats.map((stat, i) => (
-          <StatCard key={stat.label} {...stat} delay={i * 0.1} />
-        ))}
-      </div>
-
       {/* ── Detailed specs list ──────────────────────────────────────────── */}
       <div style={{ borderTop: '1px solid rgba(17,26,16,0.06)' }}>
         {specs.map((row, i) => (
