@@ -131,51 +131,26 @@ export default function TechnicalSheet({ property }) {
         Ficha de Rigor Técnico
       </motion.p>
 
-      {/* Property name + download CTA */}
-      <div style={{
-        display: 'flex', alignItems: 'flex-start',
-        justifyContent: 'space-between', flexWrap: 'wrap',
-        gap: '1.5rem', marginBottom: '3.5rem',
-      }}>
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          style={{
-            fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-            fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-            fontWeight: 400, lineHeight: 1.05, margin: 0,
-          }}
-        >
-          {(() => {
-            const parts = name.split(' ')
-            return <>
-              <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-              {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
-            </>
-          })()}
-        </motion.h2>
-
-        <motion.button
-          onClick={handleDownload}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          style={{
-            display: 'flex', alignItems: 'center', gap: '0.6rem',
-            padding: '0.9rem 2rem',
-            background: 'linear-gradient(135deg, #c9a84c, #e8c96e)',
-            color: '#ffffff', border: 'none', borderRadius: 2, cursor: 'pointer',
-            fontFamily: 'Inter, sans-serif', fontSize: '0.65rem',
-            fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase',
-          }}
-        >
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-            <path d="M8 12L3 7h3.5V2h3v5H13L8 12zM2 14h12v1.5H2V14z" fill="currentColor"/>
-          </svg>
-          Descargar PDF
-        </motion.button>
-      </div>
+      {/* Property name */}
+      <motion.h2
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.05 }}
+        style={{
+          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+          fontWeight: 400, lineHeight: 1.05, margin: '0 0 3.5rem',
+        }}
+      >
+        {(() => {
+          const parts = name.split(' ')
+          return <>
+            <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
+            {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
+          </>
+        })()}
+      </motion.h2>
 
       {/* ── Detailed specs list ──────────────────────────────────────────── */}
       <div style={{ borderTop: '1px solid rgba(17,26,16,0.06)' }}>
@@ -194,6 +169,34 @@ export default function TechnicalSheet({ property }) {
         <br />
         Virtus Real Estate · VIRTUOSO — {new Date().getFullYear()}
       </p>
+
+      {/* Download CTA — below table */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}
+      >
+        <motion.button
+          onClick={handleDownload}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          style={{
+            display: 'flex', alignItems: 'center', gap: '0.6rem',
+            padding: '0.9rem 2.5rem',
+            background: 'linear-gradient(135deg, #c9a84c, #e8c96e)',
+            color: '#ffffff', border: 'none', borderRadius: 999, cursor: 'pointer',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+            fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase',
+          }}
+        >
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+            <path d="M8 12L3 7h3.5V2h3v5H13L8 12zM2 14h12v1.5H2V14z" fill="currentColor"/>
+          </svg>
+          Descargar PDF
+        </motion.button>
+      </motion.div>
     </div>
   )
 }
