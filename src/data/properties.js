@@ -45,7 +45,7 @@ export const PROPERTIES = [
       'Casi 600 hectáreas de bosque primario y secundario en el Corredor Biológico La Amistad Pacífico Sur, declarado Patrimonio de la Humanidad por la UNESCO. Nacientes propias con convenio de abastecimiento a comunidades, acceso directo desde la Ruta Interamericana y potencial agroforestal activo.',
 
     // ── Imágenes reales ────────────────────────────────────────────────────
-    image:   '/images/pz/pz-1.jpg',
+    image:   '/images/pz/PZ1.jpg',
     gallery: [
       '/images/pz/pz-1.jpg',
       '/images/pz/pz-3.jpg',
@@ -299,7 +299,7 @@ export const PROPERTIES = [
     description:
       'Dos fincas contiguas de ~21.9 ha totales en los Cerros de La Carpintera, Tres Ríos, Cartago. Zona Protectora oficial bajo SINAC/MINAE con Plan General de Manejo aprobado. Bosque nuboso con 250+ especies de aves, Quetzal, osos perezosos, puma y orquídeas endémicas. Energía solar (Starlink), naciente propia y acceso asfaltado a 22 km de San José.',
     // ── Imágenes reales ────────────────────────────────────────────────────
-    image:   '/images/carpintera/foto-1.jpg',
+    image:   '/images/carpintera/C1.jpeg',
     gallery: [
       '/images/carpintera/foto-1.jpg',
       '/images/carpintera/foto-2.jpg',
