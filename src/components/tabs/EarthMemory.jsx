@@ -51,7 +51,7 @@ function Chapter({ event, index }) {
           <h3 style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)',
-            fontWeight: 300, color: '#173C1C',
+            fontWeight: 300, color: '#111a10',
             lineHeight: 1.15, marginBottom: '0.6rem',
           }}>
             {event.title}
@@ -60,7 +60,7 @@ function Chapter({ event, index }) {
           <p style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: '1.02rem', fontWeight: 300,
-            color: 'rgba(23,60,28,0.6)', lineHeight: 1.8,
+            color: 'rgba(17,26,16,0.6)', lineHeight: 1.8,
           }}>
             {event.description}
           </p>
@@ -111,7 +111,7 @@ export default function EarthMemory({ property }) {
         }}
       >
         <span style={{ color: '#c9a84c' }}>Historia</span>
-        <span style={{ color: '#173C1C' }}> Viva de {name}</span>
+        <span style={{ color: '#111a10' }}> Viva de {name}</span>
       </motion.h2>
 
       <div>
@@ -123,7 +123,7 @@ export default function EarthMemory({ property }) {
       <div style={{ height: 1, background: 'rgba(201,168,76,0.15)', marginTop: '0.5rem', marginBottom: '2rem' }} />
       <p style={{
         fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-        fontSize: '0.95rem', color: 'rgba(23,60,28,0.28)',
+        fontSize: '0.95rem', color: 'rgba(17,26,16,0.28)',
         lineHeight: 1.75, textAlign: 'center',
         maxWidth: 480, margin: '0 auto',
       }}>

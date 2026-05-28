@@ -94,13 +94,13 @@ function RingGauge({ score, label, icon, isActive, onClick }) {
           <span style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: '1.6rem', fontWeight: 300,
-            color: isActive ? '#c9a84c' : '#173C1C',
+            color: isActive ? '#c9a84c' : '#111a10',
             lineHeight: 1, transition: 'color 0.25s',
           }}>
             {score}
           </span>
           <span style={{
-            color: isActive ? '#c9a84c' : 'rgba(23,60,28,0.35)',
+            color: isActive ? '#c9a84c' : 'rgba(17,26,16,0.35)',
             transition: 'color 0.25s',
           }}>
             {icon}
@@ -111,7 +111,7 @@ function RingGauge({ score, label, icon, isActive, onClick }) {
       <span style={{
         fontFamily: '"Cormorant Garamond", serif',
         fontSize: '0.95rem', fontWeight: 300,
-        color: isActive ? '#173C1C' : 'rgba(23,60,28,0.55)',
+        color: isActive ? '#111a10' : 'rgba(17,26,16,0.55)',
         letterSpacing: '0.02em', transition: 'color 0.25s',
       }}>
         {label}
@@ -158,7 +158,7 @@ export default function VirtuosoIndex({ property }) {
           }}
         >
           <span style={{ color: '#c9a84c' }}>Índice</span>
-          <span style={{ color: '#173C1C' }}> Virtuoso</span>
+          <span style={{ color: '#111a10' }}> Virtuoso</span>
         </motion.h2>
 
         {/* Global avg */}
@@ -223,7 +223,7 @@ export default function VirtuosoIndex({ property }) {
           position: 'absolute', bottom: 10, left: 0, right: 0, textAlign: 'center',
           fontFamily: 'Inter, sans-serif', fontSize: '0.54rem',
           letterSpacing: '0.14em', textTransform: 'uppercase',
-          color: 'rgba(23,60,28,0.22)',
+          color: 'rgba(17,26,16,0.22)',
         }}>
           Selecciona un pilar para leer su análisis
         </p>
@@ -253,21 +253,21 @@ export default function VirtuosoIndex({ property }) {
                   gridTemplateColumns: '1fr auto auto',
                   alignItems: 'center', gap: '2rem',
                   padding: '1.75rem 2rem',
-                  background: isOpen ? 'rgba(23,60,28,0.025)' : '#ffffff',
+                  background: isOpen ? 'rgba(17,26,16,0.025)' : '#ffffff',
                   border: 'none', cursor: 'pointer', textAlign: 'left',
                   transition: 'background 0.3s ease',
                   borderLeft: isOpen ? '3px solid #c9a84c' : '3px solid transparent',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span style={{ color: isOpen ? '#c9a84c' : 'rgba(23,60,28,0.3)', transition: 'color 0.25s' }}>
+                  <span style={{ color: isOpen ? '#c9a84c' : 'rgba(17,26,16,0.3)', transition: 'color 0.25s' }}>
                     {pillar.icon}
                   </span>
                   <span style={{
                     fontFamily: '"Cormorant Garamond", serif',
                     fontSize: 'clamp(1.1rem, 2vw, 1.6rem)',
                     fontWeight: 300,
-                    color: isOpen ? '#173C1C' : 'rgba(23,60,28,0.6)',
+                    color: isOpen ? '#111a10' : 'rgba(17,26,16,0.6)',
                     transition: 'color 0.25s',
                   }}>
                     {pillar.label}
@@ -286,7 +286,7 @@ export default function VirtuosoIndex({ property }) {
                   <span style={{
                     fontFamily: 'Inter, sans-serif', fontSize: '0.56rem',
                     letterSpacing: '0.14em', textTransform: 'uppercase',
-                    color: isOpen ? '#c9a84c' : 'rgba(23,60,28,0.22)',
+                    color: isOpen ? '#c9a84c' : 'rgba(17,26,16,0.22)',
                     transition: 'color 0.25s',
                   }}>
                     {isOpen ? 'Cerrar' : 'Leer'}
@@ -313,13 +313,13 @@ export default function VirtuosoIndex({ property }) {
                     <div style={{
                       padding: '0 2rem 2rem',
                       paddingLeft: 'calc(2rem + 18px + 1rem + 3px)',
-                      background: 'rgba(23,60,28,0.025)',
+                      background: 'rgba(17,26,16,0.025)',
                       borderLeft: '3px solid #c9a84c',
                     }}>
                       <p style={{
                         fontFamily: '"Cormorant Garamond", serif',
                         fontSize: '1.02rem', fontWeight: 300,
-                        color: 'rgba(23,60,28,0.65)', lineHeight: 1.9,
+                        color: 'rgba(17,26,16,0.65)', lineHeight: 1.9,
                         maxWidth: 680,
                       }}>
                         {desc}
@@ -335,7 +335,7 @@ export default function VirtuosoIndex({ property }) {
 
       <p style={{
         marginTop: '1.75rem', fontFamily: 'Inter, sans-serif', fontSize: '0.56rem',
-        color: 'rgba(23,60,28,0.2)', lineHeight: 1.8, textAlign: 'center',
+        color: 'rgba(17,26,16,0.2)', lineHeight: 1.8, textAlign: 'center',
         letterSpacing: '0.06em',
       }}>
         El Índice Virtuoso es una metodología propietaria de Virtus Real Estate para la evaluación holística de propiedades de alto valor natural.

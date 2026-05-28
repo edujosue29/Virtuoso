@@ -6,9 +6,9 @@
   --color-gold:        #c9a84c;
   --color-gold-light:  #e8c96e;
   --color-gold-dim:    rgba(201,168,76,0.15);
-  --color-forest:      #173C1C;
-  --color-forest-mid:  #173C1C;
-  --color-forest-card: rgba(23,60,28,0.85);
+  --color-forest:      #050d05;
+  --color-forest-mid:  #0a1a0a;
+  --color-forest-card: rgba(10,25,10,0.85);
   --color-cream:       #f5f0e8;
   --color-muted:       #a09880;
   --font-display:      "Playfair Display", "Cormorant Garamond", Georgia, serif;
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: #173C1C;
+  background-color: #050d05;
   color: #f5f0e8;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #173C1C; }
+::-webkit-scrollbar-track { background: #050d05; }
 ::-webkit-scrollbar-thumb { background: #c9a84c44; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #c9a84c88; }
 
@@ -48,7 +48,7 @@ body {
 
 /* Glass card */
 .glass {
-  background: rgba(23, 60, 28, 0.7);
+  background: rgba(10, 25, 10, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(201, 168, 76, 0.15);
