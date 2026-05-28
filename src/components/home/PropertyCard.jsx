@@ -41,7 +41,7 @@ export default function PropertyCard({ property, index }) {
         overflow: 'hidden',
         background: '#ffffff',
         cursor: 'pointer',
-        boxShadow: '0 4px 32px rgba(17,26,16,0.09), 0 1px 4px rgba(17,26,16,0.06)',
+        boxShadow: '0 4px 32px rgba(49,87,44,0.09), 0 1px 4px rgba(49,87,44,0.06)',
         display: 'grid',
         gridTemplateColumns: index % 2 === 0 ? '52% 48%' : '48% 52%',
       }}
@@ -79,7 +79,7 @@ export default function PropertyCard({ property, index }) {
           <p style={{
             fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
             letterSpacing: '0.25em', textTransform: 'uppercase',
-            color: 'rgba(17,26,16,0.38)', marginBottom: '0.6rem',
+            color: 'rgba(49,87,44,0.38)', marginBottom: '0.6rem',
           }}>
             {property.sanctuaryName?.split('—')[0]?.trim()}
           </p>
@@ -92,14 +92,14 @@ export default function PropertyCard({ property, index }) {
             marginBottom: '1rem', letterSpacing: '-0.02em',
           }}>
             <span style={{ color: '#c9a84c' }}>{nameFirst}</span>
-            {nameRest && <span style={{ color: '#111a10' }}> {nameRest}</span>}
+            {nameRest && <span style={{ color: '#31572C' }}> {nameRest}</span>}
           </h2>
 
           {/* Tagline */}
           <p style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
             fontSize: '1.05rem', fontWeight: 300,
-            color: 'rgba(17,26,16,0.45)', lineHeight: 1.6,
+            color: 'rgba(49,87,44,0.45)', lineHeight: 1.6,
             marginBottom: '1.75rem',
           }}>
             {property.tagline}
@@ -109,7 +109,7 @@ export default function PropertyCard({ property, index }) {
           <p style={{
             fontFamily: '"DM Sans", Inter, sans-serif',
             fontSize: '0.82rem', fontWeight: 300,
-            color: 'rgba(17,26,16,0.5)', lineHeight: 1.9,
+            color: 'rgba(49,87,44,0.5)', lineHeight: 1.9,
             display: '-webkit-box',
             WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
@@ -123,7 +123,7 @@ export default function PropertyCard({ property, index }) {
           display: 'flex', gap: '0.75rem', flexWrap: 'wrap',
           marginTop: '2rem',
           paddingTop: '1.5rem',
-          borderTop: '1px solid rgba(17,26,16,0.07)',
+          borderTop: '1px solid rgba(49,87,44,0.07)',
         }}>
           <motion.button
             onClick={handleDownload}
@@ -133,9 +133,9 @@ export default function PropertyCard({ property, index }) {
               fontFamily: '"DM Sans", Inter, sans-serif',
               fontSize: '0.6rem', letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'rgba(17,26,16,0.45)',
+              color: 'rgba(49,87,44,0.45)',
               background: 'transparent',
-              border: '1px solid rgba(17,26,16,0.15)',
+              border: '1px solid rgba(49,87,44,0.15)',
               borderRadius: 999,
               padding: '0.65rem 1.25rem',
               cursor: 'pointer',
@@ -157,7 +157,7 @@ export default function PropertyCard({ property, index }) {
               fontSize: '0.6rem', letterSpacing: '0.18em',
               textTransform: 'uppercase',
               color: '#ffffff',
-              background: 'linear-gradient(135deg, #111a10, #1e3018)',
+              background: 'linear-gradient(135deg, #31572C, #3d6b35)',
               border: 'none', borderRadius: 999,
               padding: '0.65rem 1.5rem',
               cursor: 'pointer', fontWeight: 500,
@@ -198,14 +198,14 @@ function ImagePanel({ property }) {
       {/* Gradient */}
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to bottom, rgba(5,13,5,0.05) 0%, rgba(5,13,5,0.55) 100%)',
+        background: 'linear-gradient(to bottom, rgba(49,87,44,0.05) 0%, rgba(49,87,44,0.55) 100%)',
       }} />
       {/* Location badge */}
       <div style={{
         position: 'absolute', bottom: '1.5rem', left: '1.5rem',
         display: 'flex', alignItems: 'center', gap: '0.4rem',
         padding: '0.35rem 0.85rem',
-        background: 'rgba(5,13,5,0.65)',
+        background: 'rgba(49,87,44,0.65)',
         backdropFilter: 'blur(8px)',
         borderRadius: 999,
         border: '1px solid rgba(201,168,76,0.2)',

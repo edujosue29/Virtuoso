@@ -19,7 +19,7 @@ function StatCard({ value, label, sub, delay = 0 }) {
       <span style={{
         fontFamily: '"Cormorant Garamond", serif',
         fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)',
-        fontWeight: 300, color: '#111a10', lineHeight: 1,
+        fontWeight: 300, color: '#31572C', lineHeight: 1,
       }}>
         {value}
       </span>
@@ -33,7 +33,7 @@ function StatCard({ value, label, sub, delay = 0 }) {
       {sub && (
         <span style={{
           fontFamily: '"Cormorant Garamond", serif',
-          fontSize: '0.9rem', color: 'rgba(17,26,16,0.42)',
+          fontSize: '0.9rem', color: 'rgba(49,87,44,0.42)',
           lineHeight: 1.4, marginTop: '0.25rem',
         }}>
           {sub}
@@ -56,7 +56,7 @@ function SpecRow({ label, value, index }) {
         gridTemplateColumns: '190px 1fr',
         gap: '2rem',
         padding: '1.5rem 0',
-        borderBottom: '1px solid rgba(17,26,16,0.06)',
+        borderBottom: '1px solid rgba(49,87,44,0.06)',
         alignItems: 'start',
       }}
     >
@@ -69,7 +69,7 @@ function SpecRow({ label, value, index }) {
       </span>
       <span style={{
         fontFamily: '"Cormorant Garamond", serif',
-        fontSize: '1.05rem', color: '#111a10',
+        fontSize: '1.05rem', color: '#31572C',
         fontWeight: 300, lineHeight: 1.65,
       }}>
         {value}
@@ -152,7 +152,7 @@ export default function TechnicalSheet({ property }) {
             const parts = name.split(' ')
             return <>
               <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-              {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
+              {parts.length > 1 && <span style={{ color: '#31572C' }}> {parts.slice(1).join(' ')}</span>}
             </>
           })()}
         </motion.h2>
@@ -192,7 +192,7 @@ export default function TechnicalSheet({ property }) {
       </div>
 
       {/* ── Detailed specs list ──────────────────────────────────────────── */}
-      <div style={{ borderTop: '1px solid rgba(17,26,16,0.06)' }}>
+      <div style={{ borderTop: '1px solid rgba(49,87,44,0.06)' }}>
         {specs.map((row, i) => (
           <SpecRow key={row.label} label={row.label} value={row.value} index={i} />
         ))}
@@ -201,7 +201,7 @@ export default function TechnicalSheet({ property }) {
       {/* Disclaimer */}
       <p style={{
         marginTop: '3.5rem', fontSize: '0.6rem',
-        color: 'rgba(17,26,16,0.25)', fontFamily: 'Inter, sans-serif',
+        color: 'rgba(49,87,44,0.25)', fontFamily: 'Inter, sans-serif',
         lineHeight: 1.9, textAlign: 'center',
       }}>
         Información basada en registros catastrales y estudios de campo. Sujeta a verificación legal y técnica.

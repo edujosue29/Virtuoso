@@ -6,8 +6,8 @@ const PULSE_IMAGE = '/images/carpintera/IMG_3036.jpg'
 const SIZES = ['1.55rem', '1.05rem', '1.3rem', '0.98rem', '1.45rem', '1.05rem', '1.2rem']
 
 function ActivityItem({ act, index, dark }) {
-  const text     = dark ? 'rgba(245,240,232,0.82)' : '#111a10'
-  const border   = dark ? 'rgba(245,240,232,0.07)'  : 'rgba(17,26,16,0.06)'
+  const text     = dark ? 'rgba(245,240,232,0.82)' : '#31572C'
+  const border   = dark ? 'rgba(245,240,232,0.07)'  : 'rgba(49,87,44,0.06)'
 
   return (
     <motion.div
@@ -46,10 +46,10 @@ export default function CommunityPulse({ property, dark }) {
   const phrases = communityPulse.lifestyle
   const acts    = communityPulse.activities
 
-  const textMain   = dark ? '#f5f0e8'                 : '#111a10'
-  const textStrong = dark ? 'rgba(245,240,232,0.85)'  : 'rgba(17,26,16,0.78)'
-  const textMid    = dark ? 'rgba(245,240,232,0.65)'  : 'rgba(17,26,16,0.52)'
-  const textSoft   = dark ? 'rgba(245,240,232,0.52)'  : 'rgba(17,26,16,0.65)'
+  const textMain   = dark ? '#f5f0e8'                 : '#31572C'
+  const textStrong = dark ? 'rgba(245,240,232,0.85)'  : 'rgba(49,87,44,0.78)'
+  const textMid    = dark ? 'rgba(245,240,232,0.65)'  : 'rgba(49,87,44,0.52)'
+  const textSoft   = dark ? 'rgba(245,240,232,0.52)'  : 'rgba(49,87,44,0.65)'
   const borderCol  = 'rgba(201,168,76,0.12)'
 
   // Three levels of opacity cycling through phrases
@@ -137,7 +137,7 @@ export default function CommunityPulse({ property, dark }) {
           {/* Gradient */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to bottom, rgba(5,13,5,0.1) 0%, rgba(5,13,5,0.55) 100%)',
+            background: 'linear-gradient(to bottom, rgba(49,87,44,0.1) 0%, rgba(49,87,44,0.55) 100%)',
           }} />
           {/* Bottom badge */}
           <div style={{

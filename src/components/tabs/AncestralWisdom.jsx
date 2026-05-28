@@ -31,7 +31,7 @@ export default function AncestralWisdom({ property }) {
           const parts = (ancestral.title || '').split(' ')
           return <>
             <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-            {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
+            {parts.length > 1 && <span style={{ color: '#31572C' }}> {parts.slice(1).join(' ')}</span>}
           </>
         })()}
       </motion.h2>
@@ -65,7 +65,7 @@ export default function AncestralWisdom({ property }) {
           style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
             fontSize: 'clamp(1.3rem, 2.5vw, 1.85rem)',
-            fontWeight: 300, color: 'rgba(17,26,16,0.72)',
+            fontWeight: 300, color: 'rgba(49,87,44,0.72)',
             lineHeight: 1.85, textAlign: 'center',
             maxWidth: 800, margin: '0 auto',
             position: 'relative', zIndex: 1,
@@ -89,7 +89,7 @@ export default function AncestralWisdom({ property }) {
           <span style={{
             fontFamily: 'Inter, sans-serif', fontSize: '0.58rem',
             letterSpacing: '0.2em', textTransform: 'uppercase',
-            color: 'rgba(17,26,16,0.32)',
+            color: 'rgba(49,87,44,0.32)',
           }}>
             Memoria Huetar · La Carpintera
           </span>
@@ -145,7 +145,7 @@ export default function AncestralWisdom({ property }) {
             <h3 style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)',
-              fontWeight: 300, color: '#111a10',
+              fontWeight: 300, color: '#31572C',
               lineHeight: 1.2, marginBottom: '1.25rem',
             }}>
               {item.name}
@@ -154,7 +154,7 @@ export default function AncestralWisdom({ property }) {
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontSize: '1.02rem', fontWeight: 300,
-              color: 'rgba(17,26,16,0.58)', lineHeight: 1.85,
+              color: 'rgba(49,87,44,0.58)', lineHeight: 1.85,
             }}>
               {item.description}
             </p>

@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
 
       {/* ── Properties section — dark forest green ─────────────────── */}
-      <section style={{ background: '#050d05', padding: '6rem 0 7rem' }}>
+      <section style={{ background: '#31572C', padding: '6rem 0 7rem' }}>
 
         {/* Section header */}
         <motion.div
@@ -65,7 +65,7 @@ export default function Home() {
 
       {/* ── Footer ────────────────────────────────────────────────────── */}
       <div style={{
-        background: '#050d05', padding: '3.5rem 0',
+        background: '#31572C', padding: '3.5rem 0',
         textAlign: 'center',
         borderTop: '1px solid rgba(201,168,76,0.1)',
       }}>

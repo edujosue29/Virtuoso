@@ -66,7 +66,7 @@ export default function WeatherWidget({ coordinates, location }) {
       transition={{ duration: 0.6, delay: 0.8 }}
       className="flex flex-col gap-3"
       style={{
-        background: 'rgba(5,13,5,0.55)',
+        background: 'rgba(49,87,44,0.55)',
         backdropFilter: 'blur(20px)',
         border: '1px solid rgba(201,168,76,0.2)',
         borderRadius: 16,

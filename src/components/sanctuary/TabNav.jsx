@@ -28,7 +28,7 @@ export default function TabNav({ activeTab, onTabChange, navRef }) {
       ref={navRef}
       className="sticky top-0 z-50"
       style={{
-        background: 'rgba(5,13,5,0.97)',
+        background: 'rgba(49,87,44,0.97)',
         backdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(201,168,76,0.12)',
         borderTop: 'none',
