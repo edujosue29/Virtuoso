@@ -7,6 +7,9 @@ dist/
 # Local media assets
 multimedia/
 
+# Claude Code internal files
+.claude/
+
 # Sensitive documents
 *.pdf
 *.xlsx
