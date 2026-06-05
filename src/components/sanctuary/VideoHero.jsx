@@ -166,7 +166,6 @@ export default function VideoHero({ property }) {
             </div>
           )}
         </>
-      )
       ) : (
         <motion.div
           style={{
