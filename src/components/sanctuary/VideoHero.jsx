@@ -39,6 +39,7 @@ export default function VideoHero({ property }) {
   const sectionRef = useRef(null)
   // Audio ON by default when there's a video with sound
   const [muted, setMuted] = useState(!property.videoSrc)
+  const [videoReady, setVideoReady] = useState(false)
 
   // ── Fade volume as hero scrolls out — full at 50%+, silent at 10% ────────
   useEffect(() => {
@@ -89,6 +90,10 @@ export default function VideoHero({ property }) {
     }
   }
 
+  const handleCanPlay = () => {
+    setVideoReady(true)
+  }
+
   const sanctuaryLabel = property.sanctuaryName
     ? property.sanctuaryName.split('—')[0].split('·')[0].trim()
     : ''
@@ -109,23 +114,59 @@ export default function VideoHero({ property }) {
     >
       {/* Background — video or image */}
       {property.videoSrc ? (
-        <video
-          ref={videoRef}
-          src={property.videoSrc}
-          poster={property.heroImage}
-          autoPlay
-          muted={false}
-          loop
-          playsInline
-          preload="metadata"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
-        />
+        <>
+          <video
+            ref={videoRef}
+            src={property.videoSrc}
+            poster={property.heroImage}
+            autoPlay
+            muted={false}
+            loop
+            playsInline
+            preload="metadata"
+            onCanPlay={handleCanPlay}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: videoReady ? 1 : 0,
+              transition: 'opacity 0.6s ease-out',
+            }}
+          />
+
+          {/* Placeholder while video loads */}
+          {!videoReady && (
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: `url(${property.heroImage || property.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center 30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 5,
+            }}>
+              {/* Loading spinner */}
+              <div style={{
+                width: 48,
+                height: 48,
+                border: '3px solid rgba(201,168,76,0.3)',
+                borderTop: '3px solid #c9a84c',
+                borderRadius: '50%',
+                animation: 'spin 1s linear infinite',
+              }} />
+              <style>{`
+                @keyframes spin {
+                  to { transform: rotate(360deg); }
+                }
+              `}</style>
+            </div>
+          )}
+        </>
+      )
       ) : (
         <motion.div
           style={{
