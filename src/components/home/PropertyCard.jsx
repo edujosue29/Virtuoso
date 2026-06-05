@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function deriveZoning(property) {
@@ -11,6 +12,7 @@ function deriveZoning(property) {
 
 export default function PropertyCard({ property, index }) {
   const navigate = useNavigate()
+  const [showAnexos, setShowAnexos] = useState(false)
 
   const handleDownload = (e) => {
     e.stopPropagation()
@@ -64,7 +66,7 @@ export default function PropertyCard({ property, index }) {
             background: 'rgba(201,168,76,0.1)',
             border: '1px solid rgba(201,168,76,0.25)',
             borderRadius: 999,
-            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.58rem',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
             letterSpacing: '0.16em', textTransform: 'uppercase',
             color: '#c9a84c', marginBottom: '1.5rem',
           }}>
@@ -77,7 +79,7 @@ export default function PropertyCard({ property, index }) {
 
           {/* Sanctuary name — small gold label */}
           <p style={{
-            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
             letterSpacing: '0.25em', textTransform: 'uppercase',
             color: 'rgba(17,26,16,0.38)', marginBottom: '0.6rem',
           }}>
@@ -100,10 +102,28 @@ export default function PropertyCard({ property, index }) {
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
             fontSize: '1.05rem', fontWeight: 300,
             color: 'rgba(17,26,16,0.45)', lineHeight: 1.6,
-            marginBottom: '1.75rem',
+            marginBottom: '1.25rem',
           }}>
             {property.tagline}
           </p>
+
+          {/* Energy tags */}
+          {property.energy?.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.25rem' }}>
+              {property.energy.map(tag => (
+                <span key={tag} style={{
+                  fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+                  letterSpacing: '0.16em', textTransform: 'uppercase',
+                  color: 'rgba(17,26,16,0.4)',
+                  padding: '0.2rem 0.65rem',
+                  border: '1px solid rgba(17,26,16,0.1)',
+                  borderRadius: 999,
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Description */}
           <p style={{
@@ -131,7 +151,7 @@ export default function PropertyCard({ property, index }) {
             whileTap={{ scale: 0.97 }}
             style={{
               fontFamily: '"DM Sans", Inter, sans-serif',
-              fontSize: '0.6rem', letterSpacing: '0.18em',
+              fontSize: '0.72rem', letterSpacing: '0.18em',
               textTransform: 'uppercase',
               color: 'rgba(17,26,16,0.45)',
               background: 'transparent',
@@ -148,16 +168,91 @@ export default function PropertyCard({ property, index }) {
             Ficha Técnica
           </motion.button>
 
+          {/* Anexos dropdown */}
+          {property.anexos?.length > 0 && (
+            <div style={{ position: 'relative' }}>
+              <motion.button
+                onClick={e => { e.stopPropagation(); setShowAnexos(!showAnexos) }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                style={{
+                  fontFamily: '"DM Sans", Inter, sans-serif',
+                  fontSize: '0.72rem', letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(17,26,16,0.45)',
+                  background: 'transparent',
+                  border: '1px solid rgba(17,26,16,0.15)',
+                  borderRadius: 999,
+                  padding: '0.65rem 1.25rem',
+                  cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 6,
+                }}
+              >
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                </svg>
+                Anexos
+                <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                  <path d={showAnexos ? 'M2 7l3-3 3 3' : 'M2 3l3 3 3-3'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </motion.button>
+
+              {showAnexos && (
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  onClick={e => e.stopPropagation()}
+                  style={{
+                    position: 'absolute', bottom: 'calc(100% + 8px)', left: 0,
+                    background: '#ffffff',
+                    border: '1px solid rgba(17,26,16,0.1)',
+                    borderRadius: 10,
+                    boxShadow: '0 8px 32px rgba(17,26,16,0.12)',
+                    minWidth: 240, zIndex: 50, overflow: 'hidden',
+                  }}
+                >
+                  {property.anexos.map((anexo, i) => (
+                    <a
+                      key={i}
+                      href={anexo.file}
+                      download
+                      style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                        gap: '1rem', padding: '0.85rem 1.1rem',
+                        textDecoration: 'none',
+                        borderBottom: i < property.anexos.length - 1 ? '1px solid rgba(17,26,16,0.06)' : 'none',
+                        transition: 'background 0.15s',
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.background = 'rgba(17,26,16,0.03)'}
+                      onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                    >
+                      <span style={{
+                        fontFamily: '"DM Sans", Inter, sans-serif',
+                        fontSize: '0.72rem', color: '#111a10', lineHeight: 1.3,
+                      }}>
+                        {anexo.label}
+                      </span>
+                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="#c9a84c"/>
+                      </svg>
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+          )}
+
           <motion.button
             onClick={(e) => { e.stopPropagation(); navigate(`/sanctuary/${property.slug}`) }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
             style={{
               fontFamily: '"DM Sans", Inter, sans-serif',
-              fontSize: '0.6rem', letterSpacing: '0.18em',
+              fontSize: '0.72rem', letterSpacing: '0.18em',
               textTransform: 'uppercase',
               color: '#ffffff',
-              background: 'linear-gradient(135deg, #111a10, #1e3018)',
+              background: 'linear-gradient(135deg, #2d4a2b, #3a6038)',
               border: 'none', borderRadius: 999,
               padding: '0.65rem 1.5rem',
               cursor: 'pointer', fontWeight: 500,
@@ -205,7 +300,7 @@ function ImagePanel({ property }) {
         position: 'absolute', bottom: '1.5rem', left: '1.5rem',
         display: 'flex', alignItems: 'center', gap: '0.4rem',
         padding: '0.35rem 0.85rem',
-        background: 'rgba(5,13,5,0.65)',
+        background: 'rgba(45,74,43,0.72)',
         backdropFilter: 'blur(8px)',
         borderRadius: 999,
         border: '1px solid rgba(201,168,76,0.2)',
@@ -214,7 +309,7 @@ function ImagePanel({ property }) {
           <path d="M4 0C1.79 0 0 1.79 0 4c0 3 4 6 4 6s4-3 4-6c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 4 2.5 1.5 1.5 0 0 1 4 5.5z" fill="#c9a84c"/>
         </svg>
         <span style={{
-          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.58rem',
+          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
           color: 'rgba(245,240,232,0.85)', letterSpacing: '0.1em',
           textTransform: 'uppercase',
         }}>

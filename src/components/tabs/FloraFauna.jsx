@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FILTERS = [
@@ -19,6 +19,22 @@ export default function FloraFauna({ property, dark }) {
   const list = property.species.filter((s) => filter === 'all' || s.type === filter)
   const safeIdx = Math.min(selected, list.length - 1)
   const featured = list[safeIdx] ?? list[0]
+
+  // Keyboard navigation for species gallery
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        setSelected(prev => (prev > 0 ? prev - 1 : list.length - 1))
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        setSelected(prev => (prev < list.length - 1 ? prev + 1 : 0))
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [list.length])
 
   const handleFilter = (f) => {
     setFilter(f)
@@ -41,39 +57,58 @@ export default function FloraFauna({ property, dark }) {
 
   return (
     <div>
-      {/* Section label */}
-      <p style={{
-        fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
-        letterSpacing: '0.28em', textTransform: 'uppercase',
-        color: '#c9a84c', marginBottom: '0.9rem',
-      }}>
-        Santuario Vivo
-      </p>
 
-      {/* Title + filters row */}
+      {/* ── Top: heading left + filters right ──────────────────────────── */}
       <div style={{
-        display: 'flex', alignItems: 'flex-end',
-        justifyContent: 'space-between', flexWrap: 'wrap',
-        gap: '1.5rem', marginBottom: '3rem',
+        display: 'grid',
+        gridTemplateColumns: '1fr auto',
+        gap: '3rem',
+        alignItems: 'flex-end',
+        marginBottom: '3rem',
       }}>
-        <h2 style={{
-          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-          fontWeight: 400, lineHeight: 1.05, margin: 0,
-        }}>
-          <span style={{ color: '#c9a84c' }}>Flora</span>
-          <span style={{ color: textMain }}> &amp; Fauna del Santuario</span>
-        </h2>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+              letterSpacing: '0.3em', textTransform: 'uppercase',
+              color: '#c9a84c', marginBottom: '1rem',
+            }}
+          >
+            Santuario Vivo
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+              fontSize: 'clamp(2.6rem, 5.5vw, 4.8rem)',
+              fontWeight: 700, lineHeight: 1.0,
+              letterSpacing: '-0.02em', margin: 0,
+            }}
+          >
+            <span style={{ color: '#c9a84c', display: 'block' }}>Flora</span>
+            <span style={{ color: textMain, display: 'block', fontWeight: 400 }}>&amp; Fauna</span>
+          </motion.h2>
+        </div>
+
+        {/* Filters — aligned to bottom-right */}
+        <div style={{ display: 'flex', gap: '0.5rem', paddingBottom: '0.25rem' }}>
           {FILTERS.map((f) => (
             <button
               key={f.id}
               onClick={() => handleFilter(f.id)}
               style={{
-                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
+                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
                 letterSpacing: '0.18em', textTransform: 'uppercase',
                 padding: '0.45rem 1.1rem', borderRadius: 999, cursor: 'pointer',
-                color: filter === f.id ? '#050d05' : pillText,
+                color: filter === f.id ? '#2d4a2b' : pillText,
                 background: filter === f.id ? 'linear-gradient(135deg,#c9a84c,#e8c96e)' : 'transparent',
                 border: `1px solid ${filter === f.id ? 'transparent' : pillBorder}`,
                 transition: 'all 0.2s ease',
@@ -108,7 +143,7 @@ export default function FloraFauna({ property, dark }) {
               style={{
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
-                objectFit: 'cover', objectPosition: 'center',
+                objectFit: 'cover', objectPosition: 'center 25%',
               }}
             />
           </AnimatePresence>
@@ -116,7 +151,7 @@ export default function FloraFauna({ property, dark }) {
           {/* Gradient overlay */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to top, rgba(5,13,5,0.88) 0%, rgba(5,13,5,0.1) 55%)',
+            background: 'linear-gradient(to top, rgba(45,74,43,0.88) 0%, rgba(45,74,43,0.1) 55%)',
           }} />
 
           {/* Name + scientific overlaid bottom-left */}
@@ -169,7 +204,7 @@ export default function FloraFauna({ property, dark }) {
                 display: 'inline-flex', alignSelf: 'flex-start',
                 padding: '0.3rem 0.9rem', borderRadius: 999,
                 background: col.bg, border: `1px solid ${col.border}`,
-                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.58rem',
+                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
                 letterSpacing: '0.18em', textTransform: 'uppercase', color: col.text,
               }}>
                 {featured.type}
@@ -198,7 +233,7 @@ export default function FloraFauna({ property, dark }) {
                     border: '1px solid rgba(201,168,76,0.12)',
                   }}>
                     <span style={{
-                      fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.58rem',
+                      fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
                       letterSpacing: '0.16em', textTransform: 'uppercase', color: '#c9a84c',
                       paddingTop: 2,
                     }}>
@@ -219,54 +254,103 @@ export default function FloraFauna({ property, dark }) {
       </div>
 
       {/* ── Thumbnail strip ────────────────────────────────────────────── */}
-      <div style={{
-        display: 'flex', gap: '0.75rem',
-        overflowX: 'auto', scrollbarWidth: 'none',
-        paddingTop: '1.25rem', paddingBottom: '0.25rem',
-      }}>
-        {list.map((sp, i) => {
-          const isActive = i === safeIdx
-          return (
-            <button
-              key={sp.id}
-              onClick={() => setSelected(i)}
-              style={{
-                flexShrink: 0, width: 90, height: 64,
-                position: 'relative', overflow: 'hidden',
-                border: isActive ? '2px solid #c9a84c' : '2px solid transparent',
-                cursor: 'pointer', padding: 0, background: 'none',
-                transition: 'border-color 0.2s ease',
-                outline: 'none',
-              }}
-            >
-              <img
-                src={sp.image}
-                alt={sp.name}
-                style={{
-                  width: '100%', height: '100%', objectFit: 'cover',
-                  filter: isActive ? 'brightness(1)' : 'brightness(0.65) saturate(0.7)',
-                  transition: 'filter 0.25s ease',
-                }}
-              />
-              {!isActive && (
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  background: 'rgba(17,26,16,0.18)',
-                }} />
-              )}
-            </button>
-          )
-        })}
-      </div>
+      <div style={{ marginTop: '2.5rem' }}>
+        {/* Label */}
+        <p style={{
+          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+          letterSpacing: '0.2em', textTransform: 'uppercase',
+          color: '#c9a84c', marginBottom: '0.75rem', fontWeight: 600,
+        }}>
+          Galería de Especies
+        </p>
 
-      {/* Thumbnail count hint */}
-      <p style={{
-        fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.58rem',
-        color: countColor, letterSpacing: '0.12em',
-        marginTop: '0.75rem',
-      }}>
-        {safeIdx + 1} / {list.length}
-      </p>
+        {/* Scrollable container with visible scrollbar */}
+        <div style={{
+          display: 'flex', gap: '1rem',
+          overflowX: 'auto', overflowY: 'hidden',
+          paddingBottom: '1.25rem',
+          scrollBehavior: 'smooth',
+          // Show scrollbar with custom styling
+          scrollbarWidth: 'thin',
+          scrollbarColor: 'rgba(201,168,76,0.4) rgba(45,74,43,0.1)',
+        }}>
+          {list.map((sp, i) => {
+            const isActive = i === safeIdx
+            return (
+              <button
+                key={sp.id}
+                onClick={() => setSelected(i)}
+                style={{
+                  flexShrink: 0, width: 120, height: 100,
+                  position: 'relative', overflow: 'hidden',
+                  border: isActive ? '3px solid #c9a84c' : '2px solid rgba(201,168,76,0.2)',
+                  borderRadius: 3,
+                  cursor: 'pointer', padding: 0, background: 'none',
+                  transition: 'all 0.25s ease',
+                  outline: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = 'rgba(201,168,76,0.5)'
+                    e.currentTarget.style.transform = 'scale(1.05)'
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = 'rgba(201,168,76,0.2)'
+                    e.currentTarget.style.transform = 'scale(1)'
+                  }
+                }}
+              >
+                <img
+                  src={sp.image}
+                  alt={sp.name}
+                  style={{
+                    width: '100%', height: '100%', objectFit: 'cover',
+                    filter: isActive ? 'brightness(1) saturate(1)' : 'brightness(0.72) saturate(0.75)',
+                    transition: 'filter 0.25s ease',
+                  }}
+                />
+                {!isActive && (
+                  <div style={{
+                    position: 'absolute', inset: 0,
+                    background: 'rgba(17,26,16,0.15)',
+                    transition: 'background 0.25s ease',
+                  }} />
+                )}
+                {/* Active indicator */}
+                {isActive && (
+                  <div style={{
+                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                    height: 3, background: '#c9a84c',
+                  }} />
+                )}
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Count and hint */}
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          paddingTop: '0.5rem',
+        }}>
+          <p style={{
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+            color: countColor, letterSpacing: '0.12em',
+            margin: 0,
+          }}>
+            {safeIdx + 1} de {list.length} especies
+          </p>
+          <p style={{
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+            color: 'rgba(201,168,76,0.5)', letterSpacing: '0.1em',
+            margin: 0, fontStyle: 'italic',
+          }}>
+            {list.length > 4 ? '↔ Desliza o usa ← → para navegar' : '← → para navegar'}
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

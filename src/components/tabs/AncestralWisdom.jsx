@@ -3,107 +3,104 @@ import { motion } from 'framer-motion'
 const ROMANS = ['I', 'II']
 
 export default function AncestralWisdom({ property }) {
-  const { ancestral } = property
+  const { ancestral, name } = property
+
+  const attribution = name.includes('Carpintera')
+    ? 'Memoria Huetar · La Carpintera'
+    : 'Memoria Boruca · Guardianes del Sur'
+
+  // Split title: first word gold, rest dark
+  const parts = (ancestral.title || '').split(' — ')
+  const titleMain = parts[0] || ''
+  const titleSub  = parts[1] || ''
 
   return (
     <div>
-      {/* Section label */}
-      <p style={{
-        fontFamily: 'Inter, sans-serif', fontSize: '0.6rem',
-        letterSpacing: '0.28em', textTransform: 'uppercase',
-        color: '#c9a84c', marginBottom: '0.9rem',
-      }}>
-        Sabiduría Ancestral
-      </p>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        style={{
-          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-          fontWeight: 400, lineHeight: 1.05, margin: '0 0 5rem',
-        }}
-      >
-        {(() => {
-          const parts = (ancestral.title || '').split(' ')
-          return <>
-            <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-            {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
-          </>
-        })()}
-      </motion.h2>
-
-      {/* ── Cinematic full-width quote ────────────────────────────────── */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        style={{ position: 'relative', marginBottom: '6rem', padding: '0 3rem' }}
-      >
-        {/* Decorative giant quote mark */}
-        <div style={{
-          position: 'absolute', top: -60, left: -8,
-          fontFamily: '"Cormorant Garamond", serif',
-          fontSize: 'clamp(8rem, 14vw, 13rem)',
-          lineHeight: 1,
-          color: 'rgba(201,168,76,0.08)',
-          userSelect: 'none', pointerEvents: 'none',
-        }}>
-          "
-        </div>
-
-        {/* Quote text */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.75, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1.3rem, 2.5vw, 1.85rem)',
-            fontWeight: 300, color: 'rgba(17,26,16,0.72)',
-            lineHeight: 1.85, textAlign: 'center',
-            maxWidth: 800, margin: '0 auto',
-            position: 'relative', zIndex: 1,
-          }}
-        >
-          {ancestral.description}
-        </motion.p>
-
-        {/* Attribution */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.25 }}
-          style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            gap: '1.25rem', marginTop: '2.5rem',
-          }}
-        >
-          <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.35)' }} />
-          <span style={{
-            fontFamily: 'Inter, sans-serif', fontSize: '0.58rem',
-            letterSpacing: '0.2em', textTransform: 'uppercase',
-            color: 'rgba(17,26,16,0.32)',
-          }}>
-            Memoria Huetar · La Carpintera
-          </span>
-          <div style={{ width: 40, height: 1, background: 'rgba(201,168,76,0.35)' }} />
-        </motion.div>
-      </motion.div>
-
-      {/* ── Wisdom Diptych — 2 cards ──────────────────────────────────── */}
+      {/* ── Top: heading left + description right (mockup layout) ──────── */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
-        gap: '1px',
-        background: 'rgba(201,168,76,0.1)',
-        border: '1px solid rgba(201,168,76,0.1)',
+        gap: '4rem',
+        alignItems: 'flex-end',
+        marginBottom: '4rem',
+      }}>
+        {/* Left — heading block */}
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+              letterSpacing: '0.3em', textTransform: 'uppercase',
+              color: '#c9a84c', marginBottom: '1rem',
+            }}
+          >
+            Sabiduría Ancestral
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+              fontSize: 'clamp(2.6rem, 5.5vw, 4.8rem)',
+              fontWeight: 700, lineHeight: 1.0,
+              letterSpacing: '-0.02em', margin: 0,
+            }}
+          >
+            <span style={{ color: '#c9a84c', display: 'block' }}>
+              {titleMain}
+            </span>
+            {titleSub && (
+              <span style={{ color: '#111a10', display: 'block', fontWeight: 400, fontSize: '0.6em' }}>
+                {titleSub}
+              </span>
+            )}
+          </motion.h2>
+        </div>
+
+        {/* Right — description */}
+        <motion.div
+          initial={{ opacity: 0, x: 16 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          style={{ paddingBottom: '0.5rem' }}
+        >
+          <p style={{
+            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+            fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
+            fontWeight: 300, color: 'rgba(17,26,16,0.68)',
+            lineHeight: 1.9,
+          }}>
+            {ancestral.description}
+          </p>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: '0.75rem',
+            marginTop: '1.5rem',
+          }}>
+            <div style={{ width: 28, height: 1, background: 'rgba(201,168,76,0.4)' }} />
+            <span style={{
+              fontFamily: 'Inter, sans-serif', fontSize: '0.66rem',
+              letterSpacing: '0.2em', textTransform: 'uppercase',
+              color: 'rgba(17,26,16,0.3)',
+            }}>
+              {attribution}
+            </span>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* ── Architecture cards — image + text, 2 columns ───────────────── */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '1.5rem',
       }}>
         {ancestral.architecture.map((item, i) => (
           <motion.div
@@ -111,53 +108,66 @@ export default function AncestralWisdom({ property }) {
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, delay: i * 0.14, ease: [0.16, 1, 0.3, 1] }}
             style={{
-              background: '#ffffff',
-              padding: i === 0 ? '3.5rem 2.5rem 4.5rem' : '3.5rem 2.5rem 3rem',
-              position: 'relative', overflow: 'hidden',
-              borderTop: '3px solid rgba(201,168,76,0.5)',
+              display: 'grid',
+              gridTemplateRows: item.image ? '260px auto' : 'auto',
+              overflow: 'hidden',
+              border: '1px solid rgba(17,26,16,0.08)',
             }}
           >
-            {/* Roman numeral backdrop */}
+            {/* Image */}
+            {item.image && (
+              <div style={{ position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{
+                    width: '100%', height: '100%',
+                    objectFit: 'cover', objectPosition: 'center 40%',
+                    filter: 'brightness(0.78) saturate(0.85)',
+                    display: 'block',
+                    transition: 'transform 0.6s ease',
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
+                  onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                />
+                {/* Roman numeral overlay */}
+                <div style={{
+                  position: 'absolute', top: '1rem', left: '1.25rem',
+                  fontFamily: '"Cormorant Garamond", serif',
+                  fontSize: '0.75rem', letterSpacing: '0.15em',
+                  color: 'rgba(245,240,232,0.6)',
+                  textTransform: 'uppercase',
+                }}>
+                  {ROMANS[i]}
+                </div>
+              </div>
+            )}
+
+            {/* Text block */}
             <div style={{
-              position: 'absolute', top: -12, right: 20,
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: 'clamp(5rem, 9vw, 8rem)',
-              fontWeight: 300,
-              color: 'rgba(201,168,76,0.07)',
-              lineHeight: 1, userSelect: 'none',
-              pointerEvents: 'none',
+              padding: '2rem 2rem 2.25rem',
+              background: '#faf9f6',
+              borderTop: '2px solid rgba(201,168,76,0.35)',
             }}>
-              {ROMANS[i]}
+              <h3 style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: 'clamp(1.15rem, 2vw, 1.55rem)',
+                fontWeight: 400, color: '#111a10',
+                lineHeight: 1.2, marginBottom: '0.85rem',
+              }}>
+                {item.name}
+              </h3>
+              <p style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: '0.95rem', fontWeight: 300,
+                color: 'rgba(17,26,16,0.6)', lineHeight: 1.8,
+                margin: 0,
+              }}>
+                {item.description}
+              </p>
             </div>
-
-            {/* Content */}
-            <span style={{
-              display: 'block',
-              fontFamily: 'Inter, sans-serif', fontSize: '0.55rem',
-              letterSpacing: '0.22em', textTransform: 'uppercase',
-              color: '#c9a84c', marginBottom: '1rem',
-            }}>
-              {ROMANS[i]}
-            </span>
-
-            <h3 style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)',
-              fontWeight: 300, color: '#111a10',
-              lineHeight: 1.2, marginBottom: '1.25rem',
-            }}>
-              {item.name}
-            </h3>
-
-            <p style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1.02rem', fontWeight: 300,
-              color: 'rgba(17,26,16,0.58)', lineHeight: 1.85,
-            }}>
-              {item.description}
-            </p>
           </motion.div>
         ))}
       </div>

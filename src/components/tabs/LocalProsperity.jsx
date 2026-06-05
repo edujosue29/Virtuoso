@@ -3,13 +3,40 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const CONSERVATION_IMAGE = '/images/carpintera/IMG_3028.jpg'
 
+// Minimal SVG icons — one per indicator
+const ICONS = [
+  // Compass / ecoturismo
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+  </svg>,
+  // Leaf / organic
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </svg>,
+  // Tree / PSA
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 5c4 0 8 3 8 7z"/>
+    <path d="M12 12C12 7 16 4 20 5c-4 0-8 3-8 7z"/>
+    <path d="M12 12c0 5-3 8-7 9 4-1 7-4 7-9z"/>
+    <path d="M12 12c0 5 3 8 7 9-4-1-7-4-7-9z"/>
+  </svg>,
+  // Globe / UNESCO
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </svg>,
+  // People / community
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+  </svg>,
+]
+
 function FlipCard({ item, index, dark }) {
   const [flipped, setFlipped] = useState(false)
-
-  const frontBg     = dark ? 'rgba(255,255,255,0.05)' : '#ffffff'
-  const frontBorder = dark ? 'rgba(201,168,76,0.15)'  : 'rgba(17,26,16,0.1)'
-  const frontText   = dark ? 'rgba(245,240,232,0.78)' : '#111a10'
-  const hintColor   = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(17,26,16,0.22)'
 
   return (
     <motion.div
@@ -33,36 +60,42 @@ function FlipCard({ item, index, dark }) {
         <div style={{
           position: 'absolute', inset: 0,
           backfaceVisibility: 'hidden',
-          padding: '1.75rem',
-          border: `1px solid ${frontBorder}`,
-          background: frontBg,
+          padding: '1.75rem 2rem',
+          border: '1px solid rgba(255,255,255,0.09)',
+          background: dark ? 'rgba(255,255,255,0.04)' : '#ffffff',
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
         }}>
           <div>
             <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.57rem',
-              letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'rgba(180,60,60,0.65)',
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: 'rgba(200,80,80,0.7)',
             }}>
               Problemática
             </span>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1rem', color: frontText,
-              lineHeight: 1.7, marginTop: '0.65rem',
+              fontSize: '1rem', lineHeight: 1.75, marginTop: '0.7rem',
+              color: dark ? 'rgba(245,240,232,0.82)' : '#111a10',
             }}>
               {item.problem}
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
             <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.54rem',
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
               letterSpacing: '0.14em', textTransform: 'uppercase',
-              color: hintColor,
+              color: dark ? 'rgba(245,240,232,0.2)' : 'rgba(17,26,16,0.22)',
             }}>
-              Toca para ver la respuesta
+              Ver respuesta
             </span>
-            <span style={{ color: '#c9a84c', fontSize: '0.7rem' }}>›</span>
+            <motion.span
+              animate={{ x: [0, 4, 0] }}
+              transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+              style={{ color: '#c9a84c', fontSize: '0.9rem', lineHeight: 1 }}
+            >
+              ›
+            </motion.span>
           </div>
         </div>
 
@@ -71,29 +104,28 @@ function FlipCard({ item, index, dark }) {
           position: 'absolute', inset: 0,
           backfaceVisibility: 'hidden',
           transform: 'rotateY(180deg)',
-          padding: '1.75rem',
-          background: '#050d05',
-          border: '1px solid rgba(201,168,76,0.18)',
+          padding: '1.75rem 2rem',
+          background: '#2d4a2b',
+          border: '1px solid rgba(201,168,76,0.2)',
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
         }}>
           <div>
             <span style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '0.57rem',
-              letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: '#c9a84c',
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+              letterSpacing: '0.22em', textTransform: 'uppercase', color: '#c9a84c',
             }}>
               Respuesta
             </span>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontSize: '1rem', color: '#f5f0e8',
-              lineHeight: 1.75, marginTop: '0.65rem', fontWeight: 300,
+              lineHeight: 1.75, marginTop: '0.7rem', fontWeight: 300,
             }}>
               {item.solution}
             </p>
           </div>
           <span style={{
-            fontFamily: 'Inter, sans-serif', fontSize: '0.54rem',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
             letterSpacing: '0.14em', textTransform: 'uppercase',
             color: 'rgba(245,240,232,0.18)',
           }}>
@@ -105,202 +137,198 @@ function FlipCard({ item, index, dark }) {
   )
 }
 
-export default function LocalProsperity({ property, dark }) {
-  const { prosperity, sectionImages } = property
+export default function LocalProsperity({ property, finca, dark }) {
+  const { sectionImages } = property
+  // Use finca-specific prosperity data when available
+  const prosperity = finca?.prosperity ?? property.prosperity
   const img = sectionImages?.prosperity || CONSERVATION_IMAGE
 
-  const textMain    = dark ? '#f5f0e8'                : '#111a10'
-  const statCardBg  = dark ? 'rgba(255,255,255,0.04)' : '#ffffff'
-  const statVal     = dark ? '#f5f0e8'                : '#111a10'
-  const statNote    = dark ? 'rgba(245,240,232,0.38)' : 'rgba(17,26,16,0.36)'
-  const statUnit    = dark ? 'rgba(245,240,232,0.35)' : 'rgba(17,26,16,0.32)'
-  const flipFrontBg = dark ? 'rgba(255,255,255,0.05)' : '#ffffff'
-  const flipFrontBorder = dark ? 'rgba(201,168,76,0.15)' : 'rgba(17,26,16,0.1)'
-  const flipFrontText   = dark ? 'rgba(245,240,232,0.78)' : '#111a10'
-  const flipHint        = dark ? 'rgba(245,240,232,0.2)'  : 'rgba(17,26,16,0.22)'
-  const gridBg          = dark ? 'rgba(201,168,76,0.08)'  : 'rgba(201,168,76,0.1)'
-  const gridBorder      = dark ? 'rgba(201,168,76,0.08)'  : 'rgba(201,168,76,0.1)'
+  const cream = '#faf9f6'
+  const muted = 'rgba(245,240,232,0.52)'
 
   return (
     <div>
-      {/* Section label */}
-      <p style={{
-        fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
-        letterSpacing: '0.28em', textTransform: 'uppercase',
-        color: '#c9a84c', marginBottom: '0.9rem',
+
+      {/* ── Top: heading block ──────────────────────────────────────────── */}
+      <div style={{
+        display: 'flex', alignItems: 'flex-end',
+        justifyContent: 'space-between', flexWrap: 'wrap',
+        gap: '1.5rem', marginBottom: '3.5rem',
       }}>
-        Custodia del Ecosistema
-      </p>
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+              letterSpacing: '0.3em', textTransform: 'uppercase',
+              color: '#c9a84c', marginBottom: '1rem',
+            }}
+          >
+            Custodia del Ecosistema
+          </motion.p>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        style={{
-          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-          fontWeight: 400, lineHeight: 1.05, margin: '0 0 3rem',
-        }}
-      >
-        <span style={{ color: '#c9a84c' }}>Conservación</span>
-        <span style={{ color: textMain }}> Activa</span>
-      </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+              fontSize: 'clamp(2.6rem, 6vw, 5rem)',
+              fontWeight: 700, lineHeight: 1.0,
+              letterSpacing: '-0.02em', margin: 0,
+            }}
+          >
+            <span style={{ color: cream, display: 'block' }}>Conservación</span>
+            <span style={{ color: '#c9a84c', display: 'block' }}>Activa</span>
+          </motion.h2>
+        </div>
 
-      {/* ── Image + pull quote — side by side ─────────────────────────── */}
+        {/* Pull quote right */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          style={{
+            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+            fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
+            color: muted, lineHeight: 1.8,
+            maxWidth: 340, textAlign: 'right',
+          }}
+        >
+          {prosperity.description}
+        </motion.p>
+      </div>
+
+      {/* ── Main: tall image left + feature grid right ──────────────────── */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          border: '1px solid rgba(201,168,76,0.12)',
-          overflow: 'hidden',
-          marginBottom: '0',
-          borderBottom: 'none',
+          gridTemplateColumns: '2fr 3fr',
+          gap: '3rem',
+          alignItems: 'start',
+          marginBottom: '5rem',
         }}
       >
-        {/* Left — image */}
-        <div style={{ position: 'relative', minHeight: 340, overflow: 'hidden' }}>
+        {/* Tall image */}
+        <div style={{
+          position: 'relative',
+          height: 520,
+          overflow: 'hidden',
+          borderRadius: 6,
+        }}>
           <img
             src={img}
-            alt="La Carpintera — bosque nuboso"
+            alt="Bosque nuboso en conservación"
             style={{
-              position: 'absolute', inset: 0,
               width: '100%', height: '100%',
-              objectFit: 'cover', objectPosition: 'center 35%',
-              filter: 'brightness(0.55) saturate(0.8)',
+              objectFit: 'cover', objectPosition: 'center 30%',
+              filter: 'brightness(0.72) saturate(0.85)',
+              display: 'block',
             }}
           />
-          {/* Subtle dark overlay */}
+          {/* Bottom label */}
           <div style={{
-            position: 'absolute', inset: 0,
-            background: 'linear-gradient(135deg, rgba(5,13,5,0.4) 0%, rgba(5,13,5,0.1) 100%)',
-          }} />
-          {/* Caption bottom */}
-          <div style={{
-            position: 'absolute', bottom: '1.5rem', left: '1.75rem',
+            position: 'absolute', bottom: '1.5rem', left: '1.5rem',
           }}>
             <span style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '0.55rem',
+              fontFamily: 'Inter, sans-serif', fontSize: '0.65rem',
               letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'rgba(245,240,232,0.55)',
+              color: 'rgba(245,240,232,0.45)',
             }}>
-              Bosque nuboso · 1,500–1,800 msnm
+              Bosque nuboso · SINAC
             </span>
           </div>
         </div>
 
-        {/* Right — description + context */}
+        {/* Feature grid — 2 columns */}
         <div style={{
-          background: '#050d05',
-          padding: '3rem 2.5rem',
-          display: 'flex', flexDirection: 'column', justifyContent: 'center',
-          gap: '1.5rem',
-          borderLeft: '1px solid rgba(201,168,76,0.1)',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0',
         }}>
-          <div style={{ width: 32, height: 1, background: 'rgba(201,168,76,0.4)' }} />
-          <p style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-            fontWeight: 300, color: '#f5f0e8',
-            lineHeight: 1.85,
-          }}>
-            {prosperity.description}
-          </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <div style={{ width: 24, height: 1, background: 'rgba(201,168,76,0.35)' }} />
-            <span style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '0.56rem',
-              letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'rgba(201,168,76,0.6)',
-            }}>
-              VIRTUOSO · La Carpintera
-            </span>
-          </div>
+          {prosperity.indicators.map((ind, i) => (
+            <motion.div
+              key={ind.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              style={{
+                padding: '2rem 1.75rem',
+                borderBottom: i < prosperity.indicators.length - 2
+                  ? '1px solid rgba(255,255,255,0.07)'
+                  : 'none',
+                borderRight: i % 2 === 0
+                  ? '1px solid rgba(255,255,255,0.07)'
+                  : 'none',
+              }}
+            >
+              {/* Icon */}
+              <div style={{
+                width: 40, height: 40,
+                borderRadius: '50%',
+                border: '1px solid rgba(201,168,76,0.3)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: '#c9a84c',
+                marginBottom: '1.1rem',
+              }}>
+                {ICONS[i]}
+              </div>
+
+              {/* Title */}
+              <h3 style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: '1.05rem', fontWeight: 500,
+                color: cream, lineHeight: 1.3,
+                marginBottom: '0.55rem',
+              }}>
+                {ind.label}
+              </h3>
+
+              {/* Ultra-brief description */}
+              {ind.note && (
+                <p style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '0.78rem', color: muted,
+                  lineHeight: 1.65,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                }}>
+                  {ind.note}
+                </p>
+              )}
+            </motion.div>
+          ))}
         </div>
       </motion.div>
 
-      {/* ── 5 conservation stat cards ─────────────────────────────────── */}
+      {/* ── Desafíos ─────────────────────────────────────────────────────── */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(5, 1fr)',
-        gap: '1px',
-        background: gridBg,
-        border: `1px solid ${gridBorder}`,
-        borderTop: 'none',
-        marginBottom: '4.5rem',
-      }}>
-        {prosperity.indicators.map((ind, i) => (
-          <motion.div
-            key={ind.label}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.07 }}
-            style={{
-              background: statCardBg,
-              padding: '1.75rem 1.25rem 1.5rem',
-              display: 'flex', flexDirection: 'column', gap: '0.3rem',
-              borderTop: '3px solid rgba(201,168,76,0.4)',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', flexWrap: 'wrap' }}>
-              <span style={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: 'clamp(1.6rem, 3vw, 2.6rem)',
-                fontWeight: 300, color: statVal, lineHeight: 1,
-              }}>
-                {ind.value}
-              </span>
-              {ind.unit && (
-                <span style={{
-                  fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.57rem',
-                  color: statUnit, letterSpacing: '0.06em',
-                }}>
-                  {ind.unit}
-                </span>
-              )}
-            </div>
-            <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.54rem',
-              letterSpacing: '0.15em', textTransform: 'uppercase',
-              color: '#c9a84c', fontWeight: 500,
-            }}>
-              {ind.label}
-            </span>
-            <span style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '0.8rem', color: statNote,
-              lineHeight: 1.5, marginTop: '0.1rem',
-            }}>
-              {ind.note}
-            </span>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* ── Desafíos del custodio ─────────────────────────────────────── */}
-      <div style={{
-        display: 'flex', alignItems: 'center', gap: '1.5rem',
+        display: 'flex', alignItems: 'center', gap: '1.25rem',
         marginBottom: '2rem',
       }}>
-        <div style={{ flex: 1, height: 1, background: 'rgba(201,168,76,0.2)' }} />
         <span style={{
-          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.54rem',
-          letterSpacing: '0.22em', textTransform: 'uppercase', color: '#c9a84c',
-          flexShrink: 0,
+          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+          letterSpacing: '0.24em', textTransform: 'uppercase',
+          color: '#c9a84c', flexShrink: 0,
         }}>
           Desafíos del Custodio
         </span>
         <div style={{ flex: 1, height: 1, background: 'rgba(201,168,76,0.2)' }} />
       </div>
 
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem',
-      }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
         {prosperity.issues.map((item, i) => (
           <FlipCard key={i} item={item} index={i} dark={dark} />
         ))}

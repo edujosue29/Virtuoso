@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
 
       {/* ── Properties section — dark forest green ─────────────────── */}
-      <section style={{ background: '#050d05', padding: '6rem 0 7rem' }}>
+      <section style={{ background: '#2d4a2b', padding: '6rem 0 7rem' }}>
 
         {/* Section header */}
         <motion.div
@@ -27,7 +27,7 @@ export default function Home() {
           <div style={{ flex: 1, maxWidth: 120, height: 1, background: 'rgba(201,168,76,0.3)' }} />
           <span style={{
             fontFamily: '"DM Sans", Inter, sans-serif',
-            fontSize: '0.6rem', letterSpacing: '0.32em',
+            fontSize: '0.72rem', letterSpacing: '0.32em',
             textTransform: 'uppercase', color: '#c9a84c',
           }}>
             Santuarios
@@ -42,14 +42,32 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           style={{
             fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            fontWeight: 400, textAlign: 'center',
-            marginBottom: '4rem', lineHeight: 1.2,
+            fontSize: 'clamp(2.6rem, 5vw, 4.2rem)',
+            fontWeight: 700, textAlign: 'center',
+            letterSpacing: '-0.02em',
+            marginBottom: '1.5rem', lineHeight: 1.05,
           }}
         >
           <span style={{ color: '#c9a84c' }}>Tierras</span>
-          <span style={{ color: '#f5f0e8' }}> que buscan custodio</span>
+          <span style={{ color: '#faf9f6' }}> que buscan custodio</span>
         </motion.h2>
+
+        {/* Bridge paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.65, delay: 0.2 }}
+          style={{
+            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+            fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', fontWeight: 300,
+            color: 'rgba(245,240,232,0.5)', lineHeight: 1.85,
+            textAlign: 'center', maxWidth: 580,
+            margin: '0 auto 4rem',
+          }}
+        >
+          Dos santuarios costarricenses bajo protección activa, buscando un custodio consciente que entienda que conservar es la inversión más inteligente del siglo.
+        </motion.p>
 
         {/* Cards */}
         <div style={{
@@ -65,7 +83,7 @@ export default function Home() {
 
       {/* ── Footer ────────────────────────────────────────────────────── */}
       <div style={{
-        background: '#050d05', padding: '3.5rem 0',
+        background: '#2d4a2b', padding: '3.5rem 0',
         textAlign: 'center',
         borderTop: '1px solid rgba(201,168,76,0.1)',
       }}>
@@ -78,7 +96,7 @@ export default function Home() {
         </div>
         <p style={{
           fontFamily: '"DM Sans", Inter, sans-serif',
-          fontSize: '0.58rem', letterSpacing: '0.2em',
+          fontSize: '0.72rem', letterSpacing: '0.2em',
           textTransform: 'uppercase',
           color: 'rgba(245,240,232,0.2)',
         }}>

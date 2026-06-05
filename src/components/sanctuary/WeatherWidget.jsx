@@ -134,7 +134,7 @@ export default function WeatherWidget({ coordinates, location }) {
             <div style={{ fontSize: '1.6rem' }}>{WEATHER_ICONS.default}</div>
             <div
               className="mt-0.5"
-              style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.6rem', color: 'rgba(245,240,232,0.45)', letterSpacing: '0.06em' }}
+              style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', color: 'rgba(245,240,232,0.45)', letterSpacing: '0.06em' }}
             >
               💧 {weather.humidity}%
             </div>
@@ -147,7 +147,7 @@ export default function WeatherWidget({ coordinates, location }) {
         className="text-center"
         style={{
           fontFamily: 'Inter, sans-serif',
-          fontSize: '0.6rem',
+          fontSize: '0.72rem',
           color: 'rgba(201,168,76,0.5)',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',

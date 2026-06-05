@@ -166,7 +166,7 @@ export default function Hero() {
           <span
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: '0.6rem',
+              fontSize: '0.72rem',
               letterSpacing: '0.25em',
               textTransform: 'uppercase',
               color: 'rgba(201,168,76,0.55)',
@@ -185,11 +185,11 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom fade into white */}
+      {/* Bottom fade into forest green */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent, #ffffff)',
+          background: 'linear-gradient(to bottom, transparent, #2d4a2b)',
         }}
       />
     </section>

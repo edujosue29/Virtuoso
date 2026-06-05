@@ -1,76 +1,32 @@
 import { motion } from 'framer-motion'
 
-// ── Hero stat card ────────────────────────────────────────────────────────────
-function StatCard({ value, label, sub, delay = 0 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      style={{
-        padding: '2.5rem 2rem',
-        border: '1px solid rgba(201,168,76,0.18)',
-        borderTop: '3px solid rgba(201,168,76,0.55)',
-        background: '#ffffff',
-        display: 'flex', flexDirection: 'column', gap: '0.5rem',
-      }}
-    >
-      <span style={{
-        fontFamily: '"Cormorant Garamond", serif',
-        fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)',
-        fontWeight: 300, color: '#111a10', lineHeight: 1,
-      }}>
-        {value}
-      </span>
-      <span style={{
-        fontFamily: 'Inter, sans-serif', fontSize: '0.6rem',
-        letterSpacing: '0.2em', textTransform: 'uppercase',
-        color: '#c9a84c', fontWeight: 500,
-      }}>
-        {label}
-      </span>
-      {sub && (
-        <span style={{
-          fontFamily: '"Cormorant Garamond", serif',
-          fontSize: '0.9rem', color: 'rgba(17,26,16,0.42)',
-          lineHeight: 1.4, marginTop: '0.25rem',
-        }}>
-          {sub}
-        </span>
-      )}
-    </motion.div>
-  )
-}
-
-// ── Spec row ─────────────────────────────────────────────────────────────────
 function SpecRow({ label, value, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -16 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
+      transition={{ duration: 0.5, delay: index * 0.04 }}
       style={{
         display: 'grid',
-        gridTemplateColumns: '190px 1fr',
+        gridTemplateColumns: '200px 1fr',
         gap: '2rem',
-        padding: '1.5rem 0',
+        padding: '1.35rem 0',
         borderBottom: '1px solid rgba(17,26,16,0.06)',
         alignItems: 'start',
       }}
     >
       <span style={{
-        fontFamily: 'Inter, sans-serif', fontSize: '0.58rem',
+        fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
         letterSpacing: '0.2em', textTransform: 'uppercase',
-        color: '#c9a84c', paddingTop: '0.15rem',
+        color: '#c9a84c', paddingTop: '0.2rem', fontWeight: 700,
       }}>
         {label}
       </span>
       <span style={{
         fontFamily: '"Cormorant Garamond", serif',
         fontSize: '1.05rem', color: '#111a10',
-        fontWeight: 300, lineHeight: 1.65,
+        fontWeight: 400, lineHeight: 1.65,
       }}>
         {value}
       </span>
@@ -78,33 +34,26 @@ function SpecRow({ label, value, index }) {
   )
 }
 
-// ── TechnicalSheet ────────────────────────────────────────────────────────────
 export default function TechnicalSheet({ property }) {
-  const { technical, name, techSheet } = property
+  const { technical, name, tagline, techSheet } = property
 
-  // Derive clean hero stat values
-  const areaClean = technical.area.split('(')[0].trim()
-  const elevClean = technical.elevation.split('·')[0].replace(/^Finca \d+:\s*/i, '').trim()
-  const zoneClean = technical.zoning.includes('UNESCO')
-    ? 'UNESCO · Patrimonio'
-    : technical.zoning.includes('SINAC') ? 'SINAC · ZPCC' : technical.zoning.split('—')[0].trim()
-
-  const heroStats = [
-    { value: areaClean, label: 'Área Total',  sub: technical.areaDesglose?.split('·')[0]?.trim() },
-    { value: elevClean, label: 'Elevación',    sub: 'Bosque nuboso de montaña' },
-    { value: zoneClean, label: 'Zonificación', sub: 'Plan General de Manejo' },
-  ]
+  const nameParts = name.split(' ')
+  const nameFirst = nameParts[0]
+  const nameRest  = nameParts.slice(1).join(' ')
 
   const specs = [
-    { label: 'Desglose',          value: technical.areaDesglose },
-    { label: 'Recursos Hídricos', value: technical.water },
-    { label: 'Acceso',            value: technical.access },
-    { label: 'Estado de Título',  value: technical.titleStatus },
-    { label: 'Folio Real',        value: technical.folio },
-    { label: 'Tipo de Suelo',     value: technical.soilType },
-    { label: 'Infraestructura',   value: technical.infrastructure },
-    { label: 'Restricciones',     value: technical.restrictions },
-    { label: 'Valor Referencial', value: technical.value },
+    { label: 'Área total',         value: technical.area },
+    { label: 'Desglose',           value: technical.areaDesglose },
+    { label: 'Elevación',          value: technical.elevation },
+    { label: 'Zonificación',       value: technical.zoning },
+    { label: 'Recursos Hídricos',  value: technical.water },
+    { label: 'Acceso',             value: technical.access },
+    { label: 'Estado de Título',   value: technical.titleStatus },
+    { label: 'Folio Real',         value: technical.folio },
+    { label: 'Tipo de Suelo',      value: technical.soilType },
+    { label: 'Infraestructura',    value: technical.infrastructure },
+    { label: 'Restricciones',      value: technical.restrictions },
+    { label: 'Valor Referencial',  value: technical.value },
   ].filter((r) => r.value)
 
   const handleDownload = () => {
@@ -116,79 +65,125 @@ export default function TechnicalSheet({ property }) {
 
   return (
     <div>
-      {/* Section label */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        style={{
-          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
-          letterSpacing: '0.28em', textTransform: 'uppercase',
-          color: '#c9a84c', marginBottom: '0.9rem',
-        }}
-      >
-        Ficha de Rigor Técnico
-      </motion.p>
 
-      {/* Property name */}
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.05 }}
-        style={{
-          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-          fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-          fontWeight: 400, lineHeight: 1.05, margin: '0 0 3.5rem',
-        }}
-      >
-        {(() => {
-          const parts = name.split(' ')
-          return <>
-            <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-            {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
-          </>
-        })()}
-      </motion.h2>
+      {/* ── Top: heading left + tagline right ──────────────────────────── */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '4rem',
+        alignItems: 'flex-end',
+        marginBottom: '4rem',
+      }}>
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+              letterSpacing: '0.3em', textTransform: 'uppercase',
+              color: '#c9a84c', marginBottom: '1rem',
+            }}
+          >
+            Ficha de Rigor Técnico
+          </motion.p>
 
-      {/* ── Detailed specs list ──────────────────────────────────────────── */}
-      <div style={{ borderTop: '1px solid rgba(17,26,16,0.06)' }}>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+              fontSize: 'clamp(2.6rem, 5.5vw, 4.8rem)',
+              fontWeight: 700, lineHeight: 1.0,
+              letterSpacing: '-0.02em', margin: 0,
+            }}
+          >
+            <span style={{ color: '#c9a84c', display: 'block' }}>{nameFirst}</span>
+            {nameRest && (
+              <span style={{ color: '#111a10', display: 'block', fontWeight: 400 }}>
+                {nameRest}
+              </span>
+            )}
+          </motion.h2>
+        </div>
+
+        {tagline && (
+          <motion.p
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            style={{
+              fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+              fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
+              fontWeight: 300, color: 'rgba(17,26,16,0.58)',
+              lineHeight: 1.9, paddingBottom: '0.5rem',
+            }}
+          >
+            "{tagline}"
+          </motion.p>
+        )}
+      </div>
+
+      {/* ── Divider ─────────────────────────────────────────────────────── */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        style={{
+          height: 1,
+          background: 'linear-gradient(to right, rgba(201,168,76,0.5), transparent)',
+          marginBottom: '0',
+          transformOrigin: 'left',
+        }}
+      />
+
+      {/* ── Specs table ─────────────────────────────────────────────────── */}
+      <div>
         {specs.map((row, i) => (
           <SpecRow key={row.label} label={row.label} value={row.value} index={i} />
         ))}
       </div>
 
-      {/* Disclaimer */}
-      <p style={{
-        marginTop: '3.5rem', fontSize: '0.6rem',
-        color: 'rgba(17,26,16,0.25)', fontFamily: 'Inter, sans-serif',
-        lineHeight: 1.9, textAlign: 'center',
+      {/* ── Footer: disclaimer + download ──────────────────────────────── */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '2rem',
+        marginTop: '3rem',
+        paddingTop: '2rem',
+        borderTop: '1px solid rgba(17,26,16,0.06)',
       }}>
-        Información basada en registros catastrales y estudios de campo. Sujeta a verificación legal y técnica.
-        <br />
-        Virtus Real Estate · VIRTUOSO — {new Date().getFullYear()}
-      </p>
+        <p style={{
+          fontSize: '0.72rem',
+          color: 'rgba(17,26,16,0.28)', fontFamily: 'Inter, sans-serif',
+          lineHeight: 1.8, maxWidth: 500,
+        }}>
+          Información basada en registros catastrales y estudios de campo. Sujeta a verificación
+          legal y técnica. Virtus Real Estate · VIRTUOSO — {new Date().getFullYear()}
+        </p>
 
-      {/* Download CTA — below table */}
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}
-      >
         <motion.button
           onClick={handleDownload}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           style={{
             display: 'flex', alignItems: 'center', gap: '0.6rem',
-            padding: '0.9rem 2.5rem',
+            padding: '0.9rem 2.25rem',
             background: 'linear-gradient(135deg, #c9a84c, #e8c96e)',
-            color: '#ffffff', border: 'none', borderRadius: 999, cursor: 'pointer',
-            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
+            color: '#2d4a2b', border: 'none', borderRadius: 999, cursor: 'pointer',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.64rem',
             fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase',
+            flexShrink: 0,
           }}
         >
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
@@ -196,7 +191,7 @@ export default function TechnicalSheet({ property }) {
           </svg>
           Descargar PDF
         </motion.button>
-      </motion.div>
+      </div>
     </div>
   )
 }
