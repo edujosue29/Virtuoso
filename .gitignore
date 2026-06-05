@@ -16,7 +16,7 @@ multimedia/
 *.xls
 
 # Stock nature images — exclude all except specifically referenced ones
-public/images/nature/
+public/images/nature/*
 !public/images/nature/dario-bronnimann-fWBZ9r4vO9M-unsplash.jpg
 !public/images/nature/dario-bronnimann-osI_sT8d-Ig-unsplash.jpg
 !public/images/nature/clement-m-igX2deuD9lc-unsplash.jpg
@@ -34,6 +34,8 @@ public/images/nature/
 !public/images/nature/zdenek-machacek-jNZV4o7zay4-unsplash.jpg
 !public/images/nature/zdenek-machacek-iEy05HTiamo-unsplash.jpg
 !public/images/nature/zdenek-machacek-VPcKMnBJanI-unsplash.jpg
+!public/images/nature/NPZ.jpg
+!public/images/nature/NCA.jpg
 
 # macOS
 .DS_Store

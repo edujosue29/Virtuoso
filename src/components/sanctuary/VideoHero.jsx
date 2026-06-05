@@ -43,6 +43,7 @@ export default function VideoHero({ property }) {
         <video
           ref={videoRef}
           src={property.videoSrc}
+          poster={property.heroImage}
           autoPlay
           muted
           loop
@@ -61,7 +62,7 @@ export default function VideoHero({ property }) {
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: `url(${property.image})`,
+            backgroundImage: `url(${property.heroImage || property.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center 30%',
             filter: 'brightness(0.5)',

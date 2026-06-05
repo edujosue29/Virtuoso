@@ -13,6 +13,7 @@ import AncestralWisdom from '../components/tabs/AncestralWisdom'
 import CommunityPulse from '../components/tabs/CommunityPulse'
 import VirtuosoIndex from '../components/tabs/VirtuosoIndex'
 import CustodyLegacy from '../components/tabs/CustodyLegacy'
+import VirtuosPotential from '../components/tabs/VirtuosPotential'
 
 const TAB_COMPONENTS = {
   technical:  TechnicalSheet,
@@ -23,26 +24,42 @@ const TAB_COMPONENTS = {
   pulse:      CommunityPulse,
   index:      VirtuosoIndex,
   legacy:     CustodyLegacy,
+  potencial:  VirtuosPotential,
 }
 
-const CONTENT_TABS = TABS.filter((t) => t.id !== 'gallery')
+const CONTENT_TABS = TABS.filter(t => t.id !== 'gallery')
 
-// Alternating dark / light sections — dark = #0a1a0a (deep forest), light = #ffffff
-const SECTION_BG   = ['#ffffff', '#0a1a0a', '#ffffff', '#0a1a0a', '#ffffff', '#0a1a0a', '#ffffff', '#0a1a0a']
-const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true    ]
+// 9 content sections — alternating dark/light
+const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#ffffff', '#2d4a2b', '#faf9f6']
+const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true,      false    ]
 
-// ── Sanctuary page ────────────────────────────────────────────────────────────
 export default function Sanctuary() {
   const { slug } = useParams()
-  const property = PROPERTIES.find((p) => p.slug === slug)
-  const [activeTab, setActiveTab] = useState(TABS[0].id)
+  const property = PROPERTIES.find(p => p.slug === slug)
+
+  const [activeTab,     setActiveTab]     = useState(TABS[0].id)
+  const [selectedFinca, setSelectedFinca] = useState(0)
+  const [heroVisible,   setHeroVisible]   = useState(true)
+
   const sectionRefs = useRef({})
-  const navRef = useRef(null)
+  const heroRef     = useRef(null)
+  const navRef      = useRef(null)
   const scrollingTo = useRef(false)
 
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
-  // Scroll-spy
+  // Track hero visibility to show Portal button in TabNav
+  useEffect(() => {
+    const el = heroRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroVisible(entry.isIntersecting),
+      { threshold: 0 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   useEffect(() => {
     const handleScroll = () => {
       if (scrollingTo.current) return
@@ -59,7 +76,7 @@ export default function Sanctuary() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (tabId) => {
+  const scrollToSection = tabId => {
     const el = sectionRefs.current[tabId]
     if (!el) return
     const navHeight = navRef.current?.offsetHeight ?? 64
@@ -71,23 +88,39 @@ export default function Sanctuary() {
 
   if (!property) return <Navigate to="/" replace />
 
+  const finca = property.fincas?.[selectedFinca] ?? null
+
+  // Override technical & timeline with finca-specific data when available
+  const resolvedProperty = finca
+    ? {
+        ...property,
+        technical: finca.technical ?? property.technical,
+        timeline:  finca.timeline ?? property.timeline,
+      }
+    : property
+
   return (
     <div style={{ minHeight: '100vh', background: '#ffffff' }}>
-
-      <VideoHero property={property} />
-      <TabNav navRef={navRef} activeTab={activeTab} onTabChange={scrollToSection} />
+      <div ref={heroRef}><VideoHero key={property.slug} property={property} /></div>
+      <TabNav
+        navRef={navRef}
+        activeTab={activeTab}
+        onTabChange={scrollToSection}
+        fincas={property.fincas ?? null}
+        selectedFinca={selectedFinca}
+        onFincaChange={setSelectedFinca}
+        showPortal={!heroVisible}
+      />
 
       <main>
-        {/* ── 8 content sections ── */}
         {CONTENT_TABS.map((tab, index) => {
           const Component = TAB_COMPONENTS[tab.id]
           const bg   = SECTION_BG[index]
           const dark = SECTION_DARK[index]
-
           return (
             <section
               key={tab.id}
-              ref={(el) => { sectionRefs.current[tab.id] = el }}
+              ref={el => { sectionRefs.current[tab.id] = el }}
             >
               <div style={{ background: bg }}>
                 <div style={{ maxWidth: 1100, margin: '0 auto', padding: '7rem 3rem 9rem' }}>
@@ -97,7 +130,7 @@ export default function Sanctuary() {
                     viewport={{ once: true, margin: '-60px' }}
                     transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <Component property={property} dark={dark} />
+                    <Component property={resolvedProperty} dark={dark} finca={finca} />
                   </motion.div>
                 </div>
               </div>
@@ -105,45 +138,19 @@ export default function Sanctuary() {
           )
         })}
 
-        {/* ── Gallery section ── */}
-        <section ref={(el) => { sectionRefs.current['gallery'] = el }}>
-          <div style={{ background: '#f8f6f1' }}>
+        {/* Gallery */}
+        <section ref={el => { sectionRefs.current['gallery'] = el }}>
+          <div style={{ background: '#faf9f6' }}>
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '7rem 3rem 9rem' }}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                style={{ marginBottom: '3.5rem' }}
-              >
-                <p style={{
-                  fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.6rem',
-                  letterSpacing: '0.32em', textTransform: 'uppercase',
-                  color: '#c9a84c', marginBottom: '1rem',
-                }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ marginBottom: '3.5rem' }}>
+                <p style={{ fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem', letterSpacing: '0.32em', textTransform: 'uppercase', color: '#c9a84c', marginBottom: '1rem', fontWeight: 600 }}>
                   El Santuario en Imágenes
                 </p>
-                <h3 style={{
-                  fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-                  fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400,
-                  lineHeight: 1.2, margin: 0,
-                }}>
-                  {(() => {
-                    const parts = property.name.split(' ')
-                    return <>
-                      <span style={{ color: '#c9a84c' }}>{parts[0]}</span>
-                      {parts.length > 1 && <span style={{ color: '#111a10' }}> {parts.slice(1).join(' ')}</span>}
-                    </>
-                  })()}
+                <h3 style={{ fontFamily: '"Playfair Display", "Cormorant Garamond", serif', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400, lineHeight: 1.2, margin: 0 }}>
+                  {(() => { const p = property.name.split(' '); return <><span style={{ color: '#c9a84c' }}>{p[0]}</span>{p.length > 1 && <span style={{ color: '#2d4a2b' }}> {p.slice(1).join(' ')}</span>}</> })()}
                 </h3>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.15 }}
-              >
+              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>
                 <ImageGallery images={property.gallery} title={property.name} />
               </motion.div>
             </div>
@@ -151,21 +158,11 @@ export default function Sanctuary() {
         </section>
       </main>
 
-      {/* Footer */}
-      <div style={{
-        background: '#111a10', padding: '4rem 0', textAlign: 'center',
-      }}>
-        <div style={{ marginBottom: '1.25rem' }}>
-          <img
-            src="/images/logo-virtus.png"
-            alt="Virtus Realty"
-            style={{ height: 52, width: 'auto', filter: 'invert(1)', opacity: 0.18 }}
-          />
+      <div style={{ background: '#2d4a2b', padding: '4rem 0', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
+          <img src="/images/logo-virtus.png" alt="Virtus Realty" style={{ height: 52, width: 'auto', filter: 'invert(1)', opacity: 0.18 }} />
         </div>
-        <p style={{
-          fontSize: '0.58rem', color: 'rgba(245,240,232,0.25)',
-          fontFamily: 'Inter, sans-serif', letterSpacing: '0.2em', textTransform: 'uppercase',
-        }}>
+        <p style={{ fontSize: '0.72rem', color: 'rgba(245,240,232,0.25)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           VIRTUS REAL ESTATE · VIRTUOSO · {new Date().getFullYear()}
         </p>
       </div>
