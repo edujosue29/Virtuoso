@@ -410,7 +410,7 @@ export const PROPERTIES = [
       '/images/carpintera/invernadero-3.png',
       '/images/carpintera/bodegas.png',
     ],
-    videoSrc: '/videos/carpintera-final.mp4',
+    videoSrc: '/videos/carpintera.mp4',
 
     // ── Imágenes por sección (banners editoriales) ─────────────────────────
     sectionImages: {

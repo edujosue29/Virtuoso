@@ -117,6 +117,7 @@ export default function VideoHero({ property }) {
           muted={false}
           loop
           playsInline
+          preload="metadata"
           style={{
             position: 'absolute',
             inset: 0,
