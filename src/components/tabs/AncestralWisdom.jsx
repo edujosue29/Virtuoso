@@ -74,7 +74,7 @@ export default function AncestralWisdom({ property }) {
         >
           <p style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
+            fontSize: 'clamp(1.15rem, 1.6vw, 1.35rem)',
             fontWeight: 300, color: 'rgba(17,26,16,0.68)',
             lineHeight: 1.9,
           }}>
@@ -161,7 +161,7 @@ export default function AncestralWisdom({ property }) {
               </h3>
               <p style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '0.95rem', fontWeight: 300,
+                fontSize: '1.1rem', fontWeight: 300,
                 color: 'rgba(17,26,16,0.6)', lineHeight: 1.8,
                 margin: 0,
               }}>

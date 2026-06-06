@@ -82,7 +82,7 @@ export default function CommunityPulse({ property, dark }) {
           transition={{ duration: 0.7, delay: 0.2 }}
           style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
+            fontSize: 'clamp(1.15rem, 1.5vw, 1.35rem)',
             fontWeight: 300, color: muted,
             lineHeight: 1.9, paddingBottom: '0.5rem',
           }}
@@ -127,7 +127,7 @@ export default function CommunityPulse({ property, dark }) {
           }}>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-              fontSize: '0.9rem', color: 'rgba(245,240,232,0.6)',
+              fontSize: '1.05rem', color: 'rgba(245,240,232,0.6)',
               lineHeight: 1.6,
             }}>
               "No es retirarse del mundo. Es regresar a él."
@@ -163,7 +163,7 @@ export default function CommunityPulse({ property, dark }) {
               <p style={{
                 fontFamily: '"Cormorant Garamond", serif',
                 fontStyle: 'italic',
-                fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)',
+                fontSize: 'clamp(1.05rem, 1.4vw, 1.2rem)',
                 fontWeight: 300, color: 'rgba(245,240,232,0.78)',
                 lineHeight: 1.7, margin: 0,
               }}>

@@ -169,7 +169,7 @@ export default function FloraFauna({ property, dark }) {
             >
               <p style={{
                 fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-                fontSize: '0.9rem', color: 'rgba(245,240,232,0.5)', marginBottom: '0.35rem',
+                fontSize: '1.05rem', color: 'rgba(245,240,232,0.5)', marginBottom: '0.35rem',
               }}>
                 {featured.scientific}
               </p>
@@ -213,7 +213,7 @@ export default function FloraFauna({ property, dark }) {
               {/* Description */}
               <p style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '1.08rem', fontWeight: 300,
+                fontSize: '1.25rem', fontWeight: 300,
                 color: textMuted, lineHeight: 1.8,
                 flex: 1,
               }}>
@@ -241,7 +241,7 @@ export default function FloraFauna({ property, dark }) {
                     </span>
                     <span style={{
                       fontFamily: '"Cormorant Garamond", serif',
-                      fontSize: '0.98rem', color: metaVal, lineHeight: 1.5,
+                      fontSize: '1.15rem', color: metaVal, lineHeight: 1.5,
                     }}>
                       {value}
                     </span>

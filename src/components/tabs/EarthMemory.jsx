@@ -138,7 +138,7 @@ export default function EarthMemory({ property, dark }) {
             {/* Description */}
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '0.95rem', fontWeight: 300,
+              fontSize: '1.1rem', fontWeight: 300,
               color: 'rgba(17,26,16,0.58)', lineHeight: 1.8,
               position: 'relative', zIndex: 1,
               margin: 0,

@@ -195,7 +195,7 @@ export default function LocalProsperity({ property, finca, dark }) {
           transition={{ duration: 0.7, delay: 0.2 }}
           style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
+            fontSize: 'clamp(1.1rem, 1.5vw, 1.3rem)',
             color: muted, lineHeight: 1.8,
             maxWidth: 340, textAlign: 'right',
           }}
