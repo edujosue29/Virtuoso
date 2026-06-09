@@ -48,9 +48,9 @@ const ICONS = {
 }
 
 export default function VirtuosPotential({ property, finca, dark }) {
-  const potencial = finca?.potencial ?? []
+  const potencial = finca?.potencial ?? property?.potencial ?? []
   const ddLink    = finca?.dueDiligence ?? null
-  const fincaLabel = finca?.label ?? 'Finca'
+  const fincaLabel = finca?.label ?? 'Propiedad'
 
   const cream  = dark ? '#faf9f6' : '#111a10'
   const muted  = dark ? 'rgba(245,240,232,0.55)' : 'rgba(17,26,16,0.52)'
@@ -59,105 +59,195 @@ export default function VirtuosPotential({ property, finca, dark }) {
 
   return (
     <div>
-      {/* ── Heading ─────────────────────────────────────────────────────── */}
-      <div style={{
-        display: 'grid', gridTemplateColumns: '1fr 1fr',
-        gap: '4rem', alignItems: 'flex-end', marginBottom: '3.5rem',
-      }}>
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
-              letterSpacing: '0.3em', textTransform: 'uppercase',
-              color: '#c9a84c', marginBottom: '1rem', fontWeight: 600,
-            }}
-          >
-            Potencial Observado · {fincaLabel}
-          </motion.p>
+      {/* ── Section Label ──────────────────────────────────────────────────── */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        style={{
+          fontFamily: '"DM Sans", Inter, sans-serif',
+          fontSize: '0.72rem',
+          letterSpacing: '0.3em',
+          textTransform: 'uppercase',
+          color: '#c9a84c',
+          marginBottom: '1.5rem',
+          fontWeight: 600,
+        }}
+      >
+        Potencial Observado · {fincaLabel}
+      </motion.p>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-              fontSize: 'clamp(2.4rem, 5vw, 4.2rem)',
-              fontWeight: 700, lineHeight: 1.0,
-              letterSpacing: '-0.02em', margin: 0,
-            }}
-          >
-            <span style={{ color: '#c9a84c', display: 'block' }}>Visión</span>
-            <span style={{ color: cream, display: 'block', fontWeight: 400 }}>Virtus</span>
-          </motion.h2>
-        </div>
+      {/* ── Main Heading ────────────────────────────────────────────────────── */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        style={{
+          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+          fontSize: 'clamp(2.4rem, 5vw, 4.2rem)',
+          fontWeight: 700,
+          lineHeight: 1.0,
+          letterSpacing: '-0.02em',
+          margin: '0 0 4rem 0',
+        }}
+      >
+        <span style={{ color: '#c9a84c', display: 'block' }}>Visión</span>
+        <span style={{ color: cream, display: 'block', fontWeight: 400 }}>Equipo Virtus</span>
+      </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, x: 16 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1rem, 1.6vw, 1.15rem)',
-            fontWeight: 300, color: muted, lineHeight: 1.9,
-            paddingBottom: '0.5rem',
-          }}
-        >
-          Evaluación estratégica del equipo Virtus Real Estate sobre el potencial transformador de esta propiedad.
-        </motion.p>
-      </div>
+      {/* ── Editorial Items — Alternating Layout ────────────────────────────── */}
+      <div style={{ marginBottom: '4rem' }}>
+        {potencial.map((item, i) => {
+          const isEven = i % 2 === 0
+          const itemNumber = String(i + 1).padStart(2, '0')
 
-      {/* ── 7 Potential cards — 2-col grid ──────────────────────────────── */}
-      <div style={{
-        display: 'grid', gridTemplateColumns: '1fr 1fr',
-        gap: '0',
-        border: `1px solid ${border}`,
-        marginBottom: '3.5rem',
-      }}>
-        {potencial.map((item, i) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.07 }}
-            style={{
-              padding: '2rem 2rem',
-              background: cardBg,
-              borderBottom: i < potencial.length - 2 ? `1px solid ${border}` : 'none',
-              borderRight: i % 2 === 0 ? `1px solid ${border}` : 'none',
-              display: 'flex', flexDirection: 'column', gap: '0.75rem',
-            }}
-          >
-            <div style={{
-              width: 42, height: 42, borderRadius: '50%',
-              border: '1px solid rgba(201,168,76,0.3)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: '#c9a84c', flexShrink: 0,
-            }}>
-              {ICONS[item.icon] || ICONS.leaf}
-            </div>
-            <h3 style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1.15rem', fontWeight: 500,
-              color: cream, lineHeight: 1.2, margin: 0,
-            }}>
-              {item.title}
-            </h3>
-            <p style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '0.98rem', fontWeight: 300,
-              color: muted, lineHeight: 1.75, margin: 0,
-            }}>
-              {item.desc}
-            </p>
-          </motion.div>
-        ))}
+          return (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: isEven ? '120px 1fr' : '1fr 120px',
+                gap: '3rem',
+                alignItems: 'flex-start',
+                marginBottom: i < potencial.length - 1 ? '3.5rem' : 0,
+              }}
+            >
+              {/* Left side — number (for even) / content (for odd) */}
+              {isEven ? (
+                <div style={{ paddingTop: '0.5rem' }}>
+                  <div
+                    style={{
+                      fontFamily: '"Playfair Display", serif',
+                      fontSize: '8rem',
+                      fontWeight: 700,
+                      color: 'rgba(201,168,76,0.12)',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {itemNumber}
+                  </div>
+                </div>
+              ) : (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1.2rem',
+                  }}
+                >
+                  {/* Title */}
+                  <h3
+                    style={{
+                      fontFamily: '"Cormorant Garamond", serif',
+                      fontSize: '1.5rem',
+                      fontWeight: 700,
+                      color: cream,
+                      lineHeight: 1.3,
+                      margin: 0,
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontFamily: '"Cormorant Garamond", serif',
+                      fontSize: '1.1rem',
+                      fontWeight: 300,
+                      color: '#000000',
+                      lineHeight: 1.75,
+                      margin: 0,
+                    }}
+                  >
+                    {item.desc}
+                  </p>
+
+                  {/* Decorative line */}
+                  <div
+                    style={{
+                      marginTop: '0.5rem',
+                      width: '50px',
+                      height: '1.5px',
+                      background: `linear-gradient(to right, #c9a84c, transparent)`,
+                      opacity: 0.5,
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* Right side — content (for even) / number (for odd) */}
+              {isEven ? (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1.2rem',
+                  }}
+                >
+                  {/* Title */}
+                  <h3
+                    style={{
+                      fontFamily: '"Cormorant Garamond", serif',
+                      fontSize: '1.5rem',
+                      fontWeight: 700,
+                      color: cream,
+                      lineHeight: 1.3,
+                      margin: 0,
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontFamily: '"Cormorant Garamond", serif',
+                      fontSize: '1.1rem',
+                      fontWeight: 300,
+                      color: '#000000',
+                      lineHeight: 1.75,
+                      margin: 0,
+                    }}
+                  >
+                    {item.desc}
+                  </p>
+
+                  {/* Decorative line */}
+                  <div
+                    style={{
+                      marginTop: '0.5rem',
+                      width: '50px',
+                      height: '1.5px',
+                      background: `linear-gradient(to right, #c9a84c, transparent)`,
+                      opacity: 0.5,
+                    }}
+                  />
+                </div>
+              ) : (
+                <div style={{ paddingTop: '0.5rem', textAlign: 'right' }}>
+                  <div
+                    style={{
+                      fontFamily: '"Playfair Display", serif',
+                      fontSize: '8rem',
+                      fontWeight: 700,
+                      color: 'rgba(201,168,76,0.12)',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {itemNumber}
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          )
+        })}
       </div>
 
       {/* ── Due Diligence CTA ────────────────────────────────────────────── */}

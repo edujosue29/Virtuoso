@@ -73,10 +73,11 @@ export default function AncestralWisdom({ property }) {
           style={{ paddingBottom: '0.5rem' }}
         >
           <p style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
+            fontFamily: '"Cormorant Garamond", serif',
             fontSize: 'clamp(1.15rem, 1.6vw, 1.35rem)',
-            fontWeight: 300, color: 'rgba(17,26,16,0.68)',
+            fontWeight: 300, color: 'rgba(17,26,16,0.85)',
             lineHeight: 1.9,
+            textAlign: 'right',
           }}>
             {ancestral.description}
           </p>
@@ -88,7 +89,7 @@ export default function AncestralWisdom({ property }) {
             <span style={{
               fontFamily: 'Inter, sans-serif', fontSize: '0.66rem',
               letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'rgba(17,26,16,0.3)',
+              color: 'rgba(17,26,16,0.55)',
             }}>
               {attribution}
             </span>
@@ -113,7 +114,7 @@ export default function AncestralWisdom({ property }) {
               display: 'grid',
               gridTemplateRows: item.image ? '260px auto' : 'auto',
               overflow: 'hidden',
-              border: '1px solid rgba(17,26,16,0.08)',
+              border: '1px solid rgba(17,26,16,0.15)',
             }}
           >
             {/* Image */}
@@ -162,7 +163,7 @@ export default function AncestralWisdom({ property }) {
               <p style={{
                 fontFamily: '"Cormorant Garamond", serif',
                 fontSize: '1.1rem', fontWeight: 300,
-                color: 'rgba(17,26,16,0.6)', lineHeight: 1.8,
+                color: 'rgba(17,26,16,0.85)', lineHeight: 1.8,
                 margin: 0,
               }}>
                 {item.description}

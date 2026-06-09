@@ -35,104 +35,94 @@ const ICONS = [
   </svg>,
 ]
 
-function FlipCard({ item, index, dark }) {
-  const [flipped, setFlipped] = useState(false)
+function AccordionItem({ item, index, dark }) {
+  const [expanded, setExpanded] = useState(false)
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.55, delay: index * 0.1 }}
-      style={{ perspective: 900, height: 240 }}
-      onClick={() => setFlipped(!flipped)}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      style={{
+        borderBottom: '1px solid rgba(201,168,76,0.15)',
+      }}
     >
-      <motion.div
-        animate={{ rotateY: flipped ? 180 : 0 }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      {/* Header - Problem */}
+      <button
+        onClick={() => setExpanded(!expanded)}
         style={{
-          width: '100%', height: '100%',
-          position: 'relative', transformStyle: 'preserve-3d',
+          width: '100%',
+          padding: '1.5rem 2rem',
+          background: dark ? 'rgba(255,255,255,0.02)' : 'rgba(255,255,255,0.5)',
+          border: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
           cursor: 'pointer',
+          transition: 'all 0.25s ease',
         }}
+        onMouseEnter={(e) => !dark && (e.currentTarget.style.background = 'rgba(255,255,255,0.7)')}
+        onMouseLeave={(e) => !dark && (e.currentTarget.style.background = 'rgba(255,255,255,0.5)')}
       >
-        {/* FRONT */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backfaceVisibility: 'hidden',
-          padding: '1.75rem 2rem',
-          border: '1px solid rgba(255,255,255,0.09)',
-          background: dark ? 'rgba(255,255,255,0.04)' : '#ffffff',
-          display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+        <p style={{
+          fontFamily: '"Cormorant Garamond", serif',
+          fontSize: '1.25rem', lineHeight: 1.75,
+          color: dark ? 'rgba(245,240,232,0.82)' : '#111a10',
+          fontWeight: 300,
+          margin: 0,
+          textAlign: 'left',
+          flex: 1,
         }}>
-          <div>
-            <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
-              letterSpacing: '0.22em', textTransform: 'uppercase',
-              color: 'rgba(200,80,80,0.7)',
-            }}>
-              Problemática
-            </span>
-            <p style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1rem', lineHeight: 1.75, marginTop: '0.7rem',
-              color: dark ? 'rgba(245,240,232,0.82)' : '#111a10',
-            }}>
-              {item.problem}
-            </p>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-            <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
-              letterSpacing: '0.14em', textTransform: 'uppercase',
-              color: dark ? 'rgba(245,240,232,0.2)' : 'rgba(17,26,16,0.22)',
-            }}>
-              Ver respuesta
-            </span>
-            <motion.span
-              animate={{ x: [0, 4, 0] }}
-              transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-              style={{ color: '#c9a84c', fontSize: '0.9rem', lineHeight: 1 }}
-            >
-              ›
-            </motion.span>
-          </div>
-        </div>
+          {item.problem}
+        </p>
 
-        {/* BACK */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backfaceVisibility: 'hidden',
-          transform: 'rotateY(180deg)',
-          padding: '1.75rem 2rem',
-          background: '#2d4a2b',
-          border: '1px solid rgba(201,168,76,0.2)',
-          display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-        }}>
-          <div>
-            <span style={{
-              fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
-              letterSpacing: '0.22em', textTransform: 'uppercase', color: '#c9a84c',
+        {/* Plus/Minus Icon */}
+        <motion.span
+          animate={{ rotate: expanded ? 45 : 0 }}
+          transition={{ duration: 0.25 }}
+          style={{
+            color: '#c9a84c',
+            fontSize: '1.5rem',
+            flexShrink: 0,
+            marginLeft: '1.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          +
+        </motion.span>
+      </button>
+
+      {/* Expandable content - Solution */}
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            style={{ overflow: 'hidden' }}
+          >
+            <div style={{
+              padding: '1.5rem 2rem',
+              background: dark ? 'rgba(45,74,43,0.15)' : 'rgba(201,168,76,0.04)',
+              borderLeft: '4px solid #c9a84c',
             }}>
-              Respuesta
-            </span>
-            <p style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: '1rem', color: '#f5f0e8',
-              lineHeight: 1.75, marginTop: '0.7rem', fontWeight: 300,
-            }}>
-              {item.solution}
-            </p>
-          </div>
-          <span style={{
-            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
-            letterSpacing: '0.14em', textTransform: 'uppercase',
-            color: 'rgba(245,240,232,0.18)',
-          }}>
-            Toca para volver
-          </span>
-        </div>
-      </motion.div>
+              <p style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: '1.15rem', fontWeight: 300,
+                color: dark ? 'rgba(245,240,232,0.75)' : '#111a10',
+                lineHeight: 1.8,
+                margin: 0,
+              }}>
+                {item.solution}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   )
 }
@@ -214,14 +204,15 @@ export default function LocalProsperity({ property, finca, dark }) {
           display: 'grid',
           gridTemplateColumns: '2fr 3fr',
           gap: '3rem',
-          alignItems: 'start',
+          alignItems: 'stretch',
           marginBottom: '5rem',
         }}
       >
         {/* Tall image */}
         <div style={{
           position: 'relative',
-          height: 520,
+          height: '100%',
+          minHeight: 480,
           overflow: 'hidden',
           borderRadius: 6,
         }}>
@@ -287,7 +278,7 @@ export default function LocalProsperity({ property, finca, dark }) {
               {/* Title */}
               <h3 style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '1.05rem', fontWeight: 500,
+                fontSize: '1.3rem', fontWeight: 500,
                 color: cream, lineHeight: 1.3,
                 marginBottom: '0.55rem',
               }}>
@@ -298,12 +289,8 @@ export default function LocalProsperity({ property, finca, dark }) {
               {ind.note && (
                 <p style={{
                   fontFamily: 'Inter, sans-serif',
-                  fontSize: '0.78rem', color: muted,
+                  fontSize: '1rem', color: muted,
                   lineHeight: 1.65,
-                  display: '-webkit-box',
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden',
                 }}>
                   {ind.note}
                 </p>
@@ -330,7 +317,7 @@ export default function LocalProsperity({ property, finca, dark }) {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
         {prosperity.issues.map((item, i) => (
-          <FlipCard key={i} item={item} index={i} dark={dark} />
+          <AccordionItem key={i} item={item} index={i} dark={dark} />
         ))}
       </div>
     </div>

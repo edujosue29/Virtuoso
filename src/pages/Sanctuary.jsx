@@ -30,8 +30,8 @@ const TAB_COMPONENTS = {
 const CONTENT_TABS = TABS.filter(t => t.id !== 'gallery')
 
 // 9 content sections — alternating dark/light
-const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#ffffff', '#2d4a2b', '#faf9f6']
-const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true,      false    ]
+const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#2d4a2b', '#2d4a2b', '#faf9f6']
+const SECTION_DARK = [false,     true,       false,     true,      false,     true,      true,      true,      false    ]
 
 export default function Sanctuary() {
   const { slug } = useParams()
@@ -140,14 +140,14 @@ export default function Sanctuary() {
 
         {/* Gallery */}
         <section ref={el => { sectionRefs.current['gallery'] = el }}>
-          <div style={{ background: '#faf9f6' }}>
+          <div style={{ background: '#2d4a2b' }}>
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '7rem 3rem 9rem' }}>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ marginBottom: '3.5rem' }}>
                 <p style={{ fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem', letterSpacing: '0.32em', textTransform: 'uppercase', color: '#c9a84c', marginBottom: '1rem', fontWeight: 600 }}>
                   El Santuario en Imágenes
                 </p>
                 <h3 style={{ fontFamily: '"Playfair Display", "Cormorant Garamond", serif', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400, lineHeight: 1.2, margin: 0 }}>
-                  {(() => { const p = property.name.split(' '); return <><span style={{ color: '#c9a84c' }}>{p[0]}</span>{p.length > 1 && <span style={{ color: '#2d4a2b' }}> {p.slice(1).join(' ')}</span>}</> })()}
+                  {(() => { const p = property.name.split(' '); return <><span style={{ color: '#c9a84c' }}>{p[0]}</span>{p.length > 1 && <span style={{ color: '#faf9f6' }}> {p.slice(1).join(' ')}</span>}</> })()}
                 </h3>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>
@@ -158,11 +158,11 @@ export default function Sanctuary() {
         </section>
       </main>
 
-      <div style={{ background: '#2d4a2b', padding: '4rem 0', textAlign: 'center' }}>
+      <div style={{ background: '#ffffff', padding: '4rem 0', textAlign: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
-          <img src="/images/logo-virtus.png" alt="Virtus Realty" style={{ height: 52, width: 'auto', filter: 'invert(1)', opacity: 0.18 }} />
+          <img src="/images/logo-virtus.png" alt="Virtus Realty" style={{ height: 52, width: 'auto', opacity: 0.3 }} />
         </div>
-        <p style={{ fontSize: '0.72rem', color: 'rgba(245,240,232,0.25)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+        <p style={{ fontSize: '0.72rem', color: 'rgba(17,26,16,0.4)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           VIRTUS REAL ESTATE · VIRTUOSO · {new Date().getFullYear()}
         </p>
       </div>

@@ -10,7 +10,7 @@ export default function EarthMemory({ property, dark }) {
 
   // Grid background matches section background
   const gridBg = dark ? 'rgba(255,255,255,0.02)' : '#faf9f6'
-  const gridBorder = dark ? 'rgba(255,255,255,0.05)' : 'rgba(17,26,16,0.07)'
+  const gridBorder = dark ? 'rgba(255,255,255,0.05)' : 'rgba(17,26,16,0.15)'
 
   return (
     <div>
@@ -66,7 +66,7 @@ export default function EarthMemory({ property, dark }) {
           style={{
             fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
             fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
-            fontWeight: 300, color: 'rgba(17,26,16,0.58)',
+            fontWeight: 300, color: 'rgba(17,26,16,0.85)',
             lineHeight: 1.9, paddingBottom: '0.5rem',
           }}
         >
@@ -115,7 +115,7 @@ export default function EarthMemory({ property, dark }) {
             <span style={{
               display: 'inline-block',
               fontFamily: '"DM Sans", Inter, sans-serif',
-              fontSize: '0.72rem', fontWeight: 700,
+              fontSize: '0.72rem', fontWeight: 900,
               letterSpacing: '0.2em', textTransform: 'uppercase',
               color: '#c9a84c',
               marginBottom: '0.75rem',
@@ -139,7 +139,7 @@ export default function EarthMemory({ property, dark }) {
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
               fontSize: '1.1rem', fontWeight: 300,
-              color: 'rgba(17,26,16,0.58)', lineHeight: 1.8,
+              color: 'rgba(17,26,16,0.85)', lineHeight: 1.8,
               position: 'relative', zIndex: 1,
               margin: 0,
             }}>

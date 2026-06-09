@@ -25,7 +25,7 @@ function SpecRow({ label, value, index }) {
       </span>
       <span style={{
         fontFamily: '"Cormorant Garamond", serif',
-        fontSize: '1.05rem', color: '#111a10',
+        fontSize: '1.2rem', color: '#111a10',
         fontWeight: 400, lineHeight: 1.65,
       }}>
         {value}
@@ -35,25 +35,20 @@ function SpecRow({ label, value, index }) {
 }
 
 export default function TechnicalSheet({ property }) {
-  const { technical, name, tagline, techSheet } = property
+  const { technical, name, location, tagline, techSheet } = property
 
   const nameParts = name.split(' ')
   const nameFirst = nameParts[0]
   const nameRest  = nameParts.slice(1).join(' ')
 
   const specs = [
+    { label: 'Ubicación',          value: location },
     { label: 'Área total',         value: technical.area },
     { label: 'Desglose',           value: technical.areaDesglose },
     { label: 'Elevación',          value: technical.elevation },
     { label: 'Zonificación',       value: technical.zoning },
     { label: 'Recursos Hídricos',  value: technical.water },
-    { label: 'Acceso',             value: technical.access },
-    { label: 'Estado de Título',   value: technical.titleStatus },
-    { label: 'Folio Real',         value: technical.folio },
-    { label: 'Tipo de Suelo',      value: technical.soilType },
     { label: 'Infraestructura',    value: technical.infrastructure },
-    { label: 'Restricciones',      value: technical.restrictions },
-    { label: 'Valor Referencial',  value: technical.value },
   ].filter((r) => r.value)
 
   const handleDownload = () => {
@@ -118,8 +113,8 @@ export default function TechnicalSheet({ property }) {
             transition={{ duration: 0.7, delay: 0.15 }}
             style={{
               fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-              fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
-              fontWeight: 300, color: 'rgba(17,26,16,0.58)',
+              fontSize: 'clamp(1.15rem, 1.6vw, 1.35rem)',
+              fontWeight: 300, color: 'rgba(17,26,16,0.85)',
               lineHeight: 1.9, paddingBottom: '0.5rem',
             }}
           >
@@ -162,7 +157,7 @@ export default function TechnicalSheet({ property }) {
       }}>
         <p style={{
           fontSize: '0.72rem',
-          color: 'rgba(17,26,16,0.28)', fontFamily: 'Inter, sans-serif',
+          color: 'rgba(17,26,16,0.55)', fontFamily: 'Inter, sans-serif',
           lineHeight: 1.8, maxWidth: 500,
         }}>
           Información basada en registros catastrales y estudios de campo. Sujeta a verificación
