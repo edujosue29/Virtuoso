@@ -2,6 +2,12 @@ import { motion } from 'framer-motion'
 
 const DRONE_IMAGE = '/images/nature/bosquedrone.jpg'
 
+function getBackgroundImage(propertyId) {
+  return propertyId === 'division-perez-zeledon'
+    ? '/images/division/portada2.jpeg'
+    : DRONE_IMAGE
+}
+
 // SVG icons for activities — no emojis
 const ACTIVITY_ICONS = {
   'Observación de Aves':     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>,
@@ -20,19 +26,20 @@ const ACTIVITY_ICONS = {
 const DEFAULT_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
 
 export default function CommunityPulse({ property, dark }) {
-  const { communityPulse, name } = property
+  const { communityPulse, name, id } = property
   const acts = communityPulse.activities
   const highlights = communityPulse.lifestyle
 
   const cream = '#faf9f6'
   const muted = 'rgba(245,240,232,0.52)'
+  const backgroundImage = getBackgroundImage(id)
 
   return (
     <div>
       {/* ── Full background section with drone image ────────────────────── */}
       <div style={{
         position: 'relative',
-        backgroundImage: `url(${DRONE_IMAGE})`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
