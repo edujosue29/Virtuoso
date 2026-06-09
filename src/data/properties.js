@@ -26,6 +26,7 @@ export const NATURE = {
   water:     '/images/nature/natalia-blauth-BcbuyNGC1CM-unsplash.jpg',
   sky:       '/images/nature/unsplash-community-0sjmO4peVKE-unsplash.jpg',
   soul:      '/images/nature/a-chosen-soul-SxQ9fZq3uQ0-unsplash.jpg',
+  bosquedrone: '/images/nature/bosquedrone.jpg',
 }
 
 export const PROPERTIES = [
