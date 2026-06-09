@@ -46,8 +46,8 @@ export const PROPERTIES = [
       'Casi 600 hectáreas de bosque primario y secundario en el Corredor Biológico La Amistad Pacífico Sur, declarado Patrimonio de la Humanidad por la UNESCO. Nacientes propias con convenio de abastecimiento a comunidades, acceso directo desde la Ruta Interamericana y potencial agroforestal activo.',
 
     // ── Imágenes reales ────────────────────────────────────────────────────
-    heroImage: '/images/division/division-1.jpeg',
-    image:   '/images/division/division-2.jpeg',
+    heroImage: '/images/division/portada2.jpeg',
+    image:   '/images/division/portada2.jpeg',
     gallery: [
       '/images/division/division-1.jpeg',
       '/images/division/division-2.jpeg',
