@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "google-image-search": {
+      "source": "glebis/claude-skills",
+      "sourceType": "github",
+      "skillPath": "google-image-search/SKILL.md",
+      "computedHash": "564a7ff4047a76bf0c2baa9a5d051e181779e77bf084adf0a0772a15a603fb49"
+    }
+  }
+}

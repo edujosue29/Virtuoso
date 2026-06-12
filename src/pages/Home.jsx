@@ -66,7 +66,7 @@ export default function Home() {
             margin: '0 auto 4rem',
           }}
         >
-          Dos santuarios costarricenses bajo protección activa, buscando un custodio consciente que entienda que conservar es la inversión más inteligente del siglo.
+          Santuarios costarricenses bajo protección activa, buscando custodios conscientes.
         </motion.p>
 
         {/* Cards */}
@@ -105,7 +105,7 @@ export default function Home() {
               letterSpacing: '-0.01em',
               margin: '0 0 1rem 0',
             }}>
-              Virtus Real Estate
+              VIRTUS REALTY CR
             </h3>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif',
@@ -114,7 +114,7 @@ export default function Home() {
               color: 'rgba(42,92,56,0.7)',
               margin: 0,
             }}>
-              Santuarios de Regeneración
+              Santuarios Naturales
             </p>
           </div>
 

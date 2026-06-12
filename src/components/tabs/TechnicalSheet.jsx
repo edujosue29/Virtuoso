@@ -42,13 +42,15 @@ export default function TechnicalSheet({ property }) {
   const nameRest  = nameParts.slice(1).join(' ')
 
   const specs = [
-    { label: 'Ubicación',          value: location },
-    { label: 'Área total',         value: technical.area },
-    { label: 'Desglose',           value: technical.areaDesglose },
-    { label: 'Elevación',          value: technical.elevation },
-    { label: 'Zonificación',       value: technical.zoning },
-    { label: 'Recursos Hídricos',  value: technical.water },
-    { label: 'Infraestructura',    value: technical.infrastructure },
+    { label: 'Ubicación y Extensión',    value: technical.area },
+    { label: 'Soberanía Hídrica',        value: technical.water },
+    { label: 'Estatus Global',           value: technical.zoning },
+    { label: 'Elevación y Clima',        value: technical.elevation },
+    { label: 'Biodiversidad Crítica',    value: technical.biodiversity },
+    { label: 'Potencial Constructivo',   value: technical.constructive },
+    { label: 'Privacidad y Aislamiento', value: technical.privacy },
+    { label: 'Accesibilidad Logística',  value: technical.access },
+    { label: 'Accesibilidad',            value: technical.infrastructure },
   ].filter((r) => r.value)
 
   const handleDownload = () => {
@@ -161,7 +163,7 @@ export default function TechnicalSheet({ property }) {
           lineHeight: 1.8, maxWidth: 500,
         }}>
           Información basada en registros catastrales y estudios de campo. Sujeta a verificación
-          legal y técnica. Virtus Real Estate · VIRTUOSO — {new Date().getFullYear()}
+          legal y técnica. VIRTUS REALTY CR · VIRTUOSO — {new Date().getFullYear()}
         </p>
 
         <motion.button

@@ -7,7 +7,7 @@ export const TABS = [
   { id: 'memory',     label: 'Memoria',             short: 'Memoria'    },
   { id: 'prosperity', label: 'Prosperidad',         short: 'Prosperidad'},
   { id: 'ancestral',  label: 'Sabiduría Ancestral', short: 'Ancestral'  },
-  { id: 'pulse',      label: 'Pulso Comunidad',     short: 'Comunidad'  },
+  { id: 'pulse',      label: 'Estilo de Vida',      short: 'Lifestyle'  },
   { id: 'index',      label: 'Índice Virtuoso',     short: 'Índice'     },
   { id: 'legacy',     label: 'Legado',              short: 'Legado'     },
   { id: 'potencial',  label: 'Potencial Virtus',    short: 'Potencial'  },

@@ -26,6 +26,19 @@ export default function PropertyCard({ property, index }) {
   const elevation = property.technical?.elevation?.split('·')[0]?.trim() ?? ''
   const certification = deriveZoning(property)
 
+  // Override taglines for homepage display (not affecting sanctuary pages)
+  const getDisplayTagline = () => {
+    if (property.id === 'division-perez-zeledon') {
+      return 'Un santuario de biodiversidad donde el bosque y el agua conviven en perfecta armonía.'
+    }
+    if (property.id === 'la-carpintera') {
+      return 'La dualidad perfecta entre conectividad estratégica y aislamiento ecológico: un santuario de bosque nuboso dotado de soberanía absoluta en agua y energía.'
+    }
+    return property.tagline
+  }
+
+  const displayTagline = getDisplayTagline()
+
   // Split title: first word gold, rest dark
   const nameParts = property.name.split(' ')
   const nameFirst = nameParts[0]
@@ -104,7 +117,7 @@ export default function PropertyCard({ property, index }) {
             color: 'rgba(17,26,16,0.45)', lineHeight: 1.6,
             marginBottom: '1.25rem',
           }}>
-            {property.tagline}
+            {displayTagline}
           </p>
 
           {/* Energy tags */}

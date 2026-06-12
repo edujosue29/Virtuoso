@@ -79,7 +79,7 @@ export default function CommunityPulse({ property, dark }) {
                   color: '#c9a84c', marginBottom: '1rem',
                 }}
               >
-                El Pulso de la Comunidad
+                Estilo de Vida
               </motion.p>
 
               <motion.h2
@@ -92,10 +92,10 @@ export default function CommunityPulse({ property, dark }) {
                   fontSize: 'clamp(2.6rem, 5.5vw, 4.8rem)',
                   fontWeight: 700, lineHeight: 1.0,
                   letterSpacing: '-0.02em', margin: 0,
+                  color: '#c9a84c',
                 }}
               >
-                <span style={{ color: cream, display: 'block' }}>Vivir en</span>
-                <span style={{ color: '#c9a84c', display: 'block' }}>{name}</span>
+                Estilo de Vida
               </motion.h2>
             </div>
 

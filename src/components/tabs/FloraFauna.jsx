@@ -220,33 +220,28 @@ export default function FloraFauna({ property, dark }) {
                 {featured.description}
               </p>
 
-              {/* Habitat + Status pills */}
+              {/* Habitat pill */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                {[
-                  { label: 'Hábitat', value: featured.habitat },
-                  { label: 'Estado', value: featured.status },
-                ].map(({ label, value }) => (
-                  <div key={label} style={{
-                    display: 'grid', gridTemplateColumns: '72px 1fr',
-                    gap: '1rem', padding: '0.75rem 1rem',
-                    background: metaBg,
-                    border: '1px solid rgba(201,168,76,0.12)',
+                <div style={{
+                  display: 'grid', gridTemplateColumns: '72px 1fr',
+                  gap: '1rem', padding: '0.75rem 1rem',
+                  background: metaBg,
+                  border: '1px solid rgba(201,168,76,0.12)',
+                }}>
+                  <span style={{
+                    fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+                    letterSpacing: '0.16em', textTransform: 'uppercase', color: '#c9a84c',
+                    paddingTop: 2,
                   }}>
-                    <span style={{
-                      fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
-                      letterSpacing: '0.16em', textTransform: 'uppercase', color: '#c9a84c',
-                      paddingTop: 2,
-                    }}>
-                      {label}
-                    </span>
-                    <span style={{
-                      fontFamily: '"Cormorant Garamond", serif',
-                      fontSize: '1.15rem', color: metaVal, lineHeight: 1.5,
-                    }}>
-                      {value}
-                    </span>
-                  </div>
-                ))}
+                    Hábitat
+                  </span>
+                  <span style={{
+                    fontFamily: '"Cormorant Garamond", serif',
+                    fontSize: '1.15rem', color: metaVal, lineHeight: 1.5,
+                  }}>
+                    {featured.habitat}
+                  </span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>

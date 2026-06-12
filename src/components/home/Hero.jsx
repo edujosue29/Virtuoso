@@ -75,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex items-center gap-3 mb-8"
+          className="flex items-center gap-3 mb-16"
         >
           <div className="h-px w-10" style={{ background: 'linear-gradient(to right, transparent, #c9a84c)' }} />
           <span
@@ -87,14 +87,14 @@ export default function Hero() {
               color: '#c9a84c',
             }}
           >
-            Virtus Real Estate · VIRTUOSO
+            Virtus Realty CR & Virtuoso
           </span>
           <div className="h-px w-10" style={{ background: 'linear-gradient(to left, transparent, #c9a84c)' }} />
         </motion.div>
 
         {/* Headline */}
         <h1
-          className="mb-6 max-w-4xl"
+          className="mb-12 max-w-4xl"
           style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: 'clamp(2.8rem, 7vw, 6.5rem)',
@@ -160,16 +160,17 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.3 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-4"
           style={{ color: 'rgba(201,168,76,0.5)' }}
         >
           <span
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: '0.72rem',
+              fontSize: '1rem',
               letterSpacing: '0.25em',
               textTransform: 'uppercase',
-              color: 'rgba(201,168,76,0.55)',
+              color: 'rgba(201,168,76,0.7)',
+              fontWeight: 700,
             }}
           >
             Descubre los santuarios
@@ -178,7 +179,7 @@ export default function Hero() {
             animate={{ y: [0, 7, 0] }}
             transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <svg width="48" height="48" viewBox="0 0 20 20" fill="none">
               <path d="M10 4v12M4 10l6 6 6-6" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
             </svg>
           </motion.div>

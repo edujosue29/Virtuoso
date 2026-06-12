@@ -21,8 +21,31 @@ export default function ImageGallery({ images, title }) {
   const [hovered,  setHovered]  = useState(null)
 
   const close = useCallback(() => setLightbox(null), [])
-  const prev  = useCallback(() => setLightbox(i => (i - 1 + images.length) % images.length), [images.length])
-  const next  = useCallback(() => setLightbox(i => (i + 1) % images.length), [images.length])
+
+  const prev  = useCallback(() => {
+    setLightbox(i => {
+      const newIndex = (i - 1 + images.length) % images.length
+      setTimeout(() => scrollToImage(newIndex), 0)
+      return newIndex
+    })
+  }, [images.length])
+
+  const next  = useCallback(() => {
+    setLightbox(i => {
+      const newIndex = (i + 1) % images.length
+      setTimeout(() => scrollToImage(newIndex), 0)
+      return newIndex
+    })
+  }, [images.length])
+
+  const scrollToImage = (index) => {
+    const container = document.querySelector('[data-gallery-container]')
+    const elem = document.querySelector(`[data-gallery-index="${index}"]`)
+    if (container && elem) {
+      const scrollLeft = elem.offsetLeft - container.offsetWidth / 2 + elem.offsetWidth / 2
+      container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+    }
+  }
 
   useEffect(() => {
     if (lightbox === null) return
@@ -35,17 +58,26 @@ export default function ImageGallery({ images, title }) {
     return () => window.removeEventListener('keydown', h)
   }, [lightbox, next, prev, close])
 
-  const visible = images.slice(0, 9)
+  const visible = images
 
   return (
     <div>
       {/* ── Bento grid ──────────────────────────────────────────────────── */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridAutoRows: `${ROW_H}px`,
-        gap: '6px',
-      }}>
+      <div
+        data-gallery-container
+        style={{
+          overflowX: 'hidden',
+          overflowY: 'visible',
+          paddingBottom: '8px',
+        }}
+      >
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridAutoRows: `${ROW_H}px`,
+          gap: '6px',
+          width: '100%',
+        }}>
         {visible.map((src, i) => {
           const { col, row } = BENTO[i] ?? { col: 1, row: 1 }
           const isHov = hovered === i
@@ -53,6 +85,7 @@ export default function ImageGallery({ images, title }) {
           return (
             <motion.div
               key={src}
+              data-gallery-index={i}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -123,35 +156,10 @@ export default function ImageGallery({ images, title }) {
                 </div>
               </div>
 
-              {/* +N overlay on last tile when there are more images */}
-              {i === 8 && images.length > 9 && (
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: 'rgba(45,74,43,0.72)',
-                }}>
-                  <span style={{
-                    fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: '2rem', color: '#c9a84c',
-                  }}>
-                    +{images.length - 9}
-                  </span>
-                  <span style={{
-                    fontFamily: 'Inter, sans-serif', fontSize: '0.58rem',
-                    color: 'rgba(245,240,232,0.5)',
-                    letterSpacing: '0.15em', textTransform: 'uppercase',
-                  }}>
-                    más fotos
-                  </span>
-                </div>
-              )}
             </motion.div>
           )
         })}
+        </div>
       </div>
 
       {/* ── Lightbox ─────────────────────────────────────────────────────── */}

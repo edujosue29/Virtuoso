@@ -1,7 +1,144 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const CONSERVATION_IMAGE = '/images/carpintera/IMG_3028.jpg'
+const CONSERVATION_IMAGE = '/images/division/ca.jpeg'
+
+// ═════════════════════════════════════════════════════════════════════════════
+// CLEAN STATIC CAROUSEL — Static design with icon row and hover effects
+// ═════════════════════════════════════════════════════════════════════════════
+function StaticConservationSection({ indicators, cream, dark }) {
+  const [hoveredIndex, setHoveredIndex] = useState(null)
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: '100%',
+        minHeight: 650,
+        overflow: 'hidden',
+        borderRadius: 6,
+      }}
+    >
+      {/* ──── Full-Width Image (No Parallax) ──── */}
+      <img
+        src={CONSERVATION_IMAGE}
+        alt="Conservación Activa"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'right 30%',
+          zIndex: 0,
+        }}
+      />
+
+      {/* ──── Overlay Black ──── */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(0,0,0,0.70)',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* ──── Center Row: 5 Icons (Horizontal Layout) ──── */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          display: 'flex',
+          gap: '1.5rem',
+          zIndex: 10,
+          alignItems: 'center',
+        }}
+      >
+        {indicators.map((ind, i) => (
+          <div
+            key={ind.label}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              cursor: 'pointer',
+              transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+              transform: hoveredIndex === i ? 'scale(1.12)' : 'scale(1)',
+            }}
+            onMouseEnter={() => setHoveredIndex(i)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {/* Icon Circle */}
+            <div
+              style={{
+                width: 70,
+                height: 70,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(201,168,76,0.05) 100%)',
+                border: '1.5px solid rgba(201,168,76,0.35)',
+                boxShadow: hoveredIndex === i
+                  ? '0 0 24px rgba(201,168,76,0.4)'
+                  : 'inset 0 1px 4px rgba(255,255,255,0.1), 0 0 12px rgba(201,168,76,0.15)',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                marginBottom: '0.8rem',
+              }}
+            >
+              {/* SVG Icon */}
+              <div
+                style={{
+                  transform: 'scale(1.8)',
+                  color: '#c9a84c',
+                  filter: 'drop-shadow(0 2px 6px rgba(201,168,76,0.25))',
+                  opacity: 0.92,
+                }}
+              >
+                {ICONS[i]}
+              </div>
+            </div>
+
+            {/* Title */}
+            <h4
+              style={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontSize: '0.95rem',
+                fontWeight: 500,
+                color: cream,
+                lineHeight: 1.3,
+                margin: 0,
+                letterSpacing: '0.3px',
+                textShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                maxWidth: 110,
+              }}
+            >
+              {ind.label}
+            </h4>
+          </div>
+        ))}
+      </div>
+
+      {/* ──── Description Overlay (Bottom Left) ──── */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '3rem',
+          left: '3rem',
+          maxWidth: '45%',
+          zIndex: 5,
+        }}
+      >
+      </div>
+    </div>
+  )
+}
 
 // Minimal SVG icons — one per indicator
 const ICONS = [
@@ -177,21 +314,6 @@ export default function LocalProsperity({ property, finca, dark }) {
           </motion.h2>
         </div>
 
-        {/* Pull quote right */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1.1rem, 1.5vw, 1.3rem)',
-            color: muted, lineHeight: 1.8,
-            maxWidth: 340, textAlign: 'right',
-          }}
-        >
-          {prosperity.description}
-        </motion.p>
       </div>
 
       {/* ── Main: tall image left + feature grid right ──────────────────── */}
@@ -208,112 +330,58 @@ export default function LocalProsperity({ property, finca, dark }) {
           marginBottom: '5rem',
         }}
       >
-        {/* Tall image */}
-        <div style={{
-          position: 'relative',
-          height: '100%',
-          minHeight: 480,
-          overflow: 'hidden',
-          borderRadius: 6,
-        }}>
-          <img
-            src={img}
-            alt="Bosque nuboso en conservación"
-            style={{
-              width: '100%', height: '100%',
-              objectFit: 'cover', objectPosition: 'center 30%',
-              filter: 'brightness(0.72) saturate(0.85)',
-              display: 'block',
-            }}
-          />
-          {/* Bottom label */}
-          <div style={{
-            position: 'absolute', bottom: '1.5rem', left: '1.5rem',
+        {/* Text content left */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            padding: '3rem 2rem',
+            background: 'rgba(201,168,76,0.06)',
+            border: '1px solid rgba(201,168,76,0.2)',
+            borderRadius: 6,
+            minHeight: 480,
+          }}
+        >
+          <p style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: 'clamp(1.15rem, 1.8vw, 1.35rem)',
+            fontWeight: 300,
+            color: cream,
+            lineHeight: 1.95,
+            margin: 0,
           }}>
-            <span style={{
-              fontFamily: 'Inter, sans-serif', fontSize: '0.65rem',
-              letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'rgba(245,240,232,0.45)',
-            }}>
-              Bosque nuboso · SINAC
-            </span>
-          </div>
-        </div>
+            {prosperity.description}
+          </p>
+        </motion.div>
 
-        {/* Feature grid — 2 columns */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '0',
-        }}>
-          {prosperity.indicators.map((ind, i) => (
-            <motion.div
-              key={ind.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              style={{
-                padding: '2rem 1.75rem',
-                borderBottom: i < prosperity.indicators.length - 2
-                  ? '1px solid rgba(255,255,255,0.07)'
-                  : 'none',
-                borderRight: i % 2 === 0
-                  ? '1px solid rgba(255,255,255,0.07)'
-                  : 'none',
-              }}
-            >
-              {/* Icon */}
-              <div style={{
-                width: 40, height: 40,
-                borderRadius: '50%',
-                border: '1px solid rgba(201,168,76,0.3)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: '#c9a84c',
-                marginBottom: '1.1rem',
-              }}>
-                {ICONS[i]}
-              </div>
+        {/* ──── STATIC CONSERVATION SECTION ──── */}
+        <StaticConservationSection indicators={prosperity.indicators} cream={cream} dark={dark} />
 
-              {/* Title */}
-              <h3 style={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '1.3rem', fontWeight: 500,
-                color: cream, lineHeight: 1.3,
-                marginBottom: '0.55rem',
-              }}>
-                {ind.label}
-              </h3>
-
-              {/* Ultra-brief description */}
-              {ind.note && (
-                <p style={{
-                  fontFamily: 'Inter, sans-serif',
-                  fontSize: '1rem', color: muted,
-                  lineHeight: 1.65,
-                }}>
-                  {ind.note}
-                </p>
-              )}
-            </motion.div>
-          ))}
-        </div>
       </motion.div>
 
       {/* ── Desafíos ─────────────────────────────────────────────────────── */}
-      <div style={{
-        display: 'flex', alignItems: 'center', gap: '1.25rem',
-        marginBottom: '2rem',
-      }}>
-        <span style={{
-          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
-          letterSpacing: '0.24em', textTransform: 'uppercase',
-          color: '#c9a84c', flexShrink: 0,
-        }}>
-          Desafíos del Custodio
-        </span>
-        <div style={{ flex: 1, height: 1, background: 'rgba(201,168,76,0.2)' }} />
-      </div>
+      <motion.h3
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        style={{
+          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
+          fontSize: 'clamp(2rem, 4vw, 2.8rem)',
+          fontWeight: 700,
+          color: cream,
+          letterSpacing: '-0.01em',
+          marginBottom: '3rem',
+          margin: '4rem 0 3rem 0',
+        }}
+      >
+        Desafíos del Custodio
+      </motion.h3>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
         {prosperity.issues.map((item, i) => (

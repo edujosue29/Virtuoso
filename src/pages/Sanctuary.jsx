@@ -30,8 +30,8 @@ const TAB_COMPONENTS = {
 const CONTENT_TABS = TABS.filter(t => t.id !== 'gallery')
 
 // 9 content sections — alternating dark/light
-const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#2d4a2b', '#2d4a2b', '#faf9f6']
-const SECTION_DARK = [false,     true,       false,     true,      false,     true,      true,      true,      false    ]
+const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#ffffff', '#2d4a2b', '#faf9f6']
+const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true,      false    ]
 
 export default function Sanctuary() {
   const { slug } = useParams()
@@ -144,14 +144,14 @@ export default function Sanctuary() {
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '7rem 3rem 9rem' }}>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ marginBottom: '3.5rem' }}>
                 <p style={{ fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem', letterSpacing: '0.32em', textTransform: 'uppercase', color: '#c9a84c', marginBottom: '1rem', fontWeight: 600 }}>
-                  El Santuario en Imágenes
+                  Colección Visual
                 </p>
-                <h3 style={{ fontFamily: '"Playfair Display", "Cormorant Garamond", serif', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400, lineHeight: 1.2, margin: 0 }}>
-                  {(() => { const p = property.name.split(' '); return <><span style={{ color: '#c9a84c' }}>{p[0]}</span>{p.length > 1 && <span style={{ color: '#faf9f6' }}> {p.slice(1).join(' ')}</span>}</> })()}
+                <h3 style={{ fontFamily: '"Playfair Display", "Cormorant Garamond", serif', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400, lineHeight: 1.2, margin: 0, color: '#faf9f6' }}>
+                  Galería
                 </h3>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>
-                <ImageGallery images={property.gallery} title={property.name} />
+                <ImageGallery images={[...property.gallery, ...property.floraFaunaImages]} title={property.name} />
               </motion.div>
             </div>
           </div>

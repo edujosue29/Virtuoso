@@ -252,7 +252,7 @@ export default function VideoHero({ property }) {
           style={{
             fontFamily: 'Inter, sans-serif', fontSize: '0.72rem',
             letterSpacing: '0.28em', textTransform: 'uppercase',
-            color: '#c9a84c', marginBottom: '0.6rem',
+            color: '#c9a84c', marginBottom: '0.6rem', fontWeight: 700,
           }}
         >
           {property.location}
@@ -280,10 +280,10 @@ export default function VideoHero({ property }) {
             transition={{ duration: 0.6, delay: 0.42 }}
             style={{
               fontFamily: '"Cormorant Garamond", serif',
-              fontSize: 'clamp(0.9rem, 1.6vw, 1.1rem)',
-              fontStyle: 'italic', fontWeight: 300,
-              color: 'rgba(245,240,232,0.45)',
-              lineHeight: 1.5, maxWidth: 540, marginBottom: '1rem',
+              fontSize: 'clamp(1.1rem, 1.8vw, 1.35rem)',
+              fontStyle: 'italic', fontWeight: 400,
+              color: 'rgba(245,240,232,0.72)',
+              lineHeight: 1.6, maxWidth: 540, marginBottom: '1rem',
             }}
           >
             {sanctuaryLabel}
@@ -299,8 +299,8 @@ export default function VideoHero({ property }) {
           >
             {techStats.map(stat => (
               <span key={stat} style={{
-                padding: '0.22rem 0.75rem', borderRadius: 999,
-                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+                padding: '0.35rem 0.95rem', borderRadius: 999,
+                fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.82rem',
                 letterSpacing: '0.12em', textTransform: 'uppercase',
                 color: 'rgba(245,240,232,0.75)',
                 background: 'rgba(45,74,43,0.45)',
@@ -321,8 +321,8 @@ export default function VideoHero({ property }) {
         >
           {property.energy.map(tag => (
             <span key={tag} style={{
-              padding: '0.2rem 0.7rem', borderRadius: 999,
-              fontSize: '0.72rem', fontFamily: 'Inter, sans-serif',
+              padding: '0.35rem 0.95rem', borderRadius: 999,
+              fontSize: '0.82rem', fontFamily: 'Inter, sans-serif',
               letterSpacing: '0.15em', textTransform: 'uppercase',
               color: '#c9a84c',
               background: 'rgba(45,74,43,0.55)',
