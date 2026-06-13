@@ -7,15 +7,18 @@ import TabNav, { TABS } from '../components/sanctuary/TabNav'
 import ImageGallery from '../components/ui/ImageGallery'
 import TechnicalSheet from '../components/tabs/TechnicalSheet'
 import FloraFauna from '../components/tabs/FloraFauna'
+import FloraFaunaCarpintera from '../components/tabs/FloraFaunaCarpintera'
 import EarthMemory from '../components/tabs/EarthMemory'
 import LocalProsperity from '../components/tabs/LocalProsperity'
 import AncestralWisdom from '../components/tabs/AncestralWisdom'
+import AncestralWisdomCarpintera from '../components/tabs/AncestralWisdomCarpintera'
 import CommunityPulse from '../components/tabs/CommunityPulse'
 import VirtuosoIndex from '../components/tabs/VirtuosoIndex'
 import CustodyLegacy from '../components/tabs/CustodyLegacy'
 import VirtuosPotential from '../components/tabs/VirtuosPotential'
+import VirtuosPotentialCarpintera from '../components/tabs/VirtuosPotentialCarpintera'
 
-const TAB_COMPONENTS = {
+const TAB_COMPONENTS_DEFAULT = {
   technical:  TechnicalSheet,
   flora:      FloraFauna,
   memory:     EarthMemory,
@@ -25,6 +28,18 @@ const TAB_COMPONENTS = {
   index:      VirtuosoIndex,
   legacy:     CustodyLegacy,
   potencial:  VirtuosPotential,
+}
+
+const TAB_COMPONENTS_CARPINTERA = {
+  technical:  TechnicalSheet,
+  flora:      FloraFaunaCarpintera,
+  memory:     EarthMemory,
+  prosperity: LocalProsperity,
+  ancestral:  AncestralWisdomCarpintera,
+  pulse:      CommunityPulse,
+  index:      VirtuosoIndex,
+  legacy:     CustodyLegacy,
+  potencial:  VirtuosPotentialCarpintera,
 }
 
 const CONTENT_TABS = TABS.filter(t => t.id !== 'gallery')
@@ -96,6 +111,7 @@ export default function Sanctuary() {
         ...property,
         technical: finca.technical ?? property.technical,
         timeline:  finca.timeline ?? property.timeline,
+        species:   property.species,
       }
     : property
 
@@ -114,6 +130,8 @@ export default function Sanctuary() {
 
       <main>
         {CONTENT_TABS.map((tab, index) => {
+          const isCarpintera = property?.slug === 'la-carpintera'
+          const TAB_COMPONENTS = isCarpintera ? TAB_COMPONENTS_CARPINTERA : TAB_COMPONENTS_DEFAULT
           const Component = TAB_COMPONENTS[tab.id]
           const bg   = SECTION_BG[index]
           const dark = SECTION_DARK[index]
