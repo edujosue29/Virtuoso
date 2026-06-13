@@ -141,7 +141,7 @@ export default function VideoHero({ property }) {
             <div style={{
               position: 'absolute',
               inset: 0,
-              backgroundImage: `url(${property.id === 'division-perez-zeledon' ? '/images/nature/bosquedrone.jpg' : property.heroImage || property.image})`,
+              backgroundImage: `url(${property.heroImage || property.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center 30%',
               display: 'flex',
