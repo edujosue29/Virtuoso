@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion'
 
-const DRONE_IMAGE = '/images/nature/bosquedrone.jpg'
-
-function getBackgroundImage(propertyId) {
-  return propertyId === 'division-perez-zeledon'
-    ? '/images/division/portada2.jpeg'
-    : DRONE_IMAGE
+function getBackgroundImage(property) {
+  return property.sectionImages?.pulse || '/images/nature/bosquedrone.jpg'
 }
 
 // SVG icons for activities — no emojis
@@ -26,13 +22,13 @@ const ACTIVITY_ICONS = {
 const DEFAULT_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
 
 export default function CommunityPulse({ property, dark }) {
-  const { communityPulse, name, id } = property
+  const { communityPulse, name } = property
   const acts = communityPulse.activities
   const highlights = communityPulse.lifestyle
 
   const cream = '#faf9f6'
   const muted = 'rgba(245,240,232,0.52)'
-  const backgroundImage = getBackgroundImage(id)
+  const backgroundImage = getBackgroundImage(property)
 
   return (
     <div>
