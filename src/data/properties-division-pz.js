@@ -56,6 +56,12 @@ export const divisionPzData = {
     '/images/division/division-35.jpeg',
   ],
   videoSrc:  '/videos/division-portada.mp4',
+  sectionImages: {
+    technical:  '/images/division/division-2.jpeg',
+    prosperity: '/images/division/division-3.jpeg',
+    pulse:      '/images/division/division-5.jpeg',
+    legacy:     '/images/division/division-1.jpeg',
+  },
   floraFaunaImages: [
     '/images/species/puma.jpg',
     '/images/species/zorro.jpg',
