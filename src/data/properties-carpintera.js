@@ -67,7 +67,7 @@ export const laCarpinteraData = {
     sectionImages: {
       technical:  '/images/carpintera/prop-2.jpeg',
       prosperity: '/images/carpintera/naciente.png',
-      pulse:      '/images/carpintera/apt-2.jpeg',
+      pulse:      '/images/carpintera/apt-1.png',
       legacy:     '/images/carpintera/prop-4.png',
     },
 
