@@ -96,13 +96,15 @@ export default function Hero() {
 
         {/* Headline */}
         <h1
-          className="mb-12 max-w-4xl"
+          className="max-w-4xl"
           style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: 'clamp(2.8rem, 7vw, 6.5rem)',
             fontWeight: 300,
             lineHeight: 1.05,
             color: '#f5f0e8',
+            marginTop: '4.5rem',
+            marginBottom: '4.5rem',
           }}
         >
           {words.map((word, i) => (
