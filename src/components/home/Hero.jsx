@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from '../LanguageSwitcher'
+import PrivateDocumentsLock from './PrivateDocumentsLock'
 
 const WORD_VARIANTS = {
   hidden: { opacity: 0, y: 24 },
@@ -10,8 +13,9 @@ const WORD_VARIANTS = {
 }
 
 export default function Hero() {
-  const headline = 'Portal de Santuarios Regenerativos'
-  const words = headline.split(' ')
+  const { t } = useTranslation()
+  const headline = t('hero.headline') || 'Portal de Santuarios Regenerativos'
+  const words = headline?.split(' ') || []
 
   return (
     <section
@@ -67,6 +71,18 @@ export default function Hero() {
             opacity: 0.92,
           }}
         />
+      </motion.div>
+
+      {/* ── Language Switcher & Private Lock top-right ────────────────── */}
+      <motion.div
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute top-8 right-8 flex items-center gap-3"
+      >
+        <PrivateDocumentsLock />
+        <div style={{ width: '1px', height: '24px', background: 'rgba(201,168,76,0.2)' }} />
+        <LanguageSwitcher showText={true} />
       </motion.div>
 
       {/* ── Main content ─────────────────────────────────────────────── */}
@@ -137,7 +153,7 @@ export default function Hero() {
             marginBottom: '1rem',
           }}
         >
-          Habitar con propósito. Vivir con conciencia.
+          {t('hero.tagline')}
         </motion.p>
 
         <motion.p
@@ -155,8 +171,7 @@ export default function Hero() {
             marginBottom: '2.5rem',
           }}
         >
-          Únete a la comunidad que eligió Costa Rica como su santuario —
-          tierras vivas que buscan custodios conscientes.
+          {t('hero.description')}
         </motion.p>
 
         {/* CTA scroll */}
@@ -177,7 +192,7 @@ export default function Hero() {
               fontWeight: 700,
             }}
           >
-            Descubre los santuarios
+            {t('hero.cta')}
           </span>
           <motion.div
             animate={{ y: [0, 7, 0] }}

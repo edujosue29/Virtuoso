@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const CONSERVATION_IMAGE = '/images/division/ca.jpeg'
@@ -265,6 +266,7 @@ function AccordionItem({ item, index, dark }) {
 }
 
 export default function LocalProsperity({ property, finca, dark }) {
+  const { t } = useTranslation()
   const { sectionImages } = property
   // Use finca-specific prosperity data when available
   const prosperity = finca?.prosperity ?? property.prosperity
@@ -294,7 +296,7 @@ export default function LocalProsperity({ property, finca, dark }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Custodia del Ecosistema
+            {t('prosperity.title')}
           </motion.p>
 
           <motion.h2
@@ -309,8 +311,8 @@ export default function LocalProsperity({ property, finca, dark }) {
               letterSpacing: '-0.02em', margin: 0,
             }}
           >
-            <span style={{ color: cream, display: 'block' }}>Conservación</span>
-            <span style={{ color: '#c9a84c', display: 'block' }}>Activa</span>
+            <span style={{ color: cream, display: 'block' }}>{t('prosperity.subtitle').split('&')[0].trim()}</span>
+            <span style={{ color: '#c9a84c', display: 'block' }}>{t('prosperity.subtitle').split('&')[1]?.trim() || ''}</span>
           </motion.h2>
         </div>
 
@@ -380,7 +382,7 @@ export default function LocalProsperity({ property, finca, dark }) {
           margin: '4rem 0 3rem 0',
         }}
       >
-        Desafíos del Custodio
+        {t('prosperity.community_benefits')}
       </motion.h3>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>

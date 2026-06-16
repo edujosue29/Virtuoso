@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FILTERS = [
@@ -13,6 +14,7 @@ const STATUS_COLOR = {
 }
 
 export default function FloraFaunaCarpintera({ property, dark }) {
+  const { t } = useTranslation()
   const [filter, setFilter] = useState('all')
   const [selected, setSelected] = useState(0)
 
@@ -74,7 +76,7 @@ export default function FloraFaunaCarpintera({ property, dark }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Santuario Vivo
+            {t('flora_fauna.title')}
           </motion.p>
 
           <motion.h2
@@ -220,7 +222,7 @@ export default function FloraFaunaCarpintera({ property, dark }) {
                     letterSpacing: '0.16em', textTransform: 'uppercase', color: '#c9a84c',
                     paddingTop: 2,
                   }}>
-                    Hábitat
+                    {t('flora_fauna.view_species')}
                   </span>
                   <span style={{
                     fontFamily: '"Cormorant Garamond", serif',
@@ -241,7 +243,7 @@ export default function FloraFaunaCarpintera({ property, dark }) {
           letterSpacing: '0.2em', textTransform: 'uppercase',
           color: '#c9a84c', marginBottom: '0.75rem', fontWeight: 600,
         }}>
-          Galería de Especies
+          {t('image_gallery.images')}
         </p>
 
         <div style={{
@@ -323,7 +325,7 @@ export default function FloraFaunaCarpintera({ property, dark }) {
             color: 'rgba(201,168,76,0.5)', letterSpacing: '0.1em',
             margin: 0, fontStyle: 'italic',
           }}>
-            {list.length > 4 ? '↔ Desliza o usa ← → para navegar' : '← → para navegar'}
+            {list.length > 4 ? t('image_gallery.previous') + '/' + t('image_gallery.next') : t('image_gallery.next')}
           </p>
         </div>
       </div>

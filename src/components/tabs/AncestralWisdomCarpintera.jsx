@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const ROMANS = ['I', 'II']
 
 export default function AncestralWisdomCarpintera({ property, finca, dark }) {
+  const { t } = useTranslation()
   const ancestral = finca?.ancestral ?? property.ancestral
   const name = property.name
 
@@ -37,7 +39,7 @@ export default function AncestralWisdomCarpintera({ property, finca, dark }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Sabiduría Ancestral
+            {t('ancestral_wisdom.title')}
           </motion.p>
 
           <motion.h2

@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { getDownloadUrl } from '../../utils/documentDownloads'
+import { usePrivateDocuments } from '../../context/PrivateDocumentsContext'
 
 const ICONS = {
   leaf: (
@@ -48,9 +51,12 @@ const ICONS = {
 }
 
 export default function VirtuosPotential({ property, finca, dark }) {
+  const { t } = useTranslation()
+  const { isUnlocked } = usePrivateDocuments()
   const potencial = finca?.potencial ?? property?.potencial ?? []
-  const ddLink    = finca?.dueDiligence ?? null
-  const fincaLabel = finca?.label ?? 'Propiedad'
+  const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+  const ddLink = getDownloadUrl('debida-diligencia', sanctuaryId)
+  const fincaLabel = finca?.label ?? t('virtus_potential.finca_label')
 
   const cream  = dark ? '#faf9f6' : '#111a10'
   const muted  = dark ? 'rgba(245,240,232,0.55)' : 'rgba(17,26,16,0.52)'
@@ -75,7 +81,7 @@ export default function VirtuosPotential({ property, finca, dark }) {
           fontWeight: 600,
         }}
       >
-        Potencial Observado · {fincaLabel}
+        {t('virtus_potential.title')} · {fincaLabel}
       </motion.p>
 
       {/* ── Main Heading ────────────────────────────────────────────────────── */}
@@ -91,10 +97,14 @@ export default function VirtuosPotential({ property, finca, dark }) {
           lineHeight: 1.0,
           letterSpacing: '-0.02em',
           margin: '0 0 4rem 0',
+          whiteSpace: 'pre-line',
         }}
       >
-        <span style={{ color: '#c9a84c', display: 'block' }}>Visión</span>
-        <span style={{ color: cream, display: 'block', fontWeight: 400 }}>Equipo Virtus</span>
+        {t('virtus_potential.subtitle').split('\n').map((line, i) => (
+          <span key={i} style={{ color: i === 0 ? '#c9a84c' : cream, display: 'block', fontWeight: i === 0 ? 700 : 400 }}>
+            {line}
+          </span>
+        ))}
       </motion.h2>
 
       {/* ── Editorial Items — Alternating Layout ────────────────────────────── */}
@@ -251,7 +261,7 @@ export default function VirtuosPotential({ property, finca, dark }) {
       </div>
 
       {/* ── Due Diligence CTA ────────────────────────────────────────────── */}
-      {ddLink && (
+      {ddLink && isUnlocked && (
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -271,18 +281,17 @@ export default function VirtuosPotential({ property, finca, dark }) {
               letterSpacing: '0.2em', textTransform: 'uppercase',
               color: '#c9a84c', fontWeight: 700, marginBottom: '0.4rem',
             }}>
-              Debida Diligencia Legal
+              {t('common.download_due_diligence')}
             </p>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
               fontSize: '1rem', color: muted, lineHeight: 1.6,
             }}>
-              Estudio legal completo de {fincaLabel} — Licda. Clarita Solano Villalobos, abogada y notaria pública.
+              {t('virtus_potential.potential_description')} {fincaLabel} — Licda. Clarita Solano Villalobos, abogada y notaria pública.
             </p>
           </div>
-          <a
-            href={ddLink}
-            download
+          <button
+            onClick={() => window.open(ddLink, '_blank')}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.55rem',
               padding: '0.85rem 2rem',
@@ -292,13 +301,15 @@ export default function VirtuosPotential({ property, finca, dark }) {
               fontSize: '0.72rem', fontWeight: 700,
               letterSpacing: '0.16em', textTransform: 'uppercase',
               flexShrink: 0,
+              border: 'none',
+              cursor: 'pointer',
             }}
           >
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path d="M8 12L3 7h3.5V2h3v5H13L8 12zM2 14h12v1.5H2V14z" fill="currentColor"/>
             </svg>
-            Descargar DD {fincaLabel}
-          </a>
+            {t('virtus_potential.download_due_diligence', { label: fincaLabel })}
+          </button>
         </motion.div>
       )}
     </div>

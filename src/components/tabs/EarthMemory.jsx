@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { useSanctuaryText } from '../../utils/sanctuaryTranslations'
 
 export default function EarthMemory({ property, dark }) {
+  const { t } = useTranslation()
+  const sanctuary = useSanctuaryText(property)
   const { timeline, name } = property
+
+  // Get translated timeline if available
+  const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+  const translatedTimelineData = t(`history.${sanctuaryId}.timeline`)
+  const translatedTimeline = Array.isArray(translatedTimelineData) ? translatedTimelineData : timeline
 
   // Split name for two-tone heading
   const nameParts = name.split(' ')
@@ -35,7 +44,7 @@ export default function EarthMemory({ property, dark }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Memoria de la Tierra
+            {t('earth_memory.title')}
           </motion.p>
 
           <motion.h2
@@ -50,7 +59,7 @@ export default function EarthMemory({ property, dark }) {
               letterSpacing: '-0.02em', margin: 0,
             }}
           >
-            <span style={{ color: '#111a10', display: 'block' }}>Historia</span>
+            <span style={{ color: '#111a10', display: 'block' }}>{t('earth_memory.history')}</span>
             <span style={{ color: '#c9a84c', display: 'block' }}>
               {nameFirst}
               {nameRest && <span style={{ color: '#111a10', fontWeight: 400 }}> {nameRest}</span>}
@@ -70,7 +79,7 @@ export default function EarthMemory({ property, dark }) {
             lineHeight: 1.9, paddingBottom: '0.5rem',
           }}
         >
-          Cada año es una capa de memoria. Cada capa sostiene el valor del presente.
+          {t('earth_memory.soil_type')}
         </motion.p>
       </div>
 
@@ -82,7 +91,7 @@ export default function EarthMemory({ property, dark }) {
         background: gridBg,
         border: `1px solid ${gridBorder}`,
       }}>
-        {timeline.map((event, i) => (
+        {translatedTimeline.map((event, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}

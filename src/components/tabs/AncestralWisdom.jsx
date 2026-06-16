@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const ROMANS = ['I', 'II']
 
 export default function AncestralWisdom({ property }) {
+  const { t } = useTranslation()
   const { ancestral, name } = property
 
-  const attribution = name.includes('Carpintera')
-    ? 'Memoria Huetar · La Carpintera'
-    : 'Memoria Boruca · Guardianes del Sur'
+  const attributionKey = name.includes('Carpintera')
+    ? 'ancestral_wisdom.memory_huetar'
+    : 'ancestral_wisdom.memory_boruca'
+  const attribution = t(attributionKey)
 
   // Split title: first word gold, rest dark
   const parts = (ancestral.title || '').split(' — ')
@@ -38,7 +41,7 @@ export default function AncestralWisdom({ property }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Sabiduría Ancestral
+            {t('ancestral_wisdom.title')}
           </motion.p>
 
           <motion.h2

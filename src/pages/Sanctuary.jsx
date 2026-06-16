@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { PROPERTIES } from '../data/properties'
 import VideoHero from '../components/sanctuary/VideoHero'
 import TabNav, { TABS } from '../components/sanctuary/TabNav'
@@ -49,6 +50,7 @@ const SECTION_BG   = ['#faf9f6', '#2d4a2b', '#faf9f6', '#2d4a2b', '#faf9f6', '#2
 const SECTION_DARK = [false,     true,       false,     true,      false,     true,      false,     true,      false    ]
 
 export default function Sanctuary() {
+  const { t } = useTranslation()
   const { slug } = useParams()
   const property = PROPERTIES.find(p => p.slug === slug)
 
@@ -162,10 +164,10 @@ export default function Sanctuary() {
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '7rem 3rem 9rem' }}>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ marginBottom: '3.5rem' }}>
                 <p style={{ fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem', letterSpacing: '0.32em', textTransform: 'uppercase', color: '#c9a84c', marginBottom: '1rem', fontWeight: 600 }}>
-                  Colección Visual
+                  {t('image_gallery.visual_collection')}
                 </p>
                 <h3 style={{ fontFamily: '"Playfair Display", "Cormorant Garamond", serif', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 400, lineHeight: 1.2, margin: 0, color: '#faf9f6' }}>
-                  Galería
+                  {t('image_gallery.gallery')}
                 </h3>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>

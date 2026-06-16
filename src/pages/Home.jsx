@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import Hero from '../components/home/Hero'
 import PropertyCard from '../components/home/PropertyCard'
 import { PROPERTIES } from '../data/properties'
 
 export default function Home() {
+  const { t } = useTranslation()
   return (
     <main className="relative min-h-screen" style={{ background: '#ffffff' }}>
 
@@ -30,7 +32,7 @@ export default function Home() {
             fontSize: '0.72rem', letterSpacing: '0.32em',
             textTransform: 'uppercase', color: '#c9a84c',
           }}>
-            Santuarios
+            {t('home.section_label')}
           </span>
           <div style={{ flex: 1, maxWidth: 120, height: 1, background: 'rgba(201,168,76,0.3)' }} />
         </motion.div>
@@ -42,14 +44,13 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           style={{
             fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-            fontSize: 'clamp(2.6rem, 5vw, 4.2rem)',
-            fontWeight: 700, textAlign: 'center',
-            letterSpacing: '-0.02em',
-            marginBottom: '1.5rem', lineHeight: 1.05,
+            fontSize: 'clamp(2rem, 4vw, 3rem)',
+            fontWeight: 400, textAlign: 'center',
+            marginBottom: '4rem', lineHeight: 1.2,
           }}
         >
-          <span style={{ color: '#c9a84c' }}>Tierras</span>
-          <span style={{ color: '#faf9f6' }}> que buscan custodio</span>
+          <span style={{ color: '#c9a84c' }}>{t('home.section_title_part1')}</span>
+          <span style={{ color: '#f5f0e8' }}> {t('home.section_title_part2')}</span>
         </motion.h2>
 
         {/* Bridge paragraph */}
@@ -66,7 +67,7 @@ export default function Home() {
             margin: '0 auto 4rem',
           }}
         >
-          Santuarios costarricenses bajo protección activa, buscando custodios conscientes.
+          {t('home.section_description')}
         </motion.p>
 
         {/* Cards */}
@@ -114,7 +115,7 @@ export default function Home() {
               color: 'rgba(42,92,56,0.7)',
               margin: 0,
             }}>
-              Santuarios Naturales
+              {t('home.footer_subtitle')}
             </p>
           </div>
 
@@ -146,7 +147,7 @@ export default function Home() {
                 marginBottom: '1.5rem',
                 margin: '0 0 1.5rem 0',
               }}>
-                Contacto
+                {t('home.contact_section')}
               </h4>
               <div style={{
                 fontFamily: '"Cormorant Garamond", serif',
@@ -155,7 +156,7 @@ export default function Home() {
                 lineHeight: 1.8,
               }}>
                 <p style={{ margin: '0 0 0.75rem 0' }}>
-                  +506 7293 5269
+                  {t('home.phone')}
                 </p>
                 <a href="mailto:info@virtusrealtycr.com" style={{
                   color: '#2a5c38',
@@ -164,7 +165,7 @@ export default function Home() {
                   transition: 'color 0.3s',
                 }} onMouseEnter={(e) => e.currentTarget.style.color = '#c9a84c'}
                    onMouseLeave={(e) => e.currentTarget.style.color = '#2a5c38'}>
-                  info@virtusrealtycr.com
+                  {t('home.email')}
                 </a>
               </div>
             </div>
@@ -181,7 +182,7 @@ export default function Home() {
                 marginBottom: '1.5rem',
                 margin: '0 0 1.5rem 0',
               }}>
-                Síguenos
+                {t('home.follow_section')}
               </h4>
               <div style={{
                 display: 'flex',
@@ -237,7 +238,7 @@ export default function Home() {
                 marginBottom: '1.5rem',
                 margin: '0 0 1.5rem 0',
               }}>
-                Visita
+                {t('home.visit_section')}
               </h4>
               <div style={{
                 fontFamily: '"Cormorant Garamond", serif',
@@ -275,7 +276,7 @@ export default function Home() {
             textAlign: 'center',
             margin: 0,
           }}>
-            © {new Date().getFullYear()} Virtus Realty CR · Virtuoso
+            {t('home.copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </footer>

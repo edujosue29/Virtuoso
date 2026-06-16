@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const ICONS = {
   leaf: (
@@ -48,9 +49,10 @@ const ICONS = {
 }
 
 export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
+  const { t } = useTranslation()
   const potencial = finca?.potencial ?? property?.potencial ?? []
   const ddLink    = finca?.dueDiligence ?? null
-  const fincaLabel = finca?.label ?? 'Propiedad'
+  const fincaLabel = finca?.label ?? t('virtus_potential.finca_label')
 
   const cream  = dark ? '#faf9f6' : '#111a10'
   const muted  = dark ? 'rgba(245,240,232,0.55)' : 'rgba(17,26,16,0.52)'
@@ -75,7 +77,7 @@ export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
           fontWeight: 600,
         }}
       >
-        Potencial Observado · {fincaLabel}
+        {t('virtus_potential.title')} · {fincaLabel}
       </motion.p>
 
       {/* ── Main Heading ────────────────────────────────────────────────────── */}
@@ -93,8 +95,8 @@ export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
           margin: '0 0 4rem 0',
         }}
       >
-        <span style={{ color: '#c9a84c', display: 'block' }}>Visión</span>
-        <span style={{ color: cream, display: 'block', fontWeight: 400 }}>Equipo Virtus</span>
+        <span style={{ color: '#c9a84c', display: 'block' }}>{t('virtus_potential.subtitle').split(' ')[0]}</span>
+        <span style={{ color: cream, display: 'block', fontWeight: 400 }}>{t('virtus_potential.subtitle').substring(t('virtus_potential.subtitle').indexOf(' ') + 1)}</span>
       </motion.h2>
 
       {/* ── Editorial Items — Alternating Layout ────────────────────────────── */}
@@ -291,13 +293,13 @@ export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
               letterSpacing: '0.2em', textTransform: 'uppercase',
               color: '#c9a84c', fontWeight: 700, marginBottom: '0.4rem',
             }}>
-              Debida Diligencia Legal
+              {t('common.download_due_diligence')}
             </p>
             <p style={{
               fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
               fontSize: '1rem', color: muted, lineHeight: 1.6,
             }}>
-              Estudio legal completo de {fincaLabel} — Licda. Clarita Solano Villalobos, abogada y notaria pública.
+              {t('virtus_potential.potential_description')} {fincaLabel} — Licda. Clarita Solano Villalobos, abogada y notaria pública.
             </p>
           </div>
           <a
@@ -317,7 +319,7 @@ export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path d="M8 12L3 7h3.5V2h3v5H13L8 12zM2 14h12v1.5H2V14z" fill="currentColor"/>
             </svg>
-            Descargar DD {fincaLabel}
+            {t('virtus_potential.download_due_diligence', { label: fincaLabel })}
           </a>
         </motion.div>
       )}

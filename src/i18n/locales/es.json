@@ -1,0 +1,318 @@
+{
+  "common": {
+    "portal": "Portal",
+    "download": "Descargar",
+    "explore": "Explorar",
+    "viewMap": "Ver Mapa",
+    "download_technical_sheet": "Descargar Ficha Técnica",
+    "download_due_diligence": "Descargar DEBIDA DILIGENCIA",
+    "downloadPDF": "Descargar PDF",
+    "attachments": "Anexos",
+    "contact": "Contacto",
+    "follow": "Síguenos",
+    "visit": "Visita",
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "English",
+    "toggle_language": "Cambiar idioma",
+    "private_documents_enter_pin": "Ingresar PIN",
+    "private_documents_cancel": "Cancelar",
+    "private_documents_unlock": "Desbloquear",
+    "private_documents_incorrect": "Código incorrecto",
+    "private_documents_lock": "Bloquear documentos privados",
+    "private_documents_unlock_button": "Desbloquear documentos privados"
+  },
+  "hero": {
+    "logo_alt": "Virtus Realty",
+    "byline": "Virtus Realty CR & Virtuoso",
+    "headline": "Portal de Santuarios Regenerativos",
+    "tagline": "Habitar con propósito. Vivir con conciencia.",
+    "description": "Únete a la comunidad que eligió Costa Rica como su santuario — tierras vivas que buscan custodios conscientes.",
+    "cta": "Descubre los santuarios"
+  },
+  "home": {
+    "section_label": "Santuarios",
+    "section_title_part1": "Tierras",
+    "section_title_part2": "que buscan custodio",
+    "section_description": "Santuarios costarricenses bajo protección activa, buscando custodios conscientes.",
+    "explore_sanctuary": "Explorar Santuario",
+    "footer_title": "VIRTUS REALTY CR",
+    "footer_subtitle": "Santuarios Naturales",
+    "contact_section": "Contacto",
+    "phone": "+506 7293 5269",
+    "email": "info@virtusrealtycr.com",
+    "follow_section": "Síguenos",
+    "visit_section": "Visita",
+    "website": "virtusrealtycr.com",
+    "copyright": "© {{year}} Virtus Realty CR · Virtuoso"
+  },
+  "property_card": {
+    "certification": "SINAC · ZPCC",
+    "technical_sheet": "Ficha Técnica",
+    "attachments": "Anexos",
+    "explore": "Explorar Santuario"
+  },
+  "tabs": {
+    "technical": "Ficha Técnica",
+    "technical_short": "Técnica",
+    "flora_fauna": "Flora & Fauna",
+    "flora": "Flora",
+    "fauna": "Fauna",
+    "flora_short": "Flora",
+    "memory": "Memoria",
+    "memory_short": "Memoria",
+    "prosperity": "Prosperidad",
+    "prosperity_short": "Prosperidad",
+    "ancestral": "Sabiduría Ancestral",
+    "ancestral_short": "Ancestral",
+    "pulse": "Estilo de Vida",
+    "pulse_short": "Lifestyle",
+    "index": "Índice Virtuoso",
+    "index_short": "Índice",
+    "legacy": "Legado",
+    "legacy_short": "Legado",
+    "potential": "Potencial Virtus",
+    "potential_short": "Potencial",
+    "gallery": "Galería",
+    "gallery_short": "Galería"
+  },
+  "technical_sheet": {
+    "title": "Ficha de Rigor Técnico",
+    "location_area": "Ubicación y Extensión",
+    "water_sovereignty": "Soberanía Hídrica",
+    "global_status": "Estatus Global",
+    "elevation_climate": "Elevación y Clima",
+    "biodiversity": "Biodiversidad Crítica",
+    "constructive_potential": "Potencial Constructivo",
+    "privacy_isolation": "Privacidad y Aislamiento",
+    "logistics_accessibility": "Accesibilidad Logística",
+    "infrastructure": "Accesibilidad",
+    "disclaimer": "La información presentada se basa en datos públicos y análisis técnicos. Para términos legales específicos, consulta los documentos oficia les.",
+    "download": "Descargar PDF"
+  },
+  "flora_fauna": {
+    "title": "Santuario Vivo",
+    "subtitle": "Flora & Fauna",
+    "description": "Un ecosistema completo donde flora y fauna coexisten en perfecta armonía.",
+    "view_species": "Ver Especie",
+    "close": "Cerrar",
+    "filter_all": "Todas",
+    "filter_fauna": "Fauna",
+    "filter_flora": "Flora",
+    "of": "de",
+    "species": "especies"
+  },
+  "biodiversity": {
+    "title": "Biodiversidad Crítica",
+    "subtitle": "Ecosistema Vivo",
+    "critical_species": "Especies Críticas"
+  },
+  "earth_memory": {
+    "title": "Memoria de la Tierra",
+    "subtitle": "Geología y Suelos",
+    "soil_type": "Tipo de Suelo",
+    "geology": "Geología",
+    "water_sources": "Fuentes de Agua",
+    "history": "Historia"
+  },
+  "prosperity": {
+    "title": "Prosperidad Local",
+    "subtitle": "Economía y Comunidad",
+    "economic_impact": "Impacto Económico",
+    "community_benefits": "Beneficios Comunitarios"
+  },
+  "ancestral_wisdom": {
+    "title": "Sabiduría Ancestral",
+    "subtitle": "Conocimiento Indígena",
+    "description": "Respeto y integración del conocimiento ancestral con la conservación moderna.",
+    "memory_huetar": "Memoria Huetar · La Carpintera",
+    "memory_boruca": "Memoria Boruca · Guardianes del Sur"
+  },
+  "community_pulse": {
+    "title": "Estilo de Vida",
+    "subtitle": "Comunidad y Cultura",
+    "lifestyle": "Modo de Vida",
+    "activities": "Actividades",
+    "events": "Eventos",
+    "activity_bird_watching": "Observación de Aves",
+    "activity_quetzal_sighting": "Avistamiento de Quetzales",
+    "activity_forest_hiking": "Senderismo de Bosque",
+    "activity_mountain_hiking": "Senderismo de Montaña",
+    "activity_river_swimming": "Baño en Ríos y Pozas",
+    "activity_agro_tourism": "Agroturismo Orgánico",
+    "activity_nature_meditation": "Meditación en Naturaleza",
+    "activity_nature_photography": "Fotografía de Naturaleza",
+    "activity_mist_photography": "Fotografía de Neblina",
+    "activity_sunrise_yoga": "Yoga al Amanecer",
+    "activity_endemic_flora_tour": "Tour de Flora Endémica",
+    "activity_remote_work": "Trabajo Remoto en Altura"
+  },
+  "virtuoso_index": {
+    "title": "Índice de Alineación",
+    "subtitle": "Pilares Virtuoso",
+    "conservation_score": "Puntuación de Conservación",
+    "impact_metrics": "Métricas de Impacto",
+    "pillar_salud": "Salud",
+    "pillar_amor": "Amor",
+    "pillar_sabiduria": "Sabiduría",
+    "pillar_prosperidad": "Prosperidad"
+  },
+  "custody_legacy": {
+    "title": "Legado de Custodia",
+    "subtitle": "Responsabilidad Histórica",
+    "stewardship": "Custodia",
+    "heritage": "Herencia"
+  },
+  "virtus_potential": {
+    "title": "Potencial Observado",
+    "subtitle": "Visión\nEquipo Virtus",
+    "potential_description": "Desarrollo sostenible respetando los límites ecológicos.",
+    "finca_label": "Propiedad",
+    "download_due_diligence": "Descargar DEBIDA DILIGENCIA {{label}}"
+  },
+  "map_modal": {
+    "location": "Ubicación",
+    "coordinates": "Coordenadas",
+    "close": "Cerrar Mapa"
+  },
+  "image_gallery": {
+    "images": "Imágenes",
+    "close": "Cerrar Galería",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "visual_collection": "Colección Visual",
+    "gallery": "Galería"
+  },
+  "categories": {
+    "agua": "Agua",
+    "bosque": "Bosque",
+    "montaña": "Montaña",
+    "agricultura": "Agricultura",
+    "comunidad": "Comunidad",
+    "ancestral": "Ancestral"
+  },
+  "sanctuary_names": {
+    "la_carpintera": "La Carpintera",
+    "division_pz": "División Pérez Zeledón"
+  },
+  "errors": {
+    "not_found": "Santuario no encontrado",
+    "loading": "Cargando..."
+  },
+  "sanctuary_data": {
+    "division_pz": {
+      "name": "División Pérez Zeledón",
+      "sanctuary_name": "El Robledal — Refugio de Conservación Hidrológica",
+      "tagline": "Donde el bosque primario es el banco de agua que el mundo necesita.",
+      "description": "Casi 600 hectáreas de bosque primario y secundario en el Corredor Biológico La Amistad Pacífico Sur, declarado Patrimonio de la Humanidad por la UNESCO.",
+      "location": "División, Pérez Zeledón, San José, Costa Rica",
+      "technical_area": "División, Pérez Zeledón (San José). 594 hectáreas de reserva unificada.",
+      "technical_water": "Naciente principal del Río División. Concesión comercial de aguas vigente.",
+      "technical_zoning": "Ubicada en la Reserva de la Biosfera (Certificación UNESCO). Cobertura forestal del 91% actuando como sumidero de carbono.",
+      "technical_elevation": "1,800 a 2,800 msnm. Transición excepcional entre bosque tropical húmedo y bosque nuboso de montaña.",
+      "technical_biodiversity": "Hábitat prístino con presencia de megafauna: pumas y tapires (dantas). Zona de anidación del quetzal.",
+      "technical_potential": "Potencial constructivo limitado a 5 hectáreas con densidad máxima de 1 vivienda por 10 hectáreas bajo restricciones de sostenibilidad.",
+      "technical_privacy": "Acceso único por camino privado. Aislamiento acústico natural por topografía montañosa.",
+      "technical_logistics": "Acceso por ruta 237 (30 min a Uvita). Servicios básicos: agua de naciente propia, energía solar instalada, comunicación satelital."
+    },
+    "la_carpintera": {
+      "name": "La Carpintera",
+      "sanctuary_name": "Santuario Dual de Abundancia",
+      "tagline": "La dualidad perfecta entre conectividad estratégica y aislamiento ecológico.",
+      "description": "380 hectáreas de bosque nuboso y transicional en el Corredor Biológico La Amistad. Soberanía absoluta en agua y energía.",
+      "location": "La Carpintera, San José, Costa Rica",
+      "technical_area": "La Carpintera (San José). 380 hectáreas de reserva forestal con infraestructura existente.",
+      "technical_water": "3 nacientes de agua dulce. Sistema de captación y filtración natural certificado.",
+      "technical_zoning": "Zona de amortiguamiento de la Reserva de la Biosfera La Amistad. Bosque nuboso en transición.",
+      "technical_elevation": "1,600 a 2,200 msnm. Microclima único con precipitación anual de 5,000mm.",
+      "technical_biodiversity": "Bosque primario intacto. Hábitat para especies endémicas. Corredor de fauna crítico.",
+      "technical_potential": "Desarrollo limitado respetando cobertura forestal. Potencial eco-turístico y investigación.",
+      "technical_privacy": "Aislamiento natural. Acceso controlado por terreno.",
+      "technical_logistics": "Ubicación estratégica con acceso a servicios. Soberanía energética con paneles solares."
+    }
+  },
+  "energy_tags": {
+    "agua": "Agua",
+    "bosque": "Bosque",
+    "agricultura": "Agricultura",
+    "ancestral": "Ancestral",
+    "energia": "Energía",
+    "solar": "Solar"
+  },
+  "infrastructure": {
+    "division_pz": "Servicios disponibles: Electricidad, Internet, Telefonía. Finca operativa.",
+    "la_carpintera": "Servicios disponibles: Agua, Electricidad, Internet. Infraestructura existente."
+  },
+  "history": {
+    "division_pz": {
+      "title": "Historia División Pérez Zeledón",
+      "timeline": [
+        {
+          "year": "~3000 a.C.",
+          "title": "Territorio Boruca-Brunca",
+          "description": "Los pueblos Boruca (Brunca) establecen su civilización en la cuenca del río División. La tierra es comprendida como ser vivo con memoria y propósito sagrado."
+        },
+        {
+          "year": "Siglo XVI",
+          "title": "Contacto Colonial",
+          "description": "La conquista española altera las dinámicas territoriales de la Zona Sur. Los Boruca resisten con tenacidad y preservan gran parte de su cosmovisión y lengua hasta hoy."
+        },
+        {
+          "year": "1800s",
+          "title": "Colonización Agrícola",
+          "description": "Familias colonas se establecen en Pérez Zeledón. Café, caña y ganadería comienzan a transformar el paisaje, aunque las zonas altas mantienen su cobertura forestal."
+        },
+        {
+          "year": "1970-1990",
+          "title": "Políticas de Conservación",
+          "description": "Costa Rica establece un marco legal de conservación pionero en América Latina. El Corredor Biológico La Amistad es establecido, protegiendo el territorio de El Robledal."
+        },
+        {
+          "year": "2000s",
+          "title": "Reconocimiento UNESCO",
+          "description": "El Área de Conservación La Amistad Pacífico Sur es confirmada como Patrimonio de la Humanidad. El Robledal, dentro del corredor, adquiere estatus de conservación internacional."
+        },
+        {
+          "year": "Hoy",
+          "title": "En busca de custodios",
+          "description": "Casi 600 hectáreas de bosque primario buscan un custodio consciente. Un proyecto de vida que honre el Patrimonio Mundial que esta tierra representa."
+        }
+      ]
+    },
+    "la_carpintera": {
+      "title": "Historia La Carpintera",
+      "timeline": [
+        {
+          "year": "Ancestral",
+          "title": "Territorio Indígena",
+          "description": "La región fue ancestralmente poblada por pueblos Boruca, Bribri y Cabécar. Estos pueblos desarrollaron una relación profunda con el bosque nuboso, considerándolo sagrado y esencial para la vida."
+        },
+        {
+          "year": "Siglo XVI-XVIII",
+          "title": "Período Colonial",
+          "description": "La colonización española llegó a la región, aunque el terreno montañoso permitió que muchas comunidades indígenas preservaran su autonomía y conocimiento ancestral."
+        },
+        {
+          "year": "1800s-1900s",
+          "title": "Colonización Costarricense",
+          "description": "Familias costarricenses se establecieron en las zonas bajas. La Carpintera, en su altura y aislamiento, fue utilizada principalmente para actividades agrícolas sostenibles."
+        },
+        {
+          "year": "1970-1990",
+          "title": "Protección Ambiental",
+          "description": "Costa Rica reconoce la importancia de los bosques nubosos. La región entra en áreas de protección, estableciendo límites al desarrollo extractivo."
+        },
+        {
+          "year": "2000s",
+          "title": "Designación UNESCO",
+          "description": "La Carpintera se integra formalmente en la Reserva de Biosfera La Amistad, reconocida por UNESCO como Patrimonio de la Humanidad."
+        },
+        {
+          "year": "Hoy",
+          "title": "Custodía Consciente",
+          "description": "La Carpintera busca guardianes que continúen su legado de conservación. Un espacio donde la tradición ancestral y la sostenibilidad moderna convergen."
+        }
+      ]
+    }
+  }
+}

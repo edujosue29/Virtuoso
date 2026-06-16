@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const PILLARS = [
   {
     key: 'salud',
-    label: 'Salud',
+    labelKey: 'virtuoso_index.pillar_salud',
     icon: (
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
@@ -16,7 +17,7 @@ const PILLARS = [
   },
   {
     key: 'amor',
-    label: 'Amor',
+    labelKey: 'virtuoso_index.pillar_amor',
     icon: (
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z" />
@@ -27,7 +28,7 @@ const PILLARS = [
   },
   {
     key: 'sabiduria',
-    label: 'Sabiduría',
+    labelKey: 'virtuoso_index.pillar_sabiduria',
     icon: (
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" />
@@ -39,7 +40,7 @@ const PILLARS = [
   },
   {
     key: 'prosperidad',
-    label: 'Prosperidad',
+    labelKey: 'virtuoso_index.pillar_prosperidad',
     icon: (
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22V12M12 12C12 7 8 4 4 5c4 0 8 3 8 7zM12 12C12 7 16 4 20 5c-4 0-8 3-8 7zM12 12C12 17 9 20 5 21c4-1 7-4 7-9zM12 12C12 17 15 20 19 21c-4-1-7-4-7-9z" />
@@ -51,6 +52,7 @@ const PILLARS = [
 ]
 
 export default function VirtuosoIndex({ property }) {
+  const { t } = useTranslation()
   const { virtuosoIndex } = property
   const [selected, setSelected] = useState(null)
 
@@ -81,7 +83,7 @@ export default function VirtuosoIndex({ property }) {
               marginBottom: '1rem',
             }}
           >
-            Índice de Alineación
+            {t('virtuoso_index.title')}
           </motion.p>
 
           <motion.h2
@@ -98,8 +100,7 @@ export default function VirtuosoIndex({ property }) {
               margin: 0,
             }}
           >
-            <span style={{ color: '#1a3a2d', display: 'block' }}>Índice</span>
-            <span style={{ color: '#1a3a2d', display: 'block', fontWeight: 400 }}>Virtuoso</span>
+            <span style={{ color: '#1a3a2d', display: 'block' }}>{t('virtuoso_index.subtitle')}</span>
           </motion.h2>
         </div>
 
@@ -182,7 +183,7 @@ export default function VirtuosoIndex({ property }) {
                   letterSpacing: '-0.5px',
                 }}
               >
-                {pillar.label}
+                {t(pillar.labelKey)}
               </h3>
             </motion.button>
           )
@@ -235,7 +236,7 @@ export default function VirtuosoIndex({ property }) {
                 color: '#1a3a2d',
                 marginTop: '0.25rem',
               }}>
-                {selectedPillar.label}
+                {t(selectedPillar.labelKey)}
               </span>
             </div>
             <p style={{

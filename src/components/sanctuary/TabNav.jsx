@@ -1,20 +1,22 @@
 import { useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const TABS = [
-  { id: 'technical',  label: 'Ficha Técnica',      short: 'Técnica'    },
-  { id: 'flora',      label: 'Flora & Fauna',       short: 'Flora'      },
-  { id: 'memory',     label: 'Memoria',             short: 'Memoria'    },
-  { id: 'prosperity', label: 'Prosperidad',         short: 'Prosperidad'},
-  { id: 'ancestral',  label: 'Sabiduría Ancestral', short: 'Ancestral'  },
-  { id: 'pulse',      label: 'Estilo de Vida',      short: 'Lifestyle'  },
-  { id: 'index',      label: 'Índice Virtuoso',     short: 'Índice'     },
-  { id: 'legacy',     label: 'Legado',              short: 'Legado'     },
-  { id: 'potencial',  label: 'Potencial Virtus',    short: 'Potencial'  },
-  { id: 'gallery',    label: 'Galería',             short: 'Galería'    },
+  { id: 'technical',  labelKey: 'tabs.technical',      shortKey: 'tabs.technical_short'    },
+  { id: 'flora',      labelKey: 'tabs.flora_fauna',     shortKey: 'tabs.flora_short'      },
+  { id: 'memory',     labelKey: 'tabs.memory',          shortKey: 'tabs.memory_short'    },
+  { id: 'prosperity', labelKey: 'tabs.prosperity',      shortKey: 'tabs.prosperity_short'},
+  { id: 'ancestral',  labelKey: 'tabs.ancestral',       shortKey: 'tabs.ancestral_short'  },
+  { id: 'pulse',      labelKey: 'tabs.pulse',           shortKey: 'tabs.pulse_short'  },
+  { id: 'index',      labelKey: 'tabs.index',           shortKey: 'tabs.index_short'     },
+  { id: 'legacy',     labelKey: 'tabs.legacy',          shortKey: 'tabs.legacy_short'     },
+  { id: 'potencial',  labelKey: 'tabs.potential',       shortKey: 'tabs.potential_short'  },
+  { id: 'gallery',    labelKey: 'tabs.gallery',         shortKey: 'tabs.gallery_short'    },
 ]
 
 export default function TabNav({ activeTab, onTabChange, navRef, fincas, selectedFinca, onFincaChange, showPortal }) {
+  const { t } = useTranslation()
   const scrollRef = useRef(null)
   const activeRef = useRef(null)
 
@@ -64,7 +66,7 @@ export default function TabNav({ activeTab, onTabChange, navRef, fincas, selecte
               <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
                 <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              Portal
+              {t('common.portal')}
             </motion.a>
           )}
         </AnimatePresence>
@@ -149,7 +151,7 @@ export default function TabNav({ activeTab, onTabChange, navRef, fincas, selecte
                   onMouseEnter={e => { if (!isActive) e.currentTarget.style.color = 'rgba(245,240,232,0.75)' }}
                   onMouseLeave={e => { if (!isActive) e.currentTarget.style.color = 'rgba(245,240,232,0.35)' }}
                 >
-                  <span>{tab.short}</span>
+                  <span>{t(tab.shortKey)}</span>
                   {isActive && (
                     <motion.div
                       layoutId="sanctuary-tab-underline"

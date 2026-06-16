@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FILTERS = [
-  { id: 'all',   label: 'Todas' },
-  { id: 'fauna', label: 'Fauna' },
-  { id: 'flora', label: 'Flora' },
+  { id: 'all',   labelKey: 'flora_fauna.filter_all' },
+  { id: 'fauna', labelKey: 'flora_fauna.filter_fauna' },
+  { id: 'flora', labelKey: 'flora_fauna.filter_flora' },
 ]
 
 const STATUS_COLOR = {
@@ -13,6 +14,7 @@ const STATUS_COLOR = {
 }
 
 export default function FloraFauna({ property, dark }) {
+  const { t } = useTranslation()
   const [filter, setFilter] = useState('all')
   const [selected, setSelected] = useState(0)
 
@@ -78,7 +80,7 @@ export default function FloraFauna({ property, dark }) {
               color: '#c9a84c', marginBottom: '1rem',
             }}
           >
-            Santuario Vivo
+            {t('flora_fauna.title')}
           </motion.p>
 
           <motion.h2
@@ -114,7 +116,7 @@ export default function FloraFauna({ property, dark }) {
                 transition: 'all 0.2s ease',
               }}
             >
-              {f.label}
+              {t(f.labelKey)}
             </button>
           ))}
         </div>
@@ -233,7 +235,7 @@ export default function FloraFauna({ property, dark }) {
                     letterSpacing: '0.16em', textTransform: 'uppercase', color: '#c9a84c',
                     paddingTop: 2,
                   }}>
-                    Hábitat
+                    {t('flora_fauna.view_species')}
                   </span>
                   <span style={{
                     fontFamily: '"Cormorant Garamond", serif',
@@ -256,7 +258,7 @@ export default function FloraFauna({ property, dark }) {
           letterSpacing: '0.2em', textTransform: 'uppercase',
           color: '#c9a84c', marginBottom: '0.75rem', fontWeight: 600,
         }}>
-          Galería de Especies
+          {t('image_gallery.images')}
         </p>
 
         {/* Scrollable container with visible scrollbar */}
@@ -335,14 +337,14 @@ export default function FloraFauna({ property, dark }) {
             color: countColor, letterSpacing: '0.12em',
             margin: 0,
           }}>
-            {safeIdx + 1} de {list.length} especies
+            {safeIdx + 1} {t('flora_fauna.of')} {list.length} {t('flora_fauna.species')}
           </p>
           <p style={{
             fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.65rem',
             color: 'rgba(201,168,76,0.5)', letterSpacing: '0.1em',
             margin: 0, fontStyle: 'italic',
           }}>
-            {list.length > 4 ? '↔ Desliza o usa ← → para navegar' : '← → para navegar'}
+            {list.length > 4 ? t('image_gallery.previous') + '/' + t('image_gallery.next') : t('image_gallery.next')}
           </p>
         </div>
       </div>

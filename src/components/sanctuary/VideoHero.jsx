@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { useSanctuaryText } from '../../utils/sanctuaryTranslations'
 
 function deriveTechStats(property) {
   const t = property.technical || {}
@@ -34,6 +36,8 @@ function IconUnmuted() {
 }
 
 export default function VideoHero({ property }) {
+  const { t } = useTranslation()
+  const sanctuary = useSanctuaryText(property)
   const techStats  = deriveTechStats(property)
   const videoRef   = useRef(null)
   const sectionRef = useRef(null)
@@ -114,8 +118,8 @@ export default function VideoHero({ property }) {
     setVideoReady(true)
   }
 
-  const sanctuaryLabel = property.sanctuaryName
-    ? property.sanctuaryName.split('—')[0].split('·')[0].trim()
+  const sanctuaryLabel = sanctuary.sanctuaryName
+    ? sanctuary.sanctuaryName.split('—')[0].split('·')[0].trim()
     : ''
 
   return (
@@ -227,7 +231,7 @@ export default function VideoHero({ property }) {
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
             <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Portal
+          {t('common.portal')}
         </a>
 
         <img
@@ -251,7 +255,7 @@ export default function VideoHero({ property }) {
             }}
             onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.9)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.5)')}
-            aria-label={muted ? 'Activar sonido' : 'Silenciar'}
+            aria-label={muted ? t('flora_fauna.view_species') : t('flora_fauna.close')}
           >
             {muted ? <IconMuted /> : <IconUnmuted />}
           </button>
@@ -275,7 +279,7 @@ export default function VideoHero({ property }) {
             color: '#c9a84c', marginBottom: '0.6rem', fontWeight: 700,
           }}
         >
-          {property.location}
+          {sanctuary.location}
         </motion.p>
 
         <motion.h1
@@ -290,7 +294,7 @@ export default function VideoHero({ property }) {
             marginBottom: '0.65rem',
           }}
         >
-          {property.name}
+          {sanctuary.name}
         </motion.h1>
 
         {sanctuaryLabel && (
@@ -349,7 +353,7 @@ export default function VideoHero({ property }) {
               border: '1px solid rgba(201,168,76,0.22)',
               backdropFilter: 'blur(8px)',
             }}>
-              {tag}
+              {t(`energy_tags.${tag}`)}
             </span>
           ))}
         </motion.div>

@@ -1,27 +1,57 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 function getBackgroundImage(property) {
   return property.sectionImages?.pulse || '/images/nature/bosquedrone.jpg'
 }
 
+// Activity name mapping: Spanish and English names to i18n keys
+const ACTIVITY_TRANSLATION_MAP = {
+  // Spanish names
+  'Observación de Aves': 'community_pulse.activity_bird_watching',
+  'Avistamiento de Quetzales': 'community_pulse.activity_quetzal_sighting',
+  'Senderismo de Bosque': 'community_pulse.activity_forest_hiking',
+  'Senderismo de Montaña': 'community_pulse.activity_mountain_hiking',
+  'Baño en Ríos y Pozas': 'community_pulse.activity_river_swimming',
+  'Agroturismo Orgánico': 'community_pulse.activity_agro_tourism',
+  'Meditación en Naturaleza': 'community_pulse.activity_nature_meditation',
+  'Fotografía de Naturaleza': 'community_pulse.activity_nature_photography',
+  'Fotografía de Neblina': 'community_pulse.activity_mist_photography',
+  'Yoga al Amanecer': 'community_pulse.activity_sunrise_yoga',
+  'Tour de Flora Endémica': 'community_pulse.activity_endemic_flora_tour',
+  'Trabajo Remoto en Altura': 'community_pulse.activity_remote_work',
+  // English names (División PZ and La Carpintera)
+  'Quetzal Observation': 'community_pulse.activity_quetzal_sighting',
+  'Quetzal Spotting': 'community_pulse.activity_quetzal_sighting',
+  'Mountain Hiking': 'community_pulse.activity_mountain_hiking',
+  'Scientific Research': 'community_pulse.activity_nature_meditation',
+  'Regenerative Tourism': 'community_pulse.activity_agro_tourism',
+  'Environmental Education': 'community_pulse.activity_endemic_flora_tour',
+  'Hydrological Research': 'community_pulse.activity_river_swimming',
+  'Mist Photography': 'community_pulse.activity_mist_photography',
+  'Sunrise Yoga': 'community_pulse.activity_sunrise_yoga',
+  'Endemic Flora Tour': 'community_pulse.activity_endemic_flora_tour',
+}
+
 // SVG icons for activities — no emojis
 const ACTIVITY_ICONS = {
-  'Observación de Aves':     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>,
-  'Avistamiento de Quetzales': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>,
-  'Senderismo de Bosque':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h18M5 20L9 10l4 6 3-4 4 8"/></svg>,
-  'Senderismo de Montaña':   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h18M5 20L9 10l4 6 3-4 4 8"/></svg>,
-  'Baño en Ríos y Pozas':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>,
-  'Agroturismo Orgánico':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 7 8 4 4 5c4 0 8 3 8 7zM12 12C12 7 16 4 20 5c-4 0-8 3-8 7z"/></svg>,
-  'Meditación en Naturaleza':<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>,
-  'Fotografía de Naturaleza': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>,
-  'Fotografía de Neblina':   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>,
-  'Yoga al Amanecer':        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l3 3M9 20l3-5 3 5M6 12h3M15 12h3"/></svg>,
-  'Tour de Flora Endémica':  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>,
-  'Trabajo Remoto en Altura': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
+  'community_pulse.activity_bird_watching':     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>,
+  'community_pulse.activity_quetzal_sighting': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>,
+  'community_pulse.activity_forest_hiking':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h18M5 20L9 10l4 6 3-4 4 8"/></svg>,
+  'community_pulse.activity_mountain_hiking':   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M3 20h18M5 20L9 10l4 6 3-4 4 8"/></svg>,
+  'community_pulse.activity_river_swimming':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>,
+  'community_pulse.activity_agro_tourism':    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 7 8 4 4 5c4 0 8 3 8 7zM12 12C12 7 16 4 20 5c-4 0-8 3-8 7z"/></svg>,
+  'community_pulse.activity_nature_meditation':<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>,
+  'community_pulse.activity_nature_photography': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>,
+  'community_pulse.activity_mist_photography':   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>,
+  'community_pulse.activity_sunrise_yoga':        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l3 3M9 20l3-5 3 5M6 12h3M15 12h3"/></svg>,
+  'community_pulse.activity_endemic_flora_tour':  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>,
+  'community_pulse.activity_remote_work': <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
 }
 const DEFAULT_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
 
 export default function CommunityPulse({ property, dark }) {
+  const { t } = useTranslation()
   const { communityPulse, name } = property
   const acts = communityPulse.activities
   const highlights = communityPulse.lifestyle
@@ -75,7 +105,7 @@ export default function CommunityPulse({ property, dark }) {
                   color: '#c9a84c', marginBottom: '1rem',
                 }}
               >
-                Estilo de Vida
+                {t('community_pulse.title')}
               </motion.p>
 
               <motion.h2
@@ -91,7 +121,7 @@ export default function CommunityPulse({ property, dark }) {
                   color: '#c9a84c',
                 }}
               >
-                Estilo de Vida
+                {t('community_pulse.title')}
               </motion.h2>
             </div>
 
@@ -143,7 +173,7 @@ export default function CommunityPulse({ property, dark }) {
             letterSpacing: '0.2em', textTransform: 'uppercase',
             color: '#c9a84c', marginBottom: '1.5rem', fontWeight: 600,
           }}>
-            Actividades & Experiencias
+            {t('community_pulse.activities')}
           </p>
 
           {/* Activities grid — 3 columns */}
@@ -153,7 +183,9 @@ export default function CommunityPulse({ property, dark }) {
             gap: '1.5rem',
           }}>
             {acts.map((act, i) => {
-              const icon = ACTIVITY_ICONS[act.name] || DEFAULT_ICON
+              const translationKey = ACTIVITY_TRANSLATION_MAP[act.name]
+              const icon = ACTIVITY_ICONS[translationKey] || DEFAULT_ICON
+              const displayName = t(translationKey)
               return (
                 <motion.div
                   key={i}
@@ -188,7 +220,7 @@ export default function CommunityPulse({ property, dark }) {
                     color: cream, lineHeight: 1.3,
                     margin: '0 0 0.5rem',
                   }}>
-                    {act.name}
+                    {displayName}
                   </h3>
 
                 </motion.div>
@@ -217,7 +249,7 @@ export default function CommunityPulse({ property, dark }) {
           color: muted, lineHeight: 1.7,
           maxWidth: 620, margin: '0 auto',
         }}>
-          "No es retirarse del mundo. Es regresar a él."
+          "{t('community_pulse.lifestyle')}"
         </p>
       </motion.div>
 

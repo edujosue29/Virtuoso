@@ -1,0 +1,318 @@
+{
+  "common": {
+    "portal": "Portal",
+    "download": "Download",
+    "explore": "Explore",
+    "viewMap": "View Map",
+    "download_technical_sheet": "Download Technical Sheet",
+    "download_due_diligence": "Download DUE DILIGENCE",
+    "downloadPDF": "Download PDF",
+    "attachments": "Attachments",
+    "contact": "Contact",
+    "follow": "Follow",
+    "visit": "Visit",
+    "language": "Language",
+    "spanish": "Español",
+    "english": "English",
+    "toggle_language": "Toggle language",
+    "private_documents_enter_pin": "Enter PIN",
+    "private_documents_cancel": "Cancel",
+    "private_documents_unlock": "Unlock",
+    "private_documents_incorrect": "Incorrect PIN",
+    "private_documents_lock": "Lock private documents",
+    "private_documents_unlock_button": "Unlock private documents"
+  },
+  "hero": {
+    "logo_alt": "Virtus Realty",
+    "byline": "Virtus Realty CR & Virtuoso",
+    "headline": "Regenerative Sanctuary Portal",
+    "tagline": "Dwell with purpose. Live with consciousness.",
+    "description": "Join the community that chose Costa Rica as their sanctuary — living lands seeking conscious stewards.",
+    "cta": "Discover the Sanctuaries"
+  },
+  "home": {
+    "section_label": "Sanctuaries",
+    "section_title_part1": "Lands",
+    "section_title_part2": "seeking stewardship",
+    "section_description": "Costa Rican sanctuaries under active protection, seeking conscious stewards.",
+    "explore_sanctuary": "Explore Sanctuary",
+    "footer_title": "VIRTUS REALTY CR",
+    "footer_subtitle": "Natural Sanctuaries",
+    "contact_section": "Contact",
+    "phone": "+506 7293 5269",
+    "email": "info@virtusrealtycr.com",
+    "follow_section": "Follow",
+    "visit_section": "Visit",
+    "website": "virtusrealtycr.com",
+    "copyright": "© {{year}} Virtus Realty CR · Virtuoso"
+  },
+  "property_card": {
+    "certification": "SINAC · ZPCC",
+    "technical_sheet": "Technical Sheet",
+    "attachments": "Attachments",
+    "explore": "Explore Sanctuary"
+  },
+  "tabs": {
+    "technical": "Technical Sheet",
+    "technical_short": "Technical",
+    "flora_fauna": "Flora & Fauna",
+    "flora": "Flora",
+    "fauna": "Fauna",
+    "flora_short": "Flora",
+    "memory": "Memory",
+    "memory_short": "Memory",
+    "prosperity": "Prosperity",
+    "prosperity_short": "Prosperity",
+    "ancestral": "Ancestral Wisdom",
+    "ancestral_short": "Ancestral",
+    "pulse": "Lifestyle",
+    "pulse_short": "Lifestyle",
+    "index": "Virtuoso Index",
+    "index_short": "Index",
+    "legacy": "Legacy",
+    "legacy_short": "Legacy",
+    "potential": "Virtus Potential",
+    "potential_short": "Potential",
+    "gallery": "Gallery",
+    "gallery_short": "Gallery"
+  },
+  "technical_sheet": {
+    "title": "Technical Specification",
+    "location_area": "Location & Area",
+    "water_sovereignty": "Water Sovereignty",
+    "global_status": "Global Status",
+    "elevation_climate": "Elevation & Climate",
+    "biodiversity": "Critical Biodiversity",
+    "constructive_potential": "Constructive Potential",
+    "privacy_isolation": "Privacy & Isolation",
+    "logistics_accessibility": "Logistics Accessibility",
+    "infrastructure": "Infrastructure",
+    "disclaimer": "The information presented is based on public data and technical analysis. For specific legal terms, consult official documents.",
+    "download": "Download PDF"
+  },
+  "flora_fauna": {
+    "title": "Living Sanctuary",
+    "subtitle": "Flora & Fauna",
+    "description": "A complete ecosystem where flora and fauna coexist in perfect harmony.",
+    "view_species": "View Species",
+    "close": "Close",
+    "filter_all": "All",
+    "filter_fauna": "Fauna",
+    "filter_flora": "Flora",
+    "of": "of",
+    "species": "species"
+  },
+  "biodiversity": {
+    "title": "Critical Biodiversity",
+    "subtitle": "Living Ecosystem",
+    "critical_species": "Critical Species"
+  },
+  "earth_memory": {
+    "title": "Memory of the Earth",
+    "subtitle": "Geology & Soils",
+    "soil_type": "Soil Type",
+    "geology": "Geology",
+    "water_sources": "Water Sources",
+    "history": "History"
+  },
+  "prosperity": {
+    "title": "Local Prosperity",
+    "subtitle": "Economy & Community",
+    "economic_impact": "Economic Impact",
+    "community_benefits": "Community Benefits"
+  },
+  "ancestral_wisdom": {
+    "title": "Ancestral Wisdom",
+    "subtitle": "Indigenous Knowledge",
+    "description": "Respect and integration of ancestral knowledge with modern conservation.",
+    "memory_huetar": "Huetar Memory · La Carpintera",
+    "memory_boruca": "Boruca Memory · Guardians of the South"
+  },
+  "community_pulse": {
+    "title": "Lifestyle",
+    "subtitle": "Community & Culture",
+    "lifestyle": "Way of Life",
+    "activities": "Activities",
+    "events": "Events",
+    "activity_bird_watching": "Bird Watching",
+    "activity_quetzal_sighting": "Quetzal Sighting",
+    "activity_forest_hiking": "Forest Hiking",
+    "activity_mountain_hiking": "Mountain Hiking",
+    "activity_river_swimming": "River & Pool Swimming",
+    "activity_agro_tourism": "Organic Agritourism",
+    "activity_nature_meditation": "Meditation in Nature",
+    "activity_nature_photography": "Nature Photography",
+    "activity_mist_photography": "Mist Photography",
+    "activity_sunrise_yoga": "Sunrise Yoga",
+    "activity_endemic_flora_tour": "Endemic Flora Tour",
+    "activity_remote_work": "Remote Work at Altitude"
+  },
+  "virtuoso_index": {
+    "title": "Alignment Index",
+    "subtitle": "Virtuoso Pillars",
+    "conservation_score": "Conservation Score",
+    "impact_metrics": "Impact Metrics",
+    "pillar_salud": "Health",
+    "pillar_amor": "Love",
+    "pillar_sabiduria": "Wisdom",
+    "pillar_prosperidad": "Prosperity"
+  },
+  "custody_legacy": {
+    "title": "Stewardship Legacy",
+    "subtitle": "Historical Responsibility",
+    "stewardship": "Stewardship",
+    "heritage": "Heritage"
+  },
+  "virtus_potential": {
+    "title": "Observed Potential",
+    "subtitle": "Vision\nVirtus Team",
+    "potential_description": "Sustainable development respecting ecological limits.",
+    "finca_label": "Property",
+    "download_due_diligence": "Download DUE DILIGENCE {{label}}"
+  },
+  "map_modal": {
+    "location": "Location",
+    "coordinates": "Coordinates",
+    "close": "Close Map"
+  },
+  "image_gallery": {
+    "images": "Images",
+    "close": "Close Gallery",
+    "previous": "Previous",
+    "next": "Next",
+    "visual_collection": "Visual Collection",
+    "gallery": "Gallery"
+  },
+  "categories": {
+    "agua": "Water",
+    "bosque": "Forest",
+    "montaña": "Mountain",
+    "agricultura": "Agriculture",
+    "comunidad": "Community",
+    "ancestral": "Ancestral"
+  },
+  "sanctuary_names": {
+    "la_carpintera": "La Carpintera",
+    "division_pz": "División Pérez Zeledón"
+  },
+  "errors": {
+    "not_found": "Sanctuary not found",
+    "loading": "Loading..."
+  },
+  "sanctuary_data": {
+    "division_pz": {
+      "name": "División Pérez Zeledón",
+      "sanctuary_name": "El Robledal — Hydrological Conservation Refuge",
+      "tagline": "Where primary forest is the water bank the world needs.",
+      "description": "Nearly 600 hectares of primary and secondary forest within the La Amistad Pacific South Biological Corridor, designated as a UNESCO World Heritage Site.",
+      "location": "División, Pérez Zeledón, San José, Costa Rica",
+      "technical_area": "División, Pérez Zeledón (San José). 594 hectares of unified nature reserve.",
+      "technical_water": "Primary water source of the División River. Active commercial water concession.",
+      "technical_zoning": "Located within the Biosphere Reserve (UNESCO Certification). 91% forest coverage acting as a carbon sink.",
+      "technical_elevation": "1,800 to 2,800 meters above sea level. Exceptional transition between humid tropical forest and montane cloud forest.",
+      "technical_biodiversity": "Pristine habitat with megafauna presence: pumas and tapirs (jaguars). Resplendent quetzal nesting zone.",
+      "technical_potential": "Limited construction potential to 5 hectares with maximum density of 1 dwelling per 10 hectares under sustainability restrictions.",
+      "technical_privacy": "Sole access via private road. Natural acoustic isolation due to mountainous topography.",
+      "technical_logistics": "Access via Route 237 (30 minutes to Uvita). Basic services: private spring water, installed solar energy, satellite communication."
+    },
+    "la_carpintera": {
+      "name": "La Carpintera",
+      "sanctuary_name": "Dual Sanctuary of Abundance",
+      "tagline": "The perfect duality between strategic connectivity and ecological isolation.",
+      "description": "380 hectares of cloud forest and transitional forest within the La Amistad Biological Corridor. Absolute sovereignty in water and energy.",
+      "location": "La Carpintera, San José, Costa Rica",
+      "technical_area": "La Carpintera (San José). 380 hectares of forest reserve with existing infrastructure.",
+      "technical_water": "3 fresh water springs. Certified natural water capture and filtration system.",
+      "technical_zoning": "Buffer zone of the La Amistad Biosphere Reserve. Cloud forest in transition.",
+      "technical_elevation": "1,600 to 2,200 meters above sea level. Unique microclimate with annual precipitation of 5,000mm.",
+      "technical_biodiversity": "Intact primary forest. Habitat for endemic species. Critical wildlife corridor.",
+      "technical_potential": "Limited development respecting forest coverage. Eco-tourism and research potential.",
+      "technical_privacy": "Natural isolation. Controlled access by terrain.",
+      "technical_logistics": "Strategic location with service access. Energy sovereignty with solar panels."
+    }
+  },
+  "energy_tags": {
+    "agua": "Water",
+    "bosque": "Forest",
+    "agricultura": "Agriculture",
+    "ancestral": "Ancestral",
+    "energia": "Energy",
+    "solar": "Solar"
+  },
+  "infrastructure": {
+    "division_pz": "Available services: Electricity, Internet, Telephone. Operational property.",
+    "la_carpintera": "Available services: Water, Electricity, Internet. Existing infrastructure."
+  },
+  "history": {
+    "division_pz": {
+      "title": "History of División Pérez Zeledón",
+      "timeline": [
+        {
+          "year": "~3000 B.C.",
+          "title": "Boruca-Brunca Territory",
+          "description": "The Boruca (Brunca) peoples establish their civilization in the División River basin. The land is understood as a living being with memory and sacred purpose."
+        },
+        {
+          "year": "16th Century",
+          "title": "Colonial Contact",
+          "description": "Spanish conquest alters the territorial dynamics of the Southern Zone. The Boruca resist tenaciously and preserve much of their cosmovision and language to this day."
+        },
+        {
+          "year": "1800s",
+          "title": "Agricultural Settlement",
+          "description": "Colonial families establish themselves in Pérez Zeledón. Coffee, sugarcane, and cattle ranching begin to transform the landscape, while highland areas maintain their forest coverage."
+        },
+        {
+          "year": "1970-1990",
+          "title": "Conservation Policies",
+          "description": "Costa Rica establishes a pioneering conservation legal framework in Latin America. The La Amistad Biological Corridor is established, protecting the El Robledal territory."
+        },
+        {
+          "year": "2000s",
+          "title": "UNESCO Recognition",
+          "description": "The La Amistad Pacific South Conservation Area is confirmed as a World Heritage Site. El Robledal, within the corridor, acquires international conservation status."
+        },
+        {
+          "year": "Today",
+          "title": "Seeking Stewards",
+          "description": "Nearly 600 hectares of primary forest seek a conscious steward. A life project that honors the World Heritage that this land represents."
+        }
+      ]
+    },
+    "la_carpintera": {
+      "title": "History of La Carpintera",
+      "timeline": [
+        {
+          "year": "Ancestral",
+          "title": "Indigenous Territory",
+          "description": "The region was ancestrally inhabited by Boruca, Bribri, and Cabécar peoples. These communities developed a profound relationship with the cloud forest, regarding it as sacred and essential to life."
+        },
+        {
+          "year": "16th-18th Century",
+          "title": "Colonial Period",
+          "description": "Spanish colonization reached the region, though the mountainous terrain allowed many indigenous communities to preserve their autonomy and ancestral knowledge."
+        },
+        {
+          "year": "1800s-1900s",
+          "title": "Costa Rican Settlement",
+          "description": "Costa Rican families settled in the lowlands. La Carpintera, in its height and isolation, was primarily utilized for sustainable agricultural activities."
+        },
+        {
+          "year": "1970-1990",
+          "title": "Environmental Protection",
+          "description": "Costa Rica recognizes the importance of cloud forests. The region enters protected areas, establishing limits on extractive development."
+        },
+        {
+          "year": "2000s",
+          "title": "UNESCO Designation",
+          "description": "La Carpintera formally integrates into the La Amistad Biosphere Reserve, recognized by UNESCO as a World Heritage Site."
+        },
+        {
+          "year": "Today",
+          "title": "Conscious Stewardship",
+          "description": "La Carpintera seeks guardians to continue its conservation legacy. A space where ancestral tradition and modern sustainability converge."
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,11 @@
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSanctuaryText } from '../../utils/sanctuaryTranslations'
+import { usePrivateDocuments } from '../../context/PrivateDocumentsContext'
+import { openFile } from '../../utils/documentDownloads'
+import MapModal from './MapModal'
 
 function deriveZoning(property) {
   const z = (property.technical?.zoning || '').toLowerCase()
@@ -11,15 +16,31 @@ function deriveZoning(property) {
 }
 
 export default function PropertyCard({ property, index }) {
+  const { t } = useTranslation()
+  const sanctuary = useSanctuaryText(property)
   const navigate = useNavigate()
+  const { isUnlocked } = usePrivateDocuments()
   const [showAnexos, setShowAnexos] = useState(false)
+  const [showMap, setShowMap] = useState(false)
+  const anexosRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (anexosRef.current && !anexosRef.current.contains(event.target)) {
+        setShowAnexos(false)
+      }
+    }
+
+    if (showAnexos) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showAnexos])
 
   const handleDownload = (e) => {
     e.stopPropagation()
-    const link = document.createElement('a')
-    link.href = property.techSheet
-    link.download = `Ficha-Tecnica-${property.slug}.pdf`
-    link.click()
+    const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+    openFile('technical-sheet', sanctuaryId)
   }
 
   const area = property.technical?.area?.split('(')[0]?.split(',')[0]?.trim() ?? ''
@@ -62,7 +83,7 @@ export default function PropertyCard({ property, index }) {
       }}
     >
       {/* ── Image panel ───────────────────────────────────────────────── */}
-      {index % 2 === 0 && <ImagePanel property={property} />}
+      {index % 2 === 0 && <ImagePanel property={property} onMapClick={() => setShowMap(true)} />}
 
       {/* ── Content panel ─────────────────────────────────────────────── */}
       <div style={{
@@ -132,7 +153,7 @@ export default function PropertyCard({ property, index }) {
                   border: '1px solid rgba(17,26,16,0.1)',
                   borderRadius: 999,
                 }}>
-                  {tag}
+                  {t(`categories.${tag}`)}
                 </span>
               ))}
             </div>
@@ -147,7 +168,7 @@ export default function PropertyCard({ property, index }) {
             WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
           }}>
-            {property.description}
+            {sanctuary.description}
           </p>
         </div>
 
@@ -178,12 +199,12 @@ export default function PropertyCard({ property, index }) {
             <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
               <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="currentColor"/>
             </svg>
-            Ficha Técnica
+            {t('property_card.technical_sheet')}
           </motion.button>
 
           {/* Anexos dropdown */}
-          {property.anexos?.length > 0 && (
-            <div style={{ position: 'relative' }}>
+          {property.anexos?.length > 0 && isUnlocked && (
+            <div ref={anexosRef} style={{ position: 'relative' }}>
               <motion.button
                 onClick={e => { e.stopPropagation(); setShowAnexos(!showAnexos) }}
                 whileHover={{ scale: 1.02 }}
@@ -204,7 +225,7 @@ export default function PropertyCard({ property, index }) {
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
                 </svg>
-                Anexos
+                {t('property_card.attachments')}
                 <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
                   <path d={showAnexos ? 'M2 7l3-3 3 3' : 'M2 3l3 3 3-3'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
@@ -226,16 +247,20 @@ export default function PropertyCard({ property, index }) {
                   }}
                 >
                   {property.anexos.map((anexo, i) => (
-                    <a
+                    <button
                       key={i}
-                      href={anexo.file}
-                      download
+                      onClick={e => { e.stopPropagation(); window.open(anexo.file, '_blank') }}
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         gap: '1rem', padding: '0.85rem 1.1rem',
                         textDecoration: 'none',
                         borderBottom: i < property.anexos.length - 1 ? '1px solid rgba(17,26,16,0.06)' : 'none',
                         transition: 'background 0.15s',
+                        border: 'none',
+                        background: 'transparent',
+                        cursor: 'pointer',
+                        width: '100%',
+                        textAlign: 'left',
                       }}
                       onMouseEnter={e => e.currentTarget.style.background = 'rgba(17,26,16,0.03)'}
                       onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
@@ -244,12 +269,12 @@ export default function PropertyCard({ property, index }) {
                         fontFamily: '"DM Sans", Inter, sans-serif',
                         fontSize: '0.72rem', color: '#111a10', lineHeight: 1.3,
                       }}>
-                        {anexo.label}
+                        {anexo.name}
                       </span>
                       <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
                         <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="#c9a84c"/>
                       </svg>
-                    </a>
+                    </button>
                   ))}
                 </motion.div>
               )}
@@ -272,7 +297,7 @@ export default function PropertyCard({ property, index }) {
               display: 'flex', alignItems: 'center', gap: 6,
             }}
           >
-            Explorar Santuario
+            {t('property_card.explore')}
             <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -281,12 +306,18 @@ export default function PropertyCard({ property, index }) {
       </div>
 
       {/* ── Image panel (right side for odd cards) ────────────────────── */}
-      {index % 2 === 1 && <ImagePanel property={property} />}
+      {index % 2 === 1 && <ImagePanel property={property} onMapClick={() => setShowMap(true)} />}
+
+      {/* Map Modal */}
+      <AnimatePresence>
+        {showMap && <MapModal property={property} onClose={() => setShowMap(false)} />}
+      </AnimatePresence>
     </motion.article>
   )
 }
 
-function ImagePanel({ property }) {
+function ImagePanel({ property, onMapClick }) {
+  const { t } = useTranslation()
   return (
     <div style={{
       position: 'relative', overflow: 'hidden', minHeight: 380,
@@ -308,26 +339,57 @@ function ImagePanel({ property }) {
         position: 'absolute', inset: 0,
         background: 'linear-gradient(to bottom, rgba(5,13,5,0.05) 0%, rgba(5,13,5,0.55) 100%)',
       }} />
-      {/* Location badge */}
+      {/* Location badges */}
       <div style={{
         position: 'absolute', bottom: '1.5rem', left: '1.5rem',
-        display: 'flex', alignItems: 'center', gap: '0.4rem',
-        padding: '0.35rem 0.85rem',
-        background: 'rgba(45,74,43,0.72)',
-        backdropFilter: 'blur(8px)',
-        borderRadius: 999,
-        border: '1px solid rgba(201,168,76,0.2)',
+        display: 'flex', gap: '0.6rem', flexWrap: 'wrap',
+        alignItems: 'flex-start',
       }}>
-        <svg width="7" height="9" viewBox="0 0 8 10" fill="none">
-          <path d="M4 0C1.79 0 0 1.79 0 4c0 3 4 6 4 6s4-3 4-6c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 4 2.5 1.5 1.5 0 0 1 4 5.5z" fill="#c9a84c"/>
-        </svg>
-        <span style={{
-          fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
-          color: 'rgba(245,240,232,0.85)', letterSpacing: '0.1em',
-          textTransform: 'uppercase',
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: '0.4rem',
+          padding: '0.35rem 0.85rem',
+          background: 'rgba(45,74,43,0.72)',
+          backdropFilter: 'blur(8px)',
+          borderRadius: 999,
+          border: '1px solid rgba(201,168,76,0.2)',
         }}>
-          {property.location.split(',')[0]}
-        </span>
+          <svg width="7" height="9" viewBox="0 0 8 10" fill="none">
+            <path d="M4 0C1.79 0 0 1.79 0 4c0 3 4 6 4 6s4-3 4-6c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 4 2.5 1.5 1.5 0 0 1 4 5.5z" fill="#c9a84c"/>
+          </svg>
+          <span style={{
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+            color: 'rgba(245,240,232,0.85)', letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+          }}>
+            {property.location.split(',')[0]}
+          </span>
+        </div>
+
+        {/* Ver Mapa button */}
+        <motion.button
+          onClick={(e) => { e.stopPropagation(); onMapClick() }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          style={{
+            display: 'flex', alignItems: 'center', gap: '0.4rem',
+            padding: '0.35rem 0.85rem',
+            background: 'rgba(201,168,76,0.85)',
+            backdropFilter: 'blur(8px)',
+            borderRadius: 999,
+            border: 'none',
+            cursor: 'pointer',
+            fontFamily: '"DM Sans", Inter, sans-serif', fontSize: '0.72rem',
+            color: '#111a10', letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            fontWeight: 500,
+          }}
+        >
+          <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3" fill="currentColor"/>
+          </svg>
+          {t('common.viewMap')}
+        </motion.button>
       </div>
     </div>
   )

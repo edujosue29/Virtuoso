@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export default function CustodyLegacy({ property, finca, dark }) {
+  const { t } = useTranslation()
   const { name } = property
   // Use finca-specific legacy when available
   const legacy = finca?.legacy ?? property.legacy
@@ -31,7 +33,7 @@ export default function CustodyLegacy({ property, finca, dark }) {
           marginBottom: '2rem',
         }}
       >
-        El Legado de la Custodia
+        {t('custody_legacy.title')}
       </motion.p>
 
       {/* ── Main Legacy Card ──────────────────────────────────────────────── */}
@@ -111,7 +113,7 @@ export default function CustodyLegacy({ property, finca, dark }) {
               color: 'rgba(245,240,232,0.65)',
             }}
           >
-            {name} · Proyecto VIRTUOSO
+            {name} · {t('common.portal')}
           </span>
         </div>
       </motion.div>
