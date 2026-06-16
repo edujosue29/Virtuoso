@@ -40,10 +40,30 @@ export default function VideoHero({ property }) {
   // Audio ON by default when there's a video with sound
   const [muted, setMuted] = useState(!property.videoSrc)
   const [videoReady, setVideoReady] = useState(false)
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
+
+  // ── Lazy load video when section enters viewport ────────────────────────
+  useEffect(() => {
+    if (!property.videoSrc) return
+    const el = sectionRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadVideo(true)
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.1 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [property.videoSrc])
 
   // ── Fade volume as hero scrolls out — full at 50%+, silent at 10% ────────
   useEffect(() => {
-    if (!property.videoSrc) return
+    if (!property.videoSrc || !shouldLoadVideo) return
     const el = sectionRef.current
     if (!el) return
 
@@ -81,7 +101,7 @@ export default function VideoHero({ property }) {
     )
     observer.observe(el)
     return () => observer.disconnect()
-  }, [property.videoSrc])
+  }, [property.videoSrc, shouldLoadVideo])
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -117,13 +137,13 @@ export default function VideoHero({ property }) {
         <>
           <video
             ref={videoRef}
-            src={property.videoSrc}
+            src={shouldLoadVideo ? property.videoSrc : undefined}
             poster={property.heroImage}
             autoPlay
             muted={false}
             loop
             playsInline
-            preload="metadata"
+            preload={shouldLoadVideo ? "metadata" : "none"}
             onCanPlay={handleCanPlay}
             style={{
               position: 'absolute',

@@ -26,6 +26,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: 'brightness(0.52) saturate(0.85)' }}
       />
