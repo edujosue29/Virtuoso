@@ -31,10 +31,30 @@
       ]
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/:path((?!docs|images|videos|assets).*)",
-      "destination": "/index.html"
+      "src": "/docs/(.*)",
+      "dest": "/docs/$1",
+      "continue": true
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1",
+      "continue": true
+    },
+    {
+      "src": "/videos/(.*)",
+      "dest": "/videos/$1",
+      "continue": true
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
