@@ -47,13 +47,13 @@ export default function PropertyCard({ property, index }) {
   const elevation = property.technical?.elevation?.split('·')[0]?.trim() ?? ''
   const certification = deriveZoning(property)
 
-  // Override taglines for homepage display (not affecting sanctuary pages)
+  // Override taglines for homepage display (from translations)
   const getDisplayTagline = () => {
     if (property.id === 'division-perez-zeledon') {
-      return 'Un santuario de biodiversidad donde el bosque y el agua conviven en perfecta armonía.'
+      return t('home.property_cards.division_pz.tagline')
     }
     if (property.id === 'la-carpintera') {
-      return 'La dualidad perfecta entre conectividad estratégica y aislamiento ecológico: un santuario de bosque nuboso dotado de soberanía absoluta en agua y energía.'
+      return t('home.property_cards.la_carpintera.tagline')
     }
     return property.tagline
   }

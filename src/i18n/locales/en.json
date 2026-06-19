@@ -44,7 +44,15 @@
     "follow_section": "Follow",
     "visit_section": "Visit",
     "website": "virtusrealtycr.com",
-    "copyright": "© {{year}} Virtus Realty CR · Virtuoso"
+    "copyright": "© {{year}} Virtus Realty CR · Virtuoso",
+    "property_cards": {
+      "division_pz": {
+        "tagline": "A biodiversity sanctuary where forest and water coexist in perfect harmony."
+      },
+      "la_carpintera": {
+        "tagline": "The perfect duality between strategic connectivity and ecological isolation: a cloud forest sanctuary with absolute sovereignty in water and energy."
+      }
+    }
   },
   "property_card": {
     "certification": "SINAC · ZPCC",

@@ -44,7 +44,15 @@
     "follow_section": "Síguenos",
     "visit_section": "Visita",
     "website": "virtusrealtycr.com",
-    "copyright": "© {{year}} Virtus Realty CR · Virtuoso"
+    "copyright": "© {{year}} Virtus Realty CR · Virtuoso",
+    "property_cards": {
+      "division_pz": {
+        "tagline": "Un santuario de biodiversidad donde el bosque y el agua conviven en perfecta armonía."
+      },
+      "la_carpintera": {
+        "tagline": "La dualidad perfecta entre conectividad estratégica y aislamiento ecológico: un santuario de bosque nuboso dotado de soberanía absoluta en agua y energía."
+      }
+    }
   },
   "property_card": {
     "certification": "SINAC · ZPCC",
