@@ -86,7 +86,7 @@
     "constructive_potential": "Potencial Constructivo",
     "privacy_isolation": "Privacidad y Aislamiento",
     "logistics_accessibility": "Accesibilidad Logística",
-    "infrastructure": "Accesibilidad",
+    "infrastructure": "Infraestructura",
     "disclaimer": "La información presentada se basa en datos públicos y análisis técnicos. Para términos legales específicos, consulta los documentos oficia les.",
     "download": "Descargar PDF"
   },
@@ -94,7 +94,7 @@
     "title": "Santuario Vivo",
     "subtitle": "Flora & Fauna",
     "description": "Un ecosistema completo donde flora y fauna coexisten en perfecta armonía.",
-    "view_species": "Ver Especie",
+    "view_species": "Ver Especies",
     "close": "Cerrar",
     "filter_all": "Todas",
     "filter_fauna": "Fauna",
@@ -215,14 +215,14 @@
       "technical_privacy": "Acceso único por camino privado. Aislamiento acústico natural por topografía montañosa.",
       "technical_logistics": "Acceso por ruta 237 (30 min a Uvita). Servicios básicos: agua de naciente propia, energía solar instalada, comunicación satelital.",
       "species": {
-        "quetzal_pz": {
+        "quetzal-pz": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",
           "description": "Ave sagrada de Mesoamérica. Documentada en El Robledal como anidador permanente en las zonas de mayor elevación (2,000+ msnm). Su presencia confirma la madurez del bosque con aguacatillos silvestres abundantes.",
           "status": "Vulnerable (UICN)",
           "habitat": "Bosque nuboso y de montaña, 1,500–3,000 msnm"
         },
-        "tapir_danta": {
+        "tapir-danta": {
           "name": "Tapir (Danta)",
           "scientific": "Tapirus bairdii",
           "description": "Megafauna característica del Corredor Biológico La Amistad. El Robledal ofrece hábitat óptimo como dispersador de semillas en zonas de bosque primario de altura.",
@@ -236,7 +236,7 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque montano y premontano, 1,200–3,000 msnm"
         },
-        "halcon_rojo": {
+        "halcon-rojo": {
           "name": "Halcón Rojo (Halcón Cola Roja)",
           "scientific": "Buteo jamaicensis",
           "description": "Ave rapaz nativa del Corredor Biológico. Documentada en El Robledal como indicadora de ecosistema prístino. Patrulla las zonas de bosque abierto en búsqueda de presas pequeñas.",
@@ -264,7 +264,7 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y montano, 1,200–3,000 msnm"
         },
-        "perezoso_dos_dedos": {
+        "perezoso-dos-dedos": {
           "name": "Perezoso de Dos Dedos",
           "scientific": "Choloepus hoffmanni",
           "description": "Mamífero arbóreo especializado en la cobertura forestal de El Robledal. Su presencia en zonas de bosque primario indica estabilidad y madurez del ecosistema.",
@@ -306,7 +306,7 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso y montano, 2,000–3,000 msnm"
         },
-        "passiflora": {
+        "passiflora-gilbertiana": {
           "name": "Passiflora Gilbertiana",
           "scientific": "Passiflora gilbertiana",
           "description": "Especie endémica de Costa Rica documentada en El Robledal. Una de las 71 especies de plantas endémicas identificadas en la Reserva de la Biosfera Savegre. Planta de alto valor para conservación.",
@@ -327,7 +327,7 @@
           "status": "Preocupación Menor",
           "habitat": "Bosque nuboso montano, 2,000–3,000 msnm"
         },
-        "helecho_arborescente": {
+        "helecho-arborescente": {
           "name": "Helecho Arborescente",
           "scientific": "Cyathea costaricensis",
           "description": "Estructurador del sotobosque del bosque nuboso en El Robledal. Crea microhábitats húmedos cruciales para fauna invertebrada y anfibios. Indicador de humedad extrema y conservación prístina.",
@@ -379,7 +379,7 @@
       "technical_privacy": "Aislamiento natural. Acceso controlado por terreno.",
       "technical_logistics": "Carretera asfaltada hasta 400m del portón. Últimos 400m lastre apto para 4×4. Logística eficiente: 2 km (10 min) San Rafael · 12 km Cartago · 22 km (45 min) San José.",
       "species": {
-        "quetzal_carpintera": {
+        "quetzal-carpintera": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",
           "description": "Ave sagrada de Mesoamérica. Indicadora de bosque maduro. Presente estacionalmente en La Carpintera entre 1,550–1,800 msnm.",
@@ -400,35 +400,35 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso, 1,500–3,000 msnm"
         },
-        "colibri_montanes": {
+        "colibri-montanes": {
           "name": "Colibrí Montañés Garganta Morada",
           "scientific": "Lampornis calolaemus",
           "description": "Polinizador clave en los estratos medio y bajo. Especie especialista de flores de Gesneriaceae y Loranthaceae en La Carpintera.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso de montaña, 1,800–3,200 msnm"
         },
-        "colibri_magnifico": {
+        "colibri-magnifico": {
           "name": "Colibrí Magnífico",
           "scientific": "Eugenes fulgens",
           "description": "Uno de los colibríes más grandes de la zona. Atraído por la floración de flores tubulares en sotobosque nuboso de La Carpintera.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso, 1,500–3,000 msnm"
         },
-        "colibri_centelleante": {
+        "colibri-centelleante": {
           "name": "Colibrí Centelleante",
           "scientific": "Selasphorus scintilla",
           "description": "El colibrí más pequeño del país. Especialista de flores bajas en bordes y claros del bosque nuboso de La Carpintera.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso y matorrales de altura, 1,200–3,000 msnm"
         },
-        "trogon_collarejo": {
+        "trogon-collarejo": {
           "name": "Trogón Collarejo",
           "scientific": "Trogon collaris",
           "description": "Ave territorial y leal del dosel. Documentada en La Carpintera como residente permanente del bosque maduro.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso y montano, 1,500–2,500 msnm"
         },
-        "tangara_dorada": {
+        "tangara-dorada": {
           "name": "Tangara Dorada",
           "scientific": "Tangara icterocephala",
           "description": "Frugívora gregaria de dosel y sotobosque. Importante dispersadora de semillas de Melastomataceae en La Carpintera.",
@@ -442,7 +442,7 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso, 1,500–3,000 msnm"
         },
-        "roble_carpintera": {
+        "1": {
           "name": "Roble",
           "scientific": "Quercus spp.",
           "description": "Árbol majestuoso de gran talla, caracterizado por su robusto tronco y copa densa. Especie clave del bosque montano que proporciona alimento y refugio a innumerables especies. Su madera es de gran valor cultural en Costa Rica.",
@@ -456,28 +456,28 @@
           "habitat": "Bosque húmedo y muy húmedo montano",
           "altitude": "800 – 2,200 msnm"
         },
-        "higueron": {
+        "4": {
           "name": "Higuerón",
           "scientific": "Ficus spp.",
           "description": "Árbol higuero con copas expansivas que albergan ecosistemas completos de fauna. Productor de frutos durante todo el año, alimento esencial para aves, mamíferos y reptiles. Especie muy importante en corredores biológicos.",
           "habitat": "Bosque tropical y montano húmedo",
           "altitude": "200 – 2,400 msnm"
         },
-        "vaquita": {
+        "6": {
           "name": "Vaquita",
           "scientific": "Acineta densa",
           "description": "Orquídea epifita con inflorescencias péndulas y flores aromáticas. Especie dependiente de condiciones de humedad y temperatura estables del bosque montano. Símbolo de la salud ecológica del bosque nuboso.",
           "habitat": "Bosque nuboso montano bajo y medio",
           "altitude": "1,400 – 2,200 msnm"
         },
-        "lagartillo": {
+        "7": {
           "name": "Lagartillo",
           "scientific": "Zanthoxylum spp.",
           "description": "Especie forestal muy común en Costa Rica, perteneciente a la familia Rutaceae (la misma de los cítricos). Se caracteriza por su corteza cubierta de grandes espinas cónicas y su madera muy resistente. Árbol aromático de talla pequeña a mediana con hojas compuestas y frutos capsulares. Utilizado ancestralmente en medicina tradicional costarricense. Fuente de alimento para fauna silvestre especializada.",
           "habitat": "Bosque montano húmedo y deciduo",
           "altitude": "1,000 – 2,100 msnm"
         },
-        "helecho_carpintera": {
+        "9": {
           "name": "Helecho arborescente",
           "scientific": "Cyathea spp.",
           "description": "Antiguo helecho arborescente cuyo linaje se remonta a eras geológicas pasadas. Crea ecosistemas especializados alrededor de su tronco fibroso. Indicador crítico de bosques nubosos de gran altitud sin intervención humana.",
@@ -493,7 +493,9 @@
     "agricultura": "Agricultura",
     "ancestral": "Ancestral",
     "energia": "Energía",
-    "solar": "Solar"
+    "solar": "Solar",
+    "montaña": "Montaña",
+    "comunidad": "Comunidad"
   },
   "infrastructure": {
     "division_pz": "Servicios disponibles: Electricidad, Internet, Telefonía. Finca operativa.",
@@ -539,34 +541,39 @@
       "title": "Historia La Carpintera",
       "timeline": [
         {
-          "year": "Ancestral",
-          "title": "Territorio Indígena",
-          "description": "La región fue ancestralmente poblada por pueblos Boruca, Bribri y Cabécar. Estos pueblos desarrollaron una relación profunda con el bosque nuboso, considerándolo sagrado y esencial para la vida."
+          "year": "~1000 A.C.",
+          "title": "Rutas Huetar",
+          "description": "Zona mística y sagrada: Antigua ruta comercial y espiritual indígena. Un entorno considerado sagrado por su pureza y altísima capacidad natural para generar vida a través del agua."
         },
         {
-          "year": "Siglo XVI-XVIII",
-          "title": "Período Colonial",
-          "description": "La colonización española llegó a la región, aunque el terreno montañoso permitió que muchas comunidades indígenas preservaran su autonomía y conocimiento ancestral."
+          "year": "Siglo XIX - Años 2000s",
+          "title": "Explotación Tradicional",
+          "description": "Décadas de explotación tradicional familiar. La Finca 1 se dedicó a la ganadería de engorde y la Finca 2 al café y lechería de cabras; actividades que compactaban el suelo fuertemente e introducían contaminantes."
         },
         {
-          "year": "1800s-1900s",
-          "title": "Colonización Costarricense",
-          "description": "Familias costarricenses se establecieron en las zonas bajas. La Carpintera, en su altura y aislamiento, fue utilizada principalmente para actividades agrícolas sostenibles."
+          "year": "2012-2014",
+          "title": "Visión de Transformación",
+          "description": "La organización \"Para Siempre Amigos de La Carpintera\" adquiere las tierras asumiendo un alto costo financiero voluntario. ¿El objetivo? Detener radicalmente la degradación para convertir antiguos potreros en un santuario unificado de bosque nuboso."
         },
         {
-          "year": "1970-1990",
-          "title": "Protección Ambiental",
-          "description": "Costa Rica reconoce la importancia de los bosques nubosos. La región entra en áreas de protección, estableciendo límites al desarrollo extractivo."
+          "year": "2012-2015",
+          "title": "Cierre de Operaciones y Regeneración",
+          "description": "Se frena en seco toda la ganadería, el pastoreo y el uso de agroquímicos. El suelo recupera de inmediato su capacidad de infiltración de agua y brotan de forma espontánea las primeras especies de árboles nativos colonizadores."
         },
         {
-          "year": "2000s",
-          "title": "Designación UNESCO",
-          "description": "La Carpintera se integra formalmente en la Reserva de Biosfera La Amistad, reconocida por UNESCO como Patrimonio de la Humanidad."
+          "year": "2015-2020",
+          "title": "Restauración y Custodia Radical",
+          "description": "Los propietarios se mudan permanentemente al sitio en 2016 para frenar presencialmente la caza y tala ilegal. Coherentes con su huella ecológica, renuncian por completo a la red eléctrica comercial e instalan un sistema autónomo de paneles solares, viveros orgánicos y estanques de apicultura."
         },
         {
-          "year": "Hoy",
-          "title": "Custodía Consciente",
-          "description": "La Carpintera busca guardianes que continúen su legado de conservación. Un espacio donde la tradición ancestral y la sostenibilidad moderna convergen."
+          "year": "2020-2024",
+          "title": "Soberanía Operativa Absoluta",
+          "description": "Se implementa internet satelital Starlink y se unifican las fincas mediante una servidumbre estratégica de acueducto. El complejo logra 100% de soberanía de agua pura por gravedad y energía limpia. La cobertura forestal explota al 40% en Finca 1 y alcanza un impresionante 85%-90% en Finca 2."
+        },
+        {
+          "year": "2024-2026",
+          "title": "Ecosistema Maduro y Legado Global",
+          "description": "Pleno cumplimiento del Plan de Manejo del SINAC. El terreno es hoy un laboratorio vivo que sirve de refugio a pumas, osos perezosos y más de 250 especies de aves, incluyendo el mítico Quetzal. Un activo maduro, blindado por el Estado y listo para recibir un custodio institucional a escala internacional."
         }
       ]
     }
@@ -576,16 +583,40 @@
       "prosperity": {
         "description": "La ubicación estratégica dentro del Corredor Biológico UNESCO, el volumen de agua propio y el acceso desde la Interamericana hacen de El Robledal un activo de alta valorización. Su potencial en ecoturismo, producción orgánica (moras y aguacate activos) y servicios ambientales es inmediato.",
         "indicators": [
-          { "label": "Potencial Ecoturístico", "note": "Acceso directo a corredores biológicos y certificaciones activas de turismo sostenible en la región." },
-          { "label": "Producción Orgánica Activa", "note": "Parcelas de cacao, banano y plantas medicinales Boruca en producción sin agroquímicos." },
-          { "label": "Servicios Ambientales PSA", "note": "Inscrito en programa PSA del FONAFIFO — ingresos anuales garantizados por conservación de bosque." },
-          { "label": "Plusvalía Corredor UNESCO", "note": "Colindante con Zona Núcleo de Reserva de Biosfera UNESCO — valorización patrimonial excepcional." },
-          { "label": "Impacto Comunitario", "note": "Alianzas con comunidades Boruca y Bribri para gestión cultural y agrícola compartida." }
+          {
+            "label": "Potencial Ecoturístico",
+            "note": "Acceso directo a corredores biológicos y certificaciones activas de turismo sostenible en la región."
+          },
+          {
+            "label": "Producción Orgánica Activa",
+            "note": "Parcelas de cacao, banano y plantas medicinales Boruca en producción sin agroquímicos."
+          },
+          {
+            "label": "Servicios Ambientales PSA",
+            "note": "Inscrito en programa PSA del FONAFIFO — ingresos anuales garantizados por conservación de bosque."
+          },
+          {
+            "label": "Plusvalía Corredor UNESCO",
+            "note": "Colindante con Zona Núcleo de Reserva de Biosfera UNESCO — valorización patrimonial excepcional."
+          },
+          {
+            "label": "Impacto Comunitario",
+            "note": "Alianzas con comunidades Boruca y Bribri para gestión cultural y agrícola compartida."
+          }
         ],
         "issues": [
-          { "problem": "Desempleo en zonas rurales de Pérez Zeledón", "solution": "Generación de empleos verdes: guías de naturaleza, agricultores orgánicos, artesanos locales integrados al proyecto." },
-          { "problem": "Pérdida de biodiversidad por presión agrícola", "solution": "Corredores biológicos activos y reforestación con especies nativas que incrementan el valor del Patrimonio Mundial." },
-          { "problem": "Dependencia hídrica de comunidades vecinas", "solution": "Modelo de custodia hídrica responsable: las nacientes propias abastecen comunidades vecinas bajo convenio de colaboración." }
+          {
+            "problem": "Desempleo en zonas rurales de Pérez Zeledón",
+            "solution": "Generación de empleos verdes: guías de naturaleza, agricultores orgánicos, artesanos locales integrados al proyecto."
+          },
+          {
+            "problem": "Pérdida de biodiversidad por presión agrícola",
+            "solution": "Corredores biológicos activos y reforestación con especies nativas que incrementan el valor del Patrimonio Mundial."
+          },
+          {
+            "problem": "Dependencia hídrica de comunidades vecinas",
+            "solution": "Modelo de custodia hídrica responsable: las nacientes propias abastecen comunidades vecinas bajo convenio de colaboración."
+          }
         ]
       },
       "ancestral": {
@@ -603,22 +634,74 @@
           "Soberanía operativa: acceso directo desde Ruta Interamericana pavimentada + infraestructura de servicios completa"
         ],
         "activities": [
-          { "name": "Observación de Quetzales", "icon": "🦜", "level": "Experto — Anidador permanente" },
-          { "name": "Senderismo de Montaña", "icon": "⛰️", "level": "Moderado-Exigente" },
-          { "name": "Investigación Científica", "icon": "🔬", "level": "Equipo especializado" },
-          { "name": "Turismo Regenerativo", "icon": "♻️", "level": "Sostenible" },
-          { "name": "Educación Ambiental", "icon": "🎓", "level": "Instituciones" },
-          { "name": "Investigación Hidrológica", "icon": "💧", "level": "Especializado" }
+          {
+            "name": "Observación de Quetzales",
+            "icon": "🦜",
+            "level": "Experto — Anidador permanente"
+          },
+          {
+            "name": "Senderismo de Montaña",
+            "icon": "⛰️",
+            "level": "Moderado-Exigente"
+          },
+          {
+            "name": "Investigación Científica",
+            "icon": "🔬",
+            "level": "Equipo especializado"
+          },
+          {
+            "name": "Turismo Regenerativo",
+            "icon": "♻️",
+            "level": "Sostenible"
+          },
+          {
+            "name": "Educación Ambiental",
+            "icon": "🎓",
+            "level": "Instituciones"
+          },
+          {
+            "name": "Investigación Hidrológica",
+            "icon": "💧",
+            "level": "Especializado"
+          }
         ]
       },
       "potencial": [
-        { "icon": "sun", "title": "Bienestar Integral", "desc": "El Robledal ofrece un escenario superlativo para la salud integral. Al abarcar altitudes desde los 1,800 hasta los 2,800 msnm, garantiza un clima de confort perpetuo. Su aire de alta montaña y su soberanía total sobre el agua (al poseer la naciente misma del Río División) crean un entorno prístino, ideal para establecer santuarios aislados." },
-        { "icon": "tree", "title": "Conservación Ambiental", "desc": "Mega-activo de conservación con 594 hectáreas y 91% de cobertura forestal, funcionando como ancla crítica para la conectividad del Corredor Biológico hacia el Pacífico Central. Su ubicación dentro del territorio de la Reserva de la Biosfera (UNESCO) y la presencia de megafauna como el tapir y el puma, le otorgan una validación internacional inigualable aparte de sus importantes recursos hídricos." },
-        { "icon": "book", "title": "Educación e Investigación", "desc": "Alberga en una sola propiedad la transición de todas las Zonas de Vida de Holdridge, convirtiéndola en un laboratorio ecológico a escala real. Es el emplazamiento idóneo para establecer una estación universitaria internacional enfocada en el manejo de cuencas y el cambio climático." },
-        { "icon": "leaf", "title": "Turismo Regenerativo", "desc": "A diferencia de otras reservas con restricción total, el uso de suelo de El Robledal permite la construcción de baja densidad (viviendas cada 10,000 m²). Apalancado en sus 7 km de caminos internos y su acceso pavimentado, el comprador tiene el lienzo perfecto para desarrollar un eco-lodge de lujo sostenible." },
-        { "icon": "globe", "title": "Investigación Científica", "desc": "La finca es la cuna del Río División y tributaria clave del Río Savegre. Monitorear las poblaciones de dantas, felinos y aves en estas 600 hectáreas representa una oportunidad inagotable para atraer grants y turismo científico de alto nivel." },
-        { "icon": "shield", "title": "Desarrollo Espiritual", "desc": "El aislamiento que brindan casi 600 hectáreas, sumado a la energía constante de los torrentes de agua pura, generan la atmósfera de silencio y aislamiento absoluto que exigen los proyectos de retiro más exclusivos del mundo." },
-        { "icon": "coin", "title": "Integración Comunitaria", "desc": "Establecer un proyecto institucional aquí mitigará la migración y la pobreza local frenando la deforestación y la caza furtiva mediante la generación de empleos verdes estables (guardabosques, guías, hospitalidad)." }
+        {
+          "icon": "sun",
+          "title": "Bienestar Integral",
+          "desc": "El Robledal ofrece un escenario superlativo para la salud integral. Al abarcar altitudes desde los 1,800 hasta los 2,800 msnm, garantiza un clima de confort perpetuo. Su aire de alta montaña y su soberanía total sobre el agua (al poseer la naciente misma del Río División) crean un entorno prístino, ideal para establecer santuarios aislados."
+        },
+        {
+          "icon": "tree",
+          "title": "Conservación Ambiental",
+          "desc": "Mega-activo de conservación con 594 hectáreas y 91% de cobertura forestal, funcionando como ancla crítica para la conectividad del Corredor Biológico hacia el Pacífico Central. Su ubicación dentro del territorio de la Reserva de la Biosfera (UNESCO) y la presencia de megafauna como el tapir y el puma, le otorgan una validación internacional inigualable aparte de sus importantes recursos hídricos."
+        },
+        {
+          "icon": "book",
+          "title": "Educación e Investigación",
+          "desc": "Alberga en una sola propiedad la transición de todas las Zonas de Vida de Holdridge, convirtiéndola en un laboratorio ecológico a escala real. Es el emplazamiento idóneo para establecer una estación universitaria internacional enfocada en el manejo de cuencas y el cambio climático."
+        },
+        {
+          "icon": "leaf",
+          "title": "Turismo Regenerativo",
+          "desc": "A diferencia de otras reservas con restricción total, el uso de suelo de El Robledal permite la construcción de baja densidad (viviendas cada 10,000 m²). Apalancado en sus 7 km de caminos internos y su acceso pavimentado, el comprador tiene el lienzo perfecto para desarrollar un eco-lodge de lujo sostenible."
+        },
+        {
+          "icon": "globe",
+          "title": "Investigación Científica",
+          "desc": "La finca es la cuna del Río División y tributaria clave del Río Savegre. Monitorear las poblaciones de dantas, felinos y aves en estas 600 hectáreas representa una oportunidad inagotable para atraer grants y turismo científico de alto nivel."
+        },
+        {
+          "icon": "shield",
+          "title": "Desarrollo Espiritual",
+          "desc": "El aislamiento que brindan casi 600 hectáreas, sumado a la energía constante de los torrentes de agua pura, generan la atmósfera de silencio y aislamiento absoluto que exigen los proyectos de retiro más exclusivos del mundo."
+        },
+        {
+          "icon": "coin",
+          "title": "Integración Comunitaria",
+          "desc": "Establecer un proyecto institucional aquí mitigará la migración y la pobreza local frenando la deforestación y la caza furtiva mediante la generación de empleos verdes estables (guardabosques, guías, hospitalidad)."
+        }
       ],
       "virtuoso_index": {
         "descriptions": {
@@ -634,16 +717,18 @@
         "message": "Heredada del abuelo y consolidada por los hermanos Ortiz, El Robledal fue comprada íntegra para proteger la unidad de las 594 hectáreas. Los hijos de los actuales dueños tienen otros proyectos de vida y desean pasar la custodia a una organización, ONG, fundación u individuo que entienda el valor macroecológico de esta mega-reserva. Quien la acoja se convierte en guardián de la naciente del Río División, en custodio de un Patrimonio de la Humanidad, en protector de megafauna nativa y en garantía de agua pura para las generaciones futuras. Este es el llamado del Corredor Biológico La Amistad Pacífico Sur."
       },
       "species": {
-        "quetzal_pz": {
+        "quetzal-pz": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",
-          "description": "Ave sagrada de Mesoamérica. Documentada en El Robledal como anidador permanente en las zonas de mayor elevación (2,000+ msnm). Su presencia confirma la madurez del bosque con aguacatillos silvestres abundantes.",
+          "type": "fauna",
+          "description": "Ave sagrada de Mesoamérica. Documentada en El Robledal como anidadora permanente en las zonas de mayor elevación (2,000+ msnm). Su presencia confirma la madurez del bosque con aguacatillos silvestres abundantes.",
           "status": "Vulnerable (UICN)",
           "habitat": "Bosque nuboso y de montaña, 1,500–3,000 msnm"
         },
-        "tapir_danta": {
+        "tapir-danta": {
           "name": "Tapir (Danta)",
           "scientific": "Tapirus bairdii",
+          "type": "fauna",
           "description": "Megafauna característica del Corredor Biológico La Amistad. El Robledal ofrece hábitat óptimo como dispersador de semillas en zonas de bosque primario de altura.",
           "status": "Vulnerable (UICN)",
           "habitat": "Bosque tropical primario y secundario, 1,200–3,000 msnm"
@@ -651,135 +736,146 @@
         "coyote": {
           "name": "Coyote",
           "scientific": "Canis latrans",
+          "type": "fauna",
           "description": "Depredador clave del ecosistema de El Robledal. Presente en zonas de bosque primario como regulador de poblaciones de pequeños mamíferos.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque montano y premontano, 1,200–3,000 msnm"
         },
-        "halcon_rojo": {
+        "halcon-rojo": {
           "name": "Halcón Rojo (Halcón Cola Roja)",
           "scientific": "Buteo jamaicensis",
+          "type": "fauna",
           "description": "Ave rapaz nativa del Corredor Biológico. Documentada en El Robledal como indicadora de ecosistema prístino. Patrulla las zonas de bosque abierto en búsqueda de presas pequeñas.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso y montano, 1,200–3,000 msnm"
         },
-        "venado_cola_blanca": {
+        "cabro-monte": {
           "name": "Cabro de Monte (Venado Cola Blanca)",
           "scientific": "Odocoileus virginianus",
+          "type": "fauna",
           "description": "Megafauna herbívora documentada en El Robledal. Presente en zonas de bosque primario como indicador de ecosistema con baja presión de caza. Dispersador de semillas clave.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y montano, 1,200–3,000 msnm"
         },
-        "puma": {
+        "puma-pz": {
           "name": "Puma (León de Montaña)",
           "scientific": "Puma concolor",
+          "type": "fauna",
           "description": "Superdepredador del Corredor Biológico La Amistad. Documentado en El Robledal como regulador ecológico crítico. Su presencia indica ecosistema en excelente estado de conservación.",
           "status": "Vulnerable (UICN)",
           "habitat": "Bosque tropical primario y secundario, 1,200–3,000 msnm"
         },
-        "zorro": {
+        "zorro-pz": {
           "name": "Zorro",
           "scientific": "Urocyon cinereoargenteus",
-          "description": "Carnívoro mediano del ecosistema de El Robledal. Depredador de pequeños mamíferos y frutos que contribuye al balance ecológico del bosque primario.",
+          "type": "fauna",
+          "description": "Carnívoro de tamaño mediano del ecosistema de El Robledal. Depredador de pequeños mamíferos y frutos que contribuye al equilibrio ecológico del bosque primario.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y montano, 1,200–3,000 msnm"
         },
-        "perezoso_dos_dedos": {
+        "perezoso-dos-dedos": {
           "name": "Perezoso de Dos Dedos",
           "scientific": "Choloepus hoffmanni",
+          "type": "fauna",
           "description": "Mamífero arbóreo especializado en la cobertura forestal de El Robledal. Su presencia en zonas de bosque primario indica estabilidad y madurez del ecosistema.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y nuboso, 1,500–3,000 msnm"
         },
-        "conejo": {
+        "conejo-pz": {
           "name": "Conejo Silvestre",
           "scientific": "Sylvilagus brasiliensis",
-          "description": "Pequeño mamífero herbívoro del Corredor Biológico. Documentado en El Robledal como fuente alimenticia clave para depredadores medianos y aves rapaces.",
+          "type": "fauna",
+          "description": "Pequeño mamífero herbívoro del Corredor Biológico. Documentado en El Robledal como fuente de alimento clave para depredadores de tamaño mediano y aves rapaces.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y montano, 1,200–3,000 msnm"
         },
-        "liebre": {
+        "liebre-pz": {
           "name": "Liebre",
           "scientific": "Lepus alleni",
-          "description": "Mamífero saltador presente en zonas abiertas del bosque secundario. Indicador de áreas con mosaico de cobertura forestal en El Robledal.",
+          "type": "fauna",
+          "description": "Mamífero saltador presente en zonas abiertas de bosque secundario. Indicador de áreas con mosaico de cobertura forestal en El Robledal.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y premontano, 1,200–2,500 msnm"
         },
-        "murcielago": {
+        "murcielago-pz": {
           "name": "Murciélago",
           "scientific": "Artibeus jamaicensis",
-          "description": "Quiróptero dispersador de semillas crucial en El Robledal. Su actividad nocturna facilita la regeneración natural del bosque primario.",
+          "type": "fauna",
+          "description": "Dispersador de semillas quiróptero crucial para El Robledal. Su actividad nocturna facilita la regeneración natural del bosque primario.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque tropical y nuboso, 1,200–3,000 msnm"
         },
-        "zariguey": {
-          "name": "Zarigüeya",
-          "scientific": "Didelphis marsupialis",
-          "description": "Marsupial omnívoro del ecosistema de El Robledal. Presente en zonas de bosque primario como depredador de invertebrados y frutos.",
-          "status": "Preocupación Menor (UICN)",
-          "habitat": "Bosque tropical y nuboso, 1,200–3,000 msnm"
-        },
-        "trogon": {
+        "trogon-pz": {
           "name": "Trogón",
           "scientific": "Trogon violaceus",
-          "description": "Ave colorida documentada en El Robledal. Habita zonas de bosque nuboso maduro en las elevaciones más altas de la propiedad.",
+          "type": "fauna",
+          "description": "Ave colorida documentada en El Robledal. Habita las zonas de bosque nuboso maduro en las elevaciones más altas de la propiedad.",
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso y montano, 2,000–3,000 msnm"
         },
-        "passiflora": {
+        "passiflora-gilbertiana": {
           "name": "Passiflora Gilbertiana",
           "scientific": "Passiflora gilbertiana",
-          "description": "Especie endémica de Costa Rica documentada en El Robledal. Una de las 71 especies de plantas endémicas identificadas en la Reserva de la Biosfera Savegre. Planta de alto valor para conservación.",
+          "type": "flora",
+          "description": "Especie endémica de Costa Rica documentada en El Robledal. Una de 71 especies de plantas endémicas identificadas en la Reserva de Biosfera Savegre. Planta de alto valor de conservación.",
           "status": "Endémica - Vulnerable",
-          "habitat": "Bosque nuboso montano, 2,000–3,000 msnm"
+          "habitat": "Bosque nuboso de montaña, 2,000–3,000 msnm"
         },
-        "aguacatillo": {
+        "aguacatillo-pz": {
           "name": "Aguacatillo",
           "scientific": "Ocotea endresiana",
-          "description": "Árbol canopeo característico del bosque nuboso de El Robledal. Alimento preferido del Quetzal Resplandeciente. Su abundancia en la propiedad asegura anidación permanente de aves sagradas.",
+          "type": "flora",
+          "description": "Árbol dosel característico del bosque nuboso de El Robledal. Alimento preferido del Quetzal Resplandeciente. Su abundancia en la propiedad asegura el anidado permanente de aves sagradas.",
           "status": "Preocupación Menor",
           "habitat": "Bosque tropical y nuboso, 1,500–3,000 msnm"
         },
-        "roble": {
+        "roble-pz": {
           "name": "Roble",
           "scientific": "Quercus costaricensis",
-          "description": "Árbol emblemático que da nombre a El Robledal. Especie maestra del bosque montano. Su presencia indica bosque primario maduro y estable en las zonas de mayor elevación.",
+          "type": "flora",
+          "description": "Árbol emblemático que le da nombre a El Robledal. Especie maestra del bosque montano. Su presencia indica bosque primario maduro y estable en las zonas de mayor elevación.",
           "status": "Preocupación Menor",
-          "habitat": "Bosque nuboso montano, 2,000–3,000 msnm"
+          "habitat": "Bosque nuboso de montaña, 2,000–3,000 msnm"
         },
-        "helecho_arborescente": {
+        "helecho-arborescente": {
           "name": "Helecho Arborescente",
           "scientific": "Cyathea costaricensis",
-          "description": "Estructurador del sotobosque del bosque nuboso en El Robledal. Crea microhábitats húmedos cruciales para fauna invertebrada y anfibios. Indicador de humedad extrema y conservación prístina.",
+          "type": "flora",
+          "description": "Estructurador del sotobosque del bosque nuboso en El Robledal. Crea microhábitats húmedos cruciales para fauna de invertebrados y anfibios. Indicador de humedad extrema y conservación prístina.",
           "status": "Preocupación Menor",
-          "habitat": "Bosque muy húmedo nuboso, 1,800–3,000 msnm"
+          "habitat": "Bosque nuboso de montaña muy húmedo, 1,800–3,000 msnm"
         },
-        "orquidea": {
-          "name": "Orquídeas del Bosque Nuboso",
+        "orquídea-pz": {
+          "name": "Orquídeas de Bosque Nuboso",
           "scientific": "Epidendrum secundum",
-          "description": "Familia de plantas epífitas que adornan el dosel del bosque nuboso. Documentadas cientos de especies en el Corredor Biológico. Su presencia indica alta humedad y conservación forestal excepcional.",
+          "type": "flora",
+          "description": "Familia de plantas epífitas que adornan el dosel del bosque nuboso. Cientos de especies documentadas en el Corredor Biológico. Su presencia indica humedad alta y conservación forestal excepcional.",
           "status": "Preocupación Menor",
           "habitat": "Bosque nuboso epifítico, 2,000–3,000 msnm"
         },
-        "musgo_liquen": {
-          "name": "Musgos y Líquenes del Bosque Nuboso",
+        "musgo-liquen-pz": {
+          "name": "Musgos y Líquenes de Bosque Nuboso",
           "scientific": "Bryophyta & Ascomycota",
-          "description": "Componentes clave de la biomasa aérea en El Robledal. Absorben humedad y nutrientes de la neblina perpetua. Indicadores del estado de conservación y pureza del aire de montaña.",
+          "type": "flora",
+          "description": "Componentes clave de la biomasa aérea en El Robledal. Absorben humedad y nutrientes de la niebla perpetua. Indicadores del estado de conservación y pureza del aire de montaña.",
           "status": "Preocupación Menor",
-          "habitat": "Bosque muy húmedo nuboso, 1,800–3,000 msnm"
+          "habitat": "Bosque nuboso de montaña muy húmedo, 1,800–3,000 msnm"
         },
-        "mora": {
+        "mora-pz": {
           "name": "Mora",
           "scientific": "Rubus urus",
-          "description": "Arbusto frutal productivo cultivado en zonas delimitadas de El Robledal. Alimento de fauna silvestre y producto agroforestal. Coexiste con conservación estricta de bosque primario.",
+          "type": "flora",
+          "description": "Arbusto frutal productivo cultivado en zonas designadas de El Robledal. Alimento para fauna y producto agroforestal. Coexiste con conservación estricta del bosque primario.",
           "status": "Preocupación Menor",
-          "habitat": "Áreas productivas de bosque montano, 1,800–2,400 msnm"
+          "habitat": "Áreas productivas del bosque montano, 1,800–2,400 msnm"
         },
-        "aguacate": {
+        "aguacate-pz": {
           "name": "Aguacate",
           "scientific": "Persea americana",
-          "description": "Cultivo agroforestal integrado en zonas productivas de El Robledal. Mantenido bajo principios de sostenibilidad. Complementa conservación de bosque primario en escala de 594 hectáreas.",
+          "type": "flora",
+          "description": "Cultivo agroforestal integrado en zonas productivas de El Robledal. Mantenido bajo principios de sostenibilidad. Complementa la conservación del bosque primario a escala de 594 hectáreas.",
           "status": "Preocupación Menor",
-          "habitat": "Áreas productivas de bosque montano, 1,800–2,600 msnm"
+          "habitat": "Áreas productivas del bosque montano, 1,800–2,600 msnm"
         }
       }
     },
@@ -787,37 +883,143 @@
       "prosperity": {
         "description": "Blindaje ecológico absoluto con custodia presencial de 10 años que erradicó caza y tala ilegal. Con 85-90% densidad boscosa, funciona como sumidero de carbono y refugio biológico libre de agroquímicos. Apicultura activa, estanques de fauna y operación 100% solar demuestran que habitar el ecosistema lo protege.",
         "indicators": [
-          { "label": "Cobertura forestal", "note": "85-90% bosque nuboso denso montano (85-90% bosque puro). Sumidero de carbono activo y corredor biológico de máxima densidad." },
-          { "label": "Pureza ambiental", "note": "12 años libre de agroquímicos. Apicultura activa, vivero orgánico certificado y frutales nativos como indicadores biológicos de calidad excepcional." },
-          { "label": "Llave en mano", "note": "Casa operativa, paneles solares, Starlink, estanques de fauna y apicultura instalados. Sistema hídrico funcional por gravedad desde naciente." },
-          { "label": "Sin cargas legales", "note": "Sin hipotecas ni gravámenes. Exoneración fiscal activa. Elegible para PSA de FONAFIFO." },
-          { "label": "Centro de operaciones", "note": "Por su tamaño compacto y alta densidad boscosa, funciona como sede administrativa perfecta para un proyecto mayor de conservación." }
+          {
+            "label": "Cobertura forestal",
+            "note": "85-90% bosque nuboso denso montano (85-90% bosque puro). Sumidero de carbono activo y corredor biológico de máxima densidad."
+          },
+          {
+            "label": "Pureza ambiental",
+            "note": "12 años libre de agroquímicos. Apicultura activa, vivero orgánico certificado y frutales nativos como indicadores biológicos de calidad excepcional."
+          },
+          {
+            "label": "Llave en mano",
+            "note": "Casa operativa, paneles solares, Starlink, estanques de fauna y apicultura instalados. Sistema hídrico funcional por gravedad desde naciente."
+          },
+          {
+            "label": "Sin cargas legales",
+            "note": "Sin hipotecas ni gravámenes. Exoneración fiscal activa. Elegible para PSA de FONAFIFO."
+          },
+          {
+            "label": "Centro de operaciones",
+            "note": "Por su tamaño compacto y alta densidad boscosa, funciona como sede administrativa perfecta para un proyecto mayor de conservación."
+          }
         ],
         "issues": [
-          { "problem": "Suministro hídrico dependiente de servidumbre", "solution": "Servidumbre de acueducto legalmente amarrada a concesión de Finca 1. Suministro garantizado por instrumento legal independiente del propietario." },
-          { "problem": "Banco de baterías solares requiere actualización", "solution": "Sustitución técnica puntual del banco de baterías. Oportunidad de modernizar el sistema a última generación con retorno inmediato." },
-          { "problem": "Infraestructura interior requiere adecuación", "solution": "Casa operable desde el primer día. Mantenimiento preventivo y adecuación de espacios internos a requerimientos técnicos del comprador (laboratorios u oficinas)." }
+          {
+            "problem": "Suministro hídrico dependiente de servidumbre",
+            "solution": "Servidumbre de acueducto legalmente amarrada a concesión de Finca 1. Suministro garantizado por instrumento legal independiente del propietario."
+          },
+          {
+            "problem": "Banco de baterías solares requiere actualización",
+            "solution": "Sustitución técnica puntual del banco de baterías. Oportunidad de modernizar el sistema a última generación con retorno inmediato."
+          },
+          {
+            "problem": "Infraestructura interior requiere adecuación",
+            "solution": "Casa operable desde el primer día. Mantenimiento preventivo y adecuación de espacios internos a requerimientos técnicos del comprador (laboratorios u oficinas)."
+          }
         ]
       },
       "ancestral": {
         "title": "Memoria Huetar y Legado de la Tierra",
-        "description": "Ruta comercial y espiritual Huetar transformada de ganadería a regeneración ecosistémica y agroturismo de bajo impacto que resguarda la pureza y el ciclo hídrico sagrado de la montaña. — MEMORIA HUETAR · LA CARPINTERA"
+        "description": "Ruta comercial y espiritual Huetar transformada de ganadería a regeneración ecosistémica y agroturismo de bajo impacto que resguarda la pureza y el ciclo hídrico sagrado de la montaña. — MEMORIA HUETAR · LA CARPINTERA",
+        "architecture": [
+          {
+            "name": "Infraestructura de Soberanía",
+            "description": "Paneles solares, Starlink y agua propia reemplazaron la red convencional. Infraestructura llave en mano: dos unidades habitacionales, bodegas y accesos de concreto con huella de carbono cero."
+          },
+          {
+            "name": "El Bosque como Arquitectura",
+            "description": "Plan de Manejo MINAE/SINAC protege la conservación perpetua. Bosque en recuperación (40%) es corredor vital para pumas, perezosos y 250+ aves. Terrazas naturales trazan el diseño original."
+          }
+        ]
       },
       "community_pulse": {
-        "lifestyle": [],
-        "activities": []
+        "lifestyle": [
+          "Despertar a 1,500 msnm — la neblina abraza el bosque de robles y el frío es el primer saludo del día",
+          "250+ especies de aves registradas — el coro del amanecer en La Carpintera es una sinfonía sin partitura",
+          "A 22 km de San José, 12 km de Cartago: lo mejor de dos mundos en menos de 45 minutos",
+          "Temperatura de 15 a 21°C todo el año — sin aire acondicionado, sin calefacción",
+          "Internet Starlink y energía solar: conectividad global con soberanía operativa total",
+          "San Rafael de La Unión a 2 km — comunidades cafetaleras con siglos de tradición",
+          "Senderos privados en bosque nuboso: la biodiversidad de un Área de Conservación como jardín trasero"
+        ],
+        "activities": [
+          {
+            "name": "Avistamiento de Quetzales",
+            "icon": "🦜",
+            "level": "Experto"
+          },
+          {
+            "name": "Senderismo de Montaña",
+            "icon": "⛰️",
+            "level": "Moderado"
+          },
+          {
+            "name": "Fotografía de Neblina",
+            "icon": "📸",
+            "level": "Todos"
+          },
+          {
+            "name": "Yoga al Amanecer",
+            "icon": "🧘",
+            "level": "Todos"
+          },
+          {
+            "name": "Tour de Flora Endémica",
+            "icon": "🌺",
+            "level": "Familiar"
+          },
+          {
+            "name": "Trabajo Remoto en Altura",
+            "icon": "💻",
+            "level": "Profesionales"
+          }
+        ]
       },
       "potencial": [
-        { "icon": "sun", "title": "Bienestar Integral", "desc": "Las propiedades en los Cerros de la Carpintera ofrecen un refugio inigualable para la salud integral. Su elevación proporciona un microclima fresco, aire puro de bosque nuboso y una barrera natural contra la contaminación, creando un entorno prístino y seguro a minutos de la ciudad; el escenario ideal para establecer santuarios de bienestar fundamentados en el pilar de la salud." },
-        { "icon": "tree", "title": "Conservación Ambiental", "desc": "Este mega-activo actúa como un bastión fundamental para la Zona Protectora de los Cerros de la Carpintera. Su cobertura forestal garantiza la conectividad biológica esencial del Valle Central, protegiendo fuentes hídricas vitales y sirviendo como refugio seguro para especies endémicas, otorgándole un incalculable valor de conservación." },
-        { "icon": "book", "title": "Educación e Investigación", "desc": "Su posición geográfica como filtro natural del clima en el valle la convierte en un laboratorio ecológico viviente. Es el emplazamiento idóneo para establecer una estación académica o centro de estudios enfocado en la resiliencia del bosque nuboso y la ecología urbana, fomentando activamente el pilar de la sabiduría." },
-        { "icon": "leaf", "title": "Turismo Regenerativo", "desc": "Su valor estratégico radica en una inmejorable accesibilidad combinada con un aislamiento natural absoluto. El uso de suelo y la topografía proporcionan el lienzo perfecto para el desarrollo conjunto de un eco-lodge de baja densidad, o programas de voluntariado donde la prosperidad se alcanza a través de un modelo sostenible y altamente exclusivo." },
-        { "icon": "globe", "title": "Investigación Científica", "desc": "La riqueza de sus ecosistemas y su función como pulmón verde representan una oportunidad inagotable. Monitorear la flora, la avifauna y los mamíferos de este corredor biológico es un atractivo clave para forjar alianzas académicas, captar fondos internacionales (grants) y fomentar el turismo científico de alto nivel." },
-        { "icon": "shield", "title": "Desarrollo Espiritual", "desc": "La atmósfera del bosque nuboso, envuelta en neblina y profundo silencio, sumada a la alta seguridad topográfica de las fincas, genera una energía de aislamiento absoluto. Es la atmósfera de paz perfecta que exigen los proyectos de retiro más exclusivos del mundo, cultivando directamente el pilar del amor y la conexión interior." },
-        { "icon": "coin", "title": "Integración Comunitaria", "desc": "Desarrollar un proyecto institucional e integral en estas fincas mitigará la presión urbana sobre la montaña, frenando la deforestación mediante la generación de empleos verdes estables (guardabosques, guías naturalistas, hospitalidad) e irradiando prosperidad y educación ambiental a las comunidades aledañas." }
+        {
+          "icon": "sun",
+          "title": "Bienestar Integral",
+          "desc": "Las propiedades en los Cerros de la Carpintera ofrecen un refugio inigualable para la salud integral. Su elevación proporciona un microclima fresco, aire puro de bosque nuboso y una barrera natural contra la contaminación, creando un entorno prístino y seguro a minutos de la ciudad; el escenario ideal para establecer santuarios de bienestar fundamentados en el pilar de la salud."
+        },
+        {
+          "icon": "tree",
+          "title": "Conservación Ambiental",
+          "desc": "Este mega-activo actúa como un bastión fundamental para la Zona Protectora de los Cerros de la Carpintera. Su cobertura forestal garantiza la conectividad biológica esencial del Valle Central, protegiendo fuentes hídricas vitales y sirviendo como refugio seguro para especies endémicas, otorgándole un incalculable valor de conservación."
+        },
+        {
+          "icon": "book",
+          "title": "Educación e Investigación",
+          "desc": "Su posición geográfica como filtro natural del clima en el valle la convierte en un laboratorio ecológico viviente. Es el emplazamiento idóneo para establecer una estación académica o centro de estudios enfocado en la resiliencia del bosque nuboso y la ecología urbana, fomentando activamente el pilar de la sabiduría."
+        },
+        {
+          "icon": "leaf",
+          "title": "Turismo Regenerativo",
+          "desc": "Su valor estratégico radica en una inmejorable accesibilidad combinada con un aislamiento natural absoluto. El uso de suelo y la topografía proporcionan el lienzo perfecto para el desarrollo conjunto de un eco-lodge de baja densidad, o programas de voluntariado donde la prosperidad se alcanza a través de un modelo sostenible y altamente exclusivo."
+        },
+        {
+          "icon": "globe",
+          "title": "Investigación Científica",
+          "desc": "La riqueza de sus ecosistemas y su función como pulmón verde representan una oportunidad inagotable. Monitorear la flora, la avifauna y los mamíferos de este corredor biológico es un atractivo clave para forjar alianzas académicas, captar fondos internacionales (grants) y fomentar el turismo científico de alto nivel."
+        },
+        {
+          "icon": "shield",
+          "title": "Desarrollo Espiritual",
+          "desc": "La atmósfera del bosque nuboso, envuelta en neblina y profundo silencio, sumada a la alta seguridad topográfica de las fincas, genera una energía de aislamiento absoluto. Es la atmósfera de paz perfecta que exigen los proyectos de retiro más exclusivos del mundo, cultivando directamente el pilar del amor y la conexión interior."
+        },
+        {
+          "icon": "coin",
+          "title": "Integración Comunitaria",
+          "desc": "Desarrollar un proyecto institucional e integral en estas fincas mitigará la presión urbana sobre la montaña, frenando la deforestación mediante la generación de empleos verdes estables (guardabosques, guías naturalistas, hospitalidad) e irradiando prosperidad y educación ambiental a las comunidades aledañas."
+        }
       ],
       "virtuoso_index": {
-        "descriptions": {}
+        "descriptions": {
+          "amor": "Proteger 21.9 hectáreas de bosque nuboso es un acto de amor y compromiso hacia el futuro. Este santuario, integrado en la Reserva de Biosfera UNESCO y bajo protección SINAC, salvaguarda el hábitat de pumas, perezosos y 250+ aves, garantizando que la generación venidera herede un patrimonio vivo.",
+          "salud": "Un refugio inigualable para la salud integral a 1,500-1,800 msnm. Microclima fresco, aire puro de bosque nuboso, temperatura de 15 a 21°C sin mecanismos artificiales, agua de manantial certificada y energía solar crean las condiciones perfectas para el bienestar absoluto.",
+          "sabiduria": "Tierra ancestral Huetar transformada por la visión y custodia radical de sus propietarios. Aquí, la verdadera sabiduría emerge del aprendizaje cotidiano sobre resiliencia forestal, ciclos hídricos naturales y reconexión con el propósito sagrado de la naturaleza.",
+          "prosperidad": "Prosperidad sin dependencia. Con soberanía operativa total (energía 100% solar, agua de manantial, internet satelital), blindaje legal perpetuo (ZPCC, FONAFIFO), y ubicación estratégica 22 km de San José, la propiedad representa seguridad intergeneracional y valor que crece con la conservación."
+        }
       },
       "legacy": {
         "title": "Un Ciclo de Vida que Se Completa",
@@ -825,7 +1027,7 @@
         "message": "Esta finca fue transformada de ganadería erosiva a santuario de bosque nuboso por manos que creyeron en ella cuando nadie más lo hacía. Hoy, tras años de restauración, soberanía energética y cumplimiento del Plan de Manejo SINAC, el ecosistema está maduro y listo para su siguiente fase. La propietaria tiene total disposición de acompañar al nuevo custodio durante la transición, aportando el conocimiento técnico y operativo acumulado. Buscamos a quien entienda que esta tierra es un activo de valor intergeneracional."
       },
       "species": {
-        "quetzal_carpintera": {
+        "quetzal-carpintera": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",
           "description": "Ave sagrada de Mesoamérica. Indicadora de bosque maduro. Presente estacionalmente en La Carpintera entre 1,550–1,800 msnm.",
@@ -839,47 +1041,238 @@
           "status": "Preocupación Menor (UICN)",
           "habitat": "Bosque nuboso montano, 1,500–3,000 msnm"
         },
-        "roble_carpintera": {
+        "1": {
           "name": "Roble",
           "scientific": "Quercus spp.",
           "description": "Árbol majestuoso de gran talla, caracterizado por su robusto tronco y copa densa. Especie clave del bosque montano que proporciona alimento y refugio a innumerables especies. Su madera es de gran valor cultural en Costa Rica.",
           "status": "Preocupación Menor",
           "habitat": "Bosque nuboso, transiciones entre elevaciones"
         },
-        "cedro": {
+        "3": {
           "name": "Cedro amargo",
           "scientific": "Cedrela odorata",
           "description": "Árbol de crecimiento rápido con madera aromática y de alto valor. Histórico en Costa Rica por su importancia cultural y económica. Especie restauradora que regenera rápidamente después de perturbaciones.",
           "status": "Preocupación Menor",
           "habitat": "Bosque húmedo y muy húmedo montano, 800–2,200 msnm"
         },
-        "higueron": {
+        "4": {
           "name": "Higuerón",
           "scientific": "Ficus spp.",
           "description": "Árbol higuero con copas expansivas que albergan ecosistemas completos de fauna. Productor de frutos durante todo el año, alimento esencial para aves, mamíferos y reptiles. Especie muy importante en corredores biológicos.",
           "status": "Preocupación Menor",
           "habitat": "Bosque tropical y montano húmedo, 200–2,400 msnm"
         },
-        "vaquita": {
+        "6": {
           "name": "Vaquita",
           "scientific": "Acineta densa",
           "description": "Orquídea epifita con inflorescencias péndulas y flores aromáticas. Especie dependiente de condiciones de humedad y temperatura estables del bosque montano. Símbolo de la salud ecológica del bosque nuboso.",
           "status": "Preocupación Menor",
           "habitat": "Bosque nuboso montano bajo y medio, 1,400–2,200 msnm"
         },
-        "lagartillo": {
+        "7": {
           "name": "Lagartillo",
           "scientific": "Zanthoxylum spp.",
           "description": "Especie forestal muy común en Costa Rica, perteneciente a la familia Rutaceae (la misma de los cítricos). Se caracteriza por su corteza cubierta de grandes espinas cónicas y su madera muy resistente. Árbol aromático de talla pequeña a mediana con hojas compuestas y frutos capsulares. Utilizado ancestralmente en medicina tradicional costarricense. Fuente de alimento para fauna silvestre especializada.",
           "status": "Preocupación Menor",
           "habitat": "Bosque montano húmedo y deciduo, 1,000–2,100 msnm"
         },
-        "helecho_carpintera": {
+        "9": {
           "name": "Helecho arborescente",
           "scientific": "Cyathea spp.",
           "description": "Antiguo helecho arborescente cuyo linaje se remonta a eras geológicas pasadas. Crea ecosistemas especializados alrededor de su tronco fibroso. Indicador crítico de bosques nubosos de gran altitud sin intervención humana.",
           "status": "Preocupación Menor",
           "habitat": "Bosque nuboso muy húmedo montano, 1,800–3,000 msnm"
+        },
+        "atlapete-matorrales": {
+          "name": "Atlapete de Matorrales",
+          "scientific": "Atlapetes albinucha",
+          "description": "Especie de sotobosque del bosque montano. Documentada en La Carpintera en matorrales de baja densidad y bordes de bosque.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano abierto, 1,500–2,800 msnm"
+        },
+        "azuleja": {
+          "name": "Azuleja",
+          "scientific": "Thraupis episcopus",
+          "description": "Tanágara azul brillante y visible. Común en dosel y sotobosque de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano, 500–2,500 msnm"
+        },
+        "carpintero-hoffmann": {
+          "name": "Carpintero de Hoffmann",
+          "scientific": "Melanerpes hoffmannii",
+          "description": "Carpintero activo del dosel que genera nidos usados por otras especies. Indicador de salud de bosque maduro en La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso montano, 1,500–2,500 msnm"
+        },
+        "chorlo-collares": {
+          "name": "Chorlo Collares",
+          "scientific": "Charadrius vociferus",
+          "description": "Chorlo territorial y ruidoso. Documentado en áreas abiertas de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Áreas abiertas y bordes de bosque, 0–2,500 msnm"
+        },
+        "clorofonia": {
+          "name": "Clorofonia / Cejiazul",
+          "scientific": "Chlorophonia callophrys",
+          "description": "Pequeña tanágara de dosel especializada en frutos de mistletoes. Endémica de bosques húmedos montanos de Centroamérica.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso, 1,500–3,000 msnm"
+        },
+        "colibri-azul": {
+          "name": "Colibrí Azul",
+          "scientific": "Amazilia saucerrottei",
+          "description": "Colibrí pequeño de color azul metálico. Visitante del sotobosque de La Carpintera alimentándose de flores nativas.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano, 1,000–2,500 msnm"
+        },
+        "colibri-centelleante": {
+          "name": "Colibrí Centelleante",
+          "scientific": "Selasphorus scintilla",
+          "description": "El colibrí más pequeño del país. Especialista de flores bajas en bordes y claros del bosque nuboso de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso y matorrales de altura, 1,200–3,000 msnm"
+        },
+        "colibri-magnifico": {
+          "name": "Colibrí Magnífico",
+          "scientific": "Eugenes fulgens",
+          "description": "Uno de los colibríes más grandes de la zona. Atraído por la floración de flores tubulares en sotobosque nuboso de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso, 1,500–3,000 msnm"
+        },
+        "colibri-montanes": {
+          "name": "Colibrí Montañés Garganta Morada",
+          "scientific": "Lampornis calolaemus",
+          "description": "Polinizador clave en los estratos medio y bajo. Especie especialista de flores de Gesneriaceae y Loranthaceae en La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso de montaña, 1,800–3,200 msnm"
+        },
+        "colibri-rabirrufo": {
+          "name": "Colibrí Rabirrufo",
+          "scientific": "Amazilia tzacatl",
+          "description": "Colibrí activo y territorial del sotobosque. Polinizador clave de flores de altura en La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso, 1,500–3,000 msnm"
+        },
+        "cucarachero-comun": {
+          "name": "Cucarachero Común",
+          "scientific": "Troglodytes aedon",
+          "description": "Ave pequeña y territorial conocida por su canto fuerte. Presente en La Carpintera en bordes de bosque y áreas abiertas.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano y matorrales, 500–2,500 msnm"
+        },
+        "elaenia-copetona": {
+          "name": "Elaenia Copetona",
+          "scientific": "Elaenia flavogaster",
+          "description": "Atrapamoscas pequeño del dosel. Documentado en La Carpintera como residente de la zona de altura.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano, 1,200–2,500 msnm"
+        },
+        "gavilan-colifajeado": {
+          "name": "Gavilán Colifajeado",
+          "scientific": "Buteo albonotatus",
+          "description": "Raptor de mediano tamaño cazador de reptiles y mamíferos pequeños. Presente en bordes y claros de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano abierto, 1,200–3,000 msnm"
+        },
+        "gavilán-caminero": {
+          "name": "Gavilán Caminero",
+          "scientific": "Rupornis magnirostris",
+          "description": "Rapaz pequeña y activa cazadora de reptiles y pequeños mamíferos. Presente en bordes y claros de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano abierto, 500–2,500 msnm"
+        },
+        "loro-perrito": {
+          "name": "Loro Perico Perrito",
+          "scientific": "Touit costaricensis",
+          "description": "Loro pequeño endémico de altitud. Documentado en La Carpintera alimentándose en árboles frutales nativos del bosque.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso montano, 1,500–2,500 msnm"
+        },
+        "mirlo-montana": {
+          "name": "Mirlo de Montaña",
+          "scientific": "Turdus plebejus",
+          "description": "Pariente montano del Yigüirro nacional, adaptado estrictamente al clima fresco de los cerros de Cartago. Residente permanente de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso montano, 1,500–3,000 msnm"
+        },
+        "perico-frentirrojo": {
+          "name": "Loro Perico Frentirrojo",
+          "scientific": "Psittacara finschi",
+          "description": "Loro social y ruidoso del dosel. Documentado en La Carpintera frugando en árboles frutales nativos.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso y montano, 1,000–2,500 msnm"
+        },
+        "soterrey-chinchiriqui": {
+          "name": "Soterrey Chinchirigüí",
+          "scientific": "Cantorchilus modestus",
+          "description": "Ave pequeña insectívora de hábitat arbustivo. Común en los tacotales y bordes de bosque secundario de La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano y tacotales, 1,000–2,500 msnm"
+        },
+        "tangara-dorada": {
+          "name": "Tangara Dorada",
+          "scientific": "Tangara icterocephala",
+          "description": "Frugívora gregaria de dosel y sotobosque. Importante dispersadora de semillas de Melastomataceae en La Carpintera.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso y montano, 1,200–2,400 msnm"
+        },
+        "trogon-collarejo": {
+          "name": "Trogón Collarejo",
+          "scientific": "Trogon collaris",
+          "description": "Ave territorial y leal del dosel. Documentada en La Carpintera como residente permanente del bosque maduro.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso y montano, 1,500–2,500 msnm"
+        },
+        "trogon-dorado": {
+          "name": "Trogón Dorado",
+          "scientific": "Trogon aurantiiventris",
+          "description": "Trogón de dosel con plumaje dorado distintivo. Presente en La Carpintera como residente permanente del bosque maduro.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso, 1,500–3,000 msnm"
+        },
+        "tucancillo": {
+          "name": "Tucancillo Verde",
+          "scientific": "Aulacorhynchus prasinus",
+          "description": "Residente de altura vital para la dispersión de semillas. Presente en el dosel de La Carpintera frugando en lauráceas y melastomáceas.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque nuboso, 1,500–3,000 msnm"
+        },
+        "yigvirro": {
+          "name": "Yigüirro",
+          "scientific": "Turdus grayi",
+          "description": "El ave nacional de Costa Rica. Residente permanente en toda el área de La Carpintera, documentado en dosel y sotobosque.",
+          "status": "Preocupación Menor (UICN)",
+          "habitat": "Bosque montano, 500–2,500 msnm"
+        }
+      },
+      "fincas": {
+        "finca_1": {
+          "title": "Memoria Huetar y Legado de la Tierra",
+          "description": "Ruta comercial y espiritual Huetar transformada de ganadería a regeneración ecosistémica y agroturismo de bajo impacto que resguarda la pureza y el ciclo hídrico sagrado de la montaña. — MEMORIA HUETAR · LA CARPINTERA",
+          "architecture": [
+            {
+              "name": "Infraestructura de Soberanía",
+              "description": "Paneles solares, Starlink y agua propia reemplazaron la red convencional. Infraestructura llave en mano: dos unidades habitacionales, bodegas y accesos de concreto con huella de carbono cero."
+            },
+            {
+              "name": "El Bosque como Arquitectura",
+              "description": "Plan de Manejo MINAE/SINAC protege la conservación perpetua. Bosque en recuperación (40%) es corredor vital para pumas, perezosos y 250+ aves. Terrazas naturales trazan el diseño original."
+            }
+          ]
+        },
+        "finca_2": {
+          "title": "Memoria Huetar y Herencia Cafetalera",
+          "description": "Herencia Huetar transformada de cafetal y lechería a restauración forestal voluntaria libre de agroquímicos durante más de una década, sanando los suelos y recuperando el ciclo hídrico. — MEMORIA HUETAR · LA CARPINTERA",
+          "architecture": [
+            {
+              "name": "Infraestructura de Soberanía",
+              "description": "Paneles solares, Starlink y agua de manantial por gravedad garantizan autosuficiencia cero-carbono. Infraestructura: casa, vivero orgánico y estanques para apicultura."
+            },
+            {
+              "name": "El Bosque como Arquitectura",
+              "description": "Plan de Manejo blinda legalmente contra expansión urbana. Bosque denso (85-90%) es el activo principal; senderos de apreciación y estanques para fauna son la arquitectura viva de la naturaleza."
+            }
+          ]
         }
       }
     }

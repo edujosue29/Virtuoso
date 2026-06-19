@@ -53,7 +53,15 @@ const ICONS = {
 export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
   const { t } = useTranslation()
   const { isUnlocked } = usePrivateDocuments()
-  const potencial = finca?.potencial ?? property?.potencial ?? []
+
+  const getSanctuaryKey = () => {
+    if (property.slug === 'division-perez-zeledon') return 'division_pz'
+    if (property.slug === 'la-carpintera') return 'la_carpintera'
+    return 'la_carpintera'
+  }
+
+  // Get translated potencial data
+  const potencial = (t(`sections.${getSanctuaryKey()}.potencial`, { returnObjects: true }) || [])
   const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
   const ddLink = getDownloadUrl('debida-diligencia', sanctuaryId)
   const fincaLabel = finca?.label ?? t('virtus_potential.finca_label')

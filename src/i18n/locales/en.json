@@ -237,7 +237,9 @@
     "agricultura": "Agriculture",
     "ancestral": "Ancestral",
     "energia": "Energy",
-    "solar": "Solar"
+    "solar": "Solar",
+    "montaña": "Mountain",
+    "comunidad": "Community"
   },
   "infrastructure": {
     "division_pz": "Available services: Electricity, Internet, Telephone. Operational property.",
@@ -248,34 +250,34 @@
       "title": "History of División Pérez Zeledón",
       "timeline": [
         {
-          "year": "~3000 B.C.",
+          "year": "~3000 BCE",
           "title": "Boruca-Brunca Territory",
           "description": "The Boruca (Brunca) peoples establish their civilization in the División River basin. The land is understood as a living being with memory and sacred purpose."
         },
         {
           "year": "16th Century",
           "title": "Colonial Contact",
-          "description": "Spanish conquest alters the territorial dynamics of the Southern Zone. The Boruca resist tenaciously and preserve much of their cosmovision and language to this day."
+          "description": "Spanish conquest alters the territorial dynamics of the Southern Zone. The Boruca resist tenaciously and preserve much of their worldview and language to this day."
         },
         {
           "year": "1800s",
-          "title": "Agricultural Settlement",
-          "description": "Colonial families establish themselves in Pérez Zeledón. Coffee, sugarcane, and cattle ranching begin to transform the landscape, while highland areas maintain their forest coverage."
+          "title": "Agricultural Colonization",
+          "description": "Colonial families settle in Pérez Zeledón. Coffee, sugar cane and cattle ranching begin to transform the landscape, though high zones maintain their forest cover."
         },
         {
           "year": "1970-1990",
           "title": "Conservation Policies",
-          "description": "Costa Rica establishes a pioneering conservation legal framework in Latin America. The La Amistad Biological Corridor is established, protecting the El Robledal territory."
+          "description": "Costa Rica establishes a pioneering conservation legal framework in Latin America. The La Amistad Biological Corridor is established, protecting El Robledal territory."
         },
         {
           "year": "2000s",
           "title": "UNESCO Recognition",
-          "description": "The La Amistad Pacific South Conservation Area is confirmed as a World Heritage Site. El Robledal, within the corridor, acquires international conservation status."
+          "description": "The La Amistad Pacífico Sur Conservation Area is confirmed as a World Heritage Site. El Robledal, within the corridor, acquires international conservation status."
         },
         {
           "year": "Today",
-          "title": "Seeking Stewards",
-          "description": "Nearly 600 hectares of primary forest seek a conscious steward. A life project that honors the World Heritage that this land represents."
+          "title": "In Search of Custodians",
+          "description": "Nearly 600 hectares of primary forest seek a conscious custodian. A life project that honors the World Heritage that this land represents."
         }
       ]
     },
@@ -283,34 +285,39 @@
       "title": "History of La Carpintera",
       "timeline": [
         {
-          "year": "Ancestral",
-          "title": "Indigenous Territory",
-          "description": "The region was ancestrally inhabited by Boruca, Bribri, and Cabécar peoples. These communities developed a profound relationship with the cloud forest, regarding it as sacred and essential to life."
+          "year": "~1000 BCE",
+          "title": "Huetar Routes",
+          "description": "Mystical and sacred zone: Ancient indigenous commercial and spiritual route. An environment considered sacred for its purity and exceptional natural capacity to generate life through water."
         },
         {
-          "year": "16th-18th Century",
-          "title": "Colonial Period",
-          "description": "Spanish colonization reached the region, though the mountainous terrain allowed many indigenous communities to preserve their autonomy and ancestral knowledge."
+          "year": "19th Century – 2000s",
+          "title": "Traditional Land Use",
+          "description": "Decades of traditional family land use. Estate 1 was dedicated to cattle ranching and Estate 2 to coffee and goat dairy; activities that heavily compacted soil and introduced contaminants."
         },
         {
-          "year": "1800s-1900s",
-          "title": "Costa Rican Settlement",
-          "description": "Costa Rican families settled in the lowlands. La Carpintera, in its height and isolation, was primarily utilized for sustainable agricultural activities."
+          "year": "2012–2014",
+          "title": "Vision of Transformation",
+          "description": "The \"Para Siempre Amigos de La Carpintera\" organization acquires the land assuming a high voluntary financial cost. The objective? To radically halt degradation and convert former pastures into a unified cloud forest sanctuary."
         },
         {
-          "year": "1970-1990",
-          "title": "Environmental Protection",
-          "description": "Costa Rica recognizes the importance of cloud forests. The region enters protected areas, establishing limits on extractive development."
+          "year": "2012–2015",
+          "title": "Operations Closure and Regeneration",
+          "description": "All cattle ranching, grazing and agrochemical use stopped abruptly. The soil immediately regains its water infiltration capacity and native pioneer tree species spontaneously emerge."
         },
         {
-          "year": "2000s",
-          "title": "UNESCO Designation",
-          "description": "La Carpintera formally integrates into the La Amistad Biosphere Reserve, recognized by UNESCO as a World Heritage Site."
+          "year": "2015–2020",
+          "title": "Restoration and Active Stewardship",
+          "description": "Owners relocate permanently to the site in 2016 to personally halt illegal hunting and logging. Consistent with their ecological footprint, they completely forgo the commercial electrical grid and install an autonomous system of solar panels, organic nurseries and beekeeping ponds."
         },
         {
-          "year": "Today",
-          "title": "Conscious Stewardship",
-          "description": "La Carpintera seeks guardians to continue its conservation legacy. A space where ancestral tradition and modern sustainability converge."
+          "year": "2020–2024",
+          "title": "Absolute Operational Sovereignty",
+          "description": "Starlink satellite internet is implemented and the estates are unified through a strategic aqueduct easement. The complex achieves 100% sovereignty of pure water by gravity and clean energy. Forest cover reaches 40% on Estate 1 and an impressive 85%–90% on Estate 2."
+        },
+        {
+          "year": "2024–2026",
+          "title": "Mature Ecosystem and Global Legacy",
+          "description": "Full compliance with SINAC Management Plan. The land is now a living laboratory serving as refuge for pumas, sloths and over 250 bird species, including the mythical Resplendent Quetzal. A mature asset, protected by the State and ready to receive an institutional custodian on an international scale."
         }
       ]
     }
@@ -320,16 +327,40 @@
       "prosperity": {
         "description": "Strategic location within the UNESCO Biological Corridor, its own water volume and access from the Inter-American Highway make El Robledal a high-value asset. Its potential in ecotourism, organic production (active blackberries and avocado) and environmental services is immediate.",
         "indicators": [
-          { "label": "Ecotourism Potential", "note": "Direct access to biological corridors and active sustainable tourism certifications in the region." },
-          { "label": "Active Organic Production", "note": "Plots of cacao, banana and Boruca medicinal plants in production without agrochemicals." },
-          { "label": "Environmental Services Payment", "note": "Registered in FONAFIFO's Environmental Services Payment program — annual income guaranteed by forest conservation." },
-          { "label": "UNESCO Corridor Appreciation", "note": "Borders UNESCO Biosphere Reserve Core Zone — exceptional patrimonial appreciation." },
-          { "label": "Community Impact", "note": "Alliances with Boruca and Bribri communities for shared cultural and agricultural management." }
+          {
+            "label": "Ecotourism Potential",
+            "note": "Direct access to biological corridors and active sustainable tourism certifications in the region."
+          },
+          {
+            "label": "Active Organic Production",
+            "note": "Plots of cacao, banana and Boruca medicinal plants in production without agrochemicals."
+          },
+          {
+            "label": "Environmental Services Payment",
+            "note": "Registered in FONAFIFO's Environmental Services Payment program — annual income guaranteed by forest conservation."
+          },
+          {
+            "label": "UNESCO Corridor Appreciation",
+            "note": "Borders UNESCO Biosphere Reserve Core Zone — exceptional patrimonial appreciation."
+          },
+          {
+            "label": "Community Impact",
+            "note": "Alliances with Boruca and Bribri communities for shared cultural and agricultural management."
+          }
         ],
         "issues": [
-          { "problem": "Unemployment in Pérez Zeledón rural zones", "solution": "Generation of green jobs: nature guides, organic farmers, local artisans integrated into the project." },
-          { "problem": "Biodiversity loss from agricultural pressure", "solution": "Active biological corridors and reforestation with native species that increase World Heritage value." },
-          { "problem": "Water dependency of neighboring communities", "solution": "Model of responsible water stewardship: private springs supply neighboring communities under collaboration agreement." }
+          {
+            "problem": "Unemployment in Pérez Zeledón rural zones",
+            "solution": "Generation of green jobs: nature guides, organic farmers, local artisans integrated into the project."
+          },
+          {
+            "problem": "Biodiversity loss from agricultural pressure",
+            "solution": "Active biological corridors and reforestation with native species that increase World Heritage value."
+          },
+          {
+            "problem": "Water dependency of neighboring communities",
+            "solution": "Model of responsible water stewardship: private springs supply neighboring communities under collaboration agreement."
+          }
         ]
       },
       "ancestral": {
@@ -347,22 +378,74 @@
           "Operational sovereignty: direct access from paved Inter-American Route + complete service infrastructure"
         ],
         "activities": [
-          { "name": "Quetzal Observation", "icon": "🦜", "level": "Expert — Permanent Breeder" },
-          { "name": "Mountain Hiking", "icon": "⛰️", "level": "Moderate-Challenging" },
-          { "name": "Scientific Research", "icon": "🔬", "level": "Specialized Team" },
-          { "name": "Regenerative Tourism", "icon": "♻️", "level": "Sustainable" },
-          { "name": "Environmental Education", "icon": "🎓", "level": "Institutions" },
-          { "name": "Hydrological Research", "icon": "💧", "level": "Specialized" }
+          {
+            "name": "Quetzal Observation",
+            "icon": "🦜",
+            "level": "Expert — Permanent Breeder"
+          },
+          {
+            "name": "Mountain Hiking",
+            "icon": "⛰️",
+            "level": "Moderate-Challenging"
+          },
+          {
+            "name": "Scientific Research",
+            "icon": "🔬",
+            "level": "Specialized Team"
+          },
+          {
+            "name": "Regenerative Tourism",
+            "icon": "♻️",
+            "level": "Sustainable"
+          },
+          {
+            "name": "Environmental Education",
+            "icon": "🎓",
+            "level": "Institutions"
+          },
+          {
+            "name": "Hydrological Research",
+            "icon": "💧",
+            "level": "Specialized"
+          }
         ]
       },
       "potencial": [
-        { "icon": "sun", "title": "Integrated Wellness", "desc": "El Robledal offers a superlative scenario for comprehensive health. Spanning elevations from 1,800 to 2,800 msnm, it guarantees perpetual comfort climate. Its high-mountain air and complete water sovereignty (owning the very source of División River) create a pristine environment, ideal for establishing isolated sanctuaries." },
-        { "icon": "tree", "title": "Environmental Conservation", "desc": "Mega-asset of conservation with 594 hectares and 91% forest cover, functioning as critical anchor for Biological Corridor connectivity toward the Central Pacific. Its location within UNESCO Biosphere Reserve territory and presence of megafauna like tapirs and pumas grant it unmatched international validation apart from its important water resources." },
-        { "icon": "book", "title": "Education and Research", "desc": "Houses within a single property the transition of all Holdridge Life Zones, converting it into a real-scale ecological laboratory. It is the ideal location to establish an international university station focused on watershed management and climate change." },
-        { "icon": "leaf", "title": "Regenerative Tourism", "desc": "Unlike other reserves with total restriction, El Robledal's land use allows low-density construction (dwellings every 10,000 m²). Leveraging its 7 km of internal roads and paved access, the buyer has the perfect canvas to develop a sustainable luxury eco-lodge." },
-        { "icon": "globe", "title": "Scientific Research", "desc": "The estate is the cradle of División River and key tributary of Savegre River. Monitoring tapir, feline and bird populations across these 600 hectares represents an inexhaustible opportunity to attract grants and high-level scientific tourism." },
-        { "icon": "shield", "title": "Spiritual Development", "desc": "The isolation provided by nearly 600 hectares, combined with the constant energy of pure water torrents, generates the atmosphere of silence and absolute isolation demanded by the world's most exclusive retreat projects." },
-        { "icon": "coin", "title": "Community Integration", "desc": "Establishing an institutional project here will mitigate migration and local poverty by halting deforestation and poaching through generation of stable green jobs (forest guardians, guides, hospitality)." }
+        {
+          "icon": "sun",
+          "title": "Integrated Wellness",
+          "desc": "El Robledal offers a superlative scenario for comprehensive health. Spanning elevations from 1,800 to 2,800 msnm, it guarantees perpetual comfort climate. Its high-mountain air and complete water sovereignty (owning the very source of División River) create a pristine environment, ideal for establishing isolated sanctuaries."
+        },
+        {
+          "icon": "tree",
+          "title": "Environmental Conservation",
+          "desc": "Mega-asset of conservation with 594 hectares and 91% forest cover, functioning as critical anchor for Biological Corridor connectivity toward the Central Pacific. Its location within UNESCO Biosphere Reserve territory and presence of megafauna like tapirs and pumas grant it unmatched international validation apart from its important water resources."
+        },
+        {
+          "icon": "book",
+          "title": "Education and Research",
+          "desc": "Houses within a single property the transition of all Holdridge Life Zones, converting it into a real-scale ecological laboratory. It is the ideal location to establish an international university station focused on watershed management and climate change."
+        },
+        {
+          "icon": "leaf",
+          "title": "Regenerative Tourism",
+          "desc": "Unlike other reserves with total restriction, El Robledal's land use allows low-density construction (dwellings every 10,000 m²). Leveraging its 7 km of internal roads and paved access, the buyer has the perfect canvas to develop a sustainable luxury eco-lodge."
+        },
+        {
+          "icon": "globe",
+          "title": "Scientific Research",
+          "desc": "The estate is the cradle of División River and key tributary of Savegre River. Monitoring tapir, feline and bird populations across these 600 hectares represents an inexhaustible opportunity to attract grants and high-level scientific tourism."
+        },
+        {
+          "icon": "shield",
+          "title": "Spiritual Development",
+          "desc": "The isolation provided by nearly 600 hectares, combined with the constant energy of pure water torrents, generates the atmosphere of silence and absolute isolation demanded by the world's most exclusive retreat projects."
+        },
+        {
+          "icon": "coin",
+          "title": "Community Integration",
+          "desc": "Establishing an institutional project here will mitigate migration and local poverty by halting deforestation and poaching through generation of stable green jobs (forest guardians, guides, hospitality)."
+        }
       ],
       "virtuoso_index": {
         "descriptions": {
@@ -378,152 +461,165 @@
         "message": "Inherited from grandfather and consolidated by the Ortiz brothers, El Robledal was purchased wholly to protect the integrity of 594 hectares. The sons of current owners have other life projects and wish to pass stewardship to an organization, NGO, foundation or individual who understands the macro-ecological value of this mega-reserve. Whoever receives it becomes guardian of División River's spring, custodian of a World Heritage Site, protector of native megafauna and guarantor of pure water for future generations. This is the call of the La Amistad Pacífico Sur Biological Corridor."
       },
       "species": {
-        "quetzal_pz": {
+        "quetzal-pz": {
           "name": "Resplendent Quetzal",
           "scientific": "Pharomachrus mocinno",
-          "description": "Sacred bird of Mesoamerica. Documented at El Robledal as permanent breeder in the highest elevation zones (2,000+ msnm). Its presence confirms forest maturity with abundant wild avocado.",
+          "type": "fauna",
+          "description": "Sacred bird of Mesoamerica. Documented in El Robledal as a permanent nester in the highest elevation zones (2,000+ msnm). Its presence confirms forest maturity with abundant wild avocadillos.",
           "status": "Vulnerable (IUCN)",
-          "habitat": "Cloud forest and mountain, 1,500–3,000 msnm"
+          "habitat": "Cloud forest and mountain forest, 1,500–3,000 msnm"
         },
-        "tapir_danta": {
-          "name": "Baird's Tapir",
+        "tapir-danta": {
+          "name": "Tapir (Baird's Tapir)",
           "scientific": "Tapirus bairdii",
-          "description": "Megafauna characteristic of the La Amistad Biological Corridor. El Robledal offers optimal habitat as seed disperser in high-elevation primary forest zones.",
+          "type": "fauna",
+          "description": "Megafauna characteristic of the La Amistad Biological Corridor. El Robledal offers optimal habitat as a seed disperser in primary forest zones at high elevation.",
           "status": "Vulnerable (IUCN)",
-          "habitat": "Primary and secondary tropical forest, 1,200–3,000 msnm"
+          "habitat": "Tropical primary and secondary forest, 1,200–3,000 msnm"
         },
         "coyote": {
           "name": "Coyote",
           "scientific": "Canis latrans",
-          "description": "Key predator of El Robledal ecosystem. Present in primary forest zones as regulator of small mammal populations.",
+          "type": "fauna",
+          "description": "Key predator of El Robledal's ecosystem. Present in primary forest zones as a regulator of small mammal populations.",
           "status": "Least Concern (IUCN)",
           "habitat": "Montane and premontane forest, 1,200–3,000 msnm"
         },
-        "halcon_rojo": {
+        "halcon-rojo": {
           "name": "Red-tailed Hawk",
           "scientific": "Buteo jamaicensis",
-          "description": "Native raptor of the Biological Corridor. Documented at El Robledal as indicator of pristine ecosystem. Patrols open forest zones searching for small prey.",
+          "type": "fauna",
+          "description": "Native raptor of the Biological Corridor. Documented in El Robledal as an indicator of pristine ecosystem. Patrols open forest zones in search of small prey.",
           "status": "Least Concern (IUCN)",
-          "habitat": "Cloud and montane forest, 1,200–3,000 msnm"
+          "habitat": "Cloud forest and montane forest, 1,200–3,000 msnm"
         },
-        "venado_cola_blanca": {
+        "cabro-monte": {
           "name": "White-tailed Deer",
           "scientific": "Odocoileus virginianus",
-          "description": "Herbivorous megafauna documented at El Robledal. Present in primary forest zones as indicator of low hunting pressure ecosystem. Key seed disperser.",
+          "type": "fauna",
+          "description": "Herbivorous megafauna documented in El Robledal. Present in primary forest zones as an indicator of ecosystem with low hunting pressure. Key seed disperser.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and montane forest, 1,200–3,000 msnm"
         },
-        "puma": {
+        "puma-pz": {
           "name": "Puma (Mountain Lion)",
           "scientific": "Puma concolor",
-          "description": "Apex predator of the La Amistad Biological Corridor. Documented at El Robledal as critical ecological regulator. Its presence indicates ecosystem in excellent conservation state.",
+          "type": "fauna",
+          "description": "Top predator of the La Amistad Biological Corridor. Documented in El Robledal as critical ecological regulator. Its presence indicates an ecosystem in excellent conservation status.",
           "status": "Vulnerable (IUCN)",
-          "habitat": "Primary and secondary tropical forest, 1,200–3,000 msnm"
+          "habitat": "Tropical primary and secondary forest, 1,200–3,000 msnm"
         },
-        "zorro": {
+        "zorro-pz": {
           "name": "Gray Fox",
           "scientific": "Urocyon cinereoargenteus",
-          "description": "Medium-sized carnivore of El Robledal ecosystem. Predator of small mammals and fruits contributing to primary forest ecological balance.",
+          "type": "fauna",
+          "description": "Medium-sized carnivore of El Robledal's ecosystem. Predator of small mammals and fruits that contributes to the ecological balance of primary forest.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and montane forest, 1,200–3,000 msnm"
         },
-        "perezoso_dos_dedos": {
+        "perezoso-dos-dedos": {
           "name": "Hoffmann's Two-toed Sloth",
           "scientific": "Choloepus hoffmanni",
+          "type": "fauna",
           "description": "Arboreal mammal specialized in El Robledal's forest cover. Its presence in primary forest zones indicates ecosystem stability and maturity.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and cloud forest, 1,500–3,000 msnm"
         },
-        "conejo": {
-          "name": "Central American Rabbit",
+        "conejo-pz": {
+          "name": "Forest Rabbit",
           "scientific": "Sylvilagus brasiliensis",
-          "description": "Small herbivorous mammal of the Biological Corridor. Documented at El Robledal as key food source for medium predators and raptors.",
+          "type": "fauna",
+          "description": "Small herbivorous mammal of the Biological Corridor. Documented in El Robledal as a key food source for medium-sized predators and raptors.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and montane forest, 1,200–3,000 msnm"
         },
-        "liebre": {
-          "name": "Black-tailed Jackrabbit",
+        "liebre-pz": {
+          "name": "Jack Rabbit",
           "scientific": "Lepus alleni",
-          "description": "Hopping mammal present in open forest zones. Indicator of forest cover mosaic areas at El Robledal.",
+          "type": "fauna",
+          "description": "Jumping mammal present in open zones of secondary forest. Indicator of areas with forest cover mosaic in El Robledal.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and premontane forest, 1,200–2,500 msnm"
         },
-        "murcielago": {
-          "name": "Jamaican Fruit-eating Bat",
+        "murcielago-pz": {
+          "name": "Jamaican Fruit Bat",
           "scientific": "Artibeus jamaicensis",
-          "description": "Crucial seed-dispersing chiropteran at El Robledal. Its nocturnal activity facilitates natural regeneration of primary forest.",
+          "type": "fauna",
+          "description": "Chiropteran seed disperser crucial to El Robledal. Its nocturnal activity facilitates natural regeneration of primary forest.",
           "status": "Least Concern (IUCN)",
           "habitat": "Tropical and cloud forest, 1,200–3,000 msnm"
         },
-        "zariguey": {
-          "name": "Virginia Opossum",
-          "scientific": "Didelphis marsupialis",
-          "description": "Omnivorous marsupial of El Robledal ecosystem. Present in primary forest zones as predator of invertebrates and fruits.",
-          "status": "Least Concern (IUCN)",
-          "habitat": "Tropical and cloud forest, 1,200–3,000 msnm"
-        },
-        "trogon": {
+        "trogon-pz": {
           "name": "Violaceous Trogon",
           "scientific": "Trogon violaceus",
-          "description": "Colorful bird documented at El Robledal. Inhabits mature cloud forest zones in the property's highest elevations.",
+          "type": "fauna",
+          "description": "Colorful bird documented in El Robledal. Inhabits mature cloud forest zones at the highest elevations of the property.",
           "status": "Least Concern (IUCN)",
-          "habitat": "Cloud and montane forest, 2,000–3,000 msnm"
+          "habitat": "Cloud forest and montane forest, 2,000–3,000 msnm"
         },
-        "passiflora": {
-          "name": "Gilbertian Passionflower",
+        "passiflora-gilbertiana": {
+          "name": "Gilbertian Passionfruit",
           "scientific": "Passiflora gilbertiana",
-          "description": "Costa Rican endemic species documented at El Robledal. One of 71 endemic plant species identified in the Savegre Biosphere Reserve. High conservation value plant.",
+          "type": "flora",
+          "description": "Endemic species of Costa Rica documented in El Robledal. One of 71 endemic plant species identified in the Savegre Biosphere Reserve. Plant of high conservation value.",
           "status": "Endemic - Vulnerable",
-          "habitat": "Montane cloud forest, 2,000–3,000 msnm"
+          "habitat": "Mountain cloud forest, 2,000–3,000 msnm"
         },
-        "aguacatillo": {
-          "name": "Aguacatillo",
+        "aguacatillo-pz": {
+          "name": "Avocadillo",
           "scientific": "Ocotea endresiana",
-          "description": "Characteristic canopy tree of El Robledal's cloud forest. Preferred food of the Resplendent Quetzal. Its abundance on the property ensures permanent nesting of sacred birds.",
+          "type": "flora",
+          "description": "Canopy tree characteristic of El Robledal's cloud forest. Preferred food of the Resplendent Quetzal. Its abundance in the property ensures permanent nesting of sacred birds.",
           "status": "Least Concern",
           "habitat": "Tropical and cloud forest, 1,500–3,000 msnm"
         },
-        "roble": {
-          "name": "White Oak",
+        "roble-pz": {
+          "name": "Costa Rican Oak",
           "scientific": "Quercus costaricensis",
-          "description": "Emblematic tree that gives name to El Robledal. Master species of montane forest. Its presence indicates mature and stable primary forest in the highest elevation zones.",
+          "type": "flora",
+          "description": "Emblematic tree that gives El Robledal its name. Master species of montane forest. Its presence indicates mature and stable primary forest in the highest elevation zones.",
           "status": "Least Concern",
-          "habitat": "Montane cloud forest, 2,000–3,000 msnm"
+          "habitat": "Mountain cloud forest, 2,000–3,000 msnm"
         },
-        "helecho_arborescente": {
+        "helecho-arborescente": {
           "name": "Tree Fern",
           "scientific": "Cyathea costaricensis",
-          "description": "Understory structurer of El Robledal's cloud forest. Creates crucial humid microhabitats for invertebrate fauna and amphibians. Indicator of extreme humidity and pristine conservation.",
+          "type": "flora",
+          "description": "Understory structurer of cloud forest in El Robledal. Creates crucial moist microhabitats for invertebrate fauna and amphibians. Indicator of extreme humidity and pristine conservation.",
           "status": "Least Concern",
-          "habitat": "Very humid cloud forest, 1,800–3,000 msnm"
+          "habitat": "Very wet mountain cloud forest, 1,800–3,000 msnm"
         },
-        "orquidea": {
+        "orquídea-pz": {
           "name": "Cloud Forest Orchids",
           "scientific": "Epidendrum secundum",
+          "type": "flora",
           "description": "Family of epiphytic plants adorning the cloud forest canopy. Hundreds of species documented in the Biological Corridor. Their presence indicates high humidity and exceptional forest conservation.",
           "status": "Least Concern",
           "habitat": "Epiphytic cloud forest, 2,000–3,000 msnm"
         },
-        "musgo_liquen": {
-          "name": "Mosses and Lichens",
+        "musgo-liquen-pz": {
+          "name": "Cloud Forest Mosses and Lichens",
           "scientific": "Bryophyta & Ascomycota",
-          "description": "Key components of aerial biomass at El Robledal. Absorb moisture and nutrients from perpetual mist. Indicators of conservation state and mountain air purity.",
+          "type": "flora",
+          "description": "Key components of aerial biomass in El Robledal. Absorb moisture and nutrients from perpetual fog. Indicators of conservation status and mountain air purity.",
           "status": "Least Concern",
-          "habitat": "Very humid cloud forest, 1,800–3,000 msnm"
+          "habitat": "Very wet mountain cloud forest, 1,800–3,000 msnm"
         },
-        "mora": {
+        "mora-pz": {
           "name": "Blackberry",
           "scientific": "Rubus urus",
-          "description": "Productive fruit shrub cultivated in delimited zones at El Robledal. Wildlife food and agroforestry product. Coexists with strict primary forest conservation.",
+          "type": "flora",
+          "description": "Productive fruit shrub cultivated in designated zones of El Robledal. Wildlife food and agroforestry product. Coexists with strict primary forest conservation.",
           "status": "Least Concern",
-          "habitat": "Productive montane forest areas, 1,800–2,400 msnm"
+          "habitat": "Productive areas of montane forest, 1,800–2,400 msnm"
         },
-        "aguacate": {
+        "aguacate-pz": {
           "name": "Avocado",
           "scientific": "Persea americana",
-          "description": "Agroforestry crop integrated in productive zones at El Robledal. Maintained under sustainability principles. Complements primary forest conservation at 594-hectare scale.",
+          "type": "flora",
+          "description": "Agroforestry crop integrated into productive zones of El Robledal. Maintained under sustainability principles. Complements primary forest conservation at a 594-hectare scale.",
           "status": "Least Concern",
-          "habitat": "Productive montane forest areas, 1,800–2,600 msnm"
+          "habitat": "Productive areas of montane forest, 1,800–2,600 msnm"
         }
       }
     },
@@ -531,37 +627,143 @@
       "prosperity": {
         "description": "Absolute ecological protection with 10 years of active stewardship that eliminated illegal hunting and logging. With 85-90% forest density, it functions as a carbon sink and biological refuge free of agrochemicals. Active beekeeping, fauna ponds and 100% solar operation demonstrate that inhabiting the ecosystem protects it.",
         "indicators": [
-          { "label": "Forest Cover", "note": "85-90% dense montane cloud forest (85-90% pure forest). Active carbon sink and biological corridor of maximum density." },
-          { "label": "Environmental Purity", "note": "12 years free of agrochemicals. Active beekeeping, certified organic nursery and native fruit trees as biological indicators of exceptional quality." },
-          { "label": "Turnkey", "note": "Operational house, solar panels, Starlink, fauna ponds and beekeeping installed. Functional water system by gravity from spring." },
-          { "label": "No Legal Encumbrances", "note": "Without mortgages or liens. Active Property Tax exemption. Eligible for FONAFIFO Environmental Services Payment." },
-          { "label": "Operations Hub", "note": "Due to its compact size and high forest density, it functions as the perfect administrative headquarters for a larger conservation project." }
+          {
+            "label": "Forest Cover",
+            "note": "85-90% dense montane cloud forest (85-90% pure forest). Active carbon sink and biological corridor of maximum density."
+          },
+          {
+            "label": "Environmental Purity",
+            "note": "12 years free of agrochemicals. Active beekeeping, certified organic nursery and native fruit trees as biological indicators of exceptional quality."
+          },
+          {
+            "label": "Turnkey",
+            "note": "Operational house, solar panels, Starlink, fauna ponds and beekeeping installed. Functional water system by gravity from spring."
+          },
+          {
+            "label": "No Legal Encumbrances",
+            "note": "Without mortgages or liens. Active Property Tax exemption. Eligible for FONAFIFO Environmental Services Payment."
+          },
+          {
+            "label": "Operations Hub",
+            "note": "Due to its compact size and high forest density, it functions as the perfect administrative headquarters for a larger conservation project."
+          }
         ],
         "issues": [
-          { "problem": "Water supply dependent on easement", "solution": "Aqueduct easement legally bound to Estate 1 concession. Supply guaranteed by legal instrument independent of owner." },
-          { "problem": "Solar battery bank requires updating", "solution": "Specific technical replacement of battery bank. Opportunity to modernize system to latest generation with immediate return." },
-          { "problem": "Interior infrastructure requires adjustment", "solution": "House operable from day one. Preventive maintenance and adjustment of interior spaces to buyer's technical requirements (laboratories or offices)." }
+          {
+            "problem": "Water supply dependent on easement",
+            "solution": "Aqueduct easement legally bound to Estate 1 concession. Supply guaranteed by legal instrument independent of owner."
+          },
+          {
+            "problem": "Solar battery bank requires updating",
+            "solution": "Specific technical replacement of battery bank. Opportunity to modernize system to latest generation with immediate return."
+          },
+          {
+            "problem": "Interior infrastructure requires adjustment",
+            "solution": "House operable from day one. Preventive maintenance and adjustment of interior spaces to buyer's technical requirements (laboratories or offices)."
+          }
         ]
       },
       "ancestral": {
-        "title": "Huetar Memory and Coffee Heritage",
-        "description": "Huetar heritage transformed from coffee plantation and dairy to voluntary forest restoration free of agrochemicals for over a decade, healing soils and recovering the water cycle. — HUETAR MEMORY · LA CARPINTERA"
+        "title": "Huetar Memory and Earth's Legacy",
+        "description": "Huetar commercial and spiritual route transformed from cattle ranching to ecosystem regeneration and low-impact agroturismo that safeguards the purity and sacred water cycle of the mountain. — HUETAR MEMORY · LA CARPINTERA",
+        "architecture": [
+          {
+            "name": "Infrastructure of Sovereignty",
+            "description": "Solar panels, Starlink and private water replaced conventional networks. Turnkey infrastructure: two residential units, storage facilities and concrete access with zero carbon footprint."
+          },
+          {
+            "name": "Forest as Architecture",
+            "description": "MINAE/SINAC Management Plan protects perpetual conservation. Recovering forest (40%) is vital corridor for pumas, sloths and 250+ birds. Natural terraces trace the original design."
+          }
+        ]
       },
       "community_pulse": {
-        "lifestyle": [],
-        "activities": []
+        "lifestyle": [
+          "Awakening at 1,500 msnm — mist embraces the oak forest and cold is the day's first greeting",
+          "250+ registered bird species — the dawn chorus at La Carpintera is a symphony without sheet music",
+          "22 km from San José, 12 km from Cartago: the best of two worlds in less than 45 minutes",
+          "Temperature of 15 to 21°C year-round — no air conditioning, no heating",
+          "Starlink internet and solar energy: global connectivity with total operational sovereignty",
+          "San Rafael de La Unión just 2 km away — coffee farming communities with centuries of tradition",
+          "Private trails in cloud forest: the biodiversity of a Conservation Area as your backyard"
+        ],
+        "activities": [
+          {
+            "name": "Quetzal Spotting",
+            "icon": "🦜",
+            "level": "Expert"
+          },
+          {
+            "name": "Mountain Hiking",
+            "icon": "⛰️",
+            "level": "Moderate"
+          },
+          {
+            "name": "Mist Photography",
+            "icon": "📸",
+            "level": "All"
+          },
+          {
+            "name": "Sunrise Yoga",
+            "icon": "🧘",
+            "level": "All"
+          },
+          {
+            "name": "Endemic Flora Tour",
+            "icon": "🌺",
+            "level": "Family"
+          },
+          {
+            "name": "Remote Work at Altitude",
+            "icon": "💻",
+            "level": "Professionals"
+          }
+        ]
       },
       "potencial": [
-        { "icon": "sun", "title": "Integrated Wellness", "desc": "The properties in the La Carpintera Hills offer an unmatched refuge for comprehensive health. Their elevation provides a cool microclimate, pure cloud forest air and a natural barrier against pollution, creating a pristine and secure environment minutes from the city; the ideal setting to establish wellness sanctuaries founded on the pillar of health." },
-        { "icon": "tree", "title": "Environmental Conservation", "desc": "This mega-asset acts as a fundamental bastion for the La Carpintera Hills Protected Zone. Its forest cover guarantees essential biological connectivity of the Central Valley, protecting vital water sources and serving as a safe refuge for endemic species, giving it incalculable conservation value." },
-        { "icon": "book", "title": "Education and Research", "desc": "Its geographic position as a natural climate filter in the valley converts it into a living ecological laboratory. It is the ideal location to establish an academic station or research center focused on cloud forest resilience and urban ecology, actively fostering the pillar of wisdom." },
-        { "icon": "leaf", "title": "Regenerative Tourism", "desc": "Its strategic value lies in unmatched accessibility combined with absolute natural isolation. Land use and topography provide the perfect canvas for developing a low-density eco-lodge or volunteer programs where prosperity is achieved through a sustainable and highly exclusive model." },
-        { "icon": "globe", "title": "Scientific Research", "desc": "The richness of its ecosystems and its function as a green lung represent an inexhaustible opportunity. Monitoring the flora, birdlife and mammals of this biological corridor is a key attraction for forging academic alliances, securing international funding (grants) and promoting high-level scientific tourism." },
-        { "icon": "shield", "title": "Spiritual Development", "desc": "The atmosphere of the cloud forest, wrapped in mist and profound silence, combined with the high topographic security of the estates, generates an energy of absolute isolation. It is the perfect atmosphere of peace demanded by the world's most exclusive retreat projects, directly cultivating the pillar of love and inner connection." },
-        { "icon": "coin", "title": "Community Integration", "desc": "Developing an institutional and integrated project on these estates will mitigate urban pressure on the mountain, stopping deforestation by generating stable green jobs (forest guardians, nature guides, hospitality) and spreading prosperity and environmental education to surrounding communities." }
+        {
+          "icon": "sun",
+          "title": "Integrated Wellness",
+          "desc": "The properties in the La Carpintera Hills offer an unmatched refuge for comprehensive health. Their elevation provides a cool microclimate, pure cloud forest air and a natural barrier against pollution, creating a pristine and secure environment minutes from the city; the ideal setting to establish wellness sanctuaries founded on the pillar of health."
+        },
+        {
+          "icon": "tree",
+          "title": "Environmental Conservation",
+          "desc": "This mega-asset acts as a fundamental bastion for the La Carpintera Hills Protected Zone. Its forest cover guarantees essential biological connectivity of the Central Valley, protecting vital water sources and serving as a safe refuge for endemic species, giving it incalculable conservation value."
+        },
+        {
+          "icon": "book",
+          "title": "Education and Research",
+          "desc": "Its geographic position as a natural climate filter in the valley converts it into a living ecological laboratory. It is the ideal location to establish an academic station or research center focused on cloud forest resilience and urban ecology, actively fostering the pillar of wisdom."
+        },
+        {
+          "icon": "leaf",
+          "title": "Regenerative Tourism",
+          "desc": "Its strategic value lies in unmatched accessibility combined with absolute natural isolation. Land use and topography provide the perfect canvas for developing a low-density eco-lodge or volunteer programs where prosperity is achieved through a sustainable and highly exclusive model."
+        },
+        {
+          "icon": "globe",
+          "title": "Scientific Research",
+          "desc": "The richness of its ecosystems and its function as a green lung represent an inexhaustible opportunity. Monitoring the flora, birdlife and mammals of this biological corridor is a key attraction for forging academic alliances, securing international funding (grants) and promoting high-level scientific tourism."
+        },
+        {
+          "icon": "shield",
+          "title": "Spiritual Development",
+          "desc": "The atmosphere of the cloud forest, wrapped in mist and profound silence, combined with the high topographic security of the estates, generates an energy of absolute isolation. It is the perfect atmosphere of peace demanded by the world's most exclusive retreat projects, directly cultivating the pillar of love and inner connection."
+        },
+        {
+          "icon": "coin",
+          "title": "Community Integration",
+          "desc": "Developing an institutional and integrated project on these estates will mitigate urban pressure on the mountain, stopping deforestation by generating stable green jobs (forest guardians, nature guides, hospitality) and spreading prosperity and environmental education to surrounding communities."
+        }
       ],
       "virtuoso_index": {
-        "descriptions": {}
+        "descriptions": {
+          "amor": "Protecting 21.9 hectares of cloud forest is an act of love and commitment toward the future. This sanctuary, integrated into the UNESCO Biosphere Reserve and under SINAC protection, safeguards the habitat of pumas, sloths and 250+ bird species, ensuring the coming generation inherits a living heritage.",
+          "salud": "An unmatched refuge for comprehensive health at 1,500-1,800 msnm. Cool microclimate, pure cloud forest air, year-round temperature of 15 to 21°C without artificial systems, certified spring water and solar energy create perfect conditions for absolute wellness.",
+          "sabiduria": "Ancestral Huetar land transformed by the vision and radical stewardship of its owners. Here, true wisdom emerges from daily learning about forest resilience, natural water cycles and reconnection with the sacred purpose of nature.",
+          "prosperidad": "Prosperity without dependence. With total operational sovereignty (100% solar energy, spring water, satellite internet), perpetual legal protection (ZPCC, FONAFIFO), and strategic location 22 km from San José, the property represents intergenerational security and value that grows with conservation."
+        }
       },
       "legacy": {
         "title": "A Platform Ready for the Next Cycle",
@@ -569,7 +771,7 @@
         "message": "This property transformed from coffee plantation and goat dairy to dense cloud forest thanks to 12 years of active stewardship and natural regeneration without chemical intervention. Today it is the purest conservation asset in the corridor. The owner offers complete technical accompaniment during transition, with deep knowledge of the water ecosystem, biodiversity and installed energy sovereignty infrastructure. This estate awaits someone who understands that conserving is the most intelligent way to invest."
       },
       "species": {
-        "quetzal_carpintera": {
+        "quetzal-carpintera": {
           "name": "Resplendent Quetzal",
           "scientific": "Pharomachrus mocinno",
           "description": "Sacred bird of Mesoamerica. Indicator of mature forest. Present seasonally in La Carpintera between 1,550–1,800 msnm.",
@@ -583,47 +785,238 @@
           "status": "Least Concern (IUCN)",
           "habitat": "Montane cloud forest, 1,500–3,000 msnm"
         },
-        "roble_carpintera": {
+        "1": {
           "name": "White Oak",
           "scientific": "Quercus spp.",
           "description": "Majestic tree of great stature, characterized by robust trunk and dense crown. Key species of montane forest providing food and shelter to countless species. Its wood holds great cultural value in Costa Rica.",
           "status": "Least Concern",
           "habitat": "Cloud forest, transitions between elevations"
         },
-        "cedro": {
+        "3": {
           "name": "Spanish Cedar",
           "scientific": "Cedrela odorata",
           "description": "Fast-growing tree with aromatic and high-value wood. Historic in Costa Rica for its cultural and economic importance. Restorer species that regenerates rapidly after disturbances.",
           "status": "Least Concern",
           "habitat": "Humid and very humid montane forest, 800–2,200 msnm"
         },
-        "higueron": {
+        "4": {
           "name": "Strangler Fig",
           "scientific": "Ficus spp.",
           "description": "Fig tree with expansive crowns that harbor complete fauna ecosystems. Fruit producer year-round, essential food for birds, mammals and reptiles. Very important species in biological corridors.",
           "status": "Least Concern",
           "habitat": "Tropical and humid montane forest, 200–2,400 msnm"
         },
-        "vaquita": {
+        "6": {
           "name": "Vaquita Orchid",
           "scientific": "Acineta densa",
           "description": "Epiphytic orchid with pendant inflorescences and aromatic flowers. Species dependent on stable moisture and temperature conditions of montane forest. Symbol of cloud forest ecological health.",
           "status": "Least Concern",
           "habitat": "Lower and middle montane cloud forest, 1,400–2,200 msnm"
         },
-        "lagartillo": {
+        "7": {
           "name": "Lagartillo",
           "scientific": "Zanthoxylum spp.",
           "description": "Very common forest species in Costa Rica, belonging to the Rutaceae family (same as citrus). Characterized by its bark covered in large conical spines and very resistant wood. Aromatic tree of small to medium stature with compound leaves and capsular fruits. Ancestrally used in traditional Costa Rican medicine. Food source for specialized wildlife.",
           "status": "Least Concern",
           "habitat": "Humid and deciduous montane forest, 1,000–2,100 msnm"
         },
-        "helecho_carpintera": {
+        "9": {
           "name": "Tree Fern",
           "scientific": "Cyathea spp.",
           "description": "Ancient tree fern whose lineage traces back to past geological eras. Creates specialized ecosystems around its fibrous trunk. Critical indicator of high-altitude cloud forests without human intervention.",
           "status": "Least Concern",
           "habitat": "Very humid montane cloud forest, 1,800–3,000 msnm"
+        },
+        "atlapete-matorrales": {
+          "name": "Chestnut-capped Brush-Finch",
+          "scientific": "Atlapetes albinucha",
+          "description": "Understory species of montane forest. Documented in La Carpintera in low-density scrub and forest edges.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Open montane forest, 1,500–2,800 msnm"
+        },
+        "azuleja": {
+          "name": "Blue Tanager",
+          "scientific": "Thraupis episcopus",
+          "description": "Bright blue tanager and highly visible. Common in canopy and understory of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest, 500–2,500 msnm"
+        },
+        "carpintero-hoffmann": {
+          "name": "Hoffmann's Woodpecker",
+          "scientific": "Melanerpes hoffmannii",
+          "description": "Active woodpecker of the canopy that generates nests used by other species. Indicator of mature forest health in La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,500–2,500 msnm"
+        },
+        "chorlo-collares": {
+          "name": "Killdeer",
+          "scientific": "Charadrius vociferus",
+          "description": "Territorial and noisy plover. Documented in open areas of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Open areas and forest edges, 0–2,500 msnm"
+        },
+        "clorofonia": {
+          "name": "Blue-hooded Euphonia",
+          "scientific": "Chlorophonia callophrys",
+          "description": "Small canopy tanager specialized in mistletoe fruits. Endemic to humid montane forests of Central America.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest, 1,500–3,000 msnm"
+        },
+        "colibri-azul": {
+          "name": "Blue-throated Hummingbird",
+          "scientific": "Amazilia saucerrottei",
+          "description": "Small metallic blue hummingbird. Visitor to the understory of La Carpintera feeding on native flowers.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest, 1,000–2,500 msnm"
+        },
+        "colibri-centelleante": {
+          "name": "Scintillant Hummingbird",
+          "scientific": "Selasphorus scintilla",
+          "description": "The smallest hummingbird in the country. Specialist of low flowers in edges and clearings of La Carpintera's cloud forest.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest and high-altitude scrub, 1,200–3,000 msnm"
+        },
+        "colibri-magnifico": {
+          "name": "Magnificent Hummingbird",
+          "scientific": "Eugenes fulgens",
+          "description": "One of the largest hummingbirds in the area. Attracted by tubular flower blooms in La Carpintera's cloud forest understory.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest, 1,500–3,000 msnm"
+        },
+        "colibri-montanes": {
+          "name": "Purple-throated Mountain-gem",
+          "scientific": "Lampornis calolaemus",
+          "description": "Key pollinator in middle and lower strata. Specialist species of Gesneriaceae and Loranthaceae flowers in La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Mountain cloud forest, 1,800–3,200 msnm"
+        },
+        "colibri-rabirrufo": {
+          "name": "Rufous-tailed Hummingbird",
+          "scientific": "Amazilia tzacatl",
+          "description": "Active and territorial hummingbird of the understory. Key pollinator of high-altitude flowers in La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest, 1,500–3,000 msnm"
+        },
+        "cucarachero-comun": {
+          "name": "House Wren",
+          "scientific": "Troglodytes aedon",
+          "description": "Small and territorial bird known for its loud song. Present in La Carpintera in forest edges and open areas.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest and scrub, 500–2,500 msnm"
+        },
+        "elaenia-copetona": {
+          "name": "Yellow-bellied Elaenia",
+          "scientific": "Elaenia flavogaster",
+          "description": "Small flycatcher of the canopy. Documented in La Carpintera as resident of the high-altitude zone.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest, 1,200–2,500 msnm"
+        },
+        "gavilan-colifajeado": {
+          "name": "Zone-tailed Hawk",
+          "scientific": "Buteo albonotatus",
+          "description": "Medium-sized raptor hunting reptiles and small mammals. Present in edges and clearings of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Open montane forest, 1,200–3,000 msnm"
+        },
+        "gavilán-caminero": {
+          "name": "Roadside Hawk",
+          "scientific": "Rupornis magnirostris",
+          "description": "Small and active raptor hunting reptiles and small mammals. Present in edges and clearings of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Open montane forest, 500–2,500 msnm"
+        },
+        "loro-perrito": {
+          "name": "Red-fronted Parrot",
+          "scientific": "Touit costaricensis",
+          "description": "Small endemic high-altitude parrot. Documented in La Carpintera feeding in native fruit trees of the forest.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,500–2,500 msnm"
+        },
+        "mirlo-montana": {
+          "name": "Mountain Thrush",
+          "scientific": "Turdus plebejus",
+          "description": "Mountain relative of the national Clay-colored Thrush, strictly adapted to the cool climate of Cartago's hills. Permanent resident of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,500–3,000 msnm"
+        },
+        "perico-frentirrojo": {
+          "name": "Red-fronted Parrakeet",
+          "scientific": "Psittacara finschi",
+          "description": "Social and noisy parrot of the canopy. Documented in La Carpintera foraging on native fruit trees.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,000–2,500 msnm"
+        },
+        "soterrey-chinchiriqui": {
+          "name": "Modest Wren",
+          "scientific": "Cantorchilus modestus",
+          "description": "Small insectivorous bird of shrubby habitat. Common in the tacotales and secondary forest edges of La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest and tacotales, 1,000–2,500 msnm"
+        },
+        "tangara-dorada": {
+          "name": "Silver-throated Tanager",
+          "scientific": "Tangara icterocephala",
+          "description": "Gregarious frugivore of canopy and understory. Important seed disperser of Melastomataceae in La Carpintera.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,200–2,400 msnm"
+        },
+        "trogon-collarejo": {
+          "name": "Collared Trogon",
+          "scientific": "Trogon collaris",
+          "description": "Territorial and loyal bird of the canopy. Documented in La Carpintera as permanent resident of mature forest.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane cloud forest, 1,500–2,500 msnm"
+        },
+        "trogon-dorado": {
+          "name": "Golden-headed Quetzal",
+          "scientific": "Trogon aurantiiventris",
+          "description": "Canopy trogon with distinctive golden plumage. Present in La Carpintera as permanent resident of mature forest.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest, 1,500–3,000 msnm"
+        },
+        "tucancillo": {
+          "name": "Emerald Toucanet",
+          "scientific": "Aulacorhynchus prasinus",
+          "description": "Vital high-altitude resident for seed dispersal. Present in the canopy of La Carpintera foraging on Lauraceae and Melastomataceae.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Cloud forest, 1,500–3,000 msnm"
+        },
+        "yigvirro": {
+          "name": "Clay-colored Thrush",
+          "scientific": "Turdus grayi",
+          "description": "National bird of Costa Rica. Permanent resident throughout La Carpintera, documented in canopy and understory.",
+          "status": "Least Concern (IUCN)",
+          "habitat": "Montane forest, 500–2,500 msnm"
+        }
+      },
+      "fincas": {
+        "finca_1": {
+          "title": "Huetar Memory and Earth's Legacy",
+          "description": "Huetar commercial and spiritual route transformed from cattle ranching to ecosystem regeneration and low-impact agroturismo that safeguards the purity and sacred water cycle of the mountain. — HUETAR MEMORY · LA CARPINTERA",
+          "architecture": [
+            {
+              "name": "Infrastructure of Sovereignty",
+              "description": "Solar panels, Starlink and private water replaced conventional networks. Turnkey infrastructure: two residential units, storage facilities and concrete access with zero carbon footprint."
+            },
+            {
+              "name": "Forest as Architecture",
+              "description": "MINAE/SINAC Management Plan protects perpetual conservation. Recovering forest (40%) is vital corridor for pumas, sloths and 250+ birds. Natural terraces trace the original design."
+            }
+          ]
+        },
+        "finca_2": {
+          "title": "Huetar Memory and Coffee Heritage",
+          "description": "Huetar heritage transformed from coffee plantation and dairy to voluntary forest restoration free of agrochemicals for over a decade, healing soils and recovering the water cycle. — HUETAR MEMORY · LA CARPINTERA",
+          "architecture": [
+            {
+              "name": "Infrastructure of Sovereignty",
+              "description": "Solar panels, Starlink and spring water by gravity guarantee zero-carbon self-sufficiency. Infrastructure: house, organic nursery and beekeeping ponds."
+            },
+            {
+              "name": "Forest as Architecture",
+              "description": "Management Plan legally protects against urban expansion. Dense forest (85-90%) is the main asset; appreciation trails and fauna ponds are the living architecture of nature."
+            }
+          ]
         }
       }
     }

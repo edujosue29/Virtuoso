@@ -226,16 +226,6 @@ export const divisionPzData = {
       habitat:     'Bosque tropical y nuboso, 1,200–3,000 msnm',
     },
     {
-      id:          'zariguey-pz',
-      name:        'Zarigüeya',
-      scientific:  'Didelphis marsupialis',
-      type:        'fauna',
-      image:       '/images/species/zariguey.jpg',
-      description: 'Marsupial omnívoro del ecosistema de El Robledal. Presente en zonas de bosque primario como depredador de invertebrados y frutos.',
-      status:      'Preocupación Menor (UICN)',
-      habitat:     'Bosque tropical y nuboso, 1,200–3,000 msnm',
-    },
-    {
       id:          'trogon-pz',
       name:        'Trogón',
       scientific:  'Trogon violaceus',

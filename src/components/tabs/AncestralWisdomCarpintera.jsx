@@ -5,8 +5,25 @@ const ROMANS = ['I', 'II']
 
 export default function AncestralWisdomCarpintera({ property, finca, dark }) {
   const { t } = useTranslation()
-  const ancestral = finca?.ancestral ?? property.ancestral
+  const ancestralRaw = finca?.ancestral ?? property.ancestral
   const name = property.name
+  const { slug } = property
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'la_carpintera'
+  }
+
+  // Translate ancestral data
+  const fincaKey = finca?.label === 'Finca 1' ? 'finca_1' : finca?.label === 'Finca 2' ? 'finca_2' : 'finca_1'
+  const ancestralData = t(`sections.${getSanctuaryKey()}.fincas.${fincaKey}`, { returnObjects: true }) || ancestralRaw
+
+  const ancestral = {
+    title: ancestralData?.title || ancestralRaw?.title,
+    description: ancestralData?.description || ancestralRaw?.description,
+    architecture: ancestralData?.architecture || ancestralRaw?.architecture || [],
+  }
 
   const attribution = 'Memoria Huetar · La Carpintera'
 

@@ -9,7 +9,7 @@ export default function EarthMemory({ property, dark }) {
 
   // Get translated timeline if available
   const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
-  const translatedTimelineData = t(`history.${sanctuaryId}.timeline`)
+  const translatedTimelineData = t(`history.${sanctuaryId}.timeline`, { returnObjects: true })
   const translatedTimeline = Array.isArray(translatedTimelineData) ? translatedTimelineData : timeline
 
   // Split name for two-tone heading
@@ -67,20 +67,6 @@ export default function EarthMemory({ property, dark }) {
           </motion.h2>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, x: 16 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          style={{
-            fontFamily: '"Cormorant Garamond", serif', fontStyle: 'italic',
-            fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
-            fontWeight: 300, color: 'rgba(17,26,16,0.85)',
-            lineHeight: 1.9, paddingBottom: '0.5rem',
-          }}
-        >
-          {t('earth_memory.soil_type')}
-        </motion.p>
       </div>
 
       {/* ── Timeline grid — 2 columns × N rows ─────────────────────────── */}

@@ -19,10 +19,11 @@ export default function AncestralWisdom({ property }) {
   const attribution = t(attributionKey)
 
   // Translate ancestral data
+  const ancestralData = t(`sections.${getSanctuaryKey()}.ancestral`, { returnObjects: true }) || {}
   const ancestralTranslated = {
-    title: t(`sections.${getSanctuaryKey()}.ancestral.title`),
-    description: t(`sections.${getSanctuaryKey()}.ancestral.description`),
-    architecture: ancestral?.architecture || [],
+    title: ancestralData.title || ancestral?.title,
+    description: ancestralData.description || ancestral?.description,
+    architecture: ancestralData.architecture || ancestral?.architecture || [],
   }
 
   // Split title: first word gold, rest dark
@@ -95,7 +96,7 @@ export default function AncestralWisdom({ property }) {
             lineHeight: 1.9,
             textAlign: 'right',
           }}>
-            {ancestral.description}
+            {ancestralTranslated.description}
           </p>
           <div style={{
             display: 'flex', alignItems: 'center', gap: '0.75rem',

@@ -7,7 +7,7 @@ function getBackgroundImage(property) {
 
 // Activity name mapping: Spanish and English names to i18n keys
 const ACTIVITY_TRANSLATION_MAP = {
-  // Spanish names
+  // Spanish names - La Carpintera
   'Observación de Aves': 'community_pulse.activity_bird_watching',
   'Avistamiento de Quetzales': 'community_pulse.activity_quetzal_sighting',
   'Senderismo de Bosque': 'community_pulse.activity_forest_hiking',
@@ -20,6 +20,12 @@ const ACTIVITY_TRANSLATION_MAP = {
   'Yoga al Amanecer': 'community_pulse.activity_sunrise_yoga',
   'Tour de Flora Endémica': 'community_pulse.activity_endemic_flora_tour',
   'Trabajo Remoto en Altura': 'community_pulse.activity_remote_work',
+  // Spanish names - División PZ
+  'Observación de Quetzales': 'community_pulse.activity_quetzal_sighting',
+  'Investigación Científica': 'community_pulse.activity_nature_meditation',
+  'Turismo Regenerativo': 'community_pulse.activity_agro_tourism',
+  'Educación Ambiental': 'community_pulse.activity_endemic_flora_tour',
+  'Investigación Hidrológica': 'community_pulse.activity_river_swimming',
   // English names (División PZ and La Carpintera)
   'Quetzal Observation': 'community_pulse.activity_quetzal_sighting',
   'Quetzal Spotting': 'community_pulse.activity_quetzal_sighting',
@@ -31,6 +37,7 @@ const ACTIVITY_TRANSLATION_MAP = {
   'Mist Photography': 'community_pulse.activity_mist_photography',
   'Sunrise Yoga': 'community_pulse.activity_sunrise_yoga',
   'Endemic Flora Tour': 'community_pulse.activity_endemic_flora_tour',
+  'Remote Work at Altitude': 'community_pulse.activity_remote_work',
 }
 
 // SVG icons for activities — no emojis
