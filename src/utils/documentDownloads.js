@@ -1,39 +1,38 @@
 import i18n from '../i18n/i18n'
 
+const BLOB_BASE_URL = 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com'
+
 export const getDownloadUrl = (docType, sanctuaryId, fincaIndex = null) => {
   const language = i18n.language || 'es'
-  const basePath = '/docs'
-
-  // Determine sanctuary folder
-  let sanctuaryFolder = 'division-pz'
-  if (sanctuaryId === 'la_carpintera' || sanctuaryId === 'la-carpintera') {
-    sanctuaryFolder = 'la-carpintera'
-  }
 
   // Document types and their logic
   if (docType === 'technical-sheet') {
     // Ficha técnica: respeta el idioma
-    if (sanctuaryFolder === 'division-pz') {
+    if (sanctuaryId === 'division-pz' || sanctuaryId === 'division_pz') {
       const filename = language === 'en' ? 'ficha-tecnica-en.pdf' : 'ficha-tecnica-es.pdf'
-      return `${basePath}/division-pz/FichaTecnica/${filename}`
+      return `${BLOB_BASE_URL}/${filename}`
     } else {
       // La Carpintera tiene 2 fincas
       const fincaNum = fincaIndex === 0 ? 'finca1' : 'finca2'
       const filename = language === 'en'
         ? `ficha-tecnica-${fincaNum}-en.pdf`
         : `ficha-tecnica-${fincaNum}-es.pdf`
-      return `${basePath}/la-carpintera/FichaTecnica/${filename}`
+      return `${BLOB_BASE_URL}/${filename}`
     }
   }
 
   if (docType === 'debida-diligencia') {
     // DD: siempre en español
-    return `${basePath}/${sanctuaryFolder}/DD/debida-diligencia-es.pdf`
+    if (sanctuaryId === 'division-pz' || sanctuaryId === 'division_pz') {
+      return `${BLOB_BASE_URL}/pz-debida-diligencia-es.pdf`
+    } else {
+      return `${BLOB_BASE_URL}/debida-diligencia-es.pdf`
+    }
   }
 
   if (docType === 'anexos') {
-    // Anexos: retorna la carpeta general
-    return `${basePath}/${sanctuaryFolder}/Anexos/`
+    // Anexos: retorna la URL base
+    return `${BLOB_BASE_URL}/`
   }
 
   return null
