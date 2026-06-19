@@ -229,18 +229,27 @@
       "name": "La Carpintera",
       "sanctuary_name": "Dual Sanctuary of Abundance",
       "tagline": "The perfect duality between strategic connectivity and ecological isolation.",
-      "description": "Two estates: 10.96 ha (Estate 1) and 2.78 ha (Estate 2) in San Rafael de La Unión, Cartago. Cloud forest sanctuary with strategic connectivity and absolute ecological isolation.",
+      "description": "Two estates in San Rafael de La Unión, Cartago. Estate 1 (10.96 ha) with strategic connectivity and development potential. Estate 2 (2.78 ha) with pristine regenerated forest.",
       "location": "San Rafael de La Unión, Cartago, Costa Rica",
-      "technical_area_estate1": "10.96 ha (109,615.34 m²) in San Rafael de La Unión, Cartago. Strategic conservation property in critical zone for Central Valley water.",
-      "technical_area_estate2": "2.78 ha (27,848.74 m²) in San Rafael de La Unión, Cartago. Natural reserve for low-impact development, ecological heart of the corridor.",
-      "technical_area": "~13.7 ha total · Estate 1: 10.96 ha + Estate 2: 2.78 ha",
+      "technical_area": "10.96 ha (109,615.34 m²) in San Rafael de La Unión, Cartago. Strategic conservation property in critical zone for Central Valley.",
       "technical_water": "Own water spring unregistered in high zone. Aqueduct easement (municipal tank). MINAE Permit Exp. 7479-A. High water charge zone for Central Valley.",
-      "technical_zoning": "Cerros de la Carpintera Protected Zone — SINAC/MINAE. Use: Water and Biodiversity Conservation",
-      "technical_elevation": "Estate 1: 1,550–1,800 msnm. Estate 2: 1,650–1,720 msnm. Transition to Lower Montane Very Humid Forest with constant 14–24°C and 2,000–2,500 mm annual rainfall.",
-      "technical_biodiversity": "250+ bird species (quetzals, goldfinches, green toucans). Pumas, two-toed sloths. Endemic flora (orchids, tree ferns). Critical biological corridor and active carbon sink.",
-      "technical_potential": "Estate 1: 60% open area allows up to 10% construction for training centers, residences, labs. Estate 2: 10+ years free of agrochemicals, eligible for Organic Agriculture or Biodiversity Sanctuary certification.",
-      "technical_privacy": "Topographic security with strict MINAE regulation for 'Water and Biodiversity Conservation'. Absolute ecological isolation.",
-      "technical_logistics": "Paved road + 400m gravel (4x4). Estate 1: 2 km from San Rafael, 12 km Cartago, 22 km San José. Estate 2: 10 min from San Rafael, less than 1 hour from International Airport."
+      "technical_zoning": "Cerros de la Carpintera Protected Zone — SINAC/MINAE. Water and Biodiversity Conservation",
+      "technical_elevation": "1,550–1,800 msnm. Unmatched transition toward Lower Montane Very Humid Forest ecosystem.",
+      "technical_biodiversity": "Pristine biological sanctuary. Vital biological corridor with 250+ bird species (quetzals, goldfinches, green toucans). Pumas, two-toed sloths. Endemic flora (orchids, tree ferns). Active carbon sink.",
+      "technical_potential": "60% open area allows planning and construction of infrastructure up to 10% of land. Ideal for training centers, low-density residences, laboratories.",
+      "technical_privacy": "High topographic security with protected environment. Land use strictly regulated by MINAE and SINAC for 'Water and Biodiversity Conservation', guaranteeing absolute ecological isolation.",
+      "technical_logistics": "Paved road to 400m before gate. Final 400m gravel (4x4). Efficient logistics: 2 km from San Rafael, 12 km from Cartago, 22 km from San José."
+    },
+    "la_carpintera_estate2": {
+      "name": "La Carpintera — Estate 2",
+      "technical_area": "2.78 ha (27,848.74 m²) in San Rafael de La Unión, Cartago. Natural reserve for low-impact development.",
+      "technical_water": "Spring water with own treatment. Own spring in low zone. Legally guaranteed aqueduct easement linked to Estate 1 (MINAE Exp. 7479-A).",
+      "technical_zoning": "Cerros de la Carpintera Protected Zone — SINAC/MINAE. Fully integrated for Water and Biodiversity Conservation",
+      "technical_elevation": "1,650–1,720 msnm. Lower Montane Very Humid Forest with higher forest density than Estate 1.",
+      "technical_biodiversity": "Living ecological laboratory and refuge for pumas, sloths, orchids, and white oak. 250+ bird species. Essential biological corridor of maximum density and high water charge.",
+      "technical_potential": "Ideal for wellness project integration. 10+ years free of intensive agricultural interventions gives soil unmatched chemical purity. Eligible for Organic Agriculture or Biodiversity Sanctuary certification.",
+      "technical_privacy": "Natural fortress carefully guarded since 2016 against logging and illegal hunting. Very high renewed forest density creates constant atmosphere of silence, deep peace, and total isolation.",
+      "technical_logistics": "Paved road access with final 400m on private gravel road (4x4). Same strategic distances: 10 minutes from San Rafael and less than one hour from Juan Santamaría International Airport."
     }
   },
   "energy_tags": {
