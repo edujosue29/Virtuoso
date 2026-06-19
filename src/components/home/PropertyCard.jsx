@@ -21,27 +21,35 @@ export default function PropertyCard({ property, index }) {
   const navigate = useNavigate()
   const { isUnlocked } = usePrivateDocuments()
   const [showAnexos, setShowAnexos] = useState(false)
+  const [showTechSheet, setShowTechSheet] = useState(false)
   const [showMap, setShowMap] = useState(false)
   const anexosRef = useRef(null)
+  const techSheetRef = useRef(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (anexosRef.current && !anexosRef.current.contains(event.target)) {
         setShowAnexos(false)
       }
+      if (techSheetRef.current && !techSheetRef.current.contains(event.target)) {
+        setShowTechSheet(false)
+      }
     }
 
-    if (showAnexos) {
+    if (showAnexos || showTechSheet) {
       document.addEventListener('mousedown', handleClickOutside)
       return () => document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [showAnexos])
+  }, [showAnexos, showTechSheet])
 
-  const handleDownload = (e) => {
-    e.stopPropagation()
+  const handleDownloadTechSheet = (fincaIndex = null) => {
     const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
-    openFile('technical-sheet', sanctuaryId)
+    openFile('technical-sheet', sanctuaryId, fincaIndex)
+    setShowTechSheet(false)
   }
+
+  const isCarpintera = property.id === 'la-carpintera'
+  const hasTwoFincas = isCarpintera && property.fincas && property.fincas.length === 2
 
   // Combine anexos + DD documents
   const getCombinedDocuments = () => {
@@ -208,28 +216,107 @@ export default function PropertyCard({ property, index }) {
           paddingTop: '1.5rem',
           borderTop: '1px solid rgba(17,26,16,0.07)',
         }}>
-          <motion.button
-            onClick={handleDownload}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
-            style={{
-              fontFamily: '"DM Sans", Inter, sans-serif',
-              fontSize: '0.72rem', letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'rgba(17,26,16,0.45)',
-              background: 'transparent',
-              border: '1px solid rgba(17,26,16,0.15)',
-              borderRadius: 999,
-              padding: '0.65rem 1.25rem',
-              cursor: 'pointer',
-              display: 'flex', alignItems: 'center', gap: 6,
-            }}
-          >
-            <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
-              <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="currentColor"/>
-            </svg>
-            {t('property_card.technical_sheet')}
-          </motion.button>
+          {/* Technical Sheet: Simple button for División PZ, Dropdown for La Carpintera */}
+          {!hasTwoFincas ? (
+            <motion.button
+              onClick={(e) => { e.stopPropagation(); handleDownloadTechSheet() }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              style={{
+                fontFamily: '"DM Sans", Inter, sans-serif',
+                fontSize: '0.72rem', letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: 'rgba(17,26,16,0.45)',
+                background: 'transparent',
+                border: '1px solid rgba(17,26,16,0.15)',
+                borderRadius: 999,
+                padding: '0.65rem 1.25rem',
+                cursor: 'pointer',
+                display: 'flex', alignItems: 'center', gap: 6,
+              }}
+            >
+              <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
+                <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="currentColor"/>
+              </svg>
+              {t('property_card.technical_sheet')}
+            </motion.button>
+          ) : (
+            <div ref={techSheetRef} style={{ position: 'relative' }}>
+              <motion.button
+                onClick={(e) => { e.stopPropagation(); setShowTechSheet(!showTechSheet) }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                style={{
+                  fontFamily: '"DM Sans", Inter, sans-serif',
+                  fontSize: '0.72rem', letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(17,26,16,0.45)',
+                  background: 'transparent',
+                  border: '1px solid rgba(17,26,16,0.15)',
+                  borderRadius: 999,
+                  padding: '0.65rem 1.25rem',
+                  cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 6,
+                }}
+              >
+                <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="currentColor"/>
+                </svg>
+                {t('property_card.technical_sheet')}
+                <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                  <path d={showTechSheet ? 'M2 7l3-3 3 3' : 'M2 3l3 3 3-3'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </motion.button>
+
+              {showTechSheet && (
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  onClick={(e) => e.stopPropagation()}
+                  style={{
+                    position: 'absolute', bottom: 'calc(100% + 8px)', left: 0,
+                    background: '#ffffff',
+                    border: '1px solid rgba(17,26,16,0.1)',
+                    borderRadius: 10,
+                    boxShadow: '0 8px 32px rgba(17,26,16,0.12)',
+                    minWidth: 240, zIndex: 50, overflow: 'hidden',
+                  }}
+                >
+                  {[0, 1].map((fincaIndex) => (
+                    <button
+                      key={fincaIndex}
+                      onClick={(e) => { e.stopPropagation(); handleDownloadTechSheet(fincaIndex) }}
+                      style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                        gap: '1rem', padding: '0.85rem 1.1rem',
+                        textDecoration: 'none',
+                        borderBottom: fincaIndex === 0 ? '1px solid rgba(17,26,16,0.06)' : 'none',
+                        transition: 'background 0.15s',
+                        border: 'none',
+                        background: 'transparent',
+                        cursor: 'pointer',
+                        width: '100%',
+                        textAlign: 'left',
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(17,26,16,0.03)'}
+                      onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+                    >
+                      <span style={{
+                        fontFamily: '"DM Sans", Inter, sans-serif',
+                        fontSize: '0.72rem', color: '#111a10', lineHeight: 1.3,
+                      }}>
+                        {t('property_card.technical_sheet')} Finca {fincaIndex + 1}
+                      </span>
+                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                        <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="#c9a84c"/>
+                      </svg>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+          )}
 
           {/* Anexos + DD dropdown */}
           {combinedDocs?.length > 0 && isUnlocked && (
