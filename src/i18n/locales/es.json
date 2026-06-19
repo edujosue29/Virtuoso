@@ -397,11 +397,8 @@
       "technical_biodiversity": "Laboratorio ecológico viviente. Refugio de pumas, perezosos, orquídeas y roble blanco. 250+ especies de aves. Corredor biológico esencial de alta carga hídrica.",
       "technical_potential": "Ideal para proyectos de bienestar. 10+ años libre de agroquímicos. Suelo químicamente puro, elegible para Agricultura Orgánica o Santuario de Biodiversidad.",
       "technical_privacy": "Fortaleza natural custodiada presencialmente desde 2016 contra tala y caza ilegal. Altísima densidad forestal crea silencio, paz profunda y aislamiento total.",
-      "technical_logistics": "Carretera asfaltada + 400m camino privado de lastre (4×4). A 10 minutos de San Rafael, menos de 1 hora del Aeropuerto Internacional Juan Santamaría."
-    }
-  },
-  "la_carpintera_species": {
-    "species": {
+      "technical_logistics": "Carretera asfaltada + 400m camino privado de lastre (4×4). A 10 minutos de San Rafael, menos de 1 hora del Aeropuerto Internacional Juan Santamaría.",
+      "species": {
         "quetzal-carpintera": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",
@@ -522,7 +519,8 @@
   },
   "infrastructure": {
     "division_pz": "Servicios disponibles: Electricidad, Internet, Telefonía. Finca operativa.",
-    "la_carpintera": "Servicios disponibles: Agua, Electricidad, Internet. Infraestructura existente."
+    "la_carpintera": "Paneles solares, Starlink, cobertura celular excelente, agua potable. Dos unidades habitacionales y bodegas.",
+    "la_carpintera_finca2": "Infraestructura con huella de carbono cero: 100% energía solar, vivero orgánico libre de agroquímicos, Starlink, buena cobertura celular, agua potable de manantial. Mejoras ecosistémicas para fauna."
   },
   "history": {
     "division_pz": {

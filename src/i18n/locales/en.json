@@ -263,7 +263,8 @@
   },
   "infrastructure": {
     "division_pz": "Available services: Electricity, Internet, Telephone. Operational property.",
-    "la_carpintera": "Available services: Water, Electricity, Internet. Existing infrastructure."
+    "la_carpintera": "Solar panels, Starlink, excellent cellular coverage, drinking water. Two residential units and storage buildings.",
+    "la_carpintera_finca2": "Carbon-zero infrastructure: 100% solar energy, organic nursery free of agrochemicals, Starlink, good cellular coverage, spring water, wildlife support ecosystem improvements."
   },
   "history": {
     "division_pz": {
