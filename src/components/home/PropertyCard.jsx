@@ -43,6 +43,35 @@ export default function PropertyCard({ property, index }) {
     openFile('technical-sheet', sanctuaryId)
   }
 
+  // Combine anexos + DD documents
+  const getCombinedDocuments = () => {
+    const docs = [...(property.anexos || [])]
+
+    // Add DD from fincas (La Carpintera)
+    if (property.fincas) {
+      property.fincas.forEach((finca, idx) => {
+        if (finca.dueDiligence) {
+          docs.push({
+            name: `Due Diligence Finca ${idx + 1}`,
+            file: finca.dueDiligence
+          })
+        }
+      })
+    }
+
+    // Add root-level DD (División PZ)
+    if (property.dueDiligence && property.id === 'division-perez-zeledon') {
+      docs.push({
+        name: t('property_card.due_diligence'),
+        file: property.dueDiligence
+      })
+    }
+
+    return docs
+  }
+
+  const combinedDocs = getCombinedDocuments()
+
   const area = property.technical?.area?.split('(')[0]?.split(',')[0]?.trim() ?? ''
   const elevation = property.technical?.elevation?.split('·')[0]?.trim() ?? ''
   const certification = deriveZoning(property)
@@ -202,8 +231,8 @@ export default function PropertyCard({ property, index }) {
             {t('property_card.technical_sheet')}
           </motion.button>
 
-          {/* Anexos dropdown */}
-          {property.anexos?.length > 0 && isUnlocked && (
+          {/* Anexos + DD dropdown */}
+          {combinedDocs?.length > 0 && isUnlocked && (
             <div ref={anexosRef} style={{ position: 'relative' }}>
               <motion.button
                 onClick={e => { e.stopPropagation(); setShowAnexos(!showAnexos) }}
@@ -246,15 +275,15 @@ export default function PropertyCard({ property, index }) {
                     minWidth: 240, zIndex: 50, overflow: 'hidden',
                   }}
                 >
-                  {property.anexos.map((anexo, i) => (
+                  {combinedDocs.map((doc, i) => (
                     <button
                       key={i}
-                      onClick={e => { e.stopPropagation(); window.open(anexo.file, '_blank') }}
+                      onClick={e => { e.stopPropagation(); window.open(doc.file, '_blank') }}
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         gap: '1rem', padding: '0.85rem 1.1rem',
                         textDecoration: 'none',
-                        borderBottom: i < property.anexos.length - 1 ? '1px solid rgba(17,26,16,0.06)' : 'none',
+                        borderBottom: i < combinedDocs.length - 1 ? '1px solid rgba(17,26,16,0.06)' : 'none',
                         transition: 'background 0.15s',
                         border: 'none',
                         background: 'transparent',
@@ -269,7 +298,7 @@ export default function PropertyCard({ property, index }) {
                         fontFamily: '"DM Sans", Inter, sans-serif',
                         fontSize: '0.72rem', color: '#111a10', lineHeight: 1.3,
                       }}>
-                        {anexo.name}
+                        {doc.name}
                       </span>
                       <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
                         <path d="M7 10L3 6h2.5V1h3v5H11L7 10zM2 12h10v1.5H2V12z" fill="#c9a84c"/>

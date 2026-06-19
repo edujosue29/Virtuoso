@@ -105,6 +105,9 @@ export const divisionPzData = {
     { name: 'Uso de Suelo Roblesa SA', file: '/docs/division-pz/Anexos/USO DE SUELO ROBLESA SA.pdf' },
   ],
 
+  // ── Debida Diligencia ──────────────────────────────────────────────────
+  dueDiligence: '/docs/division-pz/DD/debida-diligencia-es.pdf',
+
   energy:   ['agua', 'bosque', 'agricultura', 'ancestral'],
 
   // ── Ficha técnica ──────────────────────────────────────────────────────
