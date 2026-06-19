@@ -88,6 +88,23 @@ export const divisionPzData = {
     display: '9°30\'48" N  83°42\'38" O',
   },
   location: 'División, Pérez Zeledón, San José, Costa Rica',
+
+  // ── Anexos ─────────────────────────────────────────────────────────────
+  anexos: [
+    { name: 'Concesión de Aguas', file: '/docs/division-pz/Anexos/CONCESION DE AGUAS.pdf' },
+    { name: 'Constancia ORSJ 0059-2025', file: '/docs/division-pz/Anexos/CONSTANCIA-ORSJ1-0059-2025_Inversiones APA_2024.pdf' },
+    { name: 'Constancia ORSJ 0060-2025', file: '/docs/division-pz/Anexos/CONSTANCIA-ORSJ1-0060-2025_Roblesa S A_2024.pdf' },
+    { name: 'CTO SJ-02-601-0012-2024', file: '/docs/division-pz/Anexos/CTO- SJ-02-601-0012-2024.pdf' },
+    { name: 'CTO SJ-02-601-0013-2024', file: '/docs/division-pz/Anexos/CTO- SJ-02-601-0013-2024.pdf' },
+    { name: 'Plano Certificado SJ-0762238-1988', file: '/docs/division-pz/Anexos/Copia certificada plano SJ-0762238-1988.pdf' },
+    { name: 'Flora y Fauna - División', file: '/docs/division-pz/Anexos/FLORA Y FAUNA - DIVISIÓN.pdf' },
+    { name: 'Pago Impuestos APA SA', file: '/docs/division-pz/Anexos/PAGO IMPUESTOS MPZ INV.COM. APA SA CEDULA 3101080323.pdf' },
+    { name: 'Pago Impuestos Roblesa SA', file: '/docs/division-pz/Anexos/PAGO IMPUESTOS MPZ ROBLESA CEDULA 3-101-133265-.pdf' },
+    { name: 'RNP Digital 1617623-2022', file: '/docs/division-pz/Anexos/RNPDIGITAL-1617623-2022 (Plano SJ-0437167-1981).pdf' },
+    { name: 'Uso de Suelo APA SA', file: '/docs/division-pz/Anexos/USO DE SUELO INVERSIONES COMERCIALES APA SA.pdf' },
+    { name: 'Uso de Suelo Roblesa SA', file: '/docs/division-pz/Anexos/USO DE SUELO ROBLESA SA.pdf' },
+  ],
+
   energy:   ['agua', 'bosque', 'agricultura', 'ancestral'],
 
   // ── Ficha técnica ──────────────────────────────────────────────────────

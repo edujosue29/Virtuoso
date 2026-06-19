@@ -92,9 +92,10 @@ export const laCarpinteraData = {
 
     // ── Fincas (datos específicos por finca) ───────────────────────────────
     anexos: [
-      { label: 'Avalúo Finca 1',             file: '/docs/avaluo-finca-1.pdf' },
-      { label: 'Plan General de Manejo ZPCC', file: '/docs/plan-manejo-carpintera.pdf' },
-      { label: 'Viabilidad de Desarrollo e Infraestructura', file: '/docs/viabilidad-carpintera.pdf' },
+      { name: 'Avalúo Finca 1', file: '/docs/la-carpintera/Anexos/AVALUO FINCA 1.pdf' },
+      { name: 'Aves', file: '/docs/la-carpintera/Anexos/AVES.pdf' },
+      { name: 'Plan General de Manejo', file: '/docs/la-carpintera/Anexos/Plan General de Manejo para la Zona Protectora Cerros de La Carpintera.pdf' },
+      { name: 'Viabilidad de Desarrollo e Infraestructura', file: '/docs/la-carpintera/Anexos/Viabilidad de Desarrollo e Infraestructura (Zona Protectora Cerros de la Carpintera).pdf' },
     ],
     fincas: [
       {
