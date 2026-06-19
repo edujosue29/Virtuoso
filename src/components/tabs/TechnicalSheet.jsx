@@ -40,22 +40,24 @@ function SpecRow({ label, value, index }) {
 export default function TechnicalSheet({ property, finca }) {
   const { t } = useTranslation()
   const sanctuary = useSanctuaryText(property)
-  const { technical } = property
+
+  // Use finca's technical data if finca is provided (La Carpintera estates)
+  const technicalData = finca?.technical || property.technical
 
   const nameParts = sanctuary.name.split(' ')
   const nameFirst = nameParts[0]
   const nameRest  = nameParts.slice(1).join(' ')
 
   const specs = [
-    { labelKey: 'technical_sheet.location_area',          value: sanctuary.technicalArea },
-    { labelKey: 'technical_sheet.water_sovereignty',      value: sanctuary.technicalWater },
-    { labelKey: 'technical_sheet.global_status',          value: sanctuary.technicalZoning },
-    { labelKey: 'technical_sheet.elevation_climate',      value: sanctuary.technicalElevation },
-    { labelKey: 'technical_sheet.biodiversity',           value: sanctuary.technicalBiodiversity },
-    { labelKey: 'technical_sheet.constructive_potential', value: sanctuary.technicalPotential },
-    { labelKey: 'technical_sheet.privacy_isolation',      value: sanctuary.technicalPrivacy },
-    { labelKey: 'technical_sheet.logistics_accessibility',value: sanctuary.technicalLogistics },
-    { labelKey: 'technical_sheet.infrastructure',         value: sanctuary.infrastructure },
+    { labelKey: 'technical_sheet.location_area',          value: technicalData?.area },
+    { labelKey: 'technical_sheet.water_sovereignty',      value: technicalData?.water },
+    { labelKey: 'technical_sheet.global_status',          value: technicalData?.zoning },
+    { labelKey: 'technical_sheet.elevation_climate',      value: technicalData?.elevation },
+    { labelKey: 'technical_sheet.biodiversity',           value: technicalData?.biodiversity },
+    { labelKey: 'technical_sheet.constructive_potential', value: technicalData?.constructionPotential },
+    { labelKey: 'technical_sheet.privacy_isolation',      value: technicalData?.security },
+    { labelKey: 'technical_sheet.logistics_accessibility',value: technicalData?.access },
+    { labelKey: 'technical_sheet.infrastructure',         value: technicalData?.infrastructure },
   ].filter((r) => r.value)
 
   const handleDownload = () => {

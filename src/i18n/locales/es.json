@@ -387,8 +387,21 @@
       "technical_biodiversity": "Corredor biológico vital: 250+ especies de aves (quetzales, jilgueros, tucancillos verdes). Pumas, osos perezosos de dos dedos. Flora endémica (orquídeas, helechos arborescentes).",
       "technical_potential": "Zona abierta (60%) permite hasta 10% construcción. Ideal para centros de capacitación, residencias de baja densidad, laboratorios.",
       "technical_privacy": "Alta seguridad topográfica. Uso regulado MINAE/SINAC. Aislamiento ecológico absoluto contra urbanización.",
-      "technical_logistics": "Carretera asfaltada hasta 400m del portón. Tramo final lastre (4×4). A 2 km San Rafael, 12 km Cartago, 22 km San José.",
-      "species": {
+      "technical_logistics": "Carretera asfaltada hasta 400m del portón. Tramo final lastre (4×4). A 2 km San Rafael, 12 km Cartago, 22 km San José."
+    },
+    "la_carpintera_finca2": {
+      "technical_area": "2.78 ha (27,848.74 m²) en San Rafael de La Unión, Cartago. Reserva natural de desarrollo de bajo impacto.",
+      "technical_water": "Agua de manantial con tratamiento propio. Naciente propia en zona baja. Servidumbre de acueducto vinculada a Finca 1 (Exp. MINAE 7479-A).",
+      "technical_zoning": "Zona Protectora Cerros de la Carpintera — SINAC/MINAE. Totalmente integrada para Conservación del Agua y Biodiversidad.",
+      "technical_elevation": "1,650–1,720 msnm. Bosque Muy Húmedo Montano Bajo. Temperaturas 14–24°C, lluvias 2,000–2,500 mm anuales.",
+      "technical_biodiversity": "Laboratorio ecológico viviente. Refugio de pumas, perezosos, orquídeas y roble blanco. 250+ especies de aves. Corredor biológico esencial de alta carga hídrica.",
+      "technical_potential": "Ideal para proyectos de bienestar. 10+ años libre de agroquímicos. Suelo químicamente puro, elegible para Agricultura Orgánica o Santuario de Biodiversidad.",
+      "technical_privacy": "Fortaleza natural custodiada presencialmente desde 2016 contra tala y caza ilegal. Altísima densidad forestal crea silencio, paz profunda y aislamiento total.",
+      "technical_logistics": "Carretera asfaltada + 400m camino privado de lastre (4×4). A 10 minutos de San Rafael, menos de 1 hora del Aeropuerto Internacional Juan Santamaría."
+    }
+  },
+  "la_carpintera_species": {
+    "species": {
         "quetzal-carpintera": {
           "name": "Quetzal Resplandeciente",
           "scientific": "Pharomachrus mocinno",

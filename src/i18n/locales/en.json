@@ -240,16 +240,15 @@
       "technical_privacy": "High topographic security with protected environment. Land use strictly regulated by MINAE and SINAC for 'Water and Biodiversity Conservation', guaranteeing absolute ecological isolation.",
       "technical_logistics": "Paved road to 400m before gate. Final 400m gravel (4x4). Efficient logistics: 2 km from San Rafael, 12 km from Cartago, 22 km from San José."
     },
-    "la_carpintera_estate2": {
-      "name": "La Carpintera — Estate 2",
+    "la_carpintera_finca2": {
       "technical_area": "2.78 ha (27,848.74 m²) in San Rafael de La Unión, Cartago. Natural reserve for low-impact development.",
       "technical_water": "Spring water with own treatment. Own spring in low zone. Legally guaranteed aqueduct easement linked to Estate 1 (MINAE Exp. 7479-A).",
-      "technical_zoning": "Cerros de la Carpintera Protected Zone — SINAC/MINAE. Fully integrated for Water and Biodiversity Conservation",
-      "technical_elevation": "1,650–1,720 msnm. Lower Montane Very Humid Forest with higher forest density than Estate 1.",
+      "technical_zoning": "Cerros de la Carpintera Protected Zone — SINAC/MINAE. Fully integrated for Water and Biodiversity Conservation.",
+      "technical_elevation": "1,650–1,720 msnm. Lower Montane Very Humid Forest. Constant 14–24°C, annual rainfall 2,000–2,500 mm.",
       "technical_biodiversity": "Living ecological laboratory and refuge for pumas, sloths, orchids, and white oak. 250+ bird species. Essential biological corridor of maximum density and high water charge.",
-      "technical_potential": "Ideal for wellness project integration. 10+ years free of intensive agricultural interventions gives soil unmatched chemical purity. Eligible for Organic Agriculture or Biodiversity Sanctuary certification.",
-      "technical_privacy": "Natural fortress carefully guarded since 2016 against logging and illegal hunting. Very high renewed forest density creates constant atmosphere of silence, deep peace, and total isolation.",
-      "technical_logistics": "Paved road access with final 400m on private gravel road (4x4). Same strategic distances: 10 minutes from San Rafael and less than one hour from Juan Santamaría International Airport."
+      "technical_potential": "Ideal for wellness projects. 10+ years free of agrochemicals creates unmatched soil chemical purity. Eligible for Organic Agriculture or Biodiversity Sanctuary certification.",
+      "technical_privacy": "Natural fortress guarded since 2016 against illegal logging and hunting. Very high forest density creates atmosphere of silence, deep peace, and total isolation.",
+      "technical_logistics": "Paved road with final 400m on private gravel road (4x4). 10 minutes from San Rafael, less than 1 hour from Juan Santamaría International Airport."
     }
   },
   "energy_tags": {
