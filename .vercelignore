@@ -3,3 +3,4 @@ multimedia
 .claude
 *.xlsx
 *.xls
+!public/docs/**
