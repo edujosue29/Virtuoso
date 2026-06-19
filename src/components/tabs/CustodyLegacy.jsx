@@ -3,16 +3,29 @@ import { useTranslation } from 'react-i18next'
 
 export default function CustodyLegacy({ property, finca, dark }) {
   const { t } = useTranslation()
-  const { name } = property
+  const { name, slug } = property
   // Use finca-specific legacy when available
-  const legacy = finca?.legacy ?? property.legacy
+  const legacyRaw = finca?.legacy ?? property.legacy
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
+
+  // Translate legacy data
+  const legacy = legacyRaw ? {
+    ...legacyRaw,
+    title: t(`sections.${getSanctuaryKey()}.legacy.title`),
+    message: t(`sections.${getSanctuaryKey()}.legacy.message`),
+  } : legacyRaw
 
   const gold = '#c9a84c'
   const darkGreen = '#2a5c38'
   const cream = '#faf9f6'
 
   // Heading: split title
-  const titleParts = (legacy.title || '').split(' ')
+  const titleParts = (legacy?.title || '').split(' ')
   const titleFirst = titleParts[0]
   const titleRest = titleParts.slice(1).join(' ')
 

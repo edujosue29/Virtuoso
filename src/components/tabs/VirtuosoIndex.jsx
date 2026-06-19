@@ -53,8 +53,17 @@ const PILLARS = [
 
 export default function VirtuosoIndex({ property }) {
   const { t } = useTranslation()
-  const { virtuosoIndex } = property
+  const { virtuosoIndex, slug } = property
   const [selected, setSelected] = useState(null)
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
+
+  // Get translated descriptions
+  const descriptions = t(`sections.${getSanctuaryKey()}.virtuoso_index.descriptions`, { returnObjects: true }) || {}
 
   const selectedPillar = selected ? PILLARS.find(p => p.key === selected) : null
 
@@ -248,7 +257,7 @@ export default function VirtuosoIndex({ property }) {
               margin: 0,
               letterSpacing: '0.3px',
             }}>
-              {virtuosoIndex.descriptions?.[selected]}
+              {descriptions?.[selected]}
             </p>
           </motion.div>
         )}

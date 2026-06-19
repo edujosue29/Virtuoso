@@ -267,10 +267,24 @@ function AccordionItem({ item, index, dark }) {
 
 export default function LocalProsperity({ property, finca, dark }) {
   const { t } = useTranslation()
-  const { sectionImages } = property
+  const { sectionImages, slug } = property
   // Use finca-specific prosperity data when available
-  const prosperity = finca?.prosperity ?? property.prosperity
+  const prosperityRaw = finca?.prosperity ?? property.prosperity
   const img = sectionImages?.prosperity || CONSERVATION_IMAGE
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
+
+  // Translate prosperity data using array index
+  const prosperity = prosperityRaw ? {
+    ...prosperityRaw,
+    description: t(`sections.${getSanctuaryKey()}.prosperity.description`),
+    indicators: (t(`sections.${getSanctuaryKey()}.prosperity.indicators`, { returnObjects: true }) || []),
+    issues: (t(`sections.${getSanctuaryKey()}.prosperity.issues`, { returnObjects: true }) || []),
+  } : prosperityRaw
 
   const cream = '#faf9f6'
   const muted = 'rgba(245,240,232,0.52)'

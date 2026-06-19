@@ -52,9 +52,17 @@ const DEFAULT_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
 
 export default function CommunityPulse({ property, dark }) {
   const { t } = useTranslation()
-  const { communityPulse, name } = property
-  const acts = communityPulse.activities
-  const highlights = communityPulse.lifestyle
+  const { communityPulse, name, slug } = property
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
+
+  // Get translated lifestyle and activities
+  const acts = (t(`sections.${getSanctuaryKey()}.community_pulse.activities`, { returnObjects: true }) || [])
+  const highlights = (t(`sections.${getSanctuaryKey()}.community_pulse.lifestyle`, { returnObjects: true }) || [])
 
   const cream = '#faf9f6'
   const muted = 'rgba(245,240,232,0.52)'

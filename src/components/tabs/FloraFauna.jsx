@@ -20,7 +20,22 @@ export default function FloraFauna({ property, dark }) {
 
   const list = property.species.filter((s) => filter === 'all' || s.type === filter)
   const safeIdx = Math.min(selected, list.length - 1)
-  const featured = list[safeIdx] ?? list[0]
+  const featuredRaw = list[safeIdx] ?? list[0]
+
+  // Translate species data
+  const getSanctuaryKey = () => {
+    if (property.slug === 'division-perez-zeledon') return 'division_pz'
+    if (property.slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
+
+  const featured = featuredRaw ? {
+    ...featuredRaw,
+    name: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.name`),
+    description: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.description`),
+    status: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.status`),
+    habitat: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.habitat`),
+  } : null
 
   // Keyboard navigation for species gallery
   useEffect(() => {

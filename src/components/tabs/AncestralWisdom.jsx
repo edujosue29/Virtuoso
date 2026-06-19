@@ -5,15 +5,28 @@ const ROMANS = ['I', 'II']
 
 export default function AncestralWisdom({ property }) {
   const { t } = useTranslation()
-  const { ancestral, name } = property
+  const { ancestral, name, slug } = property
+
+  const getSanctuaryKey = () => {
+    if (slug === 'division-perez-zeledon') return 'division_pz'
+    if (slug === 'la-carpintera') return 'la_carpintera'
+    return 'division_pz'
+  }
 
   const attributionKey = name.includes('Carpintera')
     ? 'ancestral_wisdom.memory_huetar'
     : 'ancestral_wisdom.memory_boruca'
   const attribution = t(attributionKey)
 
+  // Translate ancestral data
+  const ancestralTranslated = {
+    title: t(`sections.${getSanctuaryKey()}.ancestral.title`),
+    description: t(`sections.${getSanctuaryKey()}.ancestral.description`),
+    architecture: ancestral?.architecture || [],
+  }
+
   // Split title: first word gold, rest dark
-  const parts = (ancestral.title || '').split(' — ')
+  const parts = (ancestralTranslated.title || '').split(' — ')
   const titleMain = parts[0] || ''
   const titleSub  = parts[1] || ''
 
@@ -106,7 +119,7 @@ export default function AncestralWisdom({ property }) {
         gridTemplateColumns: '1fr 1fr',
         gap: '1.5rem',
       }}>
-        {ancestral.architecture.map((item, i) => (
+        {ancestralTranslated.architecture.map((item, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 28 }}
