@@ -92,17 +92,17 @@ export const laCarpinteraData = {
 
     // ── Fincas (datos específicos por finca) ───────────────────────────────
     anexos: [
-      { name: 'Avalúo Finca 1', file: '/docs/la-carpintera/Anexos/AVALUO FINCA 1.pdf' },
-      { name: 'Aves', file: '/docs/la-carpintera/Anexos/AVES.pdf' },
-      { name: 'Plan General de Manejo', file: '/docs/la-carpintera/Anexos/Plan General de Manejo para la Zona Protectora Cerros de La Carpintera.pdf' },
-      { name: 'Viabilidad de Desarrollo e Infraestructura', file: '/docs/la-carpintera/Anexos/Viabilidad de Desarrollo e Infraestructura (Zona Protectora Cerros de la Carpintera).pdf' },
+      { name: 'Avalúo Finca 1', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/AVALUO%20FINCA%201.pdf' },
+      { name: 'Aves', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/AVES.pdf' },
+      { name: 'Plan General de Manejo', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/Plan%20General%20de%20Manejo%20para%20la%20Zona%20Protectora%20Cerros%20de%20La%20Carpintera.pdf' },
+      { name: 'Viabilidad de Desarrollo e Infraestructura', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/Viabilidad%20de%20Desarrollo%20e%20Infraestructura%20%28Zona%20Protectora%20Cerros%20de%20la%20Carpintera%29.pdf' },
     ],
     fincas: [
       {
         id: 1,
         label: 'Finca 1',
         folio: 'n.87613',
-        dueDiligence: '/docs/la-carpintera/DD/debida-diligencia-es.pdf',
+        dueDiligence: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/debida-diligencia-es.pdf',
         technical: {
           area:          '10.96 ha · 109,615.34 m² — San Rafael de La Unión, Cartago. Una propiedad estratégica de conservación ubicada en una zona crítica para el Valle Central.',
           areaDesglose:  '60% potrero y tacotales · 40% cobertura forestal (bosque nuboso activo)',
@@ -208,7 +208,7 @@ export const laCarpinteraData = {
         id: 2,
         label: 'Finca 2',
         folio: 'n.71964',
-        dueDiligence: '/docs/la-carpintera/DD/debida-diligencia-es.pdf',
+        dueDiligence: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/debida-diligencia-es.pdf',
         technical: {
           area:          '2.78 ha · 27,848.74 m² — San Rafael de La Unión, Cartago. Una reserva natural de desarrollo de bajo impacto que funciona como corazón ecológico del corredor biológico.',
           areaDesglose:  '85–90% cobertura forestal densa (2.36 ha de bosque puro) · Restauración ecosistémica voluntaria sin intervención química durante la última década',

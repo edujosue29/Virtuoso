@@ -91,22 +91,22 @@ export const divisionPzData = {
 
   // ── Anexos ─────────────────────────────────────────────────────────────
   anexos: [
-    { name: 'Concesión de Aguas', file: '/docs/division-pz/Anexos/CONCESION DE AGUAS.pdf' },
-    { name: 'Constancia ORSJ 0059-2025', file: '/docs/division-pz/Anexos/CONSTANCIA-ORSJ1-0059-2025_Inversiones APA_2024.pdf' },
-    { name: 'Constancia ORSJ 0060-2025', file: '/docs/division-pz/Anexos/CONSTANCIA-ORSJ1-0060-2025_Roblesa S A_2024.pdf' },
-    { name: 'CTO SJ-02-601-0012-2024', file: '/docs/division-pz/Anexos/CTO- SJ-02-601-0012-2024.pdf' },
-    { name: 'CTO SJ-02-601-0013-2024', file: '/docs/division-pz/Anexos/CTO- SJ-02-601-0013-2024.pdf' },
-    { name: 'Plano Certificado SJ-0762238-1988', file: '/docs/division-pz/Anexos/Copia certificada plano SJ-0762238-1988.pdf' },
-    { name: 'Flora y Fauna - División', file: '/docs/division-pz/Anexos/FLORA Y FAUNA - DIVISIÓN.pdf' },
-    { name: 'Pago Impuestos APA SA', file: '/docs/division-pz/Anexos/PAGO IMPUESTOS MPZ INV.COM. APA SA CEDULA 3101080323.pdf' },
-    { name: 'Pago Impuestos Roblesa SA', file: '/docs/division-pz/Anexos/PAGO IMPUESTOS MPZ ROBLESA CEDULA 3-101-133265-.pdf' },
-    { name: 'RNP Digital 1617623-2022', file: '/docs/division-pz/Anexos/RNPDIGITAL-1617623-2022 (Plano SJ-0437167-1981).pdf' },
-    { name: 'Uso de Suelo APA SA', file: '/docs/division-pz/Anexos/USO DE SUELO INVERSIONES COMERCIALES APA SA.pdf' },
-    { name: 'Uso de Suelo Roblesa SA', file: '/docs/division-pz/Anexos/USO DE SUELO ROBLESA SA.pdf' },
+    { name: 'Concesión de Aguas', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/CONCESION%20DE%20AGUAS.pdf' },
+    { name: 'Constancia ORSJ 0059-2025', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/CONSTANCIA-ORSJ1-0059-2025_Inversiones%20APA_2024.pdf' },
+    { name: 'Constancia ORSJ 0060-2025', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/CONSTANCIA-ORSJ1-0060-2025_Roblesa%20S%20A_2024.pdf' },
+    { name: 'CTO SJ-02-601-0012-2024', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/CTO-%20SJ-02-601-0012-2024.pdf' },
+    { name: 'CTO SJ-02-601-0013-2024', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/CTO-%20SJ-02-601-0013-2024.pdf' },
+    { name: 'Plano Certificado SJ-0762238-1988', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/Copia%20certificada%20plano%20SJ-0762238-1988.pdf' },
+    { name: 'Flora y Fauna - División', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/FLORA%20Y%20FAUNA%20-%20DIVISI%C3%93N.pdf' },
+    { name: 'Pago Impuestos APA SA', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/PAGO%20IMPUESTOS%20MPZ%20INV.COM.%20APA%20SA%20CEDULA%203101080323.pdf' },
+    { name: 'Pago Impuestos Roblesa SA', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/PAGO%20IMPUESTOS%20MPZ%20ROBLESA%20CEDULA%203-101-133265-.pdf' },
+    { name: 'RNP Digital 1617623-2022', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/RNPDIGITAL-1617623-2022%20%28Plano%20SJ-0437167-1981%29.pdf' },
+    { name: 'Uso de Suelo APA SA', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/USO%20DE%20SUELO%20INVERSIONES%20COMERCIALES%20APA%20SA.pdf' },
+    { name: 'Uso de Suelo Roblesa SA', file: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/USO%20DE%20SUELO%20ROBLESA%20SA.pdf' },
   ],
 
   // ── Debida Diligencia ──────────────────────────────────────────────────
-  dueDiligence: '/docs/division-pz/DD/debida-diligencia-es.pdf',
+  dueDiligence: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/pz-debida-diligencia-es.pdf',
 
   energy:   ['agua', 'bosque', 'agricultura', 'ancestral'],
 
