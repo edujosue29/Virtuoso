@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { useSanctuaryText } from '../../utils/sanctuaryTranslations'
+import { useSanctuaryText, getSanctuaryText } from '../../utils/sanctuaryTranslations'
 import { openFile } from '../../utils/documentDownloads'
+import i18n from '../../i18n/i18n'
 
 function SpecRow({ label, value, index }) {
   return (
@@ -44,19 +45,39 @@ export default function TechnicalSheet({ property, finca }) {
   // Use finca's technical data if finca is provided (La Carpintera estates)
   const technicalData = finca?.technical || property.technical
 
+  // Get finca index for translation lookup
+  const fincaIndex = finca ? property.fincas?.indexOf(finca) : null
+  const isFinca2 = fincaIndex === 1
+
+  // Helper function to get translation with finca-specific fallback
+  const getTechnicalTranslation = (key, fallbackValue) => {
+    if (!finca || property.id !== 'la-carpintera') {
+      return fallbackValue
+    }
+    // For Finca 2, try to get from la_carpintera_finca2 translation key
+    if (isFinca2) {
+      const translationKey = `sanctuary_data.la_carpintera_finca2.${key}`
+      const translated = i18n.t(translationKey)
+      if (translated !== translationKey) {
+        return translated
+      }
+    }
+    return fallbackValue
+  }
+
   const nameParts = sanctuary.name.split(' ')
   const nameFirst = nameParts[0]
   const nameRest  = nameParts.slice(1).join(' ')
 
   const specs = [
-    { labelKey: 'technical_sheet.location_area',          value: technicalData?.area },
-    { labelKey: 'technical_sheet.water_sovereignty',      value: technicalData?.water },
-    { labelKey: 'technical_sheet.global_status',          value: technicalData?.zoning },
-    { labelKey: 'technical_sheet.elevation_climate',      value: technicalData?.elevation },
-    { labelKey: 'technical_sheet.biodiversity',           value: technicalData?.biodiversity },
-    { labelKey: 'technical_sheet.constructive_potential', value: technicalData?.constructionPotential },
-    { labelKey: 'technical_sheet.privacy_isolation',      value: technicalData?.security },
-    { labelKey: 'technical_sheet.logistics_accessibility',value: technicalData?.access },
+    { labelKey: 'technical_sheet.location_area',          value: getTechnicalTranslation('technical_area', technicalData?.area) },
+    { labelKey: 'technical_sheet.water_sovereignty',      value: getTechnicalTranslation('technical_water', technicalData?.water) },
+    { labelKey: 'technical_sheet.global_status',          value: getTechnicalTranslation('technical_zoning', technicalData?.zoning) },
+    { labelKey: 'technical_sheet.elevation_climate',      value: getTechnicalTranslation('technical_elevation', technicalData?.elevation) },
+    { labelKey: 'technical_sheet.biodiversity',           value: getTechnicalTranslation('technical_biodiversity', technicalData?.biodiversity) },
+    { labelKey: 'technical_sheet.constructive_potential', value: getTechnicalTranslation('technical_potential', technicalData?.constructionPotential) },
+    { labelKey: 'technical_sheet.privacy_isolation',      value: getTechnicalTranslation('technical_privacy', technicalData?.security) },
+    { labelKey: 'technical_sheet.logistics_accessibility',value: getTechnicalTranslation('technical_logistics', technicalData?.access) },
     { labelKey: 'technical_sheet.infrastructure',         value: technicalData?.infrastructure },
   ].filter((r) => r.value)
 
