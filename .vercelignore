@@ -1,6 +1,5 @@
 node_modules
 multimedia
 .claude
-*.pdf
 *.xlsx
 *.xls
