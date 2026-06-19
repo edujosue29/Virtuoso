@@ -54,13 +54,12 @@ export default function TechnicalSheet({ property, finca }) {
     if (!finca || property.id !== 'la-carpintera') {
       return fallbackValue
     }
-    // For Finca 2, try to get from la_carpintera_finca2 translation key
-    if (isFinca2) {
-      const translationKey = `sanctuary_data.la_carpintera_finca2.${key}`
-      const translated = i18n.t(translationKey)
-      if (translated !== translationKey) {
-        return translated
-      }
+    // For Finca 1 and 2, try to get from finca-specific translation key
+    const fincaKeyName = fincaIndex === 0 ? 'la_carpintera' : 'la_carpintera_finca2'
+    const translationKey = `sanctuary_data.${fincaKeyName}.${key}`
+    const translated = i18n.t(translationKey)
+    if (translated !== translationKey) {
+      return translated
     }
     return fallbackValue
   }
