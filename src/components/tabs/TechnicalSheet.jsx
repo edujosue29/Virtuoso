@@ -77,7 +77,7 @@ export default function TechnicalSheet({ property, finca }) {
     { labelKey: 'technical_sheet.constructive_potential', value: getTechnicalTranslation('technical_potential', technicalData?.constructionPotential) },
     { labelKey: 'technical_sheet.privacy_isolation',      value: getTechnicalTranslation('technical_privacy', technicalData?.security) },
     { labelKey: 'technical_sheet.logistics_accessibility',value: getTechnicalTranslation('technical_logistics', technicalData?.access) },
-    { labelKey: 'technical_sheet.infrastructure',         value: technicalData?.infrastructure },
+    { labelKey: 'technical_sheet.infrastructure',         value: getTechnicalTranslation('infrastructure', technicalData?.infrastructure) },
   ].filter((r) => r.value)
 
   const handleDownload = () => {
