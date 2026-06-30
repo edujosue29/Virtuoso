@@ -1,5 +1,13 @@
 import i18n from '../i18n/i18n'
 
+// Map property.id to translation key (division_pz, la_carpintera, star_mountain)
+export function getSanctuaryKeyFromProperty(property) {
+  if (property.id === 'division-perez-zeledon') return 'division_pz'
+  if (property.id === 'star-mountain') return 'star_mountain'
+  if (property.id === 'la-carpintera') return 'la_carpintera'
+  return 'la_carpintera' // fallback
+}
+
 export function getSanctuaryText(sanctuaryId, key, fallback = '') {
   try {
     const lang = i18n.language || 'es'
@@ -17,7 +25,11 @@ export function getSanctuaryText(sanctuaryId, key, fallback = '') {
 }
 
 export function useSanctuaryText(property) {
-  const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+  const sanctuaryId = property.id === 'division-perez-zeledon'
+    ? 'division_pz'
+    : property.id === 'star-mountain'
+    ? 'star_mountain'
+    : 'la_carpintera'
 
   const getTranslation = (key, fallback) => {
     try {
