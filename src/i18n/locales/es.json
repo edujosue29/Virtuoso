@@ -52,6 +52,10 @@
       "la_carpintera": {
         "tagline": "La dualidad perfecta entre conectividad estratégica y aislamiento ecológico: un santuario de bosque nuboso dotado de soberanía absoluta en agua y energía.",
         "sanctuary_name": "Santuario del Bosque Nuboso"
+      },
+      "star_mountain": {
+        "tagline": "Donde la selva tropical abraza el Pacífico y la biodiversidad se refugia en la inmensidad.",
+        "sanctuary_name": "Santuario Privado de Vida Silvestre — Península de Nicoya"
       }
     }
   },
@@ -203,7 +207,8 @@
   },
   "sanctuary_names": {
     "la_carpintera": "La Carpintera",
-    "division_pz": "División Pérez Zeledón"
+    "division_pz": "División Pérez Zeledón",
+    "star_mountain": "Star Mountain"
   },
   "errors": {
     "not_found": "Santuario no encontrado",
@@ -505,6 +510,31 @@
           "altitude": "1,800 – 3,000 msnm"
         }
       }
+    },
+    "star_mountain": {
+      "name": "Star Mountain",
+      "sanctuary_name": "Santuario Privado de Vida Silvestre — Península de Nicoya",
+      "tagline": "Donde la selva tropical abraza el Pacífico y la biodiversidad se refugia en la inmensidad.",
+      "description": "Dos fincas contiguas de 112 ha totales en la Península de Nicoya, colindantes directamente con la Reserva Absoluta Cabo Blanco. Santuario privado de vida silvestre adyacente al Parque Nacional, con concesión de agua activa, acceso asfaltado y hotel en funcionamiento. Corredor biológico vital con abundante fauna marina, terrestre y aviaria.",
+      "location": "Malpaís, Cóbano, Puntarenas, Costa Rica",
+      "technical_area": "87 ha 2,500 m² en Cóbano. Santuario privado de vida silvestre colindante directo con Reserva Absoluta Cabo Blanco.",
+      "technical_water": "Concesión de agua superficial activa (Resolución R-0034-2020-AGUAS-MINAE) para Naciente Sin Nombre 1 (0.06 l/s) y Naciente Sin Nombre 3 (0.08 l/s). Uso Doméstico y Turístico (Hotel). Quebradas Florentina y Venegas generan sistemas de protección natural.",
+      "technical_zoning": "Residencial, Comercial, Zona Protección de Quebradas · Colinda directamente con Reserva Absoluta Cabo Blanco (SINAC).",
+      "technical_elevation": "0 – 250 msnm. Transición de bosque tropical seco a selva tropical húmeda. Temperaturas diurnas 25–33°C.",
+      "technical_biodiversity": "Corredor biológico vital integrado a Reserva Absoluta Cabo Blanco y Parque Nacional. Santuario de vida silvestre con mamíferos grandes, aves migratorias costeras y de bosque, vida marina (tiburones, mantas, tortugas, delfines, ballenas jorobadas).",
+      "technical_potential": "Cobertura máxima permitida 75%. Altura máxima 21 metros. Infraestructura de desarrollo sostenible con hotel operativo y casa de recreo existentes.",
+      "technical_privacy": "Aislamiento ecológico dentro de corredor protegido. Alta seguridad topográfica con presencia de fauna como indicador de biodiversidad robusta.",
+      "technical_logistics": "Camino de lastre frente a calle pública · Servidumbre de paso · Asfaltada hasta sitio. A 5 km de Cóbano, 40 km de Puntarenas."
+    },
+    "star_mountain_finca2": {
+      "technical_area": "25 ha 5,317 m² en Cóbano. Reserva natural de cobertura boscosa y tacotales con potencial de desarrollo de bajo impacto.",
+      "technical_water": "Río Florentine al norte · Quebrada Florentina al norte · Quebrada adicional al sur. Agua sin concesión aprobada aún (trámite pendiente).",
+      "technical_zoning": "Uso Agrícola (Parcela Agrícola), Zonas Protección de Quebradas · Área parcialmente dentro Reserva Absoluta Cabo Blanco.",
+      "technical_elevation": "0 – 240 msnm. Selva tropical húmeda. Precipitación promedio 2,680–3,000 mm anuales.",
+      "technical_biodiversity": "Abundante vida silvestre debido a colindancia directa con Parque Nacional Cabo Blanco. Primates, felinos, mamíferos, aves de bosque tropical y costeras, reptiles.",
+      "technical_potential": "Cobertura máxima permitida 25% (10% máximo para vivienda). Altura máxima 2 niveles. Potencial para ecoturismo de baja densidad.",
+      "technical_privacy": "Aislamiento ecológico dentro de corredor Cabo Blanco. Presencia de fauna diversa como indicador de integridad ecosistémica.",
+      "technical_logistics": "Camino de acceso en disputa legal. Servidumbre de paso principal aún no inscrita. Acceso: 1.5 km desde puerto de pescadores de Malpaís."
     }
   },
   "energy_tags": {
@@ -520,7 +550,9 @@
   "infrastructure": {
     "division_pz": "Servicios disponibles: Electricidad, Internet, Telefonía. Finca operativa.",
     "la_carpintera": "Paneles solares, Starlink, cobertura celular excelente, agua potable. Dos unidades habitacionales y bodegas.",
-    "la_carpintera_finca2": "Infraestructura con huella de carbono cero: 100% energía solar, vivero orgánico libre de agroquímicos, Starlink, buena cobertura celular, agua potable de manantial. Mejoras ecosistémicas para fauna."
+    "la_carpintera_finca2": "Infraestructura con huella de carbono cero: 100% energía solar, vivero orgánico libre de agroquímicos, Starlink, buena cobertura celular, agua potable de manantial. Mejoras ecosistémicas para fauna.",
+    "star_mountain": "Hotel en funcionamiento, casa de recreo, electricidad disponible, telecomunicaciones activas, agua con concesión certificada.",
+    "star_mountain_finca2": "Meseta y cresta de 400 metros despejadas. Sin infraestructura eléctrica ni agua aprobada aún (serán gestionadas posteriormente)."
   },
   "history": {
     "division_pz": {
@@ -554,7 +586,7 @@
         {
           "year": "Hoy",
           "title": "En busca de custodios",
-          "description": "Casi 600 hectáreas de bosque primario buscan un custodio consciente. Un proyecto de vida que honre el Patrimonio Mundial que esta tierra representa."
+          "description": "Casi 600 hectáreas de bosque primario y secundario buscan un custodio consciente. Un proyecto de vida que honre el Patrimonio Mundial que esta tierra representa."
         }
       ]
     },
@@ -595,6 +627,41 @@
           "year": "2024-2026",
           "title": "Ecosistema Maduro y Legado Global",
           "description": "Pleno cumplimiento del Plan de Manejo del SINAC. El terreno es hoy un laboratorio vivo que sirve de refugio a pumas, osos perezosos y más de 250 especies de aves, incluyendo el mítico Quetzal. Un activo maduro, blindado por el Estado y listo para recibir un custodio institucional a escala internacional."
+        }
+      ]
+    },
+    "star_mountain": {
+      "title": "Legado Ecológico de Península de Nicoya",
+      "timeline": [
+        {
+          "year": "~1000 a.C.",
+          "title": "Rutas Comerciales Huetar",
+          "description": "Zona mística y sagrada: Antigua ruta comercial y espiritual indígena. Territorio de Huetar transformado por presencia de agua y biodiversidad exuberante."
+        },
+        {
+          "year": "1930s–1950s",
+          "title": "Aislamiento Rural y Pioneros Ambientales",
+          "description": "Zona sur de Península prácticamente incomunicada. Nace el nombre 'Malpaís'. Nils Olof Wessberg y Karen Mogensen llegan como pioneros conservacionistas globales."
+        },
+        {
+          "year": "1963",
+          "title": "Nacimiento de Cabo Blanco",
+          "description": "Gracias a esfuerzos de Olof y Karen, gobierno declara primera área silvestre protegida de Costa Rica. Hito que marca inicio del sistema nacional de conservación."
+        },
+        {
+          "year": "1980–2000",
+          "title": "Modernización y Presión Ambiental",
+          "description": "Accesos mejoran lentamente. Ganadería y agricultura se expanden. Presión sobre corredores biológicos se intensifica. Pero Reserva Cabo Blanco permanece como refugio ecológico."
+        },
+        {
+          "year": "2000–2015",
+          "title": "Auge del Turismo y Transformación Económica",
+          "description": "Malpaís y Santa Teresa atraen surfistas globales y celebridades. Economía se transforma de agrícola a turística aceleradamente. Infraestructura hotelera emerge."
+        },
+        {
+          "year": "2015–Presente",
+          "title": "Regeneración y Consolidación Ecológica",
+          "description": "Actuales propietarios de Star Mountain asumen custodía conscientemente. Infraestructura hotelera operativa convive con regeneración forestal activa. Modelo de santuario privado integrado a Reserva Absoluta."
         }
       ]
     }
@@ -648,7 +715,7 @@
         "lifestyle": [
           "Amanecer con el coro de bosque nuboso — transición de zonas de vida entre 1,800 y 2,800 msnm",
           "Clima de eterna primavera: 15 a 22°C todo el año sin sistemas mecánicos de climatización",
-          "Caminatas en 7 km de senderos internos en bosque primario — acceso directo a las nacientes del Río División",
+          "Caminatas en 7 km de senderos internos en bosque — acceso directo a las nacientes del Río División",
           "Agua certificada de naciente propia, capturada de los torrentes acuíferos de la montaña",
           "A 2 km de la comunidad de División · 30 km (45 min) de San Gerardo de Dota · 35 km (45 min) de San Isidro",
           "Cielos estrellados sin contaminación lumínica en una de las cuencas más limpias de Centroamérica (UNESCO)",
@@ -1292,6 +1359,239 @@
             {
               "name": "El Bosque como Arquitectura",
               "description": "Plan de Manejo blinda legalmente contra expansión urbana. Bosque denso (85-90%) es el activo principal; senderos de apreciación y estanques para fauna son la arquitectura viva de la naturaleza."
+            }
+          ]
+        }
+      }
+    },
+    "star_mountain": {
+      "prosperity": {
+        "description": "Star Mountain representa dos oportunidades complementarias: activo turístico de lujo operativo (Finca 1, hotel en marcha) y tierra de regeneración natural emergente (Finca 2, precio de entrada estratégico). Juntas crean portafolio de inversión ecológica con flujo de ingresos inmediato y apreciación a largo plazo.",
+        "indicators": [
+          {
+            "label": "Superficie integrada",
+            "note": "112 ha totales en corredor estratégico de Reserva Absoluta Cabo Blanco."
+          },
+          {
+            "label": "Finca 1 operativa",
+            "note": "Hotel en funcionamiento con infraestructura lista. Acceso asfaltado, concesión agua activa, conectividad 24/7."
+          },
+          {
+            "label": "Finca 2 regenerativa",
+            "note": "Tierra de regeneración natural. Precio de $7/m² es punto de entrada pre-regularización legal."
+          },
+          {
+            "label": "Potencial constructivo Finca 1",
+            "note": "Cobertura máxima 75% permite expansión hotelera y residencial bajo marco legal."
+          },
+          {
+            "label": "Modelo de ocupación Finca 2",
+            "note": "Cobertura máxima 25%. Desarrollo de baja densidad integrado a bosque regenerativo."
+          }
+        ],
+        "issues": [
+          {
+            "problem": "Servidumbres en litigio (Finca 2)",
+            "solution": "Proceso judicial activo para inscripción dentro 12–18 meses. Resolución eliminará descuento de precio."
+          },
+          {
+            "problem": "Agua pendiente (Finca 2)",
+            "solution": "Recurso natural está disponible. Trámite administrativo con MINAE. Agua potable para operación garantizada."
+          },
+          {
+            "problem": "Remodelación hotelera necesaria",
+            "solution": "Infraestructura operativa permite ingresos inmediatos. Mejoras son oportunidades de valor, no limitantes."
+          }
+        ]
+      },
+      "ancestral": {
+        "title": "Herencia de Conservación de Península",
+        "description": "Territorio que fue cuna del sistema nacional de áreas protegidas de Costa Rica. Legado de Nils Olof Wessberg vive en esta tierra. Hoy es santuario privado que actúa como extensión terrestre de Reserva Absoluta Cabo Blanco.",
+        "architecture": [
+          {
+            "name": "Infraestructura de Sostenibilidad",
+            "description": "Hotel operativo + casa de recreo representa modelo de ocupación integrada a naturaleza. Agua certificada, energía estable, telecomunicaciones garantizan operación sin comprometer ecosistema."
+          },
+          {
+            "name": "Corredor Biológico Vivo",
+            "description": "Bosques ribereños y densos actúan como puente entre Reserva Absoluta y zona privada. Fauna se desplaza libremente. Conservación es arquitectura viva."
+          }
+        ]
+      },
+      "community_pulse": {
+        "lifestyle": [
+          "Malpaís, Santa Teresa, Cabuya y Cóbano forman uno de los corredores turísticos más dinámicos y cotizados de Costa Rica, combinando cultura del surf, costa salvaje del Pacífico y biodiversidad de la Reserva Cabo Blanco.",
+          "Surf de clase mundial: desafiar las consistentes olas de playas emblemáticas como Santa Teresa, Playa Carmen o los 'breaks' rocosos de Malpaís, zonas que atraen a surfistas de todos los niveles del planeta.",
+          "Senderismo en la Reserva Absoluta Cabo Blanco: caminar por los senderos de la primera área protegida del país.",
+          "Caminata a la Isla Cementerio de Cabuya: cruzar a pie sobre un arrecife expuesto hacia esta mística y única isla-cementerio del país.",
+          "Observación de vida silvestre: avistar la abundante fauna silvestre que habita junto al Parque Nacional Cabo Blanco.",
+          "Contemplación del océano: disfrutar de hermosas vistas del Pacífico desde una cresta despejada de 400 metros.",
+          "Relajación en la selva: escuchar los sonidos pacíficos de la selva tropical que envuelven la propiedad.",
+          "Senderismo junto al río: caminar por los senderos naturales colindantes al curso del Río Florentine."
+        ],
+        "activities": [
+          {
+            "name": "Tours guiados en Cuadraciclo",
+            "icon": "🏍️",
+            "level": "Fácil"
+          },
+          {
+            "name": "Canopy Tour (Tirolesa)",
+            "icon": "🦜",
+            "level": "Medio"
+          },
+          {
+            "name": "Excursión de Snorkling a Isla Tortuga",
+            "icon": "🤿",
+            "level": "Medio"
+          },
+          {
+            "name": "Pesca deportiva y artesanal",
+            "icon": "🎣",
+            "level": "Medio a Experto"
+          },
+          {
+            "name": "Clases de Yoga y Retiros de Bienestar",
+            "icon": "🧘",
+            "level": "Todos los niveles"
+          },
+          {
+            "name": "Visita a las Cataratas de Montezuma",
+            "icon": "💧",
+            "level": "Fácil a Medio"
+          },
+          {
+            "name": "Cabalgatas al atardecer en la playa",
+            "icon": "🐴",
+            "level": "Medio"
+          },
+          {
+            "name": "Avistamiento de vida silvestre",
+            "icon": "🦁",
+            "level": "Medio"
+          }
+        ]
+      },
+      "potencial": [
+        {
+          "icon": "sun",
+          "title": "Turismo Regenerativo de Lujo",
+          "desc": "Eco-lodge de máximo aislamiento y exclusividad. Modelo de baja densidad: retiros corporativos, sanaciones intensivas, investigación científica."
+        },
+        {
+          "icon": "tree",
+          "title": "Conservación Activa de Corredor",
+          "desc": "Custodio de corredor estratégico de Península de Nicoya. Oportunidad de alianza con SINAC/MINAE para esquemas de PSA."
+        },
+        {
+          "icon": "book",
+          "title": "Centro de Investigación Marina-Terrestre",
+          "desc": "Posición única en interfaz océano-bosque tropical. Estación biológica internacional para ciclos de vida y migraciones."
+        },
+        {
+          "icon": "leaf",
+          "title": "Santuario de Bienestar Holístico",
+          "desc": "Centros de yoga, meditación profunda y retiros de transformación fundamentados en conexión ecosistémica."
+        },
+        {
+          "icon": "globe",
+          "title": "Investigación Científica Acuática",
+          "desc": "Zona ISRA (Important Shark and Ray Areas) con poblaciones de importancia global. Oportunidades de research grants internacionales."
+        },
+        {
+          "icon": "shield",
+          "title": "Desarrollo Espiritual y Sanación",
+          "desc": "Sonidos puros de selva y océano, fauna abundante y aislamiento natural ideal para retiros espirituales internacionales."
+        },
+        {
+          "icon": "coin",
+          "title": "Integración Comunitaria",
+          "desc": "Empleos en guía naturalista, hospitalidad regenerativa, conservación. Modelo que prospera comunidad y naturaleza simultáneamente."
+        }
+      ],
+      "virtuoso_index": {
+        "descriptions": {
+          "amor": "Estar en santuario privado integrado a Reserva Absoluta Cabo Blanco es acto de amor hacia ancestrales y futuras generaciones. Elegir habitación conscientemente es manifestación de amor profundo a la tierra.",
+          "salud": "Aislamiento absoluto en bosque tropical intacto ofrece refugio de sanación mental y física. Sonidos puros de selva y aire cargado de fitocidas crean sanación somática perpetua.",
+          "sabiduria": "Modelo de ocupación de baja densidad respeta restricciones ambientales mientras genera prosperidad. Demostración que inversión ecológica conscientemente planificada es inversión inteligente.",
+          "prosperidad": "Dos canales de valor simultáneo: flujo de ingresos hotelero inmediato + apreciación territorial a largo plazo. Modelo donde naturaleza prospera = inversión prospera."
+        }
+      },
+      "legacy": {
+        "title": "Custodía en Línea de Nils Olof Wessberg",
+        "custodianName": "Propietarios Actuales",
+        "message": "Esta tierra nació del sueño de Nils Olof Wessberg de proteger la Península de Nicoya. Hoy, Star Mountain continúa ese legado como santuario privado operativo integrado a Reserva Absoluta Cabo Blanco. Se busca a quien entienda que cuidar estas tierras es heredarles al mundo su salvación."
+      },
+      "species": {
+        "pochote": {
+          "name": "Pochote",
+          "scientific": "Bombacopsis quinatum",
+          "description": "Árbol maderable característico, protegido por espinas. Especie emblema de bosque tropical.",
+          "status": "Estable",
+          "habitat": "Bosque tropical seco a transición, cercano a cursos de agua"
+        },
+        "espavel": {
+          "name": "Espavel",
+          "scientific": "Anacardium excelsum",
+          "description": "Árbol gigantesco vital para mantener cuencas hídricas. Fija nitrógeno en suelos.",
+          "status": "Estable",
+          "habitat": "Bosques ribereños, zonas de protección de quebradas"
+        },
+        "indio-desnudo": {
+          "name": "Indio Desnudo (Almácigo)",
+          "scientific": "Bursera simaruba",
+          "description": "Árbol con corteza rojiza que se despende. Madera blanda usada en construcción liviana.",
+          "status": "Estable",
+          "habitat": "Bosque tropical caducifolio y transición"
+        },
+        "madroño": {
+          "name": "Madroño",
+          "scientific": "Calycophyllum candidissimum",
+          "description": "Flores blancas vistosas en estación seca. Indicador de salud en bosques secundarios.",
+          "status": "Estable",
+          "habitat": "Bosque tropical transición, zonas de regeneración"
+        },
+        "mono-congo": {
+          "name": "Mono Congo (Aullador)",
+          "scientific": "Alouatta palliata",
+          "description": "Primate con vocalización profunda. Su presencia indica bosque maduro e integridad del corredor.",
+          "status": "Amenazado",
+          "habitat": "Doseles altos de bosque tropical, corredores ribereños"
+        },
+        "puma": {
+          "name": "Puma (León de Montaña)",
+          "scientific": "Puma concolor",
+          "description": "Gran felino solitario. Su presencia confirma corredor biológico de máxima integridad ecológica.",
+          "status": "Vulnerable",
+          "habitat": "Bosque tropical denso, corredores ribereños"
+        }
+      },
+      "fincas": {
+        "finca_1": {
+          "title": "Memoria de Comercio y Hotelería Sostenible",
+          "description": "Finca 1 representa punto de entrada con infraestructura operativa. Hotel en marcha, agua certificada, electricidad 24/7, telecomunicaciones activas. Custodia hotelera conscientemente integrada a corredor Cabo Blanco. — MEMORIA OPERATIVA · STAR MOUNTAIN",
+          "architecture": [
+            {
+              "name": "Hotel Operativo Sostenible",
+              "description": "Infraestructura hotelera existente permitiéndose reconversión hacia modelo regenerativo. Casa de recreo y servicios completos listos para operación turística."
+            },
+            {
+              "name": "Corredor Ribereño Protegido",
+              "description": "Quebradas Florentina y Venegas crean sistema natural de biodiversidad. Fauna desplázase libremente entre propiedad y Reserva Absoluta."
+            }
+          ]
+        },
+        "finca_2": {
+          "title": "Memoria de Regeneración Natural",
+          "description": "Finca 2 representa punto de regeneración. Bosques y tacotales en sucesión activa. Precio estratégico pre-regularización legal. Modelo de ocupación ligera integrada a restauración ecosistémica. — MEMORIA DE REGENERACIÓN · STAR MOUNTAIN SUR",
+          "architecture": [
+            {
+              "name": "Topografía de Oportunidad",
+              "description": "Meseta y cresta de 400 metros permiten ocupación ligera sin impactar bosque denso. Arquitectura humana es mínima; la naturaleza es infraestructura principal."
+            },
+            {
+              "name": "Bosque en Regeneración",
+              "description": "Tacotales y bosques en sucesión natural son indicadores de salud. Cada año, cobertura forestal se densifica. Investimento en regeneración multiplica valor intrínseco."
             }
           ]
         }

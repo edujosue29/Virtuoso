@@ -52,6 +52,10 @@
       "la_carpintera": {
         "tagline": "The perfect duality between strategic connectivity and ecological isolation: a cloud forest sanctuary with absolute sovereignty in water and energy.",
         "sanctuary_name": "Cloud Forest Sanctuary"
+      },
+      "star_mountain": {
+        "tagline": "Where tropical rainforest embraces the Pacific and biodiversity finds sanctuary in vastness.",
+        "sanctuary_name": "Private Wildlife Sanctuary — Nicoya Peninsula"
       }
     }
   },
@@ -203,7 +207,8 @@
   },
   "sanctuary_names": {
     "la_carpintera": "La Carpintera",
-    "division_pz": "División Pérez Zeledón"
+    "division_pz": "División Pérez Zeledón",
+    "star_mountain": "Star Mountain"
   },
   "errors": {
     "not_found": "Sanctuary not found",
@@ -249,6 +254,31 @@
       "technical_potential": "Ideal for wellness projects. 10+ years free of agrochemicals creates unmatched soil chemical purity. Eligible for Organic Agriculture or Biodiversity Sanctuary certification.",
       "technical_privacy": "Natural fortress guarded since 2016 against illegal logging and hunting. Very high forest density creates atmosphere of silence, deep peace, and total isolation.",
       "technical_logistics": "Paved road with final 400m on private gravel road (4x4). 10 minutes from San Rafael, less than 1 hour from Juan Santamaría International Airport."
+    },
+    "star_mountain": {
+      "name": "Star Mountain",
+      "sanctuary_name": "Private Wildlife Sanctuary — Nicoya Peninsula",
+      "tagline": "Where tropical rainforest embraces the Pacific and biodiversity finds sanctuary in vastness.",
+      "description": "Twin contiguous fincas totaling 112 hectares on the Nicoya Peninsula, directly bordering the Cabo Blanco Absolute Reserve. Private wildlife sanctuary adjacent to a national park, with active water concession, paved access, and operational hotel infrastructure. Vital biological corridor with abundant marine, terrestrial, and avian fauna.",
+      "location": "Malpaís, Cóbano, Puntarenas, Costa Rica",
+      "technical_area": "87.25 hectares in Cóbano. Private wildlife sanctuary in direct border with Cabo Blanco Absolute Reserve.",
+      "technical_water": "Active surface water concession (Resolution R-0034-2020-AGUAS-MINAE) for springs—Unnamed Source 1 (0.06 l/s) and Unnamed Source 3 (0.08 l/s). Domestic and tourist (hotel) use. Florentina and Venegas creeks provide natural riparian protection systems.",
+      "technical_zoning": "Residential, Commercial, Riparian Buffer Zone · Directly borders Cabo Blanco Absolute Reserve (SINAC).",
+      "technical_elevation": "0 – 250 meters MSL. Transition from dry tropical forest to humid tropical rainforest. Daytime temperatures 25–33°C.",
+      "technical_biodiversity": "Vital biological corridor integrated with Cabo Blanco Absolute Reserve and national park. Wildlife sanctuary harboring large mammals, migratory forest and coastal birds, marine fauna (sharks, rays, sea turtles, dolphins, humpback whales in migration).",
+      "technical_potential": "Maximum 75% land coverage permitted. Maximum height 21 meters. Sustainable development infrastructure with operational hotel and recreational house.",
+      "technical_privacy": "Ecological isolation within protected corridor. High topographic security with wildlife presence as biodiversity robustness indicator.",
+      "technical_logistics": "Gravel access frontage to public road · Right-of-way easement · Paved access to property. 5 km from Cóbano, 40 km from Puntarenas."
+    },
+    "star_mountain_finca2": {
+      "technical_area": "25.53 hectares in Cóbano. Natural reserve of forest cover and secondary growth with sustainable development potential.",
+      "technical_water": "Florentine River to the north · Florentina Creek to the north · Additional creek to the south. Water without active concession yet (MINAE application pending).",
+      "technical_zoning": "Agricultural use (agricultural plot), Riparian Buffer Zones · Area partially within Cabo Blanco Absolute Reserve.",
+      "technical_elevation": "0 – 240 meters MSL. Tropical rainforest. Average precipitation 2,680–3,000 mm annually.",
+      "technical_biodiversity": "Abundant wildlife due to direct border with Cabo Blanco National Park. Primates, felids, mammals, forest and coastal birds, native reptiles.",
+      "technical_potential": "Maximum 25% land coverage (10% maximum residential). Height limit 2 levels. Potential for low-density ecotourism.",
+      "technical_privacy": "Ecological isolation within Cabo Blanco corridor. Diverse fauna presence indicates ecosystem integrity.",
+      "technical_logistics": "Access road in active legal dispute. Primary access easement not yet formally registered. Current access: 1.5 km from Malpaís fishing port."
     }
   },
   "energy_tags": {
@@ -264,7 +294,9 @@
   "infrastructure": {
     "division_pz": "Available services: Electricity, Internet, Telephone. Operational property.",
     "la_carpintera": "Solar panels, Starlink, excellent cellular coverage, drinking water. Two residential units and storage buildings.",
-    "la_carpintera_finca2": "Carbon-zero infrastructure: 100% solar energy, organic nursery free of agrochemicals, Starlink, good cellular coverage, spring water, wildlife support ecosystem improvements."
+    "la_carpintera_finca2": "Carbon-zero infrastructure: 100% solar energy, organic nursery free of agrochemicals, Starlink, good cellular coverage, spring water, wildlife support ecosystem improvements.",
+    "star_mountain": "Operational hotel, recreational house, electricity available 24/7, active telecommunications, certified water concession.",
+    "star_mountain_finca2": "Cleared plateau and 400-meter ridge with development potential. No electrical infrastructure or approved water (both to be arranged post-acquisition)."
   },
   "history": {
     "division_pz": {
@@ -298,7 +330,7 @@
         {
           "year": "Today",
           "title": "In Search of Custodians",
-          "description": "Nearly 600 hectares of primary forest seek a conscious custodian. A life project that honors the World Heritage that this land represents."
+          "description": "Nearly 600 hectares of primary and secondary forest seek a conscious custodian. A life project that honors the World Heritage that this land represents."
         }
       ]
     },
@@ -339,6 +371,41 @@
           "year": "2024–2026",
           "title": "Mature Ecosystem and Global Legacy",
           "description": "Full compliance with SINAC Management Plan. The land is now a living laboratory serving as refuge for pumas, sloths and over 250 bird species, including the mythical Resplendent Quetzal. A mature asset, protected by the State and ready to receive an institutional custodian on an international scale."
+        }
+      ]
+    },
+    "star_mountain": {
+      "title": "Ecological Legacy of the Nicoya Peninsula",
+      "timeline": [
+        {
+          "year": "~1000 BCE",
+          "title": "Ancestral Huétar Trade Routes",
+          "description": "Mystical and sacred territory: Ancient indigenous commercial and spiritual route. Land transformed by abundant water and exuberant biodiversity."
+        },
+        {
+          "year": "1930s–1950s",
+          "title": "Rural Isolation and Environmental Pioneers",
+          "description": "Southern peninsula nearly cut off from the country. Nils Olof Wessberg and Karen Mogensen arrive as pioneering global conservationists."
+        },
+        {
+          "year": "1963",
+          "title": "Birth of Cabo Blanco",
+          "description": "Through Olof and Karen's efforts, government declares Costa Rica's first protected wilderness area. Milestone marking the beginning of the national conservation system."
+        },
+        {
+          "year": "1980–2000",
+          "title": "Modernization and Environmental Pressure",
+          "description": "Land access slowly improves. Ranching and agriculture expand. Pressure on biological corridors intensifies, yet Cabo Blanco Reserve remains ecological refuge."
+        },
+        {
+          "year": "2000–2015",
+          "title": "Surf Boom and Economic Transformation",
+          "description": "Malpaís and Santa Teresa attract global surfers and celebrities. Economy rapidly transforms from agricultural to tourism-driven. Boutique hotel infrastructure emerges."
+        },
+        {
+          "year": "2015–Present",
+          "title": "Regeneration and Ecological Consolidation",
+          "description": "Current Star Mountain custodians assume conscious stewardship. Operational hotel infrastructure coexists with active forest regeneration. Model of private sanctuary integrated with Absolute Reserve."
         }
       ]
     }
@@ -392,7 +459,7 @@
         "lifestyle": [
           "Awake with cloud forest chorus — transition of life zones between 1,800 and 2,800 msnm",
           "Eternal spring climate: 15 to 22°C year-round without mechanical air conditioning",
-          "Hikes on 7 km of internal trails in primary forest — direct access to División River springs",
+          "Hikes on 7 km of internal trails in forest — direct access to División River springs",
           "Certified water from private spring, captured from mountain water torrents",
           "At 2 km from División community · 30 km (45 min) from San Gerardo de Dota · 35 km (45 min) from San Isidro",
           "Starlit skies without light pollution in one of Central America's cleanest basins (UNESCO)",
@@ -1036,6 +1103,239 @@
             {
               "name": "Forest as Architecture",
               "description": "Management Plan legally protects against urban expansion. Dense forest (85-90%) is the main asset; appreciation trails and fauna ponds are the living architecture of nature."
+            }
+          ]
+        }
+      }
+    },
+    "star_mountain": {
+      "prosperity": {
+        "description": "Star Mountain represents two complementary opportunities: operational luxury tourism asset (Finca 1, working hotel) and emerging regeneration land (Finca 2, strategic entry price). Together they create ecological investment portfolio with immediate cash flow and long-term appreciation.",
+        "indicators": [
+          {
+            "label": "Integrated landholding",
+            "note": "112 total hectares in strategic Cabo Blanco Absolute Reserve corridor."
+          },
+          {
+            "label": "Finca 1 operational",
+            "note": "Working hotel with complete infrastructure. Paved access, active water concession, 24/7 connectivity."
+          },
+          {
+            "label": "Finca 2 regenerative",
+            "note": "Regenerating natural land. Current $7/m² is strategic pre-legalization entry point."
+          },
+          {
+            "label": "Finca 1 development potential",
+            "note": "Maximum 75% coverage allows hotel expansion and residential development under legal framework."
+          },
+          {
+            "label": "Finca 2 occupancy model",
+            "note": "Maximum 25% coverage. Low-density development integrated with regenerating forest."
+          }
+        ],
+        "issues": [
+          {
+            "problem": "Disputed easements (Finca 2)",
+            "solution": "Active legal proceeding for formal inscription within 12–18 months. Resolution will eliminate price discount."
+          },
+          {
+            "problem": "Water pending (Finca 2)",
+            "solution": "Natural resource available from rivers and creeks. Administrative process with MINAE. Operational water guaranteed."
+          },
+          {
+            "problem": "Hotel renovation required",
+            "solution": "Operational infrastructure allows immediate income generation. Improvements are value-capture opportunities, not limitations."
+          }
+        ]
+      },
+      "ancestral": {
+        "title": "Peninsula Conservation Heritage",
+        "description": "Territory that birthed Costa Rica's national protected areas system. The legacy of Nils Olof Wessberg lives in this land. Today it serves as private sanctuary functioning as terrestrial extension of Cabo Blanco Absolute Reserve.",
+        "architecture": [
+          {
+            "name": "Sustainable Infrastructure",
+            "description": "Operational hotel + recreational house represents conscious occupancy model integrated with nature. Certified water, stable energy, telecommunications enable operations without ecosystem compromise."
+          },
+          {
+            "name": "Living Biological Corridor",
+            "description": "Riparian forests serve as bridge between Absolute Reserve and private lands. Wildlife moves freely. Conservation is living architecture."
+          }
+        ]
+      },
+      "community_pulse": {
+        "lifestyle": [
+          "Malpaís, Santa Teresa, Cabuya, and Cóbano form one of Costa Rica's most dynamic and coveted tourism corridors, blending surf culture, wild Pacific coastline, and Cabo Blanco Reserve biodiversity.",
+          "World-class surfing: challenge the consistent waves at iconic beaches like Santa Teresa and Playa Carmen, or the rocky breaks of Malpaís—attracting surfers of all levels from around the globe.",
+          "Hiking in Cabo Blanco Absolute Reserve: walk the trails of Costa Rica's first protected wildland area.",
+          "Cabuya Cemetery Island walk: cross an exposed reef on foot to this mystical and unique island-cemetery of the country.",
+          "Wildlife observation: encounter the abundant wildlife inhabiting the Cabo Blanco National Park periphery.",
+          "Ocean contemplation: enjoy stunning Pacific views from a pristine 400-meter ridge clearing.",
+          "Rainforest relaxation: immerse in the peaceful sounds of tropical forest surrounding the property.",
+          "Riverside hiking: walk natural trails along the course of the Florentine River."
+        ],
+        "activities": [
+          {
+            "name": "Guided ATV Tours",
+            "icon": "🏍️",
+            "level": "Easy"
+          },
+          {
+            "name": "Canopy Tour (Zip-line)",
+            "icon": "🦜",
+            "level": "Moderate"
+          },
+          {
+            "name": "Snorkeling Expedition to Tortuga Island",
+            "icon": "🤿",
+            "level": "Moderate"
+          },
+          {
+            "name": "Sport & Traditional Fishing",
+            "icon": "🎣",
+            "level": "Moderate to Expert"
+          },
+          {
+            "name": "Yoga Classes & Wellness Retreats",
+            "icon": "🧘",
+            "level": "All Levels"
+          },
+          {
+            "name": "Montezuma Waterfall Visit",
+            "icon": "💧",
+            "level": "Easy to Moderate"
+          },
+          {
+            "name": "Sunset Beach Horseback Rides",
+            "icon": "🐴",
+            "level": "Moderate"
+          },
+          {
+            "name": "Wildlife Observation Excursions",
+            "icon": "🦁",
+            "level": "Moderate"
+          }
+        ]
+      },
+      "potencial": [
+        {
+          "icon": "sun",
+          "title": "Regenerative Luxury Ecotourism",
+          "desc": "Eco-lodge of maximum isolation and exclusivity. Low-density model: corporate retreats, intensive healing programs, scientific research."
+        },
+        {
+          "icon": "tree",
+          "title": "Active Corridor Conservation",
+          "desc": "Strategic corridor steward for Nicoya Peninsula. Alliance opportunity with SINAC/MINAE for payment-for-ecosystem-services schemes."
+        },
+        {
+          "icon": "book",
+          "title": "Marine-Terrestrial Research Hub",
+          "desc": "Unique ocean-rainforest interface position. International biological station for lifecycle research and fauna migration studies."
+        },
+        {
+          "icon": "leaf",
+          "title": "Holistic Wellness Sanctuary",
+          "desc": "Yoga centers, deep meditation, personal transformation retreats grounded in ecosystem connection and natural soundscapes."
+        },
+        {
+          "icon": "globe",
+          "title": "Global Aquatic Research",
+          "desc": "ISRA zone (Important Shark and Ray Areas) with populations of international significance. International research grant opportunities."
+        },
+        {
+          "icon": "shield",
+          "title": "Spiritual Development & Healing",
+          "desc": "Pure jungle and ocean soundscapes, abundant wildlife, absolute isolation ideal for international spiritual retreats and facilitative lodging."
+        },
+        {
+          "icon": "coin",
+          "title": "Community Employment",
+          "desc": "Green jobs in nature guiding, regenerative hospitality, wildlife monitoring. Model where community and nature thrive together."
+        }
+      ],
+      "virtuoso_index": {
+        "descriptions": {
+          "amor": "Inhabiting private sanctuary integrated with Cabo Blanco Absolute Reserve—the first protected area in Costa Rica—is an act of love toward ancestors and future generations. Conscious occupancy is manifestation of deep love for the living earth.",
+          "salud": "Absolute isolation in intact tropical rainforest offers refuge for mental and physical healing. Pure jungle soundscape and air-borne phytoncides create ongoing somatic restoration.",
+          "sabiduria": "Low-density occupancy model respects environmental constraints while generating prosperity. Proof that consciously planned ecological investment is intelligent investment.",
+          "prosperidad": "Dual value channels: immediate hotel revenue stream + long-term territorial appreciation. Model where nature thrives = investment thrives."
+        }
+      },
+      "legacy": {
+        "title": "Stewardship in Line with Nils Olof Wessberg",
+        "custodianName": "Current Custodians",
+        "message": "This land was born from Nils Olof Wessberg's vision to protect the Nicoya Peninsula. Today, Star Mountain continues that legacy as operational private sanctuary integrated with Cabo Blanco Absolute Reserve. Current stewards offer complete technical accompaniment in transition: hotel operations, environmental regulations, fauna cycles, tourism patterns, infrastructure sustainability. We seek those who understand that caring for these lands is the highest inheritance we can leave the world."
+      },
+      "species": {
+        "pochote": {
+          "name": "Pochote",
+          "scientific": "Bombacopsis quinatum",
+          "description": "Emblematic hardwood tree, protected by thorns. Iconic species of tropical dry forest.",
+          "status": "Stable",
+          "habitat": "Tropical dry to transition forest near water courses"
+        },
+        "espavel": {
+          "name": "Espavel",
+          "scientific": "Anacardium excelsum",
+          "description": "Massive tree vital to watershed integrity. Nitrogen fixer in soils.",
+          "status": "Stable",
+          "habitat": "Riparian forests, stream protection zones"
+        },
+        "indio-desnudo": {
+          "name": "Naked Indian (Almond Wood)",
+          "scientific": "Bursera simaruba",
+          "description": "Tree with distinctive red bark that peels. Soft wood historically used in light construction.",
+          "status": "Stable",
+          "habitat": "Tropical dry to transition forest, natural regeneration"
+        },
+        "madroño": {
+          "name": "Madroño",
+          "scientific": "Calycophyllum candidissimum",
+          "description": "Conspicuous white flowers during dry season. Indicator of secondary forest health.",
+          "status": "Stable",
+          "habitat": "Tropical transition forest, regenerating zones"
+        },
+        "mono-congo": {
+          "name": "Howler Monkey",
+          "scientific": "Alouatta palliata",
+          "description": "Primate with deep resonant vocalizations. Presence indicates mature forest and corridor integrity.",
+          "status": "Threatened",
+          "habitat": "High forest canopy, riparian corridors"
+        },
+        "puma": {
+          "name": "Puma (Mountain Lion)",
+          "scientific": "Puma concolor",
+          "description": "Solitary, elusive great cat. Presence confirms maximum biological corridor integrity.",
+          "status": "Vulnerable",
+          "habitat": "Dense tropical forest, riparian corridors"
+        }
+      },
+      "fincas": {
+        "finca_1": {
+          "title": "Heritage of Commerce and Sustainable Hospitality",
+          "description": "Finca 1 represents entry point with operational infrastructure. Working hotel, certified water, 24/7 electricity, active telecommunications. Conscious hotel stewardship integrated with Cabo Blanco corridor. — OPERATIONAL MEMORY · STAR MOUNTAIN",
+          "architecture": [
+            {
+              "name": "Sustainable Hotel Operations",
+              "description": "Existing hotel infrastructure enabling transition toward regenerative model. Recreational house and complete services ready for tourism operations."
+            },
+            {
+              "name": "Protected Riparian Corridor",
+              "description": "Florentina and Venegas creeks create natural biodiversity system. Wildlife moves freely between property and Absolute Reserve."
+            }
+          ]
+        },
+        "finca_2": {
+          "title": "Memory of Natural Regeneration",
+          "description": "Finca 2 represents regeneration opportunity. Forests and secondary growth in active succession. Strategic price pre-legalization. Light occupancy model integrated with ecosystem restoration. — REGENERATION MEMORY · STAR MOUNTAIN SUR",
+          "architecture": [
+            {
+              "name": "Topography of Possibility",
+              "description": "Cleared plateau and 400-meter ridge allow light occupancy without impacting dense forest. Human architecture minimal; nature is primary infrastructure."
+            },
+            {
+              "name": "Regenerating Forest",
+              "description": "Secondary growth and forests in natural succession indicate health. Annual forest coverage intensifies. Investment in regeneration multiplies intrinsic value."
             }
           ]
         }
