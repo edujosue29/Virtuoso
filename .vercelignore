@@ -1,11 +1,14 @@
-node_modules
-multimedia
-.claude
+# Only exclude dependencies and build artifacts
+node_modules/
+dist/
+.git/
+.claude/
+
+# Exclude multimedia source (images are in public/)
+multimedia/
+
+# Exclude sensitive files
 *.xlsx
 *.xls
-
-# Include all public assets for production
-!public/**
-!public/images/**
-!public/videos/**
-!public/docs/**
+.env
+.env.local
