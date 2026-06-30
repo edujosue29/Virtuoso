@@ -3,4 +3,9 @@ multimedia
 .claude
 *.xlsx
 *.xls
+
+# Include all public assets for production
+!public/**
+!public/images/**
+!public/videos/**
 !public/docs/**
