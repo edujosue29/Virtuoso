@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 const CONSERVATION_IMAGE = '/images/division/ca.jpeg'
 
 // ═════════════════════════════════════════════════════════════════════════════
 // CLEAN STATIC CAROUSEL — Static design with icon row and hover effects
 // ═════════════════════════════════════════════════════════════════════════════
-function StaticConservationSection({ indicators, cream, dark }) {
+function StaticConservationSection({ indicators, cream, dark, backgroundImage }) {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
@@ -22,7 +23,7 @@ function StaticConservationSection({ indicators, cream, dark }) {
     >
       {/* ──── Full-Width Image (No Parallax) ──── */}
       <img
-        src={CONSERVATION_IMAGE}
+        src={backgroundImage || CONSERVATION_IMAGE}
         alt="Conservación Activa"
         style={{
           position: 'absolute',
@@ -47,7 +48,7 @@ function StaticConservationSection({ indicators, cream, dark }) {
         }}
       />
 
-      {/* ──── Center Row: 5 Icons (Horizontal Layout) ──── */}
+      {/* ──── Center Row: 6 Icons (Horizontal Layout) ──── */}
       <div
         style={{
           position: 'absolute',
@@ -55,9 +56,12 @@ function StaticConservationSection({ indicators, cream, dark }) {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           display: 'flex',
-          gap: '1.5rem',
+          gap: '1rem',
           zIndex: 10,
           alignItems: 'center',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          maxWidth: '90%',
         }}
       >
         {indicators.map((ind, i) => (
@@ -78,8 +82,8 @@ function StaticConservationSection({ indicators, cream, dark }) {
             {/* Icon Circle */}
             <div
               style={{
-                width: 70,
-                height: 70,
+                width: 56,
+                height: 56,
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
@@ -90,7 +94,7 @@ function StaticConservationSection({ indicators, cream, dark }) {
                   ? '0 0 24px rgba(201,168,76,0.4)'
                   : 'inset 0 1px 4px rgba(255,255,255,0.1), 0 0 12px rgba(201,168,76,0.15)',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                marginBottom: '0.8rem',
+                marginBottom: '0.6rem',
               }}
             >
               {/* SVG Icon */}
@@ -110,14 +114,14 @@ function StaticConservationSection({ indicators, cream, dark }) {
             <h4
               style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '0.95rem',
+                fontSize: '0.85rem',
                 fontWeight: 500,
                 color: cream,
-                lineHeight: 1.3,
+                lineHeight: 1.2,
                 margin: 0,
                 letterSpacing: '0.3px',
                 textShadow: '0 2px 4px rgba(0,0,0,0.2)',
-                maxWidth: 110,
+                maxWidth: 95,
               }}
             >
               {ind.label}
@@ -143,33 +147,39 @@ function StaticConservationSection({ indicators, cream, dark }) {
 
 // Minimal SVG icons — one per indicator
 const ICONS = [
-  // Compass / ecoturismo
+  // Compass / Turismo de Lujo y Bienestar
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"/>
     <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
   </svg>,
-  // Leaf / organic
+  // Leaf / Conservación Ambiental Activa
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
   </svg>,
-  // Tree / PSA
+  // Building / Hotelería Ecológica Boutique
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 5c4 0 8 3 8 7z"/>
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </svg>,
+  // Microscope / Investigación Científica
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 9c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2z"/>
+    <path d="M9 5v14M9 19l-3 3m6 0l3-3"/>
+    <circle cx="9" cy="9" r="0"/>
+  </svg>,
+  // Leaf Circuit / Infraestructura Verde Autosostenible
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22V12"/>
+    <path d="M12 12C12 7 8 4 4 5c4 0 8 3 8 7z"/>
     <path d="M12 12C12 7 16 4 20 5c-4 0-8 3-8 7z"/>
     <path d="M12 12c0 5-3 8-7 9 4-1 7-4 7-9z"/>
     <path d="M12 12c0 5 3 8 7 9-4-1-7-4-7-9z"/>
   </svg>,
-  // Globe / UNESCO
+  // TrendingUp / Alta Plusvalía
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-  </svg>,
-  // People / community
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-    <circle cx="9" cy="7" r="4"/>
-    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+    <polyline points="17 6 23 6 23 12"/>
   </svg>,
 ]
 
@@ -272,18 +282,15 @@ export default function LocalProsperity({ property, finca, dark }) {
   const prosperityRaw = finca?.prosperity ?? property.prosperity
   const img = sectionImages?.prosperity || CONSERVATION_IMAGE
 
-  const getSanctuaryKey = () => {
-    if (slug === 'division-perez-zeledon') return 'division_pz'
-    if (slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   // Translate prosperity data using array index
   const prosperity = prosperityRaw ? {
     ...prosperityRaw,
-    description: t(`sections.${getSanctuaryKey()}.prosperity.description`),
-    indicators: (t(`sections.${getSanctuaryKey()}.prosperity.indicators`, { returnObjects: true }) || []),
-    issues: (t(`sections.${getSanctuaryKey()}.prosperity.issues`, { returnObjects: true }) || []),
+    description: t(`sections.${sanctuaryKey}.prosperity.description`),
+    indicators: (t(`sections.${sanctuaryKey}.prosperity.indicators`, { returnObjects: true }) || []),
+    issues: (t(`sections.${sanctuaryKey}.prosperity.issues`, { returnObjects: true }) || []),
   } : prosperityRaw
 
   const cream = '#faf9f6'
@@ -376,34 +383,9 @@ export default function LocalProsperity({ property, finca, dark }) {
         </motion.div>
 
         {/* ──── STATIC CONSERVATION SECTION ──── */}
-        <StaticConservationSection indicators={prosperity.indicators} cream={cream} dark={dark} />
+        <StaticConservationSection indicators={prosperity.indicators} cream={cream} dark={dark} backgroundImage={img} />
 
       </motion.div>
-
-      {/* ── Desafíos ─────────────────────────────────────────────────────── */}
-      <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        style={{
-          fontFamily: '"Playfair Display", "Cormorant Garamond", serif',
-          fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-          fontWeight: 700,
-          color: cream,
-          letterSpacing: '-0.01em',
-          marginBottom: '3rem',
-          margin: '4rem 0 3rem 0',
-        }}
-      >
-        {t('prosperity.community_benefits')}
-      </motion.h3>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
-        {prosperity.issues.map((item, i) => (
-          <AccordionItem key={i} item={item} index={i} dark={dark} />
-        ))}
-      </div>
     </div>
   )
 }

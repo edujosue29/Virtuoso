@@ -631,37 +631,37 @@
       ]
     },
     "star_mountain": {
-      "title": "Legado Ecológico de Península de Nicoya",
+      "title": "Historia de Malpaís — Star Mountain",
       "timeline": [
         {
-          "year": "~1000 a.C.",
-          "title": "Rutas Comerciales Huetar",
-          "description": "Zona mística y sagrada: Antigua ruta comercial y espiritual indígena. Territorio de Huetar transformado por presencia de agua y biodiversidad exuberante."
+          "year": "1930s",
+          "title": "Orígenes y aislamiento rural",
+          "description": "La zona sur de la Península de Nicoya era un territorio prácticamente incomunicado del resto del país. En esta época nace la leyenda del nombre de Malpaís, acuñado tras el descontento de un sacerdote local con los pocos pobladores de la costa. La comunidad dependía enteramente de trillos a caballo, carretas de bueyes y una economía de subsistencia."
         },
         {
-          "year": "1930s–1950s",
-          "title": "Aislamiento Rural y Pioneros Ambientales",
-          "description": "Zona sur de Península prácticamente incomunicada. Nace el nombre 'Malpaís'. Nils Olof Wessberg y Karen Mogensen llegan como pioneros conservacionistas globales."
+          "year": "1950s",
+          "title": "La llegada de los pioneros ambientales",
+          "description": "El ciudadano sueco Nils Olof Wessberg y su esposa danesa Karen Mogensen se asientan de manera permanente en la región. Al ser testigos de la acelerada deforestación de los bosques primarios provocada por la fuerte expansión ganadera de mediados de siglo, inician un movimiento civil y recolectan fondos internacionales para comprar terrenos estratégicos antes de que sean talados."
         },
         {
           "year": "1963",
-          "title": "Nacimiento de Cabo Blanco",
-          "description": "Gracias a esfuerzos de Olof y Karen, gobierno declara primera área silvestre protegida de Costa Rica. Hito que marca inicio del sistema nacional de conservación."
+          "title": "Hito ecológico con la creación de Cabo Blanco",
+          "description": "Gracias a la incansable presión de Olof y Karen, el gobierno declara oficialmente la Reserva Natural Absoluta Cabo Blanco. Al convertirse en la primera área silvestre protegida de Costa Rica, este hito marcó el 'kilómetro cero' del sistema de conservación nacional, sirviendo de inspiración para el modelo ecológico que hoy define al país a nivel mundial."
         },
         {
-          "year": "1980–2000",
-          "title": "Modernización y Presión Ambiental",
-          "description": "Accesos mejoran lentamente. Ganadería y agricultura se expanden. Presión sobre corredores biológicos se intensifica. Pero Reserva Cabo Blanco permanece como refugio ecológico."
+          "year": "1995",
+          "title": "Transición comercial y ordenamiento topográfico",
+          "description": "Hacia finales del siglo XX, la zona empieza a formalizar la división de sus tierras y fincas históricas a través de levantamientos técnicos oficiales, registrándose planos catastrados clave para definir la topografía y linderos de MalPais. El transporte de mercancías con Puntarenas deja de depender exclusivamente de lanchas y bongos marítimos a medida que mejoran lentamente los accesos por tierra."
         },
         {
-          "year": "2000–2015",
-          "title": "Auge del Turismo y Transformación Económica",
-          "description": "Malpaís y Santa Teresa atraen surfistas globales y celebridades. Economía se transforma de agrícola a turística aceleradamente. Infraestructura hotelera emerge."
+          "year": "2000-2010",
+          "title": "El auge del surf y el bienestar",
+          "description": "Malpaís y las playas colindantes sufren una metamorfosis radical. La espectacularidad de sus olas y su mística de aislamiento natural atraen a surfistas de todo el mundo, celebridades y proyectos inmobiliarios boutique. La antigua economía agrícola y pesquera se transforma de manera acelerada en un nodo global de turismo ecológico, centros de yoga y retiros espirituales."
         },
         {
-          "year": "2015–Presente",
-          "title": "Regeneración y Consolidación Ecológica",
-          "description": "Actuales propietarios de Star Mountain asumen custodía conscientemente. Infraestructura hotelera operativa convive con regeneración forestal activa. Modelo de santuario privado integrado a Reserva Absoluta."
+          "year": "2020s",
+          "title": "Desafíos del desarrollo sostenible actual",
+          "description": "La fuerte dinámica inmobiliaria costera continúa con la adquisición y traspaso de grandes propiedades rurales hacia nuevas sociedades comerciales en MalPais. El desarrollo actual de la zona se enfoca en resolver desafíos críticos de infraestructura para equilibrar el crecimiento con la protección del entorno, incluyendo litigios vecinales para la formalización de servidumbres de acceso, la apertura de tendidos eléctricos y la gestión planificada del agua."
         }
       ]
     }
@@ -1366,43 +1366,28 @@
     },
     "star_mountain": {
       "prosperity": {
-        "description": "Star Mountain representa dos oportunidades complementarias: activo turístico de lujo operativo (Finca 1, hotel en marcha) y tierra de regeneración natural emergente (Finca 2, precio de entrada estratégico). Juntas crean portafolio de inversión ecológica con flujo de ingresos inmediato y apreciación a largo plazo.",
+        "description": "Potencial inigualable para el establecimiento de santuarios ecológicos privados debido a la colindancia directa al sur con la Reserva Absoluta Cabo Blanco y al norte con el río Florentine, garantizando un corredor biológico natural para la abundante vida silvestre.",
         "indicators": [
           {
-            "label": "Superficie integrada",
-            "note": "112 ha totales en corredor estratégico de Reserva Absoluta Cabo Blanco."
+            "label": "Turismo de Lujo y de Bienestar (Wellness)"
           },
           {
-            "label": "Finca 1 operativa",
-            "note": "Hotel en funcionamiento con infraestructura lista. Acceso asfaltado, concesión agua activa, conectividad 24/7."
+            "label": "Conservación Ambiental Activa"
           },
           {
-            "label": "Finca 2 regenerativa",
-            "note": "Tierra de regeneración natural. Precio de $7/m² es punto de entrada pre-regularización legal."
+            "label": "Hotelería Ecológica Boutique y Agroturismo"
           },
           {
-            "label": "Potencial constructivo Finca 1",
-            "note": "Cobertura máxima 75% permite expansión hotelera y residencial bajo marco legal."
+            "label": "Investigación Científica y Proyectos Educativos"
           },
           {
-            "label": "Modelo de ocupación Finca 2",
-            "note": "Cobertura máxima 25%. Desarrollo de baja densidad integrado a bosque regenerativo."
+            "label": "Infraestructura Verde Autosostenible"
+          },
+          {
+            "label": "Alta Plusvalía"
           }
         ],
-        "issues": [
-          {
-            "problem": "Servidumbres en litigio (Finca 2)",
-            "solution": "Proceso judicial activo para inscripción dentro 12–18 meses. Resolución eliminará descuento de precio."
-          },
-          {
-            "problem": "Agua pendiente (Finca 2)",
-            "solution": "Recurso natural está disponible. Trámite administrativo con MINAE. Agua potable para operación garantizada."
-          },
-          {
-            "problem": "Remodelación hotelera necesaria",
-            "solution": "Infraestructura operativa permite ingresos inmediatos. Mejoras son oportunidades de valor, no limitantes."
-          }
-        ]
+        "issues": []
       },
       "ancestral": {
         "title": "Herencia de Conservación de Península",
@@ -1420,14 +1405,14 @@
       },
       "community_pulse": {
         "lifestyle": [
-          "Malpaís, Santa Teresa, Cabuya y Cóbano forman uno de los corredores turísticos más dinámicos y cotizados de Costa Rica, combinando cultura del surf, costa salvaje del Pacífico y biodiversidad de la Reserva Cabo Blanco.",
-          "Surf de clase mundial: desafiar las consistentes olas de playas emblemáticas como Santa Teresa, Playa Carmen o los 'breaks' rocosos de Malpaís, zonas que atraen a surfistas de todos los niveles del planeta.",
-          "Senderismo en la Reserva Absoluta Cabo Blanco: caminar por los senderos de la primera área protegida del país.",
-          "Caminata a la Isla Cementerio de Cabuya: cruzar a pie sobre un arrecife expuesto hacia esta mística y única isla-cementerio del país.",
-          "Observación de vida silvestre: avistar la abundante fauna silvestre que habita junto al Parque Nacional Cabo Blanco.",
-          "Contemplación del océano: disfrutar de hermosas vistas del Pacífico desde una cresta despejada de 400 metros.",
-          "Relajación en la selva: escuchar los sonidos pacíficos de la selva tropical que envuelven la propiedad.",
-          "Senderismo junto al río: caminar por los senderos naturales colindantes al curso del Río Florentine."
+          "Malpaís, Santa Teresa, Cabuya y Cóbano forman uno de los corredores turísticos más dinámicos y cotizados de Costa Rica. Combinando la cultura del surf, la costa salvaje del Pacífico y la biodiversidad de la Reserva Cabo Blanco.",
+          "Surf de clase mundial: Desafiar las consistentes olas de playas emblemáticas como Santa Teresa, Playa Carmen o los 'breaks' rocosos de Malpaís, zonas que atraen a surfistas de todos los niveles del planeta.",
+          "Senderismo en la Reserva Absoluta Cabo Blanco: Caminar por los senderos de la primera área protegida del país.",
+          "Caminata a la Isla Cementerio de Cabuya: Cruzar a pie sobre un arrecife expuesto hacia esta mística y única isla-cementerio del país.",
+          "Observación de vida silvestre: Puedes avistar la abundante fauna silvestre que habita junto al Parque Nacional Cabo Blanco.",
+          "Contemplación del océano: Disfruta de hermosas vistas del Pacífico desde una cresta despejada de 400 metros.",
+          "Relajación en la selva: Escucha los sonidos pacíficos de la selva tropical que envuelven la propiedad.",
+          "Senderismo junto al río: Camina por los senderos naturales colindantes al curso del Río Florentine."
         ],
         "activities": [
           {
@@ -1463,11 +1448,6 @@
           {
             "name": "Cabalgatas al atardecer en la playa",
             "icon": "🐴",
-            "level": "Medio"
-          },
-          {
-            "name": "Avistamiento de vida silvestre",
-            "icon": "🦁",
             "level": "Medio"
           }
         ]
@@ -1511,10 +1491,10 @@
       ],
       "virtuoso_index": {
         "descriptions": {
-          "amor": "Estar en santuario privado integrado a Reserva Absoluta Cabo Blanco es acto de amor hacia ancestrales y futuras generaciones. Elegir habitación conscientemente es manifestación de amor profundo a la tierra.",
-          "salud": "Aislamiento absoluto en bosque tropical intacto ofrece refugio de sanación mental y física. Sonidos puros de selva y aire cargado de fitocidas crean sanación somática perpetua.",
-          "sabiduria": "Modelo de ocupación de baja densidad respeta restricciones ambientales mientras genera prosperidad. Demostración que inversión ecológica conscientemente planificada es inversión inteligente.",
-          "prosperidad": "Dos canales de valor simultáneo: flujo de ingresos hotelero inmediato + apreciación territorial a largo plazo. Modelo donde naturaleza prospera = inversión prospera."
+          "amor": "Se refleja en el compromiso de resolver el conflicto vecinal de acceso mediante el diálogo y la conciliación , así como en el respeto ecológico de corregir los planos para proteger y devolver formalmente el área correspondiente a la Reserva Absoluta Cabo Blanco.",
+          "salud": "La propiedad ofrece un refugio ideal de sanación mental y física gracias a su absoluto aislamiento de la civilización y al entorno acústico puro dominado por los sonidos pacíficos de la selva tropical que rodea al Río Florentine.",
+          "sabiduria": "Se evidencia en el desarrollo inteligente y consciente del espacio, acatando con rigurosidad el límite constructivo del 25% de cobertura y los retiros ambientales del INVU para demostrar que se puede habitar en perfecto equilibrio con la naturaleza.",
+          "prosperidad": "Representa una oportunidad financiera excepcional debido a su bajo costo actual de $7 por metro cuadrado , cuya plusvalía se elevará sustancialmente al formalizar legalmente los accesos e introducir los servicios de agua, electricidad y mejoras viales."
         }
       },
       "legacy": {
@@ -1526,44 +1506,198 @@
         "pochote": {
           "name": "Pochote",
           "scientific": "Bombacopsis quinatum",
-          "description": "Árbol maderable característico, protegido por espinas. Especie emblema de bosque tropical.",
+          "description": "Especie maderable muy característica de la zona, protegida por espinas en su tronco.",
           "status": "Estable",
-          "habitat": "Bosque tropical seco a transición, cercano a cursos de agua"
+          "habitat": "Bosques de regeneración natural"
         },
         "espavel": {
           "name": "Espavel",
           "scientific": "Anacardium excelsum",
-          "description": "Árbol gigantesco vital para mantener cuencas hídricas. Fija nitrógeno en suelos.",
+          "description": "Árboles gigantescos que suelen crecer cerca de los ríos y quebradas, vitales para mantener las cuencas hídricas.",
           "status": "Estable",
-          "habitat": "Bosques ribereños, zonas de protección de quebradas"
-        },
-        "indio-desnudo": {
-          "name": "Indio Desnudo (Almácigo)",
-          "scientific": "Bursera simaruba",
-          "description": "Árbol con corteza rojiza que se despende. Madera blanda usada en construcción liviana.",
-          "status": "Estable",
-          "habitat": "Bosque tropical caducifolio y transición"
+          "habitat": "Bosques ribereños"
         },
         "madroño": {
           "name": "Madroño",
           "scientific": "Calycophyllum candidissimum",
-          "description": "Flores blancas vistosas en estación seca. Indicador de salud en bosques secundarios.",
+          "description": "Famoso por sus vistosas flores blancas durante la época seca.",
           "status": "Estable",
-          "habitat": "Bosque tropical transición, zonas de regeneración"
+          "habitat": "Bosques de transición"
+        },
+        "jobo": {
+          "name": "Jobo",
+          "scientific": "Spondias mombin",
+          "description": "Especie muy común en los senderos de transición hacia la costa.",
+          "status": "Estable",
+          "habitat": "Senderos de transición"
+        },
+        "frangipani": {
+          "name": "Frangipani",
+          "scientific": "Plumeria rubra",
+          "description": "Especie complementaria muy común en los senderos de transición hacia la costa.",
+          "status": "Estable",
+          "habitat": "Senderos de transición"
         },
         "mono-congo": {
           "name": "Mono Congo (Aullador)",
           "scientific": "Alouatta palliata",
-          "description": "Primate con vocalización profunda. Su presencia indica bosque maduro e integridad del corredor.",
+          "description": "Población estable de primates que habitan el bosque protegido.",
           "status": "Amenazado",
-          "habitat": "Doseles altos de bosque tropical, corredores ribereños"
+          "habitat": "Bosque tropical protegido"
+        },
+        "mono-capuchino": {
+          "name": "Mono Capuchino (Cara Blanca)",
+          "scientific": "Cebus imitator",
+          "description": "Población estable de primates que habitan el bosque protegido.",
+          "status": "Estable",
+          "habitat": "Bosque tropical protegido"
+        },
+        "mono-araña": {
+          "name": "Mono Colorado (Araña)",
+          "scientific": "Ateles geoffroyi",
+          "description": "Población estable de primates que habitan el bosque protegido.",
+          "status": "Vulnerable",
+          "habitat": "Bosque tropical protegido"
+        },
+        "tigrillo": {
+          "name": "Tigrillo",
+          "scientific": "Leopardus pardalis",
+          "description": "Felino con avistamientos esporádicos e importantes en zonas protegidas.",
+          "status": "Vulnerable",
+          "habitat": "Bosque tropical denso"
         },
         "puma": {
-          "name": "Puma (León de Montaña)",
+          "name": "Puma",
           "scientific": "Puma concolor",
-          "description": "Gran felino solitario. Su presencia confirma corredor biológico de máxima integridad ecológica.",
+          "description": "Felino con avistamientos esporádicos e importantes en zonas protegidas.",
           "status": "Vulnerable",
-          "habitat": "Bosque tropical denso, corredores ribereños"
+          "habitat": "Bosque tropical denso"
+        },
+        "yaguarundi": {
+          "name": "León Breñero (Yaguarundí)",
+          "scientific": "Herpailurus yagouaroundi",
+          "description": "Felino con avistamientos esporádicos e importantes en zonas protegidas.",
+          "status": "Vulnerable",
+          "habitat": "Bosque tropical"
+        },
+        "jaguar": {
+          "name": "Jaguar",
+          "scientific": "Panthera onca",
+          "description": "Felino con avistamientos incluso en las zonas más densas y aisladas de la reserva.",
+          "status": "Vulnerable",
+          "habitat": "Bosque tropical más denso"
+        },
+        "venado-cola-blanca": {
+          "name": "Venado Cola Blanca",
+          "scientific": "Odocoileus virginianus",
+          "description": "Herbívoro muy común en bosques protegidos.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "coati": {
+          "name": "Pizote (Coatí de Nariz Blanca)",
+          "scientific": "Nasua narica",
+          "description": "Omnívoro común en áreas protegidas.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "mapachin": {
+          "name": "Mapachín",
+          "scientific": "Procyon lotor",
+          "description": "Omnívoro común en áreas protegidas.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "guatusa": {
+          "name": "Guatusa (Agutí)",
+          "scientific": "Dasyprocta punctata",
+          "description": "Roedor pequeño común en áreas protegidas.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "trogon": {
+          "name": "Trogón",
+          "scientific": "Trogonidae spp.",
+          "description": "Ave de bosque con plumaje colorido, típica de regiones de biodiversidad alta.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "colibri": {
+          "name": "Colibrí",
+          "scientific": "Trochilidae spp.",
+          "description": "Inmensa variedad de colibríes tropicales en la región.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "pelicano": {
+          "name": "Pelícano",
+          "scientific": "Pelecanus spp.",
+          "description": "Ave marina estratégica para avistamiento de aves migratorias y costeras.",
+          "status": "Estable",
+          "habitat": "Aguas costeras"
+        },
+        "gaviota": {
+          "name": "Gaviota",
+          "scientific": "Laridae spp.",
+          "description": "Ave marina común en la región costera.",
+          "status": "Estable",
+          "habitat": "Aguas costeras"
+        },
+        "piquero-pardo": {
+          "name": "Piquero Pardo (Brown Booby)",
+          "scientific": "Sula leucogaster",
+          "description": "Ave marina con colonias de anidación masiva en Isla de Cabo Blanco.",
+          "status": "Estable",
+          "habitat": "Aguas costeras"
+        },
+        "iguana-verde": {
+          "name": "Iguana Verde",
+          "scientific": "Iguana iguana",
+          "description": "Reptil grande común en bosques tropicales.",
+          "status": "Estable",
+          "habitat": "Bosque tropical"
+        },
+        "ballena-jorobada": {
+          "name": "Ballena Jorobada",
+          "scientific": "Megaptera novaeangliae",
+          "description": "Majestuosas ballenas en épocas de migración en la zona protegida.",
+          "status": "En Recuperación",
+          "habitat": "Aguas costeras"
+        },
+        "delfin": {
+          "name": "Delfín Residente",
+          "scientific": "Tursiops truncatus",
+          "description": "Delfines residentes durante todo el año en aguas costeras.",
+          "status": "Estable",
+          "habitat": "Aguas costeras"
+        },
+        "tiburon-martillo": {
+          "name": "Tiburón Martillo",
+          "scientific": "Sphyrna mokarran",
+          "description": "Zona ISRA (Important Shark and Ray Areas) con poblaciones estables.",
+          "status": "Vulnerable",
+          "habitat": "Aguas costeras"
+        },
+        "tiburon-toro": {
+          "name": "Tiburón Toro",
+          "scientific": "Carcharhinus leucas",
+          "description": "Tiburón presente en zona ISRA de importancia global.",
+          "status": "Vulnerable",
+          "habitat": "Aguas costeras"
+        },
+        "manta-raya": {
+          "name": "Manta Raya Oceánica",
+          "scientific": "Manta birostris",
+          "description": "Espectacular manta raya oceánica con presencia predecible.",
+          "status": "Vulnerable",
+          "habitat": "Aguas costeras offshore"
+        },
+        "tortuga-marina": {
+          "name": "Tortuga Marina",
+          "scientific": "Testudines spp.",
+          "description": "Aguas costeras utilizadas como ruta de tránsito y alimentación.",
+          "status": "Vulnerable",
+          "habitat": "Aguas costeras y playas"
         }
       },
       "fincas": {
