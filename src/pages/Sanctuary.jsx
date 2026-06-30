@@ -9,6 +9,7 @@ import ImageGallery from '../components/ui/ImageGallery'
 import TechnicalSheet from '../components/tabs/TechnicalSheet'
 import FloraFauna from '../components/tabs/FloraFauna'
 import FloraFaunaCarpintera from '../components/tabs/FloraFaunaCarpintera'
+import FloraFaunaStarMountain from '../components/tabs/FloraFaunaStarMountain'
 import EarthMemory from '../components/tabs/EarthMemory'
 import LocalProsperity from '../components/tabs/LocalProsperity'
 import AncestralWisdom from '../components/tabs/AncestralWisdom'
@@ -41,6 +42,15 @@ const TAB_COMPONENTS_CARPINTERA = {
   index:      VirtuosoIndex,
   legacy:     CustodyLegacy,
   potencial:  VirtuosPotentialCarpintera,
+}
+
+const TAB_COMPONENTS_STAR_MOUNTAIN = {
+  technical:  TechnicalSheet,
+  flora:      FloraFaunaStarMountain,
+  memory:     EarthMemory,
+  prosperity: LocalProsperity,
+  pulse:      CommunityPulse,
+  index:      VirtuosoIndex,
 }
 
 const CONTENT_TABS = TABS.filter(t => t.id !== 'gallery')
@@ -128,13 +138,23 @@ export default function Sanctuary() {
         selectedFinca={selectedFinca}
         onFincaChange={setSelectedFinca}
         showPortal={!heroVisible}
+        property={property}
       />
 
       <main>
         {CONTENT_TABS.map((tab, index) => {
           const isCarpintera = property?.slug === 'la-carpintera'
-          const TAB_COMPONENTS = isCarpintera ? TAB_COMPONENTS_CARPINTERA : TAB_COMPONENTS_DEFAULT
+          const isStarMountain = property?.slug === 'star-mountain'
+          const TAB_COMPONENTS = isCarpintera
+            ? TAB_COMPONENTS_CARPINTERA
+            : isStarMountain
+            ? TAB_COMPONENTS_STAR_MOUNTAIN
+            : TAB_COMPONENTS_DEFAULT
           const Component = TAB_COMPONENTS[tab.id]
+
+          // Skip rendering if component doesn't exist (e.g., ancestral for Star Mountain)
+          if (!Component) return null
+
           const bg   = SECTION_BG[index]
           const dark = SECTION_DARK[index]
           return (

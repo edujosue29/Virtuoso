@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 function getBackgroundImage(property) {
   return property.sectionImages?.pulse || '/images/nature/bosquedrone.jpg'
@@ -26,6 +27,14 @@ const ACTIVITY_TRANSLATION_MAP = {
   'Turismo Regenerativo': 'community_pulse.activity_agro_tourism',
   'Educación Ambiental': 'community_pulse.activity_endemic_flora_tour',
   'Investigación Hidrológica': 'community_pulse.activity_river_swimming',
+  // Spanish names - Star Mountain
+  'Tours guiados en Cuadraciclo': 'community_pulse.activity_atv_tours',
+  'Canopy Tour (Tirolesa)': 'community_pulse.activity_canopy_tour',
+  'Excursión de Snorkeling a Isla Tortuga': 'community_pulse.activity_snorkeling',
+  'Pesca deportiva y artesanal': 'community_pulse.activity_sport_fishing',
+  'Clases de Yoga y Retiros de Bienestar': 'community_pulse.activity_yoga_wellness',
+  'Visita a las Cataratas de Montezuma': 'community_pulse.activity_montezuma_waterfall',
+  'Cabalgatas al atardecer en la playa': 'community_pulse.activity_horseback_rides',
   // English names (División PZ and La Carpintera)
   'Quetzal Observation': 'community_pulse.activity_quetzal_sighting',
   'Quetzal Spotting': 'community_pulse.activity_quetzal_sighting',
@@ -38,6 +47,14 @@ const ACTIVITY_TRANSLATION_MAP = {
   'Sunrise Yoga': 'community_pulse.activity_sunrise_yoga',
   'Endemic Flora Tour': 'community_pulse.activity_endemic_flora_tour',
   'Remote Work at Altitude': 'community_pulse.activity_remote_work',
+  // English names - Star Mountain
+  'Guided ATV Tours': 'community_pulse.activity_atv_tours',
+  'Canopy Tour (Zip-line)': 'community_pulse.activity_canopy_tour',
+  'Snorkeling Expedition to Tortuga Island': 'community_pulse.activity_snorkeling',
+  'Sport & Traditional Fishing': 'community_pulse.activity_sport_fishing',
+  'Yoga Classes & Wellness Retreats': 'community_pulse.activity_yoga_wellness',
+  'Montezuma Waterfall Visit': 'community_pulse.activity_montezuma_waterfall',
+  'Sunset Beach Horseback Rides': 'community_pulse.activity_horseback_rides',
 }
 
 // SVG icons for activities — no emojis
@@ -61,15 +78,12 @@ export default function CommunityPulse({ property, dark }) {
   const { t } = useTranslation()
   const { communityPulse, name, slug } = property
 
-  const getSanctuaryKey = () => {
-    if (slug === 'division-perez-zeledon') return 'division_pz'
-    if (slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   // Get translated lifestyle and activities
-  const acts = (t(`sections.${getSanctuaryKey()}.community_pulse.activities`, { returnObjects: true }) || [])
-  const highlights = (t(`sections.${getSanctuaryKey()}.community_pulse.lifestyle`, { returnObjects: true }) || [])
+  const acts = (t(`sections.${sanctuaryKey}.community_pulse.activities`, { returnObjects: true }) || [])
+  const highlights = (t(`sections.${sanctuaryKey}.community_pulse.lifestyle`, { returnObjects: true }) || [])
 
   const cream = '#faf9f6'
   const muted = 'rgba(245,240,232,0.52)'
@@ -195,12 +209,12 @@ export default function CommunityPulse({ property, dark }) {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.5rem',
+            gap: '1rem',
           }}>
             {acts.map((act, i) => {
               const translationKey = ACTIVITY_TRANSLATION_MAP[act.name]
               const icon = ACTIVITY_ICONS[translationKey] || DEFAULT_ICON
-              const displayName = t(translationKey)
+              const displayName = act.name
               return (
                 <motion.div
                   key={i}
@@ -209,7 +223,7 @@ export default function CommunityPulse({ property, dark }) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.08 }}
                   style={{
-                    padding: '1.75rem',
+                    padding: '1.25rem',
                     background: 'rgba(0, 0, 0, 0.25)',
                     border: '1px solid rgba(255,255,255,0.08)',
                     borderRadius: 4,
@@ -225,14 +239,14 @@ export default function CommunityPulse({ property, dark }) {
                     e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
                   }}
                 >
-                  <div style={{ marginBottom: '0.9rem', color: '#c9a84c' }}>
+                  <div style={{ marginBottom: '0.6rem', color: '#c9a84c' }}>
                     {icon}
                   </div>
 
                   <h3 style={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: '1.1rem', fontWeight: 400,
-                    color: cream, lineHeight: 1.3,
+                    fontSize: '0.95rem', fontWeight: 400,
+                    color: cream, lineHeight: 1.2,
                     margin: '0 0 0.5rem',
                   }}>
                     {displayName}

@@ -1,3 +1,4 @@
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../LanguageSwitcher'
@@ -17,22 +18,118 @@ export default function Hero() {
   const headline = t('hero.headline') || 'Portal de Santuarios Regenerativos'
   const words = headline?.split(' ') || []
 
+  const videoRef = useRef(null)
+  const sectionRef = useRef(null)
+  const [videoReady, setVideoReady] = useState(false)
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
+
+  // ── Trigger video load immediately (not waiting for viewport) ────────
+  useEffect(() => {
+    // Set to true immediately so observer can trigger play()
+    setShouldLoadVideo(true)
+  }, [])
+
+  // ── Fade volume as hero scrolls out — full at 50%+, silent at 10% ────────
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const video = videoRef.current
+        if (!video) return
+        const ratio = entry.intersectionRatio
+
+        if (ratio <= 0.1) {
+          // Almost gone — silence and pause
+          video.volume = 0
+          video.muted = true
+          video.pause()
+        } else if (ratio >= 0.5) {
+          // Fully visible — full volume and play
+          video.muted = false
+          video.volume = 1
+          video.play().catch(() => {})
+        } else {
+          // Between 10% and 50% — linear fade: 0 → 1
+          const vol = (ratio - 0.1) / (0.5 - 0.1)
+          video.muted = false
+          video.volume = Math.max(0, Math.min(1, vol))
+          video.play().catch(() => {})
+        }
+      },
+      {
+        // Fine-grained thresholds for smooth fade
+        threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.75, 1],
+      }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const handleCanPlay = () => {
+    setVideoReady(true)
+    // Play video immediately when ready
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
+    }
+  }
+
   return (
     <section
+      ref={sectionRef}
       className="relative flex flex-col items-center justify-center text-center px-6 overflow-hidden"
       style={{ minHeight: '100vh' }}
     >
-      {/* ── Video background ─────────────────────────────────────────── */}
+      {/* ── Placeholder while video loads ─────────────────────────── */}
+      {!videoReady && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: 'url(/images/nature/hero-background.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 5,
+          }}
+        >
+          <div
+            style={{
+              width: 48,
+              height: 48,
+              border: '3px solid rgba(201,168,76,0.3)',
+              borderTop: '3px solid #c9a84c',
+              borderRadius: '50%',
+              animation: 'spin 1s linear infinite',
+            }}
+          />
+          <style>{`
+            @keyframes spin {
+              to { transform: rotate(360deg); }
+            }
+          `}</style>
+        </div>
+      )}
+
+      {/* ── Video background (no poster = no play icon) ───────────── */}
       <video
-        src="/videos/hero.mp4"
-        poster="/images/nature/hero-background.jpg"
+        ref={videoRef}
+        src={shouldLoadVideo ? '/videos/hero.mp4' : undefined}
         autoPlay
-        muted
+        muted={false}
         loop
         playsInline
         preload="metadata"
+        onCanPlay={handleCanPlay}
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: 'brightness(0.52) saturate(0.85)' }}
+        style={{
+          filter: 'brightness(0.52) saturate(0.85)',
+          opacity: videoReady ? 1 : 0,
+          transition: 'opacity 0.6s ease-out',
+        }}
       />
 
       {/* Dark gradient overlays */}

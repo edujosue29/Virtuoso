@@ -54,6 +54,10 @@ export const divisionPzData = {
     '/images/division/division-33.jpeg',
     '/images/division/division-34.jpeg',
     '/images/division/division-35.jpeg',
+    '/images/division/division-dv-e0.png',
+    '/images/division/division-dv-e1.png',
+    '/images/division/division-dv-e2.png',
+    '/images/division/division-dv-e3.png',
   ],
   videoSrc:  '/videos/division-portada.mp4',
   sectionImages: {
@@ -367,7 +371,7 @@ export const divisionPzData = {
     {
       year:        'Hoy',
       title:       'En busca de custodios',
-      description: 'Casi 600 hectáreas de bosque primario buscan un custodio consciente. Un proyecto de vida que honre el Patrimonio Mundial que esta tierra representa.',
+      description: 'Casi 600 hectáreas de bosque primario y secundario buscan un custodio consciente. Un proyecto de vida que honre el Patrimonio Mundial que esta tierra representa.',
     },
   ],
 
@@ -410,7 +414,7 @@ export const divisionPzData = {
     lifestyle: [
       'Amanecer con el coro de bosque nuboso — transición de zonas de vida entre 1,800 y 2,800 msnm',
       'Clima de eterna primavera: 15 a 22°C todo el año sin sistemas mecánicos de climatización',
-      'Caminatas en 7 km de senderos internos en bosque primario — acceso directo a las nacientes del Río División',
+      'Caminatas en 7 km de senderos internos en bosque — acceso directo a las nacientes del Río División',
       'Agua certificada de naciente propia, capturada de los torrentes acuíferos de la montaña',
       'A 2 km de la comunidad de División · 30 km (45 min) de San Gerardo de Dota · 35 km (45 min) de San Isidro',
       'Cielos estrellados sin contaminación lumínica en una de las cuencas más limpias de Centroamérica (UNESCO)',

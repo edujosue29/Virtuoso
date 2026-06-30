@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 export default function CustodyLegacy({ property, finca, dark }) {
   const { t } = useTranslation()
@@ -7,17 +8,14 @@ export default function CustodyLegacy({ property, finca, dark }) {
   // Use finca-specific legacy when available
   const legacyRaw = finca?.legacy ?? property.legacy
 
-  const getSanctuaryKey = () => {
-    if (slug === 'division-perez-zeledon') return 'division_pz'
-    if (slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   // Translate legacy data
   const legacy = legacyRaw ? {
     ...legacyRaw,
-    title: t(`sections.${getSanctuaryKey()}.legacy.title`),
-    message: t(`sections.${getSanctuaryKey()}.legacy.message`),
+    title: t(`sections.${sanctuaryKey}.legacy.title`),
+    message: t(`sections.${sanctuaryKey}.legacy.message`),
   } : legacyRaw
 
   const gold = '#c9a84c'

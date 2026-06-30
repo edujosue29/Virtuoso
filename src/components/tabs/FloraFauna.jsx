@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 const FILTERS = [
   { id: 'all',   labelKey: 'flora_fauna.filter_all' },
@@ -23,18 +24,14 @@ export default function FloraFauna({ property, dark }) {
   const featuredRaw = list[safeIdx] ?? list[0]
 
   // Translate species data
-  const getSanctuaryKey = () => {
-    if (property.slug === 'division-perez-zeledon') return 'division_pz'
-    if (property.slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   const featured = featuredRaw ? {
     ...featuredRaw,
-    name: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.name`),
-    description: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.description`),
-    status: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.status`),
-    habitat: t(`sections.${getSanctuaryKey()}.species.${featuredRaw.id}.habitat`),
+    name: t(`sections.${sanctuaryKey}.species.${featuredRaw.id}.name`),
+    description: t(`sections.${sanctuaryKey}.species.${featuredRaw.id}.description`),
+    status: t(`sections.${sanctuaryKey}.species.${featuredRaw.id}.status`),
+    habitat: t(`sections.${sanctuaryKey}.species.${featuredRaw.id}.habitat`),
   } : null
 
   // Keyboard navigation for species gallery

@@ -15,7 +15,7 @@ export const TABS = [
   { id: 'gallery',    labelKey: 'tabs.gallery',         shortKey: 'tabs.gallery_short'    },
 ]
 
-export default function TabNav({ activeTab, onTabChange, navRef, fincas, selectedFinca, onFincaChange, showPortal }) {
+export default function TabNav({ activeTab, onTabChange, navRef, fincas, selectedFinca, onFincaChange, showPortal, property }) {
   const { t } = useTranslation()
   const scrollRef = useRef(null)
   const activeRef = useRef(null)
@@ -27,6 +27,10 @@ export default function TabNav({ activeTab, onTabChange, navRef, fincas, selecte
   }, [activeTab])
 
   const hasFincas = fincas && fincas.length > 1
+  const isStarMountain = property?.slug === 'star-mountain'
+  const visibleTabs = isStarMountain
+    ? TABS.filter(t => t.id !== 'ancestral' && t.id !== 'legacy' && t.id !== 'potencial')
+    : TABS
 
   return (
     <div
@@ -130,7 +134,7 @@ export default function TabNav({ activeTab, onTabChange, navRef, fincas, selecte
             overflowX: 'auto', scrollbarWidth: 'none', flex: 1,
           }}
         >
-          {TABS.map((tab, index) => {
+          {visibleTabs.map((tab, index) => {
             const isActive = activeTab === tab.id
             return (
               <div key={tab.id} style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
@@ -165,7 +169,7 @@ export default function TabNav({ activeTab, onTabChange, navRef, fincas, selecte
                   )}
                 </button>
 
-                {index < TABS.length - 1 && (
+                {index < visibleTabs.length - 1 && (
                   <span style={{
                     color: 'rgba(245,240,232,0.12)', fontSize: '0.45rem',
                     flexShrink: 0, userSelect: 'none',

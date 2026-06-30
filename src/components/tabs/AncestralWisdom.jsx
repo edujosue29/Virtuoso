@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 const ROMANS = ['I', 'II']
 
@@ -7,11 +8,8 @@ export default function AncestralWisdom({ property }) {
   const { t } = useTranslation()
   const { ancestral, name, slug } = property
 
-  const getSanctuaryKey = () => {
-    if (slug === 'division-perez-zeledon') return 'division_pz'
-    if (slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   const attributionKey = name.includes('Carpintera')
     ? 'ancestral_wisdom.memory_huetar'
@@ -19,7 +17,7 @@ export default function AncestralWisdom({ property }) {
   const attribution = t(attributionKey)
 
   // Translate ancestral data
-  const ancestralData = t(`sections.${getSanctuaryKey()}.ancestral`, { returnObjects: true }) || {}
+  const ancestralData = t(`sections.${sanctuaryKey}.ancestral`, { returnObjects: true }) || {}
   const ancestralTranslated = {
     title: ancestralData.title || ancestral?.title,
     description: ancestralData.description || ancestral?.description,

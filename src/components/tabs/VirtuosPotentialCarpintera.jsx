@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { getDownloadUrl } from '../../utils/documentDownloads'
 import { usePrivateDocuments } from '../../context/PrivateDocumentsContext'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 const ICONS = {
   leaf: (
@@ -54,15 +55,12 @@ export default function VirtuosPotentialCarpintera({ property, finca, dark }) {
   const { t } = useTranslation()
   const { isUnlocked } = usePrivateDocuments()
 
-  const getSanctuaryKey = () => {
-    if (property.slug === 'division-perez-zeledon') return 'division_pz'
-    if (property.slug === 'la-carpintera') return 'la_carpintera'
-    return 'la_carpintera'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   // Get translated potencial data
-  const potencial = (t(`sections.${getSanctuaryKey()}.potencial`, { returnObjects: true }) || [])
-  const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+  const potencial = (t(`sections.${sanctuaryKey}.potencial`, { returnObjects: true }) || [])
+  const sanctuaryId = sanctuaryKey
   const ddLink = getDownloadUrl('debida-diligencia', sanctuaryId)
   const fincaLabel = finca?.label ?? t('virtus_potential.finca_label')
 

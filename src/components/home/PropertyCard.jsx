@@ -43,13 +43,18 @@ export default function PropertyCard({ property, index }) {
   }, [showAnexos, showTechSheet])
 
   const handleDownloadTechSheet = (fincaIndex = null) => {
-    const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+    const sanctuaryId = property.id === 'division-perez-zeledon'
+      ? 'division_pz'
+      : property.id === 'star-mountain'
+      ? 'star_mountain'
+      : 'la_carpintera'
     openFile('technical-sheet', sanctuaryId, fincaIndex)
     setShowTechSheet(false)
   }
 
   const isCarpintera = property.id === 'la-carpintera'
-  const hasTwoFincas = isCarpintera && property.fincas && property.fincas.length === 2
+  const isStarMountain = property.id === 'star-mountain'
+  const hasTwoFincas = (isCarpintera || isStarMountain) && property.fincas && property.fincas.length === 2
 
   // Combine anexos + DD documents
   const getCombinedDocuments = () => {
@@ -91,6 +96,9 @@ export default function PropertyCard({ property, index }) {
     }
     if (property.id === 'la-carpintera') {
       return t('home.property_cards.la_carpintera.tagline')
+    }
+    if (property.id === 'star-mountain') {
+      return t('home.property_cards.star_mountain.tagline')
     }
     return property.tagline
   }
@@ -154,7 +162,7 @@ export default function PropertyCard({ property, index }) {
             letterSpacing: '0.25em', textTransform: 'uppercase',
             color: 'rgba(17,26,16,0.38)', marginBottom: '0.6rem',
           }}>
-            {property.sanctuaryName?.split('—')[0]?.trim()}
+            {sanctuary.sanctuaryName?.split('—')[0]?.trim()}
           </p>
 
           {/* Two-tone title */}

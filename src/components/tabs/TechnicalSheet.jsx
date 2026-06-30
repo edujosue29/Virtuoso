@@ -51,11 +51,20 @@ export default function TechnicalSheet({ property, finca }) {
 
   // Helper function to get translation with finca-specific fallback
   const getTechnicalTranslation = (key, fallbackValue) => {
-    if (!finca || property.id !== 'la-carpintera') {
-      return fallbackValue
+    const sanctuaryId = property.id === 'division-perez-zeledon'
+      ? 'division_pz'
+      : property.id === 'star-mountain'
+      ? 'star_mountain'
+      : 'la_carpintera'
+
+    // Determine which finca key to use for La Carpintera and Star Mountain
+    let fincaKeyName = sanctuaryId
+    if (finca && property.id !== 'division-perez-zeledon') {
+      const isSecondFinca = fincaIndex === 1
+      if (isSecondFinca) {
+        fincaKeyName = property.id === 'star-mountain' ? 'star_mountain_finca2' : 'la_carpintera_finca2'
+      }
     }
-    // For Finca 1 and 2, try to get from finca-specific translation key
-    const fincaKeyName = fincaIndex === 0 ? 'la_carpintera' : 'la_carpintera_finca2'
 
     // Special case for infrastructure: look in infrastructure section, not sanctuary_data
     if (key === 'infrastructure') {
@@ -91,7 +100,11 @@ export default function TechnicalSheet({ property, finca }) {
   ].filter((r) => r.value)
 
   const handleDownload = () => {
-    const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+    const sanctuaryId = property.id === 'division-perez-zeledon'
+      ? 'division_pz'
+      : property.id === 'star-mountain'
+      ? 'star_mountain'
+      : 'la_carpintera'
     const fincaIndex = finca ? property.fincas?.indexOf(finca) : null
     openFile('technical-sheet', sanctuaryId, fincaIndex)
   }

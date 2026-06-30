@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { useSanctuaryText } from '../../utils/sanctuaryTranslations'
+import { useSanctuaryText, getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 export default function EarthMemory({ property, dark }) {
   const { t } = useTranslation()
@@ -8,7 +8,7 @@ export default function EarthMemory({ property, dark }) {
   const { timeline, name } = property
 
   // Get translated timeline if available
-  const sanctuaryId = property.id === 'division-perez-zeledon' ? 'division_pz' : 'la_carpintera'
+  const sanctuaryId = getSanctuaryKeyFromProperty(property)
   const translatedTimelineData = t(`history.${sanctuaryId}.timeline`, { returnObjects: true })
   const translatedTimeline = Array.isArray(translatedTimelineData) ? translatedTimelineData : timeline
 

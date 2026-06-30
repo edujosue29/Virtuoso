@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getSanctuaryKeyFromProperty } from '../../utils/sanctuaryTranslations'
 
 const PILLARS = [
   {
@@ -56,14 +57,11 @@ export default function VirtuosoIndex({ property }) {
   const { virtuosoIndex, slug } = property
   const [selected, setSelected] = useState(null)
 
-  const getSanctuaryKey = () => {
-    if (slug === 'division-perez-zeledon') return 'division_pz'
-    if (slug === 'la-carpintera') return 'la_carpintera'
-    return 'division_pz'
-  }
+  // Get sanctuary translation key
+  const sanctuaryKey = getSanctuaryKeyFromProperty(property)
 
   // Get translated descriptions
-  const descriptions = t(`sections.${getSanctuaryKey()}.virtuoso_index.descriptions`, { returnObjects: true }) || {}
+  const descriptions = t(`sections.${sanctuaryKey}.virtuoso_index.descriptions`, { returnObjects: true }) || {}
 
   const selectedPillar = selected ? PILLARS.find(p => p.key === selected) : null
 
