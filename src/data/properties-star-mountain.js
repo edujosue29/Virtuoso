@@ -16,7 +16,7 @@ export const starMountainData = {
     'Dos fincas contiguas de 112 ha totales en la Península de Nicoya, colindantes directamente con la Reserva Absoluta Cabo Blanco. Santuario privado de vida silvestre adyacente al Parque Nacional, con concesión de agua activa, acceso asfaltado y hotel en funcionamiento. Corredor biológico vital con abundante fauna marina, terrestre y aviaria.',
 
   // ── Imágenes reales ────────────────────────────────────────────────────────
-  heroImage: '/images/star-mountain/MalPais_00.jpg',
+  heroImage: '/images/star-mountain/MalPais_07.jpg',
   image: '/images/star-mountain/MalPais_01.jpg',
   gallery: [
     '/images/star-mountain/MalPais_00.jpg',
