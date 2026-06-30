@@ -52,7 +52,7 @@ export const laCarpinteraData = {
       '/images/species/tangara-dorada.jpg',
       '/images/species/clorofonia.jpg',
     ],
-    videoSrc: '/videos/carpintera-final.mp4',
+    videoSrc: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/carpintera-final.mp4',
     floraFaunaImages: [
       '/images/carpintera/species/roble.jpg',
       '/images/carpintera/species/cedro.jpg',

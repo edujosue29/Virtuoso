@@ -41,7 +41,7 @@ export const starMountainData = {
     '/images/star-mountain/MalPais_19.jpg',
     '/images/star-mountain/MalPais_20.jpg',
   ],
-  videoSrc: '/videos/star-mountain.mp4',
+  videoSrc: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/star-mountain.mp4',
   floraFaunaImages: [
     '/images/star-mountain/MalPais_05.jpg',
     '/images/star-mountain/MalPais_06.jpg',

@@ -59,7 +59,7 @@ export const divisionPzData = {
     '/images/division/division-dv-e2.png',
     '/images/division/division-dv-e3.png',
   ],
-  videoSrc:  '/videos/division-portada.mp4',
+  videoSrc: 'https://raxqx36bylqlnogp.public.blob.vercel-storage.com/division-portada.mp4',
   sectionImages: {
     technical:  '/images/division/division-2.jpeg',
     prosperity: '/images/division/division-3.jpeg',
